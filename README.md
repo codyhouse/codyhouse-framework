@@ -1,5 +1,5 @@
-# Framework
-The CodyHouse's framework is a system of [SCSS](https://sass-lang.com/) globals representing the base upon which you can build the style of your web project.
+# CodyHouse's Framework
+The CodyHouse's framework is a system of SCSS globals representing the base upon which you can build the style of your web project.
 
 The framework serves three main purposes:
 
@@ -11,6 +11,34 @@ The framework is composed of:
 
 - **A collection of SCSS files** that compile into a _global.scss file. Make sure to import this style before your own;
 - **A util.js file** with some utility functions that are used in the CodyHouse components. Make sure to import this before the component script file.
+
+
+```text
+codyhouse-framework/
+└── main/
+    ├── assets/
+    │   ├── css/
+    │   │   ├── globals/
+    │   │   │   ├── _alignment.scss
+    │   │   │   ├── _breakpoints.scss
+    │   │   │   ├── _buttons.scss
+    │   │   │   ├── _colors.scss
+    │   │   │   ├── _forms.scss
+    │   │   │   ├── _grid-layout.scss
+    │   │   │   ├── _icons.scss
+    │   │   │   ├── _mixins.scss
+    │   │   │   ├── _reset.scss
+    │   │   │   ├── _shared-styles.scss
+    │   │   │   ├── _spacing.scss
+    │   │   │   ├── _typography.scss
+    │   │   │   └── _z-index.scss
+    │   │   ├── _globals.scss
+    │   │   ├── style.css
+    │   │   └── style.scss
+    │   └── js/
+    │       └── util.js
+    └── index.html
+```
 
 ## Progressive enhancement
 The Framework and the Components are built following the principle of progressive enhancement. Please make sure to include the following script in the `<head>` of your document:
