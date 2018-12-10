@@ -1,5 +1,14 @@
+<p align="center">
+  <a href="https://codyhouse.co">
+    <img src="https://codyhouse.co/avatar-sm.png" alt="CodyHouse logo" width=80 height=80>
+  </a>
+</p>
+
+
 # CodyHouse's Framework
 The CodyHouse's framework is a system of SCSS globals representing the base upon which you can build the style of your web project.
+
+[Explore the documentation on codyhouse.co](https://codyhouse.co/ds/get-started).
 
 The framework serves three main purposes:
 
@@ -10,7 +19,7 @@ The framework serves three main purposes:
 The framework is composed of:
 
 - **A collection of SCSS files** that compile into a _global.scss file. Make sure to import this style before your own;
-- **A util.js file** with some utility functions that are used in the CodyHouse components. Make sure to import this before the component script file.
+- **A util.js file** with some utility functions that are used in the [CodyHouse components](https://codyhouse.co/ds/components). Make sure to import this before the component script file.
 
 
 ```text
