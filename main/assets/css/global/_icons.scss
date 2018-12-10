@@ -1,0 +1,85 @@
+:root {
+    // size
+	--icon-xs: 16px;
+	--icon-sm: 24px;
+	--icon-md: 32px;
+	--icon-lg: 48px;
+    --icon-xl: 64px;
+}
+
+.icon {
+    display: inline-block;
+    color: var(--color-contrast-higher);
+    fill: currentColor;
+    height: 1em;
+    width: 1em;
+    line-height: 1;
+}
+
+// icon size
+.icon--xs {
+	font-size: var(--icon-xs);
+}
+
+.icon--sm {
+	font-size: var(--icon-sm);
+}
+
+.icon--md {
+	font-size: var(--icon-md);
+}
+
+.icon--lg {
+	font-size: var(--icon-lg);
+}
+
+.icon--xl {
+  	font-size: var(--icon-xl);
+}
+
+// align icon and text 
+.icon-text { // add this class to parent element that contains icon + text elements
+	display: inline-flex;
+    align-items: center;
+
+    > *:nth-child(2) {
+        margin-left: var(--space-xxs);
+    }
+
+    .icon {
+        color: inherit;
+        flex-shrink: 0;
+    }
+
+    &.icon-text-gap--none {
+        > *:nth-child(2) {
+            margin-left: 0;
+        }
+    }
+}
+
+.icon--is-spinning {
+    //add this class to rotate the icon infinitely 
+    animation: icon-spin 1s infinite linear;
+}
+
+@keyframes icon-spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+// --------------------------------
+
+// SVG <symbol>
+
+// --------------------------------
+
+// enable icon color corrections
+.icon use {
+    color: inherit;
+    fill: currentColor;
+}

@@ -1,0 +1,114 @@
+:root, body {
+    --space-unit:  1em;
+    --space-xxxxs: calc(0.125 * var(--space-unit)); 
+    --space-xxxs:  calc(0.25 * var(--space-unit));
+    --space-xxs:   calc(0.375 * var(--space-unit));
+    --space-xs:    calc(0.5 * var(--space-unit));
+    --space-sm:    calc(0.75 * var(--space-unit));
+    --space-md:    calc(1.25 * var(--space-unit));
+    --space-lg:    calc(2 * var(--space-unit));
+    --space-xl:    calc(3.25 * var(--space-unit));
+    --space-xxl:   calc(5.25 * var(--space-unit));
+    --space-xxxl:  calc(8.5 * var(--space-unit));
+    --space-xxxxl: calc(13.75 * var(--space-unit));
+    --component-padding: var(--space-sm);
+}
+
+// optional - edit space unit and padding of all components at a specific breakpoint
+@supports(--css: variables) {
+    @include breakpoint(md) {
+        body {
+            --space-unit:  1.25em;
+        }
+    }
+}
+
+// margin top
+.margin-top, .margin-top--md {
+    margin-top: var(--space-md);
+}
+
+.margin-top--xxxxs {
+    margin-top: var(--space-xxxxs);
+}
+
+.margin-top--xxxs {
+    margin-top: var(--space-xxxs);
+}
+
+.margin-top--xxs {
+    margin-top: var(--space-xxs);
+}
+
+.margin-top--xs {
+    margin-top: var(--space-xs);
+}
+
+.margin-top--sm {
+    margin-top: var(--space-sm);
+}
+
+.margin-top--lg {
+    margin-top: var(--space-lg);
+}
+
+.margin-top--xl {
+    margin-top: var(--space-xl);
+}
+
+.margin-top--xxl {
+    margin-top: var(--space-xxl);
+}
+
+.margin-top--xxxl {
+    margin-top: var(--space-xxxl);
+}
+
+.margin-top--xxxxl {
+    margin-top: var(--space-xxxxl);
+}
+
+// margin bottom
+.margin-bottom, .margin-bottom--md {
+    margin-bottom: var(--space-md);
+}
+
+.margin-bottom--xxxxs {
+    margin-bottom: var(--space-xxxxs);
+}
+
+.margin-bottom--xxxs {
+    margin-bottom: var(--space-xxxs);
+}
+
+.margin-bottom--xxs {
+    margin-bottom: var(--space-xxs);
+}
+
+.margin-bottom--xs {
+    margin-bottom: var(--space-xs);
+}
+
+.margin-bottom--sm {
+    margin-bottom: var(--space-sm);
+}
+
+.margin-bottom--lg {
+    margin-bottom: var(--space-lg);
+}
+
+.margin-bottom--xl {
+    margin-bottom: var(--space-xl);
+}
+
+.margin-bottom--xxl {
+    margin-bottom: var(--space-xxl);
+}
+
+.margin-bottom--xxxl {
+    margin-bottom: var(--space-xxxl);
+}
+
+.margin-bottom--xxxxl {
+    margin-bottom: var(--space-xxxxl);
+}

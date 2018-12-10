@@ -1,0 +1,21 @@
+{
+  "name": "codyhouse-framework",
+  "version": "1.0.0",
+  "description": "The CodyHouse's framework is a system of SCSS globals representing the base upon which you can build the style of your web project.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Amber Creative Lab <info@ambercreative.co>",
+  "license": "MIT",
+  "browserslist": "last 2 versions, > 5%, ie 9-11",
+  "devDependencies": {
+    "autoprefixer": "^8.2.0",
+    "browser-sync": "^2.23.6",
+    "gulp": "^3.9.1",
+    "gulp-postcss": "^7.0.1",
+    "gulp-sass": "^3.2.1",
+    "postcss-calc": "^7.0.1",
+    "postcss-css-variables": "git+https://github.com/CodyHouse/postcss-css-variables"
+  }
+}

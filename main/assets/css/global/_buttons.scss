@@ -1,0 +1,97 @@
+:root {
+    // size
+    --btn-font-size: 1em;
+    --btn-sm: calc(var(--btn-font-size) - 0.2em);
+    --btn-md: calc(var(--btn-font-size) + 0.2em);
+    --btn-lg: calc(var(--btn-font-size) + 0.4em);
+}
+
+.btn { // basic button style
+    display: inline-flex;
+    position: relative;
+    white-space: nowrap;
+    text-decoration: none;
+    line-height: 1;
+    padding: var(--space-xs) var(--space-sm);
+    border-radius: 0.25em;
+    font-size: var(--btn-font-size);
+    color: var(--color-primary);
+    justify-content: center;
+}
+
+// themes
+.btn--primary { // main button
+    background-color: var(--color-primary);
+    color: var(--white);
+    @include fontSmooth;
+
+    &:hover {
+        background-color: var(--color-primary-light);
+    }
+}
+
+.btn--subtle { // subtle version, used for secondary actions or in combo with primary/accent button
+    background-color: var(--color-bg);
+    color: var(--color-contrast-higher);
+    border: 1px solid var(--color-contrast-low);
+
+    &:hover {
+        background-color: var(--color-contrast-lower);
+    }
+}
+
+.btn--accent { // used to draw particular attention to the button (e.g. destructive actions)
+    background-color: var(--color-accent);
+    color: var(--white);
+    @include fontSmooth;
+
+    &:hover {
+        background-color: var(--color-accent-light);
+    }
+}
+
+// feedback
+.btn--disabled {
+    cursor: not-allowed;
+    box-shadow: none;
+    opacity: 0.6;
+}
+
+// size
+.btn--sm {
+    font-size: var(--btn-sm);
+}
+
+.btn--md {
+    font-size: var(--btn-md);
+}
+
+.btn--lg {
+    font-size: var(--btn-lg);
+}
+
+.btn--full-width {
+    display: flex;
+    width: 100%;
+}
+
+// icons
+.btn .icon {
+    // icon inherits color of button label
+    color: inherit;
+    flex-shrink: 0;
+}
+
+// icons + text
+.btn--icon-text {
+    align-items: center;
+    
+    > *:nth-child(2) {
+        margin-left: var(--space-xxs);
+    }
+}
+
+// icon only
+.btn--icon {
+    padding: var(--space-xs);
+}

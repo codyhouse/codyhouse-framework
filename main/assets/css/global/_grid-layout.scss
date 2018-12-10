@@ -1,0 +1,180 @@
+:root {
+    --container-width-xs: 37.5rem;
+    --container-width-sm: 45rem;
+    --container-width-md: 64rem;
+    --container-width-lg: 80rem;
+    --container-width-xl: 90rem;
+}
+
+// classes used to center content on x-axis and set content max width
+.container {
+    width: calc(100% - 2*var(--component-padding));
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container--full-width {
+    width: 100%;
+}
+
+.container--xs {
+    max-width: var(--container-width-xs);
+}
+
+.container--sm {
+    max-width: var(--container-width-sm);
+}
+
+.container--md {
+    max-width: var(--container-width-md);
+}
+
+.container--lg {
+    max-width: var(--container-width-lg);
+}
+
+.container--xl {
+    max-width: var(--container-width-xl);
+}
+
+// IE fallback for CSS Grid
+@mixin gridFallback($gap: null) {
+	display: flex;
+    flex-wrap: wrap;
+    @if( $gap == null ) {
+		$gap: var(--space-md);
+	}
+
+    margin: calc(#{$gap} * -1) 0 0 calc(#{$gap} * -1);
+
+    > * {
+        padding: #{$gap} 0 0 #{$gap};
+        background-clip: content-box;
+    }
+
+    @supports (grid-area: auto) {
+        margin: 0;
+
+        > * {
+            padding: 0;
+            max-width: none!important;
+        }
+    }
+}
+
+@mixin column($width) {
+	@if unit($width) != '%' {
+		$width: $width * 100%;
+	}
+	flex-basis: #{$width};
+    max-width: #{$width};
+}
+
+// --------------------------------
+
+// Alt grid system - based on utility classes
+
+// --------------------------------
+
+$grid-columns: 12;
+
+.grid {
+	display: flex;
+    flex-wrap: wrap;
+    margin: calc(var(--space-md) * -1) 0 0 calc(var(--space-md) * -1);
+
+    > * {
+        padding: var(--space-md) 0 0 var(--space-md);
+        background-clip: content-box;
+        flex-basis: 100%;
+    }
+}
+
+.grid-gap--none {
+    margin: 0;
+
+    > * {
+        padding: 0;
+    }
+}
+
+.grid-gap--xs {
+    margin: calc(var(--space-xs) * -1) 0 0 calc(var(--space-xs) * -1);
+
+    > * {
+        padding: var(--space-xs) 0 0 var(--space-xs);
+    }
+}
+
+.grid-gap--sm {
+    margin: calc(var(--space-sm) * -1) 0 0 calc(var(--space-sm) * -1);
+
+    > * {
+        padding: var(--space-sm) 0 0 var(--space-sm);
+    }
+}
+
+.grid-gap--lg {
+    margin: calc(var(--space-lg) * -1) 0 0 calc(var(--space-lg) * -1);
+
+    > * {
+        padding: var(--space-lg) 0 0 var(--space-lg);
+    }
+}
+
+.grid-gap--xl {
+    margin: calc(var(--space-xl) * -1) 0 0 calc(var(--space-xl) * -1);
+
+    > * {
+        padding: var(--space-xl) 0 0 var(--space-xl);
+    }
+}
+
+@function round-width ($i) {
+    //function used to round width to a number with 2 decimal places - used for IE fallback
+    $width : floor(100 * $i * 100/ $grid-columns) / 100;
+    @return $width#{"%"};
+}
+
+@for $i from 1 through $grid-columns {
+	.col--#{$i} {
+		flex-basis: round-width($i);
+		max-width: round-width($i); 
+	}
+}
+
+@include breakpoint(sm) {
+	@for $i from 1 through $grid-columns {
+		.col--sm-#{$i} {
+			flex-basis: round-width($i);
+			max-width: round-width($i); 
+		}
+	}
+}
+
+@include breakpoint(md) {
+	@for $i from 1 through $grid-columns {
+		.col--md-#{$i} {
+			flex-basis: round-width($i);
+			max-width: round-width($i); 
+		}
+	}
+}
+
+@include breakpoint(lg) {
+	@for $i from 1 through $grid-columns {
+		.col--lg-#{$i} {
+			flex-basis: round-width($i);
+			max-width: round-width($i);
+		}
+	}
+}
+
+@include breakpoint(xl) {
+	@for $i from 1 through $grid-columns {
+		.col--xl-#{$i} {
+			flex-basis: round-width($i);
+			max-width: round-width($i);
+		}
+	}
+}

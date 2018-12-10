@@ -1,0 +1,68 @@
+* {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+    border: none;
+    font: inherit;
+}
+
+*::after, *::before {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--color-bg, white);
+}
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, main, form legend {
+    display: block;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+button, select, textarea, input {
+    color: inherit;
+    line-height: inherit;
+    background-color: transparent;
+    border-radius: 0;
+}
+
+button, select, textarea,
+input[type="button"], input[type="email"], input[type="number"],
+input[type="password"], input[type="search"], input[type="submit"],
+input[type="tel"], input[type="text"], input[type="url"] {
+    appearance: none;
+}
+
+textarea {
+    resize: vertical;
+    overflow: auto;
+}
+
+select::-ms-expand {
+    display: none; // hide Select default icon on IE
+}
+
+input::-ms-clear {
+    display: none; // hide X icon in IE and Edge
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+img, video, svg {
+    max-width: 100%;
+}

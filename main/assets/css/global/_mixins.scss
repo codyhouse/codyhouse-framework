@@ -1,0 +1,33 @@
+// edit font rendering -> tip: use for light text on dark backgrounds
+@mixin fontSmooth {
+    -webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+// crop top space on text elements - caused by line height
+@mixin lhCrop($line-height, $capital-letter: 1) {
+    &::before {
+        content: '';
+        display: block;
+        height: 0;
+        width: 0;
+        margin-top: calc((#{$capital-letter} - #{$line-height}) * 0.5em);
+    }
+}
+
+// CSS triangle
+@mixin triangle ($direction: up, $width: 12px, $color: red) {
+    width: 0;
+    height: 0;
+    border: $width solid transparent;
+
+    @if( $direction == left ) {
+		border-right-color: $color;
+    } @else if( $direction == right ) {
+		border-left-color: $color;
+	} @else if( $direction == down ) {
+        border-top-color: $color;
+    } @else {
+        border-bottom-color: $color;
+    }
+}

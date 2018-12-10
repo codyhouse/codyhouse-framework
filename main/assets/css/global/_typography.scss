@@ -1,0 +1,230 @@
+:root, body {
+    // font family
+    --font-primary: sans-serif;
+
+    // set base values
+    --text-base-size: 1em;
+    --text-scale-ratio: 1.2;
+
+    // type scale
+    --text-xs: calc((1em / var(--text-scale-ratio)) / var(--text-scale-ratio));
+    --text-sm: calc(var(--text-xs) * var(--text-scale-ratio));
+    --text-md: calc(var(--text-sm) * var(--text-scale-ratio) * var(--text-scale-ratio));
+    --text-lg: calc(var(--text-md) * var(--text-scale-ratio));
+    --text-xl: calc(var(--text-lg) * var(--text-scale-ratio));
+    --text-xxl: calc(var(--text-xl) * var(--text-scale-ratio));
+    --text-xxxl: calc(var(--text-xxl) * var(--text-scale-ratio));
+
+    // line-height
+    --body-line-height: 1.4;
+    --heading-line-height: 1.2;
+
+    // capital letters - used in combo with the lhCrop mixin
+    --font-primary-capital-letter: 1;
+
+    // drop cap
+    --drop-cap-size-ratio: 3.5;
+    --drop-cap-padding: 1.5em;
+}
+
+@supports(--css: variables) {
+    @include breakpoint(md) {
+        body {
+            --text-base-size: 1.25em;
+            --text-scale-ratio: 1.25;
+        }
+    }
+}
+
+body {
+    font-size: var(--text-base-size);
+    font-family: var(--font-primary);
+    color: var(--color-contrast-high);
+}
+
+h1, h2, h3, h4 {
+    color: var(--color-contrast-higher);
+    line-height: var(--heading-line-height);
+}
+
+// text size
+.text--xxxl {
+    font-size: var(--text-xxxl);
+}
+
+h1, .text--xxl {
+    font-size: var(--text-xxl);
+}
+
+h2, .text--xl {
+    font-size: var(--text-xl);
+}
+
+h3, .text--lg {
+    font-size: var(--text-lg);
+}
+
+h4, .text--md {
+    font-size: var(--text-md);
+}
+
+.text--sm, small {
+    font-size: var(--text-sm);
+}
+
+.text--xs {
+    font-size: var(--text-xs);
+}
+
+// inline text
+a {
+    color: var(--color-primary);
+}
+
+mark {
+    background-color: var(--color-accent-lighter);
+    color: inherit;
+}
+
+strong {
+    font-weight: bold;
+}
+
+s {
+    text-decoration: line-through;
+}
+
+u {
+    text-decoration: underline;
+}
+
+.text--subtle {
+    color: var(--color-contrast-medium);
+}
+
+.text-component {
+    --component-body-line-height: calc(var(--body-line-height) * var(--line-height-multiplier));
+    --component-heading-line-height: calc(var(--heading-line-height) * var(--line-height-multiplier));
+    --line-height-multiplier: 1;
+    --text-vspace-multiplier: 1;
+
+    h1, h2, h3, h4 {
+        line-height: var(--component-heading-line-height);
+        margin-bottom: calc(var(--space-xxxs) * var(--text-vspace-multiplier));
+    }
+
+    h2, h3, h4 {
+        margin-top: calc(var(--space-sm) * var(--text-vspace-multiplier));
+    }
+
+    p, blockquote, ul li, ol li {
+        line-height: var(--component-body-line-height);
+        color: var(--color-contrast-high);
+    }
+    
+    ul, ol, p, blockquote {
+        margin-bottom: calc(var(--space-sm) * var(--text-vspace-multiplier));
+    }
+
+    ul, ol {
+        padding-left: 1em;
+	}
+
+	ul {
+        list-style-type: disc;
+	}
+
+	ol {
+		list-style-type: decimal;
+    }
+    
+    em {
+        font-style: italic;
+    }
+
+    blockquote {
+        padding-left: 1em;
+        border-left: 4px solid var(--color-contrast-low);
+    }
+
+    hr {
+        background: var(--color-contrast-low);
+        height: 1px;
+        margin: calc(var(--space-lg) * var(--text-vspace-multiplier)) auto;
+    }
+
+    .drop-cap:first-letter {
+        // make the first letter of a paragraph bigger
+        float: left;
+        line-height: 1;
+        font-size: calc(var(--drop-cap-size-ratio) * 1em);
+        padding: calc(var(--drop-cap-padding) / var(--drop-cap-size-ratio)) calc(var(--drop-cap-padding) / var(--drop-cap-size-ratio)) calc((var(--drop-cap-padding) - 0.8em) / var(--drop-cap-size-ratio));
+    }
+
+    > *:first-child {
+        margin-top: 0;
+    }
+
+    > *:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.article.text-component {
+    // line height for article (e.g., blog posts)
+    --line-height-multiplier: 1.13;
+}
+
+// images
+.text-component__img {
+    margin-bottom: calc(var(--space-md) * var(--text-vspace-multiplier));
+    text-align: center;
+
+    figcaption {
+        text-align: center;
+        font-size: var(--text-sm);
+        color: var(--color-contrast-medium);
+    }
+}
+
+@include breakpoint(sm) {
+    .text-component__img--left, .text-component__img--right {
+        width: 45%;
+    }
+
+    .text-component__img--left {
+        float: left;
+        margin-right: calc(var(--space-md) * var(--text-vspace-multiplier));
+    }
+
+    .text-component__img--right {
+        float: right;
+        margin-left: calc(var(--space-md) * var(--text-vspace-multiplier));
+    }
+}
+
+@include breakpoint(xl) {
+    .text-component__img--outset {
+        width: calc(100% + 2 * var(--space-xxl));
+    }
+
+    .text-component__img--outset:not(.text-component__img--right) {
+        margin-left: calc(-1 * var(--space-xxl));
+    }
+
+    .text-component__img--left, .text-component__img--right {
+        width: 50%;
+    }
+
+    .text-component__img--right.text-component__img--outset {
+        margin-right: calc(-1 * var(--space-xxl));
+    }
+}
+
+// utility classes
+.truncate {
+    // truncate text if it exceeds its parent
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
