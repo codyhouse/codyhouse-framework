@@ -2,11 +2,11 @@
   // font family
   --font-primary: sans-serif;
 
-  // set base values
+  // body font size
   --text-base-size: 1em;
-  --text-scale-ratio: 1.2;
-
+  
   // type scale
+  --text-scale-ratio: 1.2;
   --text-xs: calc((1em / var(--text-scale-ratio)) / var(--text-scale-ratio));
   --text-sm: calc(var(--text-xs) * var(--text-scale-ratio));
   --text-md: calc(var(--text-sm) * var(--text-scale-ratio) * var(--text-scale-ratio));
