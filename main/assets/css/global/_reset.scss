@@ -48,6 +48,7 @@ input[type="tel"], input[type="text"], input[type="url"] {
 textarea {
   resize: vertical;
   overflow: auto;
+  vertical-align: top; // remove extra space below textarea element
 }
 
 select::-ms-expand {
