@@ -16,16 +16,17 @@ gulp.task('sass', function() {
   }));
 });
 
-gulp.task('browserSync', function() {
+gulp.task('browserSync', gulp.series(function (done) {
   browserSync.init({
     server: {
       baseDir: 'main'
     },
   })
-});
+  done();
+}));
 
 gulp.task('watch', gulp.series(['browserSync', 'sass'], function () {
-  gulp.watch('main/assets/css/**/*.scss', ['sass']);
+  gulp.watch('main/assets/css/**/*.scss', gulp.series(['sass']));
   gulp.watch('main/*.html', browserSync.reload);
   gulp.watch('main/demo/*.html', browserSync.reload); 
   gulp.watch('main/assets/js/**/*.js', browserSync.reload);
