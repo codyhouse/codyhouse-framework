@@ -24,9 +24,9 @@ gulp.task('browserSync', function() {
   })
 });
 
-gulp.task('watch', ['browserSync', 'sass'], function (){
+gulp.task('watch', gulp.series(['browserSync', 'sass'], function () {
   gulp.watch('main/assets/css/**/*.scss', ['sass']);
   gulp.watch('main/*.html', browserSync.reload);
   gulp.watch('main/demo/*.html', browserSync.reload); 
   gulp.watch('main/assets/js/**/*.js', browserSync.reload);
-});
+}));

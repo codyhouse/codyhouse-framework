@@ -65,7 +65,7 @@ To use this Gulp configuration file, once you have downloaded the framework, mak
 
 ```
 npm install
-gulp watch
+npm run gulp watch
 ```
 
 The first command will install the modules the framework requires for compiling SCSS into CSS; the second will launch your project on a development server.
