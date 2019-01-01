@@ -58,7 +58,7 @@
 // error message
 .form__msg-error {
   background-color: var(--color-error);
-  color: var(--white);
+  color: var(--color-white);
   font-size: var(--text-sm);
   @include fontSmooth;
   padding: var(--space-xs);

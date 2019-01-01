@@ -22,7 +22,7 @@
 // themes
 .btn--primary { // main button
   background-color: var(--color-primary);
-  color: var(--white);
+  color: var(--color-white);
   @include fontSmooth;
 
   &:hover {
@@ -42,7 +42,7 @@
 
 .btn--accent { // used to draw particular attention to the button (e.g. destructive actions)
   background-color: var(--color-accent);
-  color: var(--white);
+  color: var(--color-white);
   @include fontSmooth;
 
   &:hover {

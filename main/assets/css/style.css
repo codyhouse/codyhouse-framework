@@ -54,6 +54,7 @@ input[type="tel"], input[type="text"], input[type="url"] {
 textarea {
   resize: vertical;
   overflow: auto;
+  vertical-align: top;
 }
 
 select::-ms-expand {
@@ -85,9 +86,9 @@ img, video, svg {
   --color-accent: hsl(355, 90%, 61%);
   --color-accent-light: hsl(355, 90%, 68%);
   --color-accent-lighter: hsl(356, 89%, 93%);
-  --black: hsl(240, 7%, 12%);
-  --black-a10: hsla(240, 7%, 12%, 0.1);
-  --white: hsl(0, 0%, 100%);
+  --color-black: hsl(240, 7%, 12%);
+  --color-black-a10: hsla(240, 7%, 12%, 0.1);
+  --color-white: hsl(0, 0%, 100%);
   --color-success-darker: hsl(94, 40%, 45%);
   --color-success-dark: hsl(94, 45%, 50%);
   --color-success: hsl(94, 48%, 56%);
@@ -1287,7 +1288,7 @@ u {
   background-color: hsl(220, 90%, 56%);
   background-color: var(--color-primary);
   color: hsl(0, 0%, 100%);
-  color: var(--white);
+  color: var(--color-white);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -1315,7 +1316,7 @@ u {
   background-color: hsl(355, 90%, 61%);
   background-color: var(--color-accent);
   color: hsl(0, 0%, 100%);
-  color: var(--white);
+  color: var(--color-white);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -1455,7 +1456,7 @@ u {
   background-color: hsl(355, 90%, 61%);
   background-color: var(--color-error);
   color: hsl(0, 0%, 100%);
-  color: var(--white);
+  color: var(--color-white);
   font-size: 0.83333em;
   font-size: var(--text-sm);
   -webkit-font-smoothing: antialiased;
