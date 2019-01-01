@@ -1,6 +1,6 @@
 {
   "name": "codyhouse-framework",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "The CodyHouse's framework is a system of SCSS globals representing the base upon which you can build the style of your web project.",
   "main": "index.js",
   "scripts": {
