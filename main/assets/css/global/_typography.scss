@@ -21,10 +21,6 @@
 
   // capital letters - used in combo with the lhCrop mixin
   --font-primary-capital-letter: 1;
-
-  // drop cap
-  --drop-cap-size-ratio: 3.5;
-  --drop-cap-padding: 1.5em;
 }
 
 @supports(--css: variables) {
@@ -151,14 +147,6 @@ u {
     background: var(--color-contrast-low);
     height: 1px;
     margin: calc(var(--space-lg) * var(--text-vspace-multiplier)) auto;
-  }
-
-  .drop-cap:first-letter {
-    // make the first letter of a paragraph bigger
-    float: left;
-    line-height: 1;
-    font-size: calc(var(--drop-cap-size-ratio) * 1em);
-    padding: calc(var(--drop-cap-padding) / var(--drop-cap-size-ratio)) calc(var(--drop-cap-padding) / var(--drop-cap-size-ratio)) calc((var(--drop-cap-padding) - 0.8em) / var(--drop-cap-size-ratio));
   }
 
   > *:first-child {

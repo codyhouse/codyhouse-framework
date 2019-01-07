@@ -1,5 +1,4 @@
-.form-control {
-  // basic form element style
+.form-control { // basic form element style
   padding: var(--space-xs) var(--space-sm);
   background: var(--color-bg);
   border: 2px solid var(--color-contrast-low);
@@ -48,8 +47,7 @@
   margin-bottom: var(--space-xxs);
 }
 
-.form-label {
-  // label style
+.form-label { // label style
   display: inline-block;
   font-size: var(--text-sm);
   margin-bottom: var(--space-xxxs);
@@ -82,30 +80,6 @@
 .form__msg-error--is-visible {
   position: relative;
   clip: auto;
-}
-
-// custom select element
-:root {
-  --select-icon-size: 1em;
-  --select-icon-right-margin: var(--space-sm);
-}
-
-.select {
-  position: relative;
-
-  select {
-    padding-right: calc(var(--select-icon-size) + var(--select-icon-right-margin) * 2);
-  }
-
-  .icon {
-    width: var(--select-icon-size);
-    height: var(--select-icon-size);
-    position: absolute;
-    right: var(--select-icon-right-margin);
-    top: 50%;
-    transform: translateY(-50%);
-    pointer-events: none;
-  }
 }
 
 // radio and checkbox lists
