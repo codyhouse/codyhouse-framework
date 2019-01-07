@@ -49,6 +49,7 @@ blockquote, q {
 }
 
 .btn, .form-control {
+  background-color: transparent;
   color: inherit;
   line-height: inherit;
   border: 0;
