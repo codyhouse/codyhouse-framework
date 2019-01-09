@@ -18,5 +18,9 @@
     "gulp-sass": "^4.0.2",
     "postcss-calc": "^7.0.1",
     "postcss-css-variables": "git+https://github.com/CodyHouse/postcss-css-variables"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CodyHouse/codyhouse-framework.git"
+  },
 }
