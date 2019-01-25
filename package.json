@@ -1,8 +1,24 @@
 {
   "name": "codyhouse-framework",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "The CodyHouse's framework is a system of SCSS globals representing the base upon which you can build the style of your web project.",
   "main": "index.js",
+  "keywords": [
+    "scss",
+    "css",
+    "framework",
+    "design-system",
+    "html",
+    "front-end",
+    "buttons",
+    "colors",
+    "forms",
+    "grid",
+    "mixins",
+    "spacing",
+    "typography",
+    "codyhouse"
+  ],
   "scripts": {
     "gulp": "gulp",
     "test": "echo \"Error: no test specified\" && exit 1"
