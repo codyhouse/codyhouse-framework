@@ -1,9 +1,9 @@
 :root {
-  --container-width-xs: 37.5rem;
-  --container-width-sm: 45rem;
-  --container-width-md: 64rem;
-  --container-width-lg: 80rem;
-  --container-width-xl: 90rem;
+  --container-width-xs: 37.5rem; // ~600px
+  --container-width-sm: 45rem;   // ~720px
+  --container-width-md: 64rem;   // ~1024px
+  --container-width-lg: 80rem;   // ~1280px
+  --container-width-xl: 90rem;   // ~1440px
 }
 
 // classes used to center content on x-axis and set content max width
@@ -140,6 +140,15 @@ $grid-columns: 12;
   .col--#{$i} {
     flex-basis: round-width($i);
     max-width: round-width($i); 
+  }
+}
+
+@include breakpoint(xs) {
+  @for $i from 1 through $grid-columns {
+    .col--xs-#{$i} {
+      flex-basis: round-width($i);
+      max-width: round-width($i); 
+    }
   }
 }
 
