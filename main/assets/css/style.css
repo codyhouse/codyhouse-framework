@@ -120,13 +120,13 @@ img, video, svg {
   --color-warning-lighter: hsl(46, 100%, 91%);
   --color-warning-a20: hsla(46, 100%, 61%, 0.2);
   --color-bg: hsl(0, 0%, 100%);
+  --color-bg-a00: hsla(0, 0%, 100%, 0);
   --color-contrast-lower: hsl(0, 0%, 95%);
   --color-contrast-low: hsl(0, 0%, 83%);
   --color-contrast-medium: hsl(240, 1%, 47%);
   --color-contrast-high: hsl(255, 4%, 20%);
   --color-contrast-higher: hsl(240, 7%, 12%);
-  --color-bg-a20: hsla(0, 0%, 100%, 0.2);
-  --color-contrast-a90: hsla(240, 7%, 12%, 0.9);
+  --color-contrast-higher-a90: hsla(240, 7%, 12%, 0.9);
   --color-border: var(--color-contrast-low);
 }
 
@@ -381,6 +381,15 @@ img, video, svg {
   padding: var(--space-xl) 0 0 var(--space-xl);
 }
 
+.col {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -ms-flex-preferred-size: 0;
+      flex-basis: 0;
+  max-width: 100%;
+}
+
 .col--1 {
   -ms-flex-preferred-size: 8.33%;
       flex-basis: 8.33%;
@@ -454,6 +463,14 @@ img, video, svg {
 }
 
 @media only screen and (min-width: 30rem) {
+  .col--xs {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    -ms-flex-preferred-size: 0;
+        flex-basis: 0;
+    max-width: 100%;
+  }
   .col--xs-1 {
     -ms-flex-preferred-size: 8.33%;
         flex-basis: 8.33%;
@@ -517,6 +534,14 @@ img, video, svg {
 }
 
 @media only screen and (min-width: 37.5rem) {
+  .col--sm {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    -ms-flex-preferred-size: 0;
+        flex-basis: 0;
+    max-width: 100%;
+  }
   .col--sm-1 {
     -ms-flex-preferred-size: 8.33%;
         flex-basis: 8.33%;
@@ -580,6 +605,14 @@ img, video, svg {
 }
 
 @media only screen and (min-width: 64rem) {
+  .col--md {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    -ms-flex-preferred-size: 0;
+        flex-basis: 0;
+    max-width: 100%;
+  }
   .col--md-1 {
     -ms-flex-preferred-size: 8.33%;
         flex-basis: 8.33%;
@@ -643,6 +676,14 @@ img, video, svg {
 }
 
 @media only screen and (min-width: 80rem) {
+  .col--lg {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    -ms-flex-preferred-size: 0;
+        flex-basis: 0;
+    max-width: 100%;
+  }
   .col--lg-1 {
     -ms-flex-preferred-size: 8.33%;
         flex-basis: 8.33%;
@@ -706,6 +747,14 @@ img, video, svg {
 }
 
 @media only screen and (min-width: 90rem) {
+  .col--xl {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    -ms-flex-preferred-size: 0;
+        flex-basis: 0;
+    max-width: 100%;
+  }
   .col--xl-1 {
     -ms-flex-preferred-size: 8.33%;
         flex-basis: 8.33%;

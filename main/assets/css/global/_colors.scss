@@ -43,13 +43,13 @@
 
   // color contrast
   --color-bg: hsl(0, 0%, 100%);
+  --color-bg-a00: hsla(0, 0%, 100%, 0);
   --color-contrast-lower: hsl(0, 0%, 95%);
   --color-contrast-low: hsl(0, 0%, 83%);
   --color-contrast-medium: hsl(240, 1%, 47%);
   --color-contrast-high: hsl(255, 4%, 20%);
   --color-contrast-higher: hsl(240, 7%, 12%);
-  --color-bg-a20: hsla(0, 0%, 100%, 0.2);
-  --color-contrast-a90: hsla(240, 7%, 12%, 0.9);
+  --color-contrast-higher-a90: hsla(240, 7%, 12%, 0.9);
 
   // semantic
   --color-border: var(--color-contrast-low);

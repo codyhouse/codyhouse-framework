@@ -136,6 +136,16 @@ $grid-columns: 12;
   @return $width#{"%"};
 }
 
+@mixin autoSizedColumn {
+  flex-grow: 1;
+  flex-basis: 0;
+  max-width: 100%;
+}
+
+.col { // auto-sized column
+  @include autoSizedColumn;
+}
+
 @for $i from 1 through $grid-columns {
   .col--#{$i} {
     flex-basis: round-width($i);
@@ -144,6 +154,10 @@ $grid-columns: 12;
 }
 
 @include breakpoint(xs) {
+  .col--xs { // auto-sized column
+    @include autoSizedColumn;
+  }
+
   @for $i from 1 through $grid-columns {
     .col--xs-#{$i} {
       flex-basis: round-width($i);
@@ -153,6 +167,10 @@ $grid-columns: 12;
 }
 
 @include breakpoint(sm) {
+  .col--sm { // auto-sized column
+    @include autoSizedColumn;
+  }
+
   @for $i from 1 through $grid-columns {
     .col--sm-#{$i} {
       flex-basis: round-width($i);
@@ -162,6 +180,10 @@ $grid-columns: 12;
 }
 
 @include breakpoint(md) {
+  .col--md { // auto-sized column
+    @include autoSizedColumn;
+  }
+
   @for $i from 1 through $grid-columns {
     .col--md-#{$i} {
       flex-basis: round-width($i);
@@ -171,6 +193,10 @@ $grid-columns: 12;
 }
 
 @include breakpoint(lg) {
+  .col--lg { // auto-sized column
+    @include autoSizedColumn;
+  }
+
   @for $i from 1 through $grid-columns {
     .col--lg-#{$i} {
       flex-basis: round-width($i);
@@ -180,6 +206,10 @@ $grid-columns: 12;
 }
 
 @include breakpoint(xl) {
+  .col--xl { // auto-sized column
+    @include autoSizedColumn;
+  }
+
   @for $i from 1 through $grid-columns {
     .col--xl-#{$i} {
       flex-basis: round-width($i);
