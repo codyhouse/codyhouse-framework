@@ -87,53 +87,53 @@ img, video, svg {
 }
 
 :root, [data-theme="default"] {
-  --color-primary-darker: hsl(220, 75%, 42%);
-  --color-primary-dark: hsl(220, 80%, 48%);
+  --color-primary-darker: hsl(220, 90%, 36%);
+  --color-primary-dark: hsl(220, 90%, 46%);
   --color-primary: hsl(220, 90%, 56%);
-  --color-primary-light: hsl(220, 90%, 63%);
-  --color-primary-lighter: hsl(220, 90%, 92%);
+  --color-primary-light: hsl(220, 90%, 66%);
+  --color-primary-lighter: hsl(220, 90%, 76%);
   --color-primary-a20: hsla(220, 90%, 56%, 0.2);
-  --color-accent-darker: hsl(355, 75%, 48%);
-  --color-accent-dark: hsl(355, 80%, 54%);
+  --color-accent-darker: hsl(355, 90%, 41%);
+  --color-accent-dark: hsl(355, 90%, 51%);
   --color-accent: hsl(355, 90%, 61%);
-  --color-accent-light: hsl(355, 90%, 68%);
-  --color-accent-lighter: hsl(356, 89%, 93%);
-  --color-black: hsl(240, 7%, 12%);
-  --color-black-a10: hsla(240, 7%, 12%, 0.1);
+  --color-accent-light: hsl(355, 90%, 71%);
+  --color-accent-lighter: hsl(355, 90%, 81%);
+  --color-black: hsl(240, 8%, 12%);
+  --color-black-a10: hsla(240, 8%, 12%, 0.1);
   --color-white: hsl(0, 0%, 100%);
-  --color-success-darker: hsl(94, 40%, 45%);
-  --color-success-dark: hsl(94, 45%, 50%);
+  --color-success-darker: hsl(94, 48%, 36%);
+  --color-success-dark: hsl(94, 48%, 46%);
   --color-success: hsl(94, 48%, 56%);
-  --color-success-light: hsl(94, 48%, 62%);
-  --color-success-lighter: hsl(94, 48%, 92%);
+  --color-success-light: hsl(94, 48%, 66%);
+  --color-success-lighter: hsl(94, 48%, 76%);
   --color-success-a20: hsla(94, 48%, 56%, 0.2);
-  --color-error-darker: hsl(355, 75%, 48%);
-  --color-error-dark: hsl(355, 80%, 54%);
+  --color-error-darker: hsl(355, 90%, 41%);
+  --color-error-dark: hsl(355, 90%, 51%);
   --color-error: hsl(355, 90%, 61%);
-  --color-error-light: hsl(355, 90%, 68%);
-  --color-error-lighter: hsl(356, 89%, 93%);
+  --color-error-light: hsl(355, 90%, 71%);
+  --color-error-lighter: hsl(355, 90%, 81%);
   --color-error-a20: hsla(355, 90%, 61%, 0.2);
-  --color-warning-darker: hsl(46, 90%, 50%);
-  --color-warning-dark: hsl(46, 95%, 55%);
+  --color-warning-darker: hsl(46, 100%, 41%);
+  --color-warning-dark: hsl(46, 100%, 51%);
   --color-warning: hsl(46, 100%, 61%);
-  --color-warning-light: hsl(46, 100%, 68%);
-  --color-warning-lighter: hsl(46, 100%, 91%);
+  --color-warning-light: hsl(46, 100%, 71%);
+  --color-warning-lighter: hsl(46, 100%, 81%);
   --color-warning-a20: hsla(46, 100%, 61%, 0.2);
   --color-bg: hsl(0, 0%, 100%);
   --color-bg-a00: hsla(0, 0%, 100%, 0);
   --color-contrast-lower: hsl(0, 0%, 95%);
-  --color-contrast-low: hsl(0, 0%, 83%);
-  --color-contrast-medium: hsl(240, 1%, 47%);
-  --color-contrast-high: hsl(255, 4%, 20%);
-  --color-contrast-higher: hsl(240, 7%, 12%);
-  --color-contrast-higher-a90: hsla(240, 7%, 12%, 0.9);
+  --color-contrast-low: hsl(240, 1%, 83%);
+  --color-contrast-medium: hsl(240, 1%, 48%);
+  --color-contrast-high: hsl(240, 4%, 20%);
+  --color-contrast-higher: hsl(240, 8%, 12%);
+  --color-contrast-higher-a90: hsla(240, 8%, 12%, 0.9);
   --color-border: var(--color-contrast-low);
 }
 
 [data-theme] {
   background-color: hsl(0, 0%, 100%);
   background-color: var(--color-bg);
-  color: hsl(255, 4%, 20%);
+  color: hsl(240, 4%, 20%);
   color: var(--color-contrast-high);
 }
 
@@ -1059,7 +1059,7 @@ body {
   font-size: var(--text-base-size);
   font-family: sans-serif;
   font-family: var(--font-primary);
-  color: hsl(255, 4%, 20%);
+  color: hsl(240, 4%, 20%);
   color: var(--color-contrast-high);
 }
 
@@ -1075,7 +1075,7 @@ body {
 }
 
 h1, h2, h3, h4 {
-  color: hsl(240, 7%, 12%);
+  color: hsl(240, 8%, 12%);
   color: var(--color-contrast-higher);
   line-height: 1.2;
   line-height: var(--heading-line-height);
@@ -1122,7 +1122,7 @@ a {
 }
 
 mark {
-  background-color: hsl(356, 89%, 93%);
+  background-color: hsl(355, 90%, 81%);
   background-color: var(--color-accent-lighter);
   color: inherit;
 }
@@ -1140,7 +1140,7 @@ u {
 }
 
 .text--subtle {
-  color: hsl(240, 1%, 47%);
+  color: hsl(240, 1%, 48%);
   color: var(--color-contrast-medium);
 }
 
@@ -1166,7 +1166,7 @@ u {
 .text-component p, .text-component blockquote, .text-component ul li, .text-component ol li {
   line-height: 1.4;
   line-height: var(--component-body-line-height);
-  color: hsl(255, 4%, 20%);
+  color: hsl(240, 4%, 20%);
   color: var(--color-contrast-high);
 }
 
@@ -1193,12 +1193,12 @@ u {
 
 .text-component blockquote {
   padding-left: 1em;
-  border-left: 4px solid hsl(0, 0%, 83%);
+  border-left: 4px solid hsl(240, 1%, 83%);
   border-left: 4px solid var(--color-contrast-low);
 }
 
 .text-component hr {
-  background: hsl(0, 0%, 83%);
+  background: hsl(240, 1%, 83%);
   background: var(--color-contrast-low);
   height: 1px;
   margin: 2em auto;
@@ -1227,7 +1227,7 @@ u {
   text-align: center;
   font-size: 0.83333em;
   font-size: var(--text-sm);
-  color: hsl(240, 1%, 47%);
+  color: hsl(240, 1%, 48%);
   color: var(--color-contrast-medium);
 }
 
@@ -1281,7 +1281,7 @@ u {
 
 .icon {
   display: inline-block;
-  color: hsl(240, 7%, 12%);
+  color: hsl(240, 8%, 12%);
   color: var(--color-contrast-higher);
   fill: currentColor;
   height: 1em;
@@ -1409,23 +1409,13 @@ u {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.btn--primary:hover {
-  background-color: hsl(220, 90%, 63%);
-  background-color: var(--color-primary-light);
-}
-
 .btn--subtle {
   background-color: hsl(0, 0%, 100%);
   background-color: var(--color-bg);
-  color: hsl(240, 7%, 12%);
+  color: hsl(240, 8%, 12%);
   color: var(--color-contrast-higher);
-  border: 1px solid hsl(0, 0%, 83%);
+  border: 1px solid hsl(240, 1%, 83%);
   border: 1px solid var(--color-contrast-low);
-}
-
-.btn--subtle:hover {
-  background-color: hsl(0, 0%, 95%);
-  background-color: var(--color-contrast-lower);
 }
 
 .btn--accent {
@@ -1435,11 +1425,6 @@ u {
   color: var(--color-white);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-.btn--accent:hover {
-  background-color: hsl(355, 90%, 68%);
-  background-color: var(--color-accent-light);
 }
 
 .btn--disabled {
@@ -1498,7 +1483,7 @@ u {
   padding: var(--space-xs) var(--space-sm);
   background: hsl(0, 0%, 100%);
   background: var(--color-bg);
-  border: 2px solid hsl(0, 0%, 83%);
+  border: 2px solid hsl(240, 1%, 83%);
   border: 2px solid var(--color-contrast-low);
   width: 100%;
 }
@@ -1514,23 +1499,23 @@ u {
 }
 
 .form-control::-webkit-input-placeholder {
-  color: hsl(240, 1%, 47%);
+  color: hsl(240, 1%, 48%);
   color: var(--color-contrast-medium);
 }
 
 .form-control::-moz-placeholder {
   opacity: 1;
-  color: hsl(240, 1%, 47%);
+  color: hsl(240, 1%, 48%);
   color: var(--color-contrast-medium);
 }
 
 .form-control:-ms-input-placeholder {
-  color: hsl(240, 1%, 47%);
+  color: hsl(240, 1%, 48%);
   color: var(--color-contrast-medium);
 }
 
 .form-control:-moz-placeholder {
-  color: hsl(240, 1%, 47%);
+  color: hsl(240, 1%, 48%);
   color: var(--color-contrast-medium);
 }
 
@@ -1551,7 +1536,7 @@ u {
 }
 
 .form-legend {
-  color: hsl(240, 7%, 12%);
+  color: hsl(240, 8%, 12%);
   color: var(--color-contrast-higher);
   line-height: 1.2;
   font-size: 1.2em;
@@ -1657,4 +1642,97 @@ u {
   --zindex-header: 2;
   --zindex-fixed-element: 5;
   --zindex-overlay: 10;
+}
+
+:root {
+  --display: block;
+}
+
+@media only screen and (max-width: 29.95rem) {
+  .display--xs, .display--sm, .display--md, .display--lg, .display--xl {
+    display: none !important;
+  }
+}
+
+@media only screen and (max-width: 37.45rem) {
+  .display--sm, .display--md, .display--lg, .display--xl {
+    display: none !important;
+  }
+}
+
+@media only screen and (max-width: 63.95rem) {
+  .display--md, .display--lg, .display--xl {
+    display: none !important;
+  }
+}
+
+@media only screen and (max-width: 79.95rem) {
+  .display--lg, .display--xl {
+    display: none !important;
+  }
+}
+
+@media only screen and (max-width: 89.95rem) {
+  .display--xl {
+    display: none !important;
+  }
+}
+
+@media only screen and (min-width: 30rem) {
+  .display--xs {
+    display: block !important;
+    display: var(--display) !important;
+  }
+  .hide--xs {
+    display: none !important;
+  }
+}
+
+@media only screen and (min-width: 37.5rem) {
+  .display--sm {
+    display: block !important;
+    display: var(--display) !important;
+  }
+  .hide--sm {
+    display: none !important;
+  }
+}
+
+@media only screen and (min-width: 64rem) {
+  .display--md {
+    display: block !important;
+    display: var(--display) !important;
+  }
+  .hide--md {
+    display: none !important;
+  }
+}
+
+@media only screen and (min-width: 80rem) {
+  .display--lg {
+    display: block !important;
+    display: var(--display) !important;
+  }
+  .hide--lg {
+    display: none !important;
+  }
+}
+
+@media only screen and (min-width: 90rem) {
+  .display--xl {
+    display: block !important;
+    display: var(--display) !important;
+  }
+  .hide--xl {
+    display: none !important;
+  }
+}
+
+.is-visible {
+  display: block !important;
+  display: var(--display) !important;
+}
+
+.is-hidden {
+  display: none !important;
 }

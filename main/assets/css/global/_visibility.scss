@@ -1,0 +1,91 @@
+:root {
+  --display: block;
+}
+
+@media only screen and (max-width: map-get($map: $breakpoints, $key: xs) - 0.05rem) {
+  .display--xs, .display--sm, .display--md, .display--lg, .display--xl {
+    display: none !important;
+  }
+}
+
+@media only screen and (max-width: map-get($map: $breakpoints, $key: sm) - 0.05rem) {
+  .display--sm, .display--md, .display--lg, .display--xl {
+    display: none !important;
+  }
+}
+
+@media only screen and (max-width: map-get($map: $breakpoints, $key: md) - 0.05rem) {
+  .display--md, .display--lg, .display--xl {
+    display: none !important;
+  }
+}
+
+@media only screen and (max-width: map-get($map: $breakpoints, $key: lg) - 0.05rem) {
+  .display--lg, .display--xl {
+    display: none !important;
+  }
+}
+
+@media only screen and (max-width: map-get($map: $breakpoints, $key: xl) - 0.05rem) {
+  .display--xl {
+    display: none !important;
+  }
+}
+
+@include breakpoint(xs) {
+  .display--xs {
+    display: var(--display) !important;
+  }
+
+  .hide--xs {
+    display: none !important;
+  }
+}
+
+@include breakpoint(sm) {
+  .display--sm {
+    display: var(--display) !important;
+  }
+
+  .hide--sm {
+    display: none !important;
+  }
+}
+
+@include breakpoint(md) {
+  .display--md {
+    display: var(--display) !important;
+  }
+
+  .hide--md {
+    display: none !important;
+  }
+}
+
+@include breakpoint(lg) {
+  .display--lg {
+    display: var(--display) !important;
+  }
+
+  .hide--lg {
+    display: none !important;
+  }
+}
+
+@include breakpoint(xl) {
+  .display--xl {
+    display: var(--display) !important;
+  }
+
+  .hide--xl {
+    display: none !important;
+  }
+}
+
+.is-visible {
+  display: var(--display) !important;
+}
+
+.is-hidden {
+  display: none !important;
+}
