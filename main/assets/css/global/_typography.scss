@@ -99,8 +99,8 @@ u {
 }
 
 .text-component {
-  --component-body-line-height: calc(var(--body-line-height) * var(--line-height-multiplier));
-  --component-heading-line-height: calc(var(--heading-line-height) * var(--line-height-multiplier));
+  --component-body-line-height: calc(var(--body-line-height) * var(--line-height-multiplier, 1));
+  --component-heading-line-height: calc(var(--heading-line-height) * var(--line-height-multiplier, 1));
   --line-height-multiplier: 1;
   --text-vspace-multiplier: 1;
 
@@ -165,7 +165,7 @@ u {
 
 // images
 .text-component__img {
-  margin-bottom: calc(var(--space-md) * var(--text-vspace-multiplier));
+  margin-bottom: calc(var(--space-md) * var(--text-vspace-multiplier, 1));
   text-align: center;
 
   figcaption {
@@ -182,12 +182,12 @@ u {
 
   .text-component__img--left {
     float: left;
-    margin-right: calc(var(--space-md) * var(--text-vspace-multiplier));
+    margin-right: calc(var(--space-md) * var(--text-vspace-multiplier, 1));
   }
 
   .text-component__img--right {
     float: right;
-    margin-left: calc(var(--space-md) * var(--text-vspace-multiplier));
+    margin-left: calc(var(--space-md) * var(--text-vspace-multiplier, 1));
   }
 }
 
