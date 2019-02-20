@@ -6,6 +6,10 @@ $breakpoints: (
   xl: 90rem    // ~1440px
 );
 
-@mixin breakpoint($breakpoint) {
-  @media only screen and (min-width: map-get($map: $breakpoints, $key: $breakpoint)) { @content; } 
+@mixin breakpoint($breakpoint, $logic: false) {
+  @if( $logic ) {
+    @media #{$logic} and (min-width: map-get($map: $breakpoints, $key: $breakpoint)) { @content; }
+  } @else {
+    @media (min-width: map-get($map: $breakpoints, $key: $breakpoint)) { @content; }
+  }
 }

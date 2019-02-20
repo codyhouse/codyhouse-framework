@@ -154,7 +154,7 @@ img, video, svg {
 }
 
 @supports (--css: variables) {
-  @media only screen and (min-width: 64rem) {
+  @media (min-width: 64rem) {
     body {
       --space-unit:  1.25em;
     }
@@ -462,7 +462,7 @@ img, video, svg {
   max-width: 100%;
 }
 
-@media only screen and (min-width: 30rem) {
+@media (min-width: 30rem) {
   .col--xs {
     -webkit-box-flex: 1;
         -ms-flex-positive: 1;
@@ -533,7 +533,7 @@ img, video, svg {
   }
 }
 
-@media only screen and (min-width: 37.5rem) {
+@media (min-width: 37.5rem) {
   .col--sm {
     -webkit-box-flex: 1;
         -ms-flex-positive: 1;
@@ -604,7 +604,7 @@ img, video, svg {
   }
 }
 
-@media only screen and (min-width: 64rem) {
+@media (min-width: 64rem) {
   .col--md {
     -webkit-box-flex: 1;
         -ms-flex-positive: 1;
@@ -675,7 +675,7 @@ img, video, svg {
   }
 }
 
-@media only screen and (min-width: 80rem) {
+@media (min-width: 80rem) {
   .col--lg {
     -webkit-box-flex: 1;
         -ms-flex-positive: 1;
@@ -746,7 +746,7 @@ img, video, svg {
   }
 }
 
-@media only screen and (min-width: 90rem) {
+@media (min-width: 90rem) {
   .col--xl {
     -webkit-box-flex: 1;
         -ms-flex-positive: 1;
@@ -1046,7 +1046,7 @@ img, video, svg {
 }
 
 @supports (--css: variables) {
-  @media only screen and (min-width: 64rem) {
+  @media (min-width: 64rem) {
     body {
       --text-base-size: 1.25em;
       --text-scale-ratio: 1.25;
@@ -1065,7 +1065,7 @@ body {
 
 @supports (--css: variables) {
 
-  @media only screen and (min-width: 64rem) {
+  @media (min-width: 64rem) {
 
     body {
   font-size: 1.25em;
@@ -1231,7 +1231,7 @@ u {
   color: var(--color-contrast-medium);
 }
 
-@media only screen and (min-width: 37.5rem) {
+@media (min-width: 37.5rem) {
   .text-component__img--left, .text-component__img--right {
     width: 45%;
   }
@@ -1247,7 +1247,7 @@ u {
   }
 }
 
-@media only screen and (min-width: 90rem) {
+@media (min-width: 90rem) {
   .text-component__img--outset {
     width: calc(100% + 10.5em);
     width: calc(100% + 2*var(--space-xxl));
@@ -1644,88 +1644,68 @@ u {
   --zindex-overlay: 10;
 }
 
-:root {
-  --display: block;
-}
-
-@media only screen and (max-width: 29.95rem) {
-  .display--xs, .display--sm, .display--md, .display--lg, .display--xl {
-    display: none !important;
-  }
-}
-
-@media only screen and (max-width: 37.45rem) {
-  .display--sm, .display--md, .display--lg, .display--xl {
-    display: none !important;
-  }
-}
-
-@media only screen and (max-width: 63.95rem) {
-  .display--md, .display--lg, .display--xl {
-    display: none !important;
-  }
-}
-
-@media only screen and (max-width: 79.95rem) {
-  .display--lg, .display--xl {
-    display: none !important;
-  }
-}
-
-@media only screen and (max-width: 89.95rem) {
-  .display--xl {
-    display: none !important;
-  }
-}
-
-@media only screen and (min-width: 30rem) {
+@media not all and (min-width: 30rem) {
   .display--xs {
-    display: block !important;
-    display: var(--display) !important;
+    display: none !important;
   }
+}
+
+@media (min-width: 30rem) {
   .hide--xs {
     display: none !important;
   }
 }
 
-@media only screen and (min-width: 37.5rem) {
+@media not all and (min-width: 37.5rem) {
   .display--sm {
-    display: block !important;
-    display: var(--display) !important;
+    display: none !important;
   }
+}
+
+@media (min-width: 37.5rem) {
   .hide--sm {
     display: none !important;
   }
 }
 
-@media only screen and (min-width: 64rem) {
+@media not all and (min-width: 64rem) {
   .display--md {
-    display: block !important;
-    display: var(--display) !important;
+    display: none !important;
   }
+}
+
+@media (min-width: 64rem) {
   .hide--md {
     display: none !important;
   }
 }
 
-@media only screen and (min-width: 80rem) {
+@media not all and (min-width: 80rem) {
   .display--lg {
-    display: block !important;
-    display: var(--display) !important;
+    display: none !important;
   }
+}
+
+@media (min-width: 80rem) {
   .hide--lg {
     display: none !important;
   }
 }
 
-@media only screen and (min-width: 90rem) {
+@media not all and (min-width: 90rem) {
   .display--xl {
-    display: block !important;
-    display: var(--display) !important;
+    display: none !important;
   }
+}
+
+@media (min-width: 90rem) {
   .hide--xl {
     display: none !important;
   }
+}
+
+:root {
+  --display: block;
 }
 
 .is-visible {

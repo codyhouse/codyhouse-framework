@@ -1,85 +1,65 @@
-:root {
-  --display: block;
-}
-
-@media only screen and (max-width: map-get($map: $breakpoints, $key: xs) - 0.05rem) {
-  .display--xs, .display--sm, .display--md, .display--lg, .display--xl {
-    display: none !important;
-  }
-}
-
-@media only screen and (max-width: map-get($map: $breakpoints, $key: sm) - 0.05rem) {
-  .display--sm, .display--md, .display--lg, .display--xl {
-    display: none !important;
-  }
-}
-
-@media only screen and (max-width: map-get($map: $breakpoints, $key: md) - 0.05rem) {
-  .display--md, .display--lg, .display--xl {
-    display: none !important;
-  }
-}
-
-@media only screen and (max-width: map-get($map: $breakpoints, $key: lg) - 0.05rem) {
-  .display--lg, .display--xl {
-    display: none !important;
-  }
-}
-
-@media only screen and (max-width: map-get($map: $breakpoints, $key: xl) - 0.05rem) {
-  .display--xl {
+@include breakpoint(xs, "not all") {
+  .display--xs {
     display: none !important;
   }
 }
 
 @include breakpoint(xs) {
-  .display--xs {
-    display: var(--display) !important;
-  }
-
   .hide--xs {
     display: none !important;
   }
 }
 
-@include breakpoint(sm) {
+@include breakpoint(sm, "not all") {
   .display--sm {
-    display: var(--display) !important;
+    display: none !important;
   }
+}
 
+@include breakpoint(sm) {
   .hide--sm {
     display: none !important;
   }
 }
 
-@include breakpoint(md) {
+@include breakpoint(md, "not all") {
   .display--md {
-    display: var(--display) !important;
+    display: none !important;
   }
+}
 
+@include breakpoint(md) {
   .hide--md {
     display: none !important;
   }
 }
 
-@include breakpoint(lg) {
+@include breakpoint(lg, "not all") {
   .display--lg {
-    display: var(--display) !important;
+    display: none !important;
   }
+}
 
+@include breakpoint(lg) {
   .hide--lg {
     display: none !important;
   }
 }
 
-@include breakpoint(xl) {
+@include breakpoint(xl, "not all") {
   .display--xl {
-    display: var(--display) !important;
+    display: none !important;
   }
+}
 
+@include breakpoint(xl) {
   .hide--xl {
     display: none !important;
   }
+}
+
+:root {
+  --display: block;
 }
 
 .is-visible {
