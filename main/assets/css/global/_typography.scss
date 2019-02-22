@@ -73,8 +73,9 @@ h4, .text--md {
 }
 
 // inline text
-a {
+a, .link {
   color: var(--color-primary);
+  text-decoration: underline;
 }
 
 mark {

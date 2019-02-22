@@ -42,6 +42,11 @@
   display: inline-flex;
   align-items: center;
 
+  > * { // flex fallback
+    display: inline-block;
+    vertical-align: middle;
+  }
+
   > *:nth-child(2) {
     margin-left: var(--space-xxs);
   }

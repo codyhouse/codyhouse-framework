@@ -8,7 +8,7 @@
 # CodyHouse's Framework
 The CodyHouse's framework is a system of SCSS globals representing the base upon which you can build the style of your web project.
 
-[Explore the documentation on codyhouse.co](https://codyhouse.co/ds/get-started).
+[Explore the documentation on codyhouse.co](https://codyhouse.co/ds/get-started)
 
 The framework serves three main purposes:
 
@@ -40,6 +40,7 @@ codyhouse-framework/
     │   │   │   ├── _shared-styles.scss
     │   │   │   ├── _spacing.scss
     │   │   │   ├── _typography.scss
+    │   │   │   ├── _visibility.scss
     │   │   │   └── _z-index.scss
     │   │   ├── _globals.scss
     │   │   ├── style.css
@@ -71,3 +72,21 @@ npm run gulp watch
 The first command will install the modules the framework requires for compiling SCSS into CSS; the second will launch your project on a development server.
 
 If you are new to Gulp, take a look at this [beginners guide](https://css-tricks.com/gulp-for-beginners/).
+
+## Components
+
+CodyHouse's components are HTML, CSS, JS production-ready modules. Each component is accessible, responsive, and work seamlessly with the CodyHouse Framework.
+
+[Explore the Components](https://codyhouse.co/ds/components)
+
+## Global Editors
+
+The Global Editors are web design tools that allow you to set the style of typography elements, color themes, spacing rules, buttons, and forms directly in the browser. They generate SCSS code that is compatible with the CodyHouse framework.
+
+Explore the Editors:
+
+- **Colors** [codyhouse.co/ds/globals/colors](https://codyhouse.co/ds/globals/colors)
+- **Typography** [codyhouse.co/ds/globals/typography](https://codyhouse.co/ds/globals/typography)
+- **Spacing** [codyhouse.co/ds/globals/spacing](https://codyhouse.co/ds/globals/spacing)
+- **Buttons** [codyhouse.co/ds/globals/buttons](https://codyhouse.co/ds/globals/buttons)
+- **Forms** [codyhouse.co/ds/globals/forms](https://codyhouse.co/ds/globals/forms)

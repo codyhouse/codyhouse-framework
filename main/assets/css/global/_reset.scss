@@ -49,12 +49,13 @@ button, input, textarea, select {
   margin: 0;
 }
 
-.btn, .form-control { // reset style for buttons + form controls
+.btn, .form-control, .link, .reset { // reset style of buttons + form controls
   background-color: transparent;
-  color: inherit;
-  line-height: inherit;
+  padding: 0;
   border: 0;
   border-radius: 0;
+  color: inherit;
+  line-height: inherit;
   appearance: none;
 }
 
