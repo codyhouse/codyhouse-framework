@@ -25,7 +25,6 @@
   },
   "author": "Amber Creative Lab <info@ambercreative.co>",
   "license": "MIT",
-  "browserslist": "last 2 versions, > 5%, ie 9-11",
   "devDependencies": {
     "autoprefixer": "^9.4.3",
     "browser-sync": "^2.26.3",

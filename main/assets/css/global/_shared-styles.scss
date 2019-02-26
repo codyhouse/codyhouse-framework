@@ -1,6 +1,11 @@
 :root {
-  // style
+  // radius
   --radius: 0.25em;
+
+  // box shadow
+  --shadow-sm: 0 1px 1px rgba(0, 0, 0, .2), 0 1px 8px rgba(0, 0, 0, .1); // low depth
+  --shadow-md: 0 1px 8px rgba(0, 0, 0, .1), 0 8px 24px rgba(0, 0, 0, .15); // medium depth
+  --shadow-lg: 0 1px 8px rgba(0, 0, 0, .1), 0 16px 48px rgba(0, 0, 0, .1), 0 24px 60px rgba(0, 0, 0, .1); // high depth
 
   // animations
   --transition-bounce: cubic-bezier(.25,1.43,.35,1.69);
