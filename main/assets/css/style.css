@@ -87,46 +87,137 @@ img, video, svg {
 
 :root, [data-theme="default"] {
   --color-primary-darker: hsl(220, 90%, 36%);
+  --color-primary-darker-h: 220;
+  --color-primary-darker-s: 90%;
+  --color-primary-darker-l: 36%;
   --color-primary-dark: hsl(220, 90%, 46%);
+  --color-primary-dark-h: 220;
+  --color-primary-dark-s: 90%;
+  --color-primary-dark-l: 46%;
   --color-primary: hsl(220, 90%, 56%);
+  --color-primary-h: 220;
+  --color-primary-s: 90%;
+  --color-primary-l: 56%;
   --color-primary-light: hsl(220, 90%, 66%);
+  --color-primary-light-h: 220;
+  --color-primary-light-s: 90%;
+  --color-primary-light-l: 66%;
   --color-primary-lighter: hsl(220, 90%, 76%);
-  --color-primary-a20: hsla(220, 90%, 56%, 0.2);
+  --color-primary-lighter-h: 220;
+  --color-primary-lighter-s: 90%;
+  --color-primary-lighter-l: 76%;
   --color-accent-darker: hsl(355, 90%, 41%);
+  --color-accent-darker-h: 355;
+  --color-accent-darker-s: 90%;
+  --color-accent-darker-l: 41%;
   --color-accent-dark: hsl(355, 90%, 51%);
+  --color-accent-dark-h: 355;
+  --color-accent-dark-s: 90%;
+  --color-accent-dark-l: 51%;
   --color-accent: hsl(355, 90%, 61%);
+  --color-accent-h: 355;
+  --color-accent-s: 90%;
+  --color-accent-l: 61%;
   --color-accent-light: hsl(355, 90%, 71%);
+  --color-accent-light-h: 355;
+  --color-accent-light-s: 90%;
+  --color-accent-light-l: 71%;
   --color-accent-lighter: hsl(355, 90%, 81%);
+  --color-accent-lighter-h: 355;
+  --color-accent-lighter-s: 90%;
+  --color-accent-lighter-l: 81%;
   --color-black: hsl(240, 8%, 12%);
-  --color-black-a10: hsla(240, 8%, 12%, 0.1);
+  --color-black-h: 240;
+  --color-black-s: 8%;
+  --color-black-l: 12%;
   --color-white: hsl(0, 0%, 100%);
+  --color-white-h: 0;
+  --color-white-s: 0%;
+  --color-white-l: 100%;
   --color-success-darker: hsl(94, 48%, 36%);
+  --color-success-darker-h: 94;
+  --color-success-darker-s: 48%;
+  --color-success-darker-l: 36%;
   --color-success-dark: hsl(94, 48%, 46%);
+  --color-success-dark-h: 94;
+  --color-success-dark-s: 48%;
+  --color-success-dark-l: 46%;
   --color-success: hsl(94, 48%, 56%);
+  --color-success-h: 94;
+  --color-success-s: 48%;
+  --color-success-l: 56%;
   --color-success-light: hsl(94, 48%, 66%);
+  --color-success-light-h: 94;
+  --color-success-light-s: 48%;
+  --color-success-light-l: 66%;
   --color-success-lighter: hsl(94, 48%, 76%);
-  --color-success-a20: hsla(94, 48%, 56%, 0.2);
+  --color-success-lighter-h: 94;
+  --color-success-lighter-s: 48%;
+  --color-success-lighter-l: 76%;
   --color-error-darker: hsl(355, 90%, 41%);
+  --color-error-darker-h: 355;
+  --color-error-darker-s: 90%;
+  --color-error-darker-l: 41%;
   --color-error-dark: hsl(355, 90%, 51%);
+  --color-error-dark-h: 355;
+  --color-error-dark-s: 90%;
+  --color-error-dark-l: 51%;
   --color-error: hsl(355, 90%, 61%);
+  --color-error-h: 355;
+  --color-error-s: 90%;
+  --color-error-l: 61%;
   --color-error-light: hsl(355, 90%, 71%);
+  --color-error-light-h: 355;
+  --color-error-light-s: 90%;
+  --color-error-light-l: 71%;
   --color-error-lighter: hsl(355, 90%, 81%);
-  --color-error-a20: hsla(355, 90%, 61%, 0.2);
+  --color-error-lighter-h: 355;
+  --color-error-lighter-s: 90%;
+  --color-error-lighter-l: 81%;
   --color-warning-darker: hsl(46, 100%, 41%);
+  --color-warning-darker-h: 46;
+  --color-warning-darker-s: 100%;
+  --color-warning-darker-l: 41%;
   --color-warning-dark: hsl(46, 100%, 51%);
+  --color-warning-dark-h: 46;
+  --color-warning-dark-s: 100%;
+  --color-warning-dark-l: 51%;
   --color-warning: hsl(46, 100%, 61%);
+  --color-warning-h: 46;
+  --color-warning-s: 100%;
+  --color-warning-l: 61%;
   --color-warning-light: hsl(46, 100%, 71%);
+  --color-warning-light-h: 46;
+  --color-warning-light-s: 100%;
+  --color-warning-light-l: 71%;
   --color-warning-lighter: hsl(46, 100%, 81%);
-  --color-warning-a20: hsla(46, 100%, 61%, 0.2);
+  --color-warning-lighter-h: 46;
+  --color-warning-lighter-s: 100%;
+  --color-warning-lighter-l: 81%;
   --color-bg: hsl(0, 0%, 100%);
-  --color-bg-a00: hsla(0, 0%, 100%, 0);
+  --color-bg-h: 0;
+  --color-bg-s: 0%;
+  --color-bg-l: 100%;
   --color-contrast-lower: hsl(0, 0%, 95%);
+  --color-contrast-lower-h: 0;
+  --color-contrast-lower-s: 0%;
+  --color-contrast-lower-l: 95%;
   --color-contrast-low: hsl(240, 1%, 83%);
+  --color-contrast-low-h: 240;
+  --color-contrast-low-s: 1%;
+  --color-contrast-low-l: 83%;
   --color-contrast-medium: hsl(240, 1%, 48%);
+  --color-contrast-medium-h: 240;
+  --color-contrast-medium-s: 1%;
+  --color-contrast-medium-l: 48%;
   --color-contrast-high: hsl(240, 4%, 20%);
+  --color-contrast-high-h: 240;
+  --color-contrast-high-s: 4%;
+  --color-contrast-high-l: 20%;
   --color-contrast-higher: hsl(240, 8%, 12%);
-  --color-contrast-higher-a90: hsla(240, 8%, 12%, 0.9);
-  --color-border: var(--color-contrast-low);
+  --color-contrast-higher-h: 240;
+  --color-contrast-higher-s: 8%;
+  --color-contrast-higher-l: 12%;
 }
 
 [data-theme] {
@@ -1468,8 +1559,15 @@ u {
   outline: none;
   border-color: hsl(220, 90%, 56%);
   border-color: var(--color-primary);
+  --color-shadow: hsla(220, 90%, 56%, 0.2);
+  --color-shadow: hsla(var(--color-primary-h), var(--color-primary-s), var(--color-primary-l), 0.2);
+  box-shadow: undefined;
+  box-shadow: 0 0 0 3px var(--color-shadow);
+}
+
+.form-control:focus:focus {
   box-shadow: 0 0 0 3px hsla(220, 90%, 56%, 0.2);
-  box-shadow: 0 0 0 3px var(--color-primary-a20);
+  box-shadow: 0 0 0 3px var(--color-shadow);
 }
 
 .form-control::-webkit-input-placeholder {
@@ -1503,8 +1601,15 @@ u {
 }
 
 .form-control[aria-invalid="true"]:focus {
+  --color-shadow: hsla(355, 90%, 61%, 0.2);
+  --color-shadow: hsla(var(--color-error-h), var(--color-error-s), var(--color-error-l), 0.2);
+  box-shadow: undefined;
+  box-shadow: 0 0 0 3px var(--color-shadow);
+}
+
+.form-control[aria-invalid="true"]:focus:focus {
   box-shadow: 0 0 0 3px hsla(355, 90%, 61%, 0.2);
-  box-shadow: 0 0 0 3px var(--color-error-a20);
+  box-shadow: 0 0 0 3px var(--color-shadow);
 }
 
 .form-legend {

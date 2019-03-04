@@ -7,7 +7,8 @@
   &:focus {
     outline: none;
     border-color: var(--color-primary);
-    box-shadow: 0 0 0 3px var(--color-primary-a20);
+    --color-shadow: hsla(var(--color-primary-h), var(--color-primary-s), var(--color-primary-l), 0.2); // fix iOS 12 bug
+    box-shadow: 0 0 0 3px var(--color-shadow);
   }
 
   &::-webkit-input-placeholder {
@@ -36,7 +37,8 @@
   border-color: var(--color-error);
 
   &:focus {
-    box-shadow: 0 0 0 3px var(--color-error-a20);
+    --color-shadow: hsla(var(--color-error-h), var(--color-error-s), var(--color-error-l), 0.2); // fix iOS 12 bug
+    box-shadow: 0 0 0 3px var(--color-shadow);
   }
 }
 

@@ -37,7 +37,12 @@
   max-width: var(--container-width-xl);
 }
 
-// IE fallback for CSS Grid
+// --------------------------------
+
+// Grid system based on CSS Grid + IE fallback
+
+// --------------------------------
+
 @mixin gridFallback($gap: null) {
   display: flex;
   flex-wrap: wrap;

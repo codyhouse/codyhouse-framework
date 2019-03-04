@@ -1,58 +1,47 @@
 :root, [data-theme="default"] {
   // main
-  --color-primary-darker: hsl(220, 90%, 36%);
-  --color-primary-dark: hsl(220, 90%, 46%);
-  --color-primary: hsl(220, 90%, 56%);
-  --color-primary-light: hsl(220, 90%, 66%);
-  --color-primary-lighter: hsl(220, 90%, 76%);
-  --color-primary-a20: hsla(220, 90%, 56%, 0.2);
+  @include defineColorHSL(--color-primary-darker, 220, 90%, 36%);
+  @include defineColorHSL(--color-primary-dark, 220, 90%, 46%);
+  @include defineColorHSL(--color-primary, 220, 90%, 56%);
+  @include defineColorHSL(--color-primary-light, 220, 90%, 66%);
+  @include defineColorHSL(--color-primary-lighter, 220, 90%, 76%);
 
-  --color-accent-darker: hsl(355, 90%, 41%);
-  --color-accent-dark: hsl(355, 90%, 51%);
-  --color-accent: hsl(355, 90%, 61%);
-  --color-accent-light: hsl(355, 90%, 71%);
-  --color-accent-lighter: hsl(355, 90%, 81%);
+  @include defineColorHSL(--color-accent-darker, 355, 90%, 41%);
+  @include defineColorHSL(--color-accent-dark, 355, 90%, 51%);
+  @include defineColorHSL(--color-accent, 355, 90%, 61%);
+  @include defineColorHSL(--color-accent-light, 355, 90%, 71%);
+  @include defineColorHSL(--color-accent-lighter, 355, 90%, 81%);
 
   // black + white
-  --color-black: hsl(240, 8%, 12%);
-  --color-black-a10: hsla(240, 8%, 12%, 0.1);
-  
-  --color-white: hsl(0, 0%, 100%);
+  @include defineColorHSL(--color-black, 240, 8%, 12%);
+  @include defineColorHSL(--color-white, 0, 0%, 100%);
 
   // feedback
-  --color-success-darker: hsl(94, 48%, 36%);
-  --color-success-dark: hsl(94, 48%, 46%);
-  --color-success: hsl(94, 48%, 56%);
-  --color-success-light: hsl(94, 48%, 66%);
-  --color-success-lighter: hsl(94, 48%, 76%);
-  --color-success-a20: hsla(94, 48%, 56%, 0.2);
+  @include defineColorHSL(--color-success-darker, 94, 48%, 36%);
+  @include defineColorHSL(--color-success-dark, 94, 48%, 46%);
+  @include defineColorHSL(--color-success, 94, 48%, 56%);
+  @include defineColorHSL(--color-success-light, 94, 48%, 66%);
+  @include defineColorHSL(--color-success-lighter, 94, 48%, 76%);
 
-  --color-error-darker: hsl(355, 90%, 41%);
-  --color-error-dark: hsl(355, 90%, 51%);
-  --color-error: hsl(355, 90%, 61%);
-  --color-error-light: hsl(355, 90%, 71%);
-  --color-error-lighter: hsl(355, 90%, 81%);
-  --color-error-a20: hsla(355, 90%, 61%, 0.2);
+  @include defineColorHSL(--color-error-darker, 355, 90%, 41%);
+  @include defineColorHSL(--color-error-dark, 355, 90%, 51%);
+  @include defineColorHSL(--color-error, 355, 90%, 61%);
+  @include defineColorHSL(--color-error-light, 355, 90%, 71%);
+  @include defineColorHSL(--color-error-lighter, 355, 90%, 81%);
 
-  --color-warning-darker: hsl(46, 100%, 41%);
-  --color-warning-dark: hsl(46, 100%, 51%);
-  --color-warning: hsl(46, 100%, 61%);
-  --color-warning-light: hsl(46, 100%, 71%);
-  --color-warning-lighter: hsl(46, 100%, 81%);
-  --color-warning-a20: hsla(46, 100%, 61%, 0.2);
+  @include defineColorHSL(--color-warning-darker, 46, 100%, 41%);
+  @include defineColorHSL(--color-warning-dark, 46, 100%, 51%);
+  @include defineColorHSL(--color-warning, 46, 100%, 61%);
+  @include defineColorHSL(--color-warning-light, 46, 100%, 71%);
+  @include defineColorHSL(--color-warning-lighter, 46, 100%, 81%);
 
-  // color contrast
-  --color-bg: hsl(0, 0%, 100%);
-  --color-bg-a00: hsla(0, 0%, 100%, 0);
-  --color-contrast-lower: hsl(0, 0%, 95%);
-  --color-contrast-low: hsl(240, 1%, 83%);
-  --color-contrast-medium: hsl(240, 1%, 48%);
-  --color-contrast-high: hsl(240, 4%, 20%);
-  --color-contrast-higher: hsl(240, 8%, 12%);
-  --color-contrast-higher-a90: hsla(240, 8%, 12%, 0.9);
-
-  // semantic
-  --color-border: var(--color-contrast-low);
+  // color contrasts
+  @include defineColorHSL(--color-bg, 0, 0%, 100%);
+  @include defineColorHSL(--color-contrast-lower, 0, 0%, 95%);
+  @include defineColorHSL(--color-contrast-low, 240, 1%, 83%);
+  @include defineColorHSL(--color-contrast-medium, 240, 1%, 48%);
+  @include defineColorHSL(--color-contrast-high, 240, 4%, 20%);
+  @include defineColorHSL(--color-contrast-higher, 240, 8%, 12%);
 }
 
 [data-theme] {
