@@ -9,4 +9,8 @@
 
   // animations
   --transition-bounce: cubic-bezier(.25,1.43,.35,1.69);
+  // https://github.com/ai/easings.net
+  --transition-ease-in-out: cubic-bezier(0.645, 0.045, 0.355, 1);
+  --transition-ease-in: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  --transition-ease-out: cubic-bezier(0.215, 0.61, 0.355, 1);
 }
