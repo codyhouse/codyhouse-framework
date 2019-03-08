@@ -1465,8 +1465,6 @@ u {
   border-radius: 0.25em;
   font-size: 1em;
   font-size: var(--btn-font-size);
-  color: hsl(220, 90%, 56%);
-  color: var(--color-primary);
   -ms-flex-pack: center;
       justify-content: center;
   -ms-flex-align: center;
@@ -1483,8 +1481,6 @@ u {
 }
 
 .btn--subtle {
-  background-color: hsl(0, 0%, 100%);
-  background-color: var(--color-bg);
   color: hsl(240, 8%, 12%);
   color: var(--color-contrast-higher);
   border: 1px solid hsl(240, 1%, 83%);

@@ -15,7 +15,6 @@
   padding: var(--space-xs) var(--space-sm);
   border-radius: 0.25em;
   font-size: var(--btn-font-size);
-  color: var(--color-primary);
   justify-content: center;
   align-items: center;
 }
@@ -28,7 +27,6 @@
 }
 
 .btn--subtle { // subtle version, used for secondary actions or in combo with primary/accent button
-  background-color: var(--color-bg);
   color: var(--color-contrast-higher);
   border: 1px solid var(--color-contrast-low);
 }
