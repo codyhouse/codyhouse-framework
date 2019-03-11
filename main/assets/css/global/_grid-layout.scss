@@ -37,6 +37,19 @@
   max-width: var(--container-width-xl);
 }
 
+// alt approach - max-width is updated at specific breakpoints
+.container--adaptive {
+  max-width: var(--container-width-xs);
+
+  @include breakpoint(md) {
+    max-width: var(--container-width-md);
+  }
+
+  @include breakpoint(xl) {
+    max-width: var(--container-width-lg);
+  }
+}
+
 // --------------------------------
 
 // Grid system based on CSS Grid + IE fallback

@@ -405,6 +405,25 @@ img, video, svg {
   max-width: var(--container-width-xl);
 }
 
+.container--adaptive {
+  max-width: 37.5rem;
+  max-width: var(--container-width-xs);
+}
+
+@media (min-width: 64rem) {
+  .container--adaptive {
+    max-width: 64rem;
+    max-width: var(--container-width-md);
+  }
+}
+
+@media (min-width: 90rem) {
+  .container--adaptive {
+    max-width: 80rem;
+    max-width: var(--container-width-lg);
+  }
+}
+
 .grid {
   display: -ms-flexbox;
   display: flex;
@@ -1789,4 +1808,17 @@ u {
 
 .is-hidden {
   display: none !important;
+}
+
+.sr-only {
+  position: absolute;
+  clip: rect(1px, 1px, 1px, 1px);
+  -webkit-clip-path: inset(50%);
+          clip-path: inset(50%);
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  padding: 0;
+  border: 0;
+  white-space: nowrap;
 }

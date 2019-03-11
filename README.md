@@ -28,6 +28,7 @@ codyhouse-framework/
     ├── assets/
     │   ├── css/
     │   │   ├── globals/
+    │   │   │   ├── _accessibility.scss
     │   │   │   ├── _alignment.scss
     │   │   │   ├── _breakpoints.scss
     │   │   │   ├── _buttons.scss
