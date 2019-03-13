@@ -50,6 +50,22 @@
   }
 }
 
+.container--adaptive-sm {
+  max-width: var(--container-width-xs);
+
+  @include breakpoint(md) {
+    max-width: var(--container-width-sm);
+  }
+}
+
+.container--adaptive-md {
+  max-width: var(--container-width-xs);
+
+  @include breakpoint(md) {
+    max-width: var(--container-width-md);
+  }
+}
+
 // --------------------------------
 
 // Grid system based on CSS Grid + IE fallback

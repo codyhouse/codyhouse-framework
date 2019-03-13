@@ -95,8 +95,12 @@ u {
   text-decoration: underline;
 }
 
-.text--subtle {
+.text--subtle, .text-component .text--subtle {
   color: var(--color-contrast-medium);
+}
+
+.text--inherit, .text-component .text--inherit {
+  color: inherit;
 }
 
 .text-component {
