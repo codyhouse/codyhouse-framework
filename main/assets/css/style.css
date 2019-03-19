@@ -1396,6 +1396,10 @@ u {
   white-space: nowrap;
 }
 
+.text--center {
+  text-align: center;
+}
+
 :root {
   --icon-xs: 16px;
   --icon-sm: 24px;
