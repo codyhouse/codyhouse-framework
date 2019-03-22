@@ -227,7 +227,7 @@ img, video, svg {
   color: var(--color-contrast-high);
 }
 
-:root, body {
+:root {
   --space-unit:  1em;
   --space-xxxxs: calc(0.125*var(--space-unit));
   --space-xxxs:  calc(0.25*var(--space-unit));
@@ -240,12 +240,12 @@ img, video, svg {
   --space-xxl:   calc(5.25*var(--space-unit));
   --space-xxxl:  calc(8.5*var(--space-unit));
   --space-xxxxl: calc(13.75*var(--space-unit));
-  --component-padding: var(--space-sm);
+  --component-padding: var(--space-md);
 }
 
 @supports (--css: variables) {
   @media (min-width: 64rem) {
-    body {
+    :root {
       --space-unit:  1.25em;
     }
   }
@@ -370,7 +370,7 @@ img, video, svg {
 }
 
 .container {
-  width: calc(100% - 0.75em);
+  width: calc(100% - 1.25em);
   width: calc(100% - 2*var(--component-padding));
   margin-left: auto;
   margin-right: auto;
@@ -1149,7 +1149,7 @@ img, video, svg {
   --transition-ease-out: cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
-:root, body {
+:root {
   --font-primary: sans-serif;
   --text-base-size: 1em;
   --text-scale-ratio: 1.2;
@@ -1167,7 +1167,7 @@ img, video, svg {
 
 @supports (--css: variables) {
   @media (min-width: 64rem) {
-    body {
+    :root {
       --text-base-size: 1.25em;
       --text-scale-ratio: 1.25;
     }
@@ -1181,17 +1181,6 @@ body {
   font-family: var(--font-primary);
   color: hsl(240, 4%, 20%);
   color: var(--color-contrast-high);
-}
-
-@supports (--css: variables) {
-
-  @media (min-width: 64rem) {
-
-    body {
-  font-size: 1.25em;
-  font-size: var(--text-base-size);
-    }
-  }
 }
 
 h1, h2, h3, h4 {

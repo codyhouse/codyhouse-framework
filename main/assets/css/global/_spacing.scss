@@ -1,4 +1,4 @@
-:root, body {
+:root {
   --space-unit:  1em;
   --space-xxxxs: calc(0.125 * var(--space-unit)); 
   --space-xxxs:  calc(0.25 * var(--space-unit));
@@ -11,13 +11,13 @@
   --space-xxl:   calc(5.25 * var(--space-unit));
   --space-xxxl:  calc(8.5 * var(--space-unit));
   --space-xxxxl: calc(13.75 * var(--space-unit));
-  --component-padding: var(--space-sm);
+  --component-padding: var(--space-md);
 }
 
 // optional - edit space unit and padding of all components at a specific breakpoint
 @supports(--css: variables) {
-  @include breakpoint(md) {
-    body {
+  :root {
+    @include breakpoint(md) {
       --space-unit:  1.25em;
     }
   }

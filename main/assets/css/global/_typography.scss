@@ -1,4 +1,4 @@
-:root, body {
+:root {
   // font family
   --font-primary: sans-serif;
 
@@ -24,8 +24,8 @@
 }
 
 @supports(--css: variables) {
-  @include breakpoint(md) {
-    body {
+  :root {
+    @include breakpoint(md) {
       --text-base-size: 1.25em;
       --text-scale-ratio: 1.25;
     }
