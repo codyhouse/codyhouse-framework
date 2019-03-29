@@ -246,8 +246,7 @@ u {
 }
 
 // utility classes
-.truncate {
-  // truncate text if it exceeds its parent
+.truncate { // truncate text if it exceeds its parent
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -255,4 +254,11 @@ u {
 
 .text--center {
   text-align: center;
+}
+
+.text--replace { // replace text with img
+  overflow: hidden;
+  color: transparent;
+  text-indent: 100%;
+  white-space: nowrap;
 }

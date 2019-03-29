@@ -1437,6 +1437,13 @@ u {
   text-align: center;
 }
 
+.text--replace {
+  overflow: hidden;
+  color: transparent;
+  text-indent: 100%;
+  white-space: nowrap;
+}
+
 :root {
   --icon-xs: 16px;
   --icon-sm: 24px;
