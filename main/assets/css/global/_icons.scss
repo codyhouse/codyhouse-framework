@@ -1,10 +1,12 @@
 :root {
   // size
-  --icon-xs: 16px;
-  --icon-sm: 24px;
-  --icon-md: 32px;
-  --icon-lg: 48px;
-  --icon-xl: 64px;
+  --icon-xxs: 12px;
+  --icon-xs:  16px;
+  --icon-sm:  24px;
+  --icon-md:  32px;
+  --icon-lg:  48px;
+  --icon-xl:  64px;
+  --icon-xxl: 128px;
 }
 
 .icon {
@@ -17,6 +19,10 @@
 }
 
 // icon size
+.icon--xxs {
+  font-size: var(--icon-xxs);
+}
+
 .icon--xs {
   font-size: var(--icon-xs);
 }
@@ -37,6 +43,10 @@
     font-size: var(--icon-xl);
 }
 
+.icon--xxl {
+    font-size: var(--icon-xxl);
+}
+
 // align icon and text 
 .icon-text { // add this class to parent element that contains icon + text elements
   display: inline-flex;
@@ -51,9 +61,21 @@
     flex-shrink: 0;
   }
 
-  &.icon-text-gap--none {
+  &.icon-text--gap-none {
     > *:nth-child(2) {
       margin-left: 0;
+    }
+  }
+
+  &.icon-text--gap-xxxs {
+    > *:nth-child(2) {
+      margin-left: var(--space-xxxs);
+    }
+  }
+
+  &.icon-text--gap-xxxxs {
+    > *:nth-child(2) {
+      margin-left: var(--space-xxxxs);
     }
   }
 }

@@ -168,6 +168,12 @@ u {
   --text-vspace-multiplier: 1.2; // increase vertical spacing
 }
 
+// text block container
+.text-component__block--full-width {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+}
+
 // image container
 .text-component__img {
   text-align: center;
