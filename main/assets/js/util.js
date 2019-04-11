@@ -49,6 +49,24 @@ Util.getChildrenByClassName = function(el, className) {
   return childrenByClass;
 };
 
+Util.is = function(elem, selector) {
+  if(selector.nodeType){
+    return elem === selector;
+  }
+
+  var qa = (typeof(selector) === 'string' ? document.querySelectorAll(selector) : selector),
+    length = qa.length,
+    returnArr = [];
+
+  while(length--){
+    if(qa[length] === elem){
+      return true;
+    }
+  }
+
+  return false;
+};
+
 /* 
 	Animate height of an element
 */
@@ -60,7 +78,7 @@ Util.setHeight = function(start, to, element, duration, cb) {
     if (!currentTime) currentTime = timestamp;         
     var progress = timestamp - currentTime;
     var val = parseInt((progress/duration)*change + start);
-    element.setAttribute("style", "height:"+val+"px;");
+    element.style.height = val+"px";
     if(progress < duration) {
         window.requestAnimationFrame(animateHeight);
     } else {
@@ -69,7 +87,7 @@ Util.setHeight = function(start, to, element, duration, cb) {
   };
   
   //set the height of the element before starting animation -> fix bug on Safari
-  element.setAttribute("style", "height:"+start+"px;");
+  element.style.height = start+"px";
   window.requestAnimationFrame(animateHeight);
 };
 
@@ -126,6 +144,44 @@ Util.cssSupports = function(property, value) {
     var jsProperty = property.replace(/-([a-z])/g, function (g) { return g[1].toUpperCase();});
     return jsProperty in document.body.style;
   }
+};
+
+// merge a set of user options into plugin defaults
+// https://gomakethings.com/vanilla-javascript-version-of-jquery-extend/
+Util.extend = function() {
+  // Variables
+  var extended = {};
+  var deep = false;
+  var i = 0;
+  var length = arguments.length;
+
+  // Check if a deep merge
+  if ( Object.prototype.toString.call( arguments[0] ) === '[object Boolean]' ) {
+    deep = arguments[0];
+    i++;
+  }
+
+  // Merge the object into the extended object
+  var merge = function (obj) {
+    for ( var prop in obj ) {
+      if ( Object.prototype.hasOwnProperty.call( obj, prop ) ) {
+        // If deep merge and property is an object, merge properties
+        if ( deep && Object.prototype.toString.call(obj[prop]) === '[object Object]' ) {
+          extended[prop] = extend( true, extended[prop], obj[prop] );
+        } else {
+          extended[prop] = obj[prop];
+        }
+      }
+    }
+  };
+
+  // Loop through each object and conduct a merge
+  for ( ; i < length; i++ ) {
+    var obj = arguments[i];
+    merge(obj);
+  }
+
+  return extended;
 };
 
 /* 
