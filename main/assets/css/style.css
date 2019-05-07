@@ -1526,6 +1526,13 @@ u {
   margin-left: var(--space-xxxxs);
 }
 
+.icon-text--space-between {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+}
+
 .icon--is-spinning {
   -webkit-animation: icon-spin 1s infinite linear;
           animation: icon-spin 1s infinite linear;

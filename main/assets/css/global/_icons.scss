@@ -80,6 +80,11 @@
   }
 }
 
+.icon-text--space-between {
+  display: flex;
+  justify-content: space-between;
+}
+
 .icon--is-spinning {
   //add this class to rotate the icon infinitely 
   animation: icon-spin 1s infinite linear;
