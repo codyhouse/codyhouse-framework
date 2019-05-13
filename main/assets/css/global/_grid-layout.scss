@@ -176,8 +176,8 @@ $grid-columns: 12;
 
 @function round-width ($i) {
   //function used to round width to a number with 2 decimal places - used for IE fallback
-  $width : floor(100 * $i * 100/ $grid-columns) / 100;
-  @return $width#{"%"};
+  $width : floor(100% * $i * 100/ $grid-columns) / 100;
+  @return $width;
 }
 
 @mixin autoSizedColumn {
