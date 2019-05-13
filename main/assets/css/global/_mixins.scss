@@ -83,3 +83,25 @@
   }
   @return $string;
 }
+
+// --------------------------------
+
+// Edit Units
+
+// --------------------------------
+
+@mixin spaceUnit($space-unit) { // edit space unit on a component level
+  --space-unit:  #{$space-unit};
+  --space-xxxxs: calc(0.125 * #{$space-unit});
+  --space-xxxs:  calc(0.25 * #{$space-unit});
+  --space-xxs:   calc(0.375 * #{$space-unit});
+  --space-xs:    calc(0.5 * #{$space-unit});
+  --space-sm:    calc(0.75 * #{$space-unit});
+  --space-md:    calc(1.25 * #{$space-unit});
+  --space-lg:    calc(2 * #{$space-unit});
+  --space-xl:    calc(3.25 * #{$space-unit});
+  --space-xxl:   calc(5.25 * #{$space-unit});
+  --space-xxxl:  calc(8.5 * #{$space-unit});
+  --space-xxxxl: calc(13.75 * #{$space-unit});
+  --component-padding: var(--space-md);
+}
