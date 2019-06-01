@@ -1303,8 +1303,10 @@ u, .text-underline {
   padding: 0.5em 0.75em;
   padding: var(--space-xs) var(--space-sm);
   border-radius: 0.25em;
-  box-shadow: 0 4px 16px hsla(240, 8%, 12%, 0.15);
-  box-shadow: 0 4px 16px hsla(var(--color-black-h), var(--color-black-s), var(--color-black-l), 0.15);
+  --color-shadow: hsla(240, 8%, 12%, 0.15);
+  --color-shadow: hsla(var(--color-black-h), var(--color-black-s), var(--color-black-l), 0.15);
+  box-shadow: 0 4px 16px 0 hsla(240, 8%, 12%, 0.15);
+  box-shadow: 0 4px 16px 0 var(--color-shadow);
   white-space: nowrap;
   text-decoration: none;
   line-height: 1;

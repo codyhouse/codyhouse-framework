@@ -13,7 +13,8 @@
   align-items: center;
   padding: var(--space-xs) var(--space-sm);
   border-radius: 0.25em;
-  box-shadow: 0 4px 16px alpha(var(--color-black), 0.15);
+  --color-shadow: hsla(var(--color-black-h), var(--color-black-s), var(--color-black-l), 0.15);
+  box-shadow: 0 4px 16px 0 var(--color-shadow);
   white-space: nowrap;
   text-decoration: none;
   line-height: 1;
