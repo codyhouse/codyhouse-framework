@@ -44,31 +44,31 @@ h1, h2, h3, h4 {
 }
 
 // text size
-.text--xxxl {
+.text-xxxl, .text--xxxl {
   font-size: var(--text-xxxl);
 }
 
-h1, .text--xxl {
+h1, .text-xxl, .text--xxl {
   font-size: var(--text-xxl);
 }
 
-h2, .text--xl {
+h2, .text-xl, .text--xl {
   font-size: var(--text-xl);
 }
 
-h3, .text--lg {
+h3, .text-lg, .text--lg {
   font-size: var(--text-lg);
 }
 
-h4, .text--md {
+h4, .text-md, .text--md {
   font-size: var(--text-md);
 }
 
-.text--sm, small {
+small, .text-sm, .text--sm  {
   font-size: var(--text-sm);
 }
 
-.text--xs {
+.text-xs, .text--xs {
   font-size: var(--text-xs);
 }
 
@@ -83,7 +83,7 @@ mark {
   color: inherit;
 }
 
-strong {
+strong, .text-bold {
   font-weight: bold;
 }
 
@@ -91,16 +91,8 @@ s {
   text-decoration: line-through;
 }
 
-u {
+u, .text-underline {
   text-decoration: underline;
-}
-
-.text--subtle, .text-component .text--subtle {
-  color: var(--color-contrast-medium);
-}
-
-.text--inherit, .text-component .text--inherit {
-  color: inherit;
 }
 
 .text-component {
@@ -120,7 +112,6 @@ u {
 
   p, blockquote, ul li, ol li {
     line-height: var(--component-body-line-height);
-    color: var(--color-contrast-high);
   }
   
   ul, ol, p, blockquote, .text-component__block, .text-component__img {
@@ -242,20 +233,19 @@ u {
   }
 }
 
-// utility classes
-.truncate { // truncate text if it exceeds its parent
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+// color
+.color-contrast-medium, .text--subtle {
+  color: var(--color-contrast-medium);
 }
 
-.text--center {
-  text-align: center;
+.color-inherit, .text--inherit {
+  color: inherit;
 }
 
-.text--replace { // replace text with img
-  overflow: hidden;
-  color: transparent;
-  text-indent: 100%;
-  white-space: nowrap;
-}
+.color-contrast-high { color: var(--color-contrast-high); }
+.color-contrast-higher { color: var(--color-contrast-higher); }
+.color-primary { color: var(--color-primary); }
+.color-accent { color: var(--color-accent); }
+.color-success { color: var(--color-success); }
+.color-warning { color: var(--color-warning); }
+.color-error { color: var(--color-error); }

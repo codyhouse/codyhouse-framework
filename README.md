@@ -6,7 +6,7 @@
 
 
 # CodyHouse's Framework
-The CodyHouse's framework is a system of SCSS globals representing the base upon which you can build the style of your web project.
+A solid system of SCSS globals to build responsive and accessible web projects.
 
 [Explore the documentation on codyhouse.co](https://codyhouse.co/ds/get-started)
 
@@ -29,12 +29,12 @@ codyhouse-framework/
     │   ├── css/
     │   │   ├── globals/
     │   │   │   ├── _accessibility.scss
-    │   │   │   ├── _alignment.scss
     │   │   │   ├── _breakpoints.scss
     │   │   │   ├── _buttons.scss
     │   │   │   ├── _colors.scss
     │   │   │   ├── _forms.scss
     │   │   │   ├── _grid-layout.scss
+    │   │   │   ├── _helpers.scss
     │   │   │   ├── _icons.scss
     │   │   │   ├── _mixins.scss
     │   │   │   ├── _reset.scss

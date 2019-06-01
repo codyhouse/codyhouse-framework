@@ -11,44 +11,26 @@
 
 .icon {
   display: inline-block;
-  color: var(--color-contrast-higher);
+  color: inherit;
   fill: currentColor;
   height: 1em;
   width: 1em;
   line-height: 1;
+  flex-shrink: 0;
 }
 
 // icon size
-.icon--xxs {
-  font-size: var(--icon-xxs);
-}
-
-.icon--xs {
-  font-size: var(--icon-xs);
-}
-
-.icon--sm {
-  font-size: var(--icon-sm);
-}
-
-.icon--md {
-  font-size: var(--icon-md);
-}
-
-.icon--lg {
-  font-size: var(--icon-lg);
-}
-
-.icon--xl {
-    font-size: var(--icon-xl);
-}
-
-.icon--xxl {
-    font-size: var(--icon-xxl);
-}
+.icon--xxs { font-size: var(--icon-xxs); }
+.icon--xs  { font-size: var(--icon-xs); }
+.icon--sm  { font-size: var(--icon-sm); }
+.icon--md  { font-size: var(--icon-md); }
+.icon--lg  { font-size: var(--icon-lg); }
+.icon--xl  { font-size: var(--icon-xl); }
+.icon--xxl { font-size: var(--icon-xxl); }
 
 // align icon and text 
 .icon-text { // add this class to parent element that contains icon + text elements
+  display: inline-block; // flex fallback
   display: inline-flex;
   align-items: center;
 
@@ -56,12 +38,7 @@
     margin-left: var(--space-xxs);
   }
 
-  .icon {
-    color: inherit;
-    flex-shrink: 0;
-  }
-
-  &.icon-text--gap-none {
+  &.icon-text--gap-none, &.icon-text--gap-0 {
     > *:nth-child(2) {
       margin-left: 0;
     }
@@ -85,8 +62,7 @@
   justify-content: space-between;
 }
 
-.icon--is-spinning {
-  //add this class to rotate the icon infinitely 
+.icon--is-spinning { // rotate the icon infinitely
   animation: icon-spin 1s infinite linear;
 }
 

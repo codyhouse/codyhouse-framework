@@ -1,6 +1,9 @@
 :root {
   // radius
-  --radius: 0.25em;
+  --radius: 0.25em; // radius base size
+  --radius-sm: calc(var(--radius)/2);
+  --radius-md: var(--radius);
+  --radius-lg: calc(var(--radius)*2);
 
   // box shadow
   --shadow-sm: 0 1px 1px rgba(0, 0, 0, .2), 0 1px 8px rgba(0, 0, 0, .1); // low depth

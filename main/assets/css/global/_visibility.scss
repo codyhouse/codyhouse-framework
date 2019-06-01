@@ -1,59 +1,59 @@
 @include breakpoint(xs, "not all") {
-  .display--xs {
+  .display\@xs, .display--xs {
     display: none !important;
   }
 }
 
 @include breakpoint(xs) {
-  .hide--xs {
+  .hide\@xs, .hide--xs {
     display: none !important;
   }
 }
 
 @include breakpoint(sm, "not all") {
-  .display--sm {
+  .display\@sm, .display--sm {
     display: none !important;
   }
 }
 
 @include breakpoint(sm) {
-  .hide--sm {
+  .hide\@sm, .hide--sm {
     display: none !important;
   }
 }
 
 @include breakpoint(md, "not all") {
-  .display--md {
+  .display\@md, .display--md {
     display: none !important;
   }
 }
 
 @include breakpoint(md) {
-  .hide--md {
+  .hide\@md, .hide--md {
     display: none !important;
   }
 }
 
 @include breakpoint(lg, "not all") {
-  .display--lg {
+  .display\@lg, .display--lg {
     display: none !important;
   }
 }
 
 @include breakpoint(lg) {
-  .hide--lg {
+  .hide\@lg, .hide--lg {
     display: none !important;
   }
 }
 
 @include breakpoint(xl, "not all") {
-  .display--xl {
+  .display\@xl, .display--xl {
     display: none !important;
   }
 }
 
 @include breakpoint(xl) {
-  .hide--xl {
+  .hide\@xl, .hide--xl {
     display: none !important;
   }
 }

@@ -7,16 +7,18 @@
 }
 
 .btn { // basic button style
-  display: inline-flex;
   position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: var(--space-xs) var(--space-sm);
+  border-radius: 0.25em;
+  box-shadow: 0 4px 16px alpha(var(--color-black), 0.15);
   white-space: nowrap;
   text-decoration: none;
   line-height: 1;
-  padding: var(--space-xs) var(--space-sm);
-  border-radius: 0.25em;
   font-size: var(--btn-font-size);
-  justify-content: center;
-  align-items: center;
+  cursor: pointer;
 }
 
 // themes
@@ -27,8 +29,8 @@
 }
 
 .btn--subtle { // subtle version, used for secondary actions or in combo with primary/accent button
+  background-color: var(--color-contrast-low);
   color: var(--color-contrast-higher);
-  border: 1px solid var(--color-contrast-low);
 }
 
 .btn--accent { // used to draw particular attention to the button (e.g. destructive actions)
@@ -60,22 +62,6 @@
 .btn--full-width {
   display: flex;
   width: 100%;
-}
-
-// icons
-.btn .icon {
-  // icon inherits color of button label
-  color: inherit;
-  flex-shrink: 0;
-}
-
-// icons + text
-.btn--icon-text {
-  align-items: center;
-  
-  > *:nth-child(2) {
-    margin-left: var(--space-xxs);
-  }
 }
 
 // btn with icon (only)
