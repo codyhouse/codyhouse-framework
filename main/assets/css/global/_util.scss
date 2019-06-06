@@ -16,8 +16,8 @@
 .justify-center, .flex--center-x { justify-content: center; }
 .justify-between, .flex--space-between { justify-content: space-between; }
 .items-center, .flex--center-y { align-items: center; }
-.flex-grow > *, .flex--grow > * { flex-grow: 1; }
-.flex-shrink-0 > *, .flex--shrink-0 > * { flex-shrink: 0; }
+.items-start { align-items: flex-start; }
+.items-end { align-items: flex-end; }
 
 @include breakpoint(xs) {
   .flex-wrap\@xs { flex-wrap: wrap; }
@@ -29,8 +29,8 @@
   .justify-center\@xs { justify-content: center; }
   .justify-between\@xs { justify-content: space-between; }
   .items-center\@xs { align-items: center; }
-  .flex-grow\@xs > * { flex-grow: 1; }
-  .flex-shrink-0\@xs > * { flex-shrink: 0; }
+  .items-start\@xs { align-items: flex-start; }
+  .items-end\@xs { align-items: flex-end; }
 }
 
 @include breakpoint(sm) {
@@ -43,8 +43,8 @@
   .justify-center\@sm { justify-content: center; }
   .justify-between\@sm { justify-content: space-between; }
   .items-center\@sm { align-items: center; }
-  .flex-grow\@sm > * { flex-grow: 1; }
-  .flex-shrink-0\@sm > * { flex-shrink: 0; }
+  .items-start\@sm { align-items: flex-start; }
+  .items-end\@sm { align-items: flex-end; }
 }
 
 @include breakpoint(md) {
@@ -57,8 +57,8 @@
   .justify-center\@md { justify-content: center; }
   .justify-between\@md { justify-content: space-between; }
   .items-center\@md { align-items: center; }
-  .flex-grow\@md > * { flex-grow: 1; }
-  .flex-shrink-0\@md > * { flex-shrink: 0; }
+  .items-start\@md { align-items: flex-start; }
+  .items-end\@md { align-items: flex-end; }
 }
 
 @include breakpoint(lg) {
@@ -71,8 +71,8 @@
   .justify-center\@lg { justify-content: center; }
   .justify-between\@lg { justify-content: space-between; }
   .items-center\@lg { align-items: center; }
-  .flex-grow\@lg > * { flex-grow: 1; }
-  .flex-shrink-0\@lg > * { flex-shrink: 0; }
+  .items-start\@lg { align-items: flex-start; }
+  .items-end\@lg { align-items: flex-end; }
 }
 
 @include breakpoint(xl) {
@@ -85,111 +85,95 @@
   .justify-center\@xl { justify-content: center; }
   .justify-between\@xl { justify-content: space-between; }
   .items-center\@xl { align-items: center; }
-  .flex-grow\@xl > * { flex-grow: 1; }
-  .flex-shrink-0\@xl > * { flex-shrink: 0; }
+  .items-start\@xl { align-items: flex-start; }
+  .items-end\@xl { align-items: flex-end; }
 }
+
+// children
+.flex-grow, .flex-item--grow { flex-grow: 1; }
+.flex-shrink-0, .flex-item--shrink-0 { flex-shrink: 0; }
+.flex-item--end { align-self: flex-end; }
 
 // set gap
 .flex-gap, .flex-gap-md, .flex--gap, .flex--gap-md, .flex-gap, .flex-gap--md {
   margin-bottom: calc(-1 * var(--space-md));
-  margin-right: calc(-1 * var(--space-md)/2);
-  margin-left: calc(-1 * var(--space-md)/2);
+  margin-right: calc(-1 * var(--space-md));
 
   > * {
     margin-bottom: var(--space-md);
-    margin-right: calc(var(--space-md)/2);
-    margin-left: calc(var(--space-md)/2);
+    margin-right: calc(var(--space-md));
   }
 }
 
 .flex-gap-xxxs, .flex--gap-xxxs, .flex-gap--xxxs {
   margin-bottom: calc(-1 * var(--space-xxxs));
-  margin-right: calc(-1 * var(--space-xxxs)/2);
-  margin-left: calc(-1 * var(--space-xxxs)/2);
+  margin-right: calc(-1 * var(--space-xxxs));
 
   > * {
     margin-bottom: var(--space-xxxs);
-    margin-right: calc(var(--space-xxxs)/2);
-    margin-left: calc(var(--space-xxxs)/2);
+    margin-right: calc(var(--space-xxxs));
   }
 }
 
 .flex-gap-xxs, .flex--gap-xxs, .flex-gap--xxs {
   margin-bottom: calc(-1 * var(--space-xxs));
-  margin-right: calc(-1 * var(--space-xxs)/2);
-  margin-left: calc(-1 * var(--space-xxs)/2);
+  margin-right: calc(-1 * var(--space-xxs));
 
   > * {
     margin-bottom: var(--space-xxs);
-    margin-right: calc(var(--space-xxs)/2);
-    margin-left: calc(var(--space-xxs)/2);
+    margin-right: calc(var(--space-xxs));
   }
 }
 
 .flex-gap-xs, .flex--gap-xs, .flex-gap--xs {
   margin-bottom: calc(-1 * var(--space-xs));
-  margin-right: calc(-1 * var(--space-xs)/2);
-  margin-left: calc(-1 * var(--space-xs)/2);
+  margin-right: calc(-1 * var(--space-xs));
 
   > * {
     margin-bottom: var(--space-xs);
-    margin-right: calc(var(--space-xs)/2);
-    margin-left: calc(var(--space-xs)/2);
+    margin-right: calc(var(--space-xs));
   }
 }
 
 .flex-gap-sm, .flex--gap-sm, .flex-gap--sm {
   margin-bottom: calc(-1 * var(--space-sm));
-  margin-right: calc(-1 * var(--space-sm)/2);
-  margin-left: calc(-1 * var(--space-sm)/2);
+  margin-right: calc(-1 * var(--space-sm));
 
   > * {
     margin-bottom: var(--space-sm);
-    margin-right: calc(var(--space-sm)/2);
-    margin-left: calc(var(--space-sm)/2);
+    margin-right: calc(var(--space-sm));
   }
 }
 
 .flex-gap-lg, .flex--gap-lg, .flex-gap--lg {
   margin-bottom: calc(-1 * var(--space-lg));
-  margin-right: calc(-1 * var(--space-lg)/2);
-  margin-left: calc(-1 * var(--space-lg)/2);
+  margin-right: calc(-1 * var(--space-lg));
 
   > * {
     margin-bottom: var(--space-lg);
-    margin-right: calc(var(--space-lg)/2);
-    margin-left: calc(var(--space-lg)/2);
+    margin-right: calc(var(--space-lg));
   }
 }
 
 .flex-gap-xl, .flex--gap-xl, .flex-gap--xl {
   margin-bottom: calc(-1 * var(--space-xl));
-  margin-right: calc(-1 * var(--space-xl)/2);
-  margin-left: calc(-1 * var(--space-xl)/2);
+  margin-right: calc(-1 * var(--space-xl));
 
   > * {
     margin-bottom: var(--space-xl);
-    margin-right: calc(var(--space-xl)/2);
-    margin-left: calc(var(--space-xl)/2);
+    margin-right: calc(var(--space-xl));
   }
 }
 
 .flex-gap-xxl, .flex--gap-xxl, .flex-gap--xxl {
   margin-bottom: calc(-1 * var(--space-xxl));
-  margin-right: calc(-1 * var(--space-xxl)/2);
-  margin-left: calc(-1 * var(--space-xxl)/2);
+  margin-right: calc(-1 * var(--space-xxl));
 
   > * {
     margin-bottom: var(--space-xxl);
-    margin-right: calc(var(--space-xxl)/2);
-    margin-left: calc(var(--space-xxl)/2);
+    margin-right: calc(var(--space-xxl));
   }
 }
-
-// children
-.flex-item--end { align-self: flex-end; }
-.flex-item--grow { flex-grow: 1; }
-.flex-item--shrink-0 { flex-shrink: 0; }
 
 // --------------------------------
 
@@ -622,6 +606,17 @@
   .text-left\@xl   { text-align: left; }
   .text-right\@xl  { text-align: right; }
 }
+
+// color
+.color-contrast-medium, .text--subtle { color: var(--color-contrast-medium); }
+.color-inherit, .text--inherit { color: inherit; }
+.color-contrast-high { color: var(--color-contrast-high); }
+.color-contrast-higher { color: var(--color-contrast-higher); }
+.color-primary { color: var(--color-primary); }
+.color-accent { color: var(--color-accent); }
+.color-success { color: var(--color-success); }
+.color-warning { color: var(--color-warning); }
+.color-error { color: var(--color-error); }
 
 // --------------------------------
 

@@ -1,9 +1,9 @@
 :root {
   // size
   --btn-font-size: 1em;
-  --btn-sm: calc(var(--btn-font-size) - 0.2em);
-  --btn-md: calc(var(--btn-font-size) + 0.2em);
-  --btn-lg: calc(var(--btn-font-size) + 0.4em);
+  --btn-font-size-sm: calc(var(--btn-font-size) - 0.2em);
+  --btn-font-size-md: calc(var(--btn-font-size) + 0.2em);
+  --btn-font-size-lg: calc(var(--btn-font-size) + 0.4em);
 }
 
 .btn { // basic button style
@@ -13,8 +13,6 @@
   align-items: center;
   padding: var(--space-xs) var(--space-sm);
   border-radius: 0.25em;
-  --color-shadow: hsla(var(--color-black-h), var(--color-black-s), var(--color-black-l), 0.15);
-  box-shadow: 0 4px 16px 0 var(--color-shadow);
   white-space: nowrap;
   text-decoration: none;
   line-height: 1;
@@ -49,15 +47,15 @@
 
 // size
 .btn--sm {
-  font-size: var(--btn-sm);
+  font-size: var(--btn-font-size-sm);
 }
 
 .btn--md {
-  font-size: var(--btn-md);
+  font-size: var(--btn-font-size-md);
 }
 
 .btn--lg {
-  font-size: var(--btn-lg);
+  font-size: var(--btn-font-size-lg);
 }
 
 .btn--full-width {

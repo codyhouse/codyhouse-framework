@@ -232,20 +232,3 @@ u, .text-underline {
     margin-right: calc(-1 * var(--space-xxl));
   }
 }
-
-// color
-.color-contrast-medium, .text--subtle {
-  color: var(--color-contrast-medium);
-}
-
-.color-inherit, .text--inherit {
-  color: inherit;
-}
-
-.color-contrast-high { color: var(--color-contrast-high); }
-.color-contrast-higher { color: var(--color-contrast-higher); }
-.color-primary { color: var(--color-primary); }
-.color-accent { color: var(--color-accent); }
-.color-success { color: var(--color-success); }
-.color-warning { color: var(--color-warning); }
-.color-error { color: var(--color-error); }
