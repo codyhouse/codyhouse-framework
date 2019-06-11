@@ -1,0 +1,90 @@
+.form-control {
+  background-color: var(--color-bg, hsl(0, 0%, 95%));
+  padding-top: var(--form-control-padding-y, 0.5em);
+  padding-bottom: var(--form-control-padding-y, 0.5em);
+  padding-left: var(--form-control-padding-x, 0.75em);
+  padding-right: var(--form-control-padding-x, 0.75em);
+  border-radius: var(--form-control-radius, 0.25em);
+
+  &::-webkit-input-placeholder {
+    color: var(--color-contrast-medium, hsl(240, 1%, 48%));
+  }
+
+  &::-moz-placeholder {
+    opacity: 1;
+    color: var(--color-contrast-medium, hsl(240, 1%, 48%));
+  }
+
+  &:-ms-input-placeholder {
+    color: var(--color-contrast-medium, hsl(240, 1%, 48%));
+  }
+
+  &:-moz-placeholder {
+    color: var(--color-contrast-medium, hsl(240, 1%, 48%));
+  }
+}
+
+.form-legend {
+  color: var(--color-contrast-higher, hsl(240, 8%, 12%));
+  line-height: 1.2;
+  font-size: var(--text-md, 1.2em);
+  margin-bottom: var(--space-xxs);
+}
+
+.form-label {
+  display: inline-block;
+}
+
+// error message
+.form__msg-error {
+  background-color: var(--color-error, hsl(355, 90%, 61%));
+  color: var(--color-white, hsl(0, 0%, 100%));
+  font-size: var(--text-sm, 0.833em);
+  @include fontSmooth;
+  padding: var(--space-xs);
+  margin-top: var(--space-sm);
+  border-radius: var(--radius-md, 0.25em);
+
+  // hide element
+  position: absolute;
+  clip: rect(1px, 1px, 1px, 1px);
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: var(--space-sm);
+    top: 0;
+    transform: translateY(-100%);
+    @include triangle(up, 8px, var(--color-error));
+  }
+}
+
+.form__msg-error--is-visible {
+  position: relative;
+  clip: auto;
+}
+
+// radio and checkbox lists
+.radio-list, .checkbox-list {
+  > * {
+    position: relative;
+    display: flex;
+    align-items: baseline;
+    margin-bottom: var(--space-xxs);
+  }
+
+  > *:last-of-type {
+    margin-bottom: 0;
+  }
+
+  label { // radio/checkbox labels
+    line-height: var(--body-line-height);
+    user-select: none;
+  }
+
+  input {
+    vertical-align: top;
+    margin-right: var(--space-xxxs);
+    flex-shrink: 0;
+  }
+}

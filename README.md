@@ -1,49 +1,53 @@
-<p align="center">
-  <a href="https://codyhouse.co">
-    <img src="https://codyhouse.co/avatar-sm.png" alt="CodyHouse logo" width=80 height=80>
-  </a>
-</p>
+# 🐞 CodyHouse Framework
+A lightweight front-end framework for building accessible, bespoke interfaces.
 
-
-# CodyHouse's Framework
-A solid system of SCSS globals to build responsive and accessible web projects.
-
-[Explore the documentation on codyhouse.co](https://codyhouse.co/ds/get-started)
-
-The framework serves three main purposes:
-
-1. **Template** - it provides you with a CSS template to speed up the first steps of setting up the style of a web project.
-2. **Responsive** - it includes smart rules that take care of several responsiveness aspects.
-3. **Design system** - it simplifies the process of creating the base of your design system.
+[Explore the documentation on codyhouse.co →](https://codyhouse.co/ds/get-started)
 
 The framework is composed of:
 
-- **A collection of SCSS files** that compile into a _global.scss file. Make sure to import this style before your own;
-- **A util.js file** with some utility functions that are used in the [CodyHouse components](https://codyhouse.co/ds/components). Make sure to import this before the component script file.
+1. **_base.scss:** essential CSS rules and utility classes.
+2. **_custom-style.scss:** a CSS template to create your bespoke style (e.g., buttons, forms, and colors).
+3. **util.js:** the utility functions used in the [CodyHouse Components](https://codyhouse.co/ds/components). Make sure to import this file before the component script file.
 
+Some of the advantages of working with this framework:
+
+- lightweight (8KB minified and gzipped)
+- no need to override existing CSS rules
+- mobile-first
+- create unique designs with total control
+- easy to learn
+- beautiful [component library](https://codyhouse.co/ds/components)
 
 ```text
 codyhouse-framework/
 └── main/
     ├── assets/
     │   ├── css/
-    │   │   ├── globals/
+    │   │   ├── base/
     │   │   │   ├── _accessibility.scss
     │   │   │   ├── _breakpoints.scss
     │   │   │   ├── _buttons.scss
     │   │   │   ├── _colors.scss
     │   │   │   ├── _forms.scss
     │   │   │   ├── _grid-layout.scss
-    │   │   │   ├── _helpers.scss
     │   │   │   ├── _icons.scss
     │   │   │   ├── _mixins.scss
     │   │   │   ├── _reset.scss
     │   │   │   ├── _shared-styles.scss
     │   │   │   ├── _spacing.scss
     │   │   │   ├── _typography.scss
+    │   │   │   ├── _util.scss
     │   │   │   ├── _visibility.scss
     │   │   │   └── _z-index.scss
-    │   │   ├── _globals.scss
+    │   │   │── custom-style/
+    │   │   │   ├── _buttons.scss
+    │   │   │   ├── _colors.scss
+    │   │   │   ├── _forms.scss
+    │   │   │   ├── _shared-styles.scss
+    │   │   │   ├── _spacing.scss
+    │   │   │   └── _typography.scss
+    │   │   ├── _base.scss
+    │   │   ├── _custom-style.scss
     │   │   ├── style.css
     │   │   └── style.scss
     │   └── js/
@@ -72,17 +76,15 @@ npm run gulp watch
 
 The first command will install the modules the framework requires for compiling SCSS into CSS; the second will launch your project on a development server.
 
-If you are new to Gulp, take a look at this [beginners guide](https://css-tricks.com/gulp-for-beginners/).
+## Component Library
 
-## Components
+CodyHouse's Components are accessible, progressively enhanced, HTML, CSS, JS components that work seamlessly with the framework.
 
-CodyHouse's components are HTML, CSS, JS production-ready modules. Each component is accessible, responsive, and work seamlessly with the CodyHouse Framework.
-
-[Explore the Components](https://codyhouse.co/ds/components)
+[Explore the Components →](https://codyhouse.co/ds/components)
 
 ## Global Editors
 
-The Global Editors are web design tools that allow you to set the style of typography elements, color themes, spacing rules, buttons, and forms directly in the browser. They generate SCSS code that is compatible with the CodyHouse framework.
+The Global Editors are web design tools that allow you to set the style of typography elements, color themes, spacing rules, buttons, and forms directly in the browser. They generate SCSS code that is compatible with the Framework.
 
 Explore the Editors:
 

@@ -1,7 +1,7 @@
 {
   "name": "codyhouse-framework",
-  "version": "1.2.0",
-  "description": "A solid system of SCSS globals to build responsive and accessible web projects.",
+  "version": "2.0.0",
+  "description": "A lightweight front-end framework for building accessible, bespoke interfaces.",
   "main": "index.js",
   "keywords": [
     "scss",

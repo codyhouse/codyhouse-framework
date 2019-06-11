@@ -13,12 +13,3 @@
   --space-xxxxl: calc(13.75 * var(--space-unit));
   --component-padding: var(--space-md);
 }
-
-// optional - edit space unit and padding of all components at a specific breakpoint
-@supports(--css: variables) {
-  :root {
-    @include breakpoint(md) {
-      --space-unit:  1.25em;
-    }
-  }
-}

@@ -1,0 +1,49 @@
+// --------------------------------
+
+// (START) Global Editor code https://codyhouse.co/ds/globals/colors
+
+// --------------------------------
+
+:root {
+  --btn-font-size: 1em;
+  --btn-font-size-sm: calc(var(--btn-font-size) - 0.2em);
+  --btn-font-size-md: calc(var(--btn-font-size) + 0.2em);
+  --btn-font-size-lg: calc(var(--btn-font-size) + 0.4em);
+  --btn-padding-x: var(--space-sm); // padding left + right
+  --btn-padding-y: var(--space-xs); // padding top + bottom
+  --btn-radius: 0.25em;
+}
+
+.btn { // basic button style
+  --color-shadow: hsla(var(--color-black-h), var(--color-black-s), var(--color-black-l), 0.15);
+  box-shadow: 0 4px 16px var(--color-shadow);
+  cursor: pointer;
+}
+
+// themes
+.btn--primary {
+  @include fontSmooth;
+}
+
+.btn--accent {
+  @include fontSmooth;
+}
+
+.btn--subtle {}
+
+// feedback
+.btn--disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+// sizes
+.btn--sm {}
+.btn--md {}
+.btn--lg {}
+
+// --------------------------------
+
+// (END) Global Editor Code
+
+// --------------------------------

@@ -1,0 +1,51 @@
+@include breakpoint(xs, "not all") {
+  .display\@xs { display: none !important; }
+}
+
+@include breakpoint(xs) {
+  .hide\@xs { display: none !important; }
+}
+
+@include breakpoint(sm, "not all") {
+  .display\@sm { display: none !important; }
+}
+
+@include breakpoint(sm) {
+  .hide\@sm { display: none !important; }
+}
+
+@include breakpoint(md, "not all") {
+  .display\@md { display: none !important; }
+}
+
+@include breakpoint(md) {
+  .hide\@md { display: none !important; }
+}
+
+@include breakpoint(lg, "not all") {
+  .display\@lg { display: none !important; }
+}
+
+@include breakpoint(lg) {
+  .hide\@lg { display: none !important; }
+}
+
+@include breakpoint(xl, "not all") {
+  .display\@xl { display: none !important; }
+}
+
+@include breakpoint(xl) {
+  .hide\@xl { display: none !important; }
+}
+
+:root {
+  --display: block;
+}
+
+.is-visible {
+  display: var(--display) !important;
+}
+
+.is-hidden {
+  display: none !important;
+}

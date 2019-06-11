@@ -1,3 +1,9 @@
+// --------------------------------
+
+// (START) Global Editor code https://codyhouse.co/ds/globals/colors
+
+// --------------------------------
+
 :root, [data-theme="default"] {
   // main
   @include defineColorHSL(--color-primary-darker, 220, 90%, 36%);
@@ -44,7 +50,8 @@
   @include defineColorHSL(--color-contrast-higher, 240, 8%, 12%);
 }
 
-[data-theme] {
-  background-color: var(--color-bg);
-  color: var(--color-contrast-high);
-}
+// --------------------------------
+
+// (END) Global Editor Code
+
+// --------------------------------

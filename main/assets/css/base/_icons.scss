@@ -28,40 +28,6 @@
 .icon--xl  { font-size: var(--icon-xl); }
 .icon--xxl { font-size: var(--icon-xxl); }
 
-// align icon and text 
-.icon-text { // add this class to parent element that contains icon + text elements
-  display: inline-block; // flex fallback
-  display: inline-flex;
-  align-items: center;
-
-  > *:nth-child(2) {
-    margin-left: var(--space-xxs);
-  }
-
-  &.icon-text--gap-none, &.icon-text--gap-0 {
-    > *:nth-child(2) {
-      margin-left: 0;
-    }
-  }
-
-  &.icon-text--gap-xxxs {
-    > *:nth-child(2) {
-      margin-left: var(--space-xxxs);
-    }
-  }
-
-  &.icon-text--gap-xxxxs {
-    > *:nth-child(2) {
-      margin-left: var(--space-xxxxs);
-    }
-  }
-}
-
-.icon-text--space-between {
-  display: flex;
-  justify-content: space-between;
-}
-
 .icon--is-spinning { // rotate the icon infinitely
   animation: icon-spin 1s infinite linear;
 }
