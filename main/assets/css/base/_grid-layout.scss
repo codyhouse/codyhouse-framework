@@ -85,11 +85,11 @@ $grid-columns: 12;
 
 [class*="grid-gap"] {
   margin-bottom: calc(var(--grid-gap, 1em) * -1);
-  margin-right: calc(var(--grid-gap, 1em) * -1);
+  margin-left: calc(var(--grid-gap, 1em) * -1);
 
   > * { 
     margin-bottom: var(--grid-gap, 1em); 
-    margin-right: var(--grid-gap, 1em);
+    margin-left: var(--grid-gap, 1em);
   }
 }
 

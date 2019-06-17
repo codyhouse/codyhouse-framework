@@ -13,7 +13,7 @@ function reload(done) {
 
 gulp.task('sass', function() {
   return gulp.src('main/assets/css/**/*.scss')
-  .pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError))
+  .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
   .pipe(postcss([autoprefixer(), cssvariables({preserve: true}), calc()]))
   .pipe(gulp.dest('main/assets/css'))
   .pipe(browserSync.reload({
