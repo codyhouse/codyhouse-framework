@@ -37,7 +37,7 @@
 
 // error message
 .form__msg-error {
-  background-color: var(--color-error, hsl(355, 90%, 61%));
+  background-color: var(--color-error, hsl(349, 75%, 51%));
   color: var(--color-white, hsl(0, 0%, 100%));
   font-size: var(--text-sm, 0.833em);
   @include fontSmooth;

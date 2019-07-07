@@ -663,3 +663,15 @@
 .media-wrapper--4\:3 {
   padding-bottom: 75%; // 4:3
 }
+
+// --------------------------------
+
+// Clearfix - clear float of child elements
+
+// --------------------------------
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
