@@ -114,11 +114,13 @@ Explore the Editors:
 ## Extensions
 
 **CodyHouse Snippets**
+
 A set of CodyHouse Framework snippets for Visual Studio Code.
 
 [Download](https://marketplace.visualstudio.com/items?itemName=CodyHouse.codyhouse-snippets)
 
 **CodyHouse Docs**
+
 Navigate the CodyHouse documentation directly from within Visual Studio Code.
 
 [Download](https://marketplace.visualstudio.com/items?itemName=CodyHouse.codyhouse-docs)

@@ -11,7 +11,7 @@ var rename = require('gulp-rename');
 var uglify = require('gulp-uglify');
 
 // js file paths
-var utilJsPath = 'main/assets/js/'; // util.js path - you may need to update this if including the framework as external node module
+var utilJsPath = 'main/assets/js'; // util.js path - you may need to update this if including the framework as external node module
 var componentsJsPath = 'main/assets/js/components/*.js'; // component js files
 var scriptsJsPath = 'main/assets/js'; //folder for final scripts.js/scripts.min.js files
 

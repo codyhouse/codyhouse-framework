@@ -184,6 +184,13 @@ Util.extend = function() {
   return extended;
 };
 
+// Check if Reduced Motion is enabled
+Util.osHasReducedMotion = function() {
+  var matchMediaObj = window.matchMedia('(prefers-reduced-motion: reduce)');
+  if(matchMediaObj) return matchMediaObj.matches;
+  return false; // return false if not supported
+}; 
+
 /* 
 	Polyfills
 */
