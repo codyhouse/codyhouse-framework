@@ -66,7 +66,7 @@ The Framework and the Components are built following the principle of progressiv
 
 The script is used in CSS to target that Javascript is enabled and apply additional style accordingly. If you don't include the script, part of the style of the components won't be visible.
 
-Besides checking JavaScript support, we check the support of CSS custom properties. If the browser supports them, the style.css file is downloaded. Otherwise, the browser downloads the style-fallback.css file, where the CSS variables are replaced by their fallbacks (generated using a PostCSS plugin). More info in the CSS Custom Properties chapter on this page.
+Besides checking JavaScript support, we check the support of CSS custom properties. If the browser supports them, the style.css file is downloaded. Otherwise, the browser downloads the style-fallback.css file, where the CSS variables are replaced by their fallbacks (generated using a PostCSS plugin).
 
 ```html
 <script>
