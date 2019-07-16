@@ -6,7 +6,6 @@
 
 .flex { display: flex; }
 .inline-flex { display: inline-flex; }
-
 .flex-wrap { flex-wrap: wrap; }
 .flex-column { flex-direction: column; }
 .flex-row { flex-direction: row; }
@@ -20,6 +19,8 @@
 .items-end { align-items: flex-end; }
 
 @include breakpoint(xs) {
+  .flex\@xs { display: flex; }
+  .inline-flex\@xs { display: inline-flex; }
   .flex-wrap\@xs { flex-wrap: wrap; }
   .flex-column\@xs { flex-direction: column; }
   .flex-row\@xs { flex-direction: row; }
@@ -34,6 +35,8 @@
 }
 
 @include breakpoint(sm) {
+  .flex\@sm { display: flex; }
+  .inline-flex\@sm { display: inline-flex; }
   .flex-wrap\@sm { flex-wrap: wrap; }
   .flex-column\@sm { flex-direction: column; }
   .flex-row\@sm { flex-direction: row; }
@@ -48,6 +51,8 @@
 }
 
 @include breakpoint(md) {
+  .flex\@md { display: flex; }
+  .inline-flex\@md { display: inline-flex; }
   .flex-wrap\@md { flex-wrap: wrap; }
   .flex-column\@md { flex-direction: column; }
   .flex-row\@md { flex-direction: row; }
@@ -62,6 +67,8 @@
 }
 
 @include breakpoint(lg) {
+  .flex\@lg { display: flex; }
+  .inline-flex\@lg { display: inline-flex; }
   .flex-wrap\@lg { flex-wrap: wrap; }
   .flex-column\@lg { flex-direction: column; }
   .flex-row\@lg { flex-direction: row; }
@@ -76,6 +83,8 @@
 }
 
 @include breakpoint(xl) {
+  .flex\@xl { display: flex; }
+  .inline-flex\@xl { display: inline-flex; }
   .flex-wrap\@xl { flex-wrap: wrap; }
   .flex-column\@xl { flex-direction: column; }
   .flex-row\@xl { flex-direction: row; }
