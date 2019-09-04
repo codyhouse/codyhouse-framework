@@ -186,6 +186,7 @@ Util.extend = function() {
 
 // Check if Reduced Motion is enabled
 Util.osHasReducedMotion = function() {
+  if(!window.matchMedia) return false;
   var matchMediaObj = window.matchMedia('(prefers-reduced-motion: reduce)');
   if(matchMediaObj) return matchMediaObj.matches;
   return false; // return false if not supported

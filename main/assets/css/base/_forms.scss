@@ -36,30 +36,17 @@
 }
 
 // error message
-.form__msg-error {
-  background-color: var(--color-error, hsl(349, 75%, 51%));
-  color: var(--color-white, hsl(0, 0%, 100%));
+.form__msg-error, .form-error-msg { // .form__msg-error is fallback for older framework versions
+  color: var(--color-error, hsl(349, 75%, 51%));
   font-size: var(--text-sm, 0.833em);
-  @include fontSmooth;
-  padding: var(--space-xs);
-  margin-top: var(--space-sm);
-  border-radius: var(--radius-md, 0.25em);
+  margin-top: var(--space-xxs);
 
   // hide element
   position: absolute;
   clip: rect(1px, 1px, 1px, 1px);
-
-  &::before {
-    content: '';
-    position: absolute;
-    left: var(--space-sm);
-    top: 0;
-    transform: translateY(-100%);
-    @include triangle(up, 8px, var(--color-error));
-  }
 }
 
-.form__msg-error--is-visible {
+.form__msg-error--is-visible, .form-error-msg--is-visible {
   position: relative;
   clip: auto;
 }

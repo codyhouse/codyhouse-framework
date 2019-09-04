@@ -72,7 +72,7 @@ mark {
   }
 }
 
-.article.text-component { // e.g., blog posts
-  --line-height-multiplier: 1.13; // increase article line-height
+.article { // e.g., blog posts
+  --body-line-height: 1.58; // set body line-height
   --text-vspace-multiplier: 1.2; // increase vertical spacing
 }

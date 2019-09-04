@@ -8,7 +8,9 @@
 .inline-flex { display: inline-flex; }
 .flex-wrap { flex-wrap: wrap; }
 .flex-column { flex-direction: column; }
+.flex-column-reverse { flex-direction: column-reverse; }
 .flex-row { flex-direction: row; }
+.flex-row-reverse { flex-direction: row-reverse; }
 .flex-center { justify-content: center; align-items: center; }
 .justify-start { justify-content: flex-start; }
 .justify-end { justify-content: flex-end; }
@@ -23,7 +25,9 @@
   .inline-flex\@xs { display: inline-flex; }
   .flex-wrap\@xs { flex-wrap: wrap; }
   .flex-column\@xs { flex-direction: column; }
+  .flex-column-reverse\@xs { flex-direction: column-reverse; }
   .flex-row\@xs { flex-direction: row; }
+  .flex-row-reverse\@xs { flex-direction: row-reverse; }
   .flex-center\@xs { justify-content: center; align-items: center; }
   .justify-start\@xs { justify-content: flex-start; }
   .justify-end\@xs { justify-content: flex-end; }
@@ -39,7 +43,9 @@
   .inline-flex\@sm { display: inline-flex; }
   .flex-wrap\@sm { flex-wrap: wrap; }
   .flex-column\@sm { flex-direction: column; }
+  .flex-column-reverse\@sm { flex-direction: column-reverse; }
   .flex-row\@sm { flex-direction: row; }
+  .flex-row-reverse\@sm { flex-direction: row-reverse; }
   .flex-center\@sm { justify-content: center; align-items: center; }
   .justify-start\@sm { justify-content: flex-start; }
   .justify-end\@sm { justify-content: flex-end; }
@@ -55,7 +61,9 @@
   .inline-flex\@md { display: inline-flex; }
   .flex-wrap\@md { flex-wrap: wrap; }
   .flex-column\@md { flex-direction: column; }
+  .flex-column-reverse\@md { flex-direction: column-reverse; }
   .flex-row\@md { flex-direction: row; }
+  .flex-row-reverse\@md { flex-direction: row-reverse; }
   .flex-center\@md { justify-content: center; align-items: center; }
   .justify-start\@md { justify-content: flex-start; }
   .justify-end\@md { justify-content: flex-end; }
@@ -71,7 +79,9 @@
   .inline-flex\@lg { display: inline-flex; }
   .flex-wrap\@lg { flex-wrap: wrap; }
   .flex-column\@lg { flex-direction: column; }
+  .flex-column-reverse\@lg { flex-direction: column-reverse; }
   .flex-row\@lg { flex-direction: row; }
+  .flex-row-reverse\@lg { flex-direction: row-reverse; }
   .flex-center\@lg { justify-content: center; align-items: center; }
   .justify-start\@lg { justify-content: flex-start; }
   .justify-end\@lg { justify-content: flex-end; }
@@ -87,7 +97,9 @@
   .inline-flex\@xl { display: inline-flex; }
   .flex-wrap\@xl { flex-wrap: wrap; }
   .flex-column\@xl { flex-direction: column; }
+  .flex-column-reverse\@xl { flex-direction: column-reverse; }
   .flex-row\@xl { flex-direction: row; }
+  .flex-row-reverse\@xl { flex-direction: row-reverse; }
   .flex-center\@xl { justify-content: center; align-items: center; }
   .justify-start\@xl { justify-content: flex-start; }
   .justify-end\@xl { justify-content: flex-end; }
@@ -191,6 +203,46 @@
     margin-bottom: var(--space-xxxl);
     margin-left: calc(var(--space-xxxl));
   }
+}
+
+// --------------------------------
+
+// Display
+
+// --------------------------------
+
+.block { display: block; }
+.inline-block { display: inline-block; }
+.inline { display: inline; }
+
+@include breakpoint(xs) {
+  .block\@xs { display: block; }
+  .inline-block\@xs { display: inline-block; }
+  .inline\@xs { display: inline; }
+}
+
+@include breakpoint(sm) {
+  .block\@sm { display: block; }
+  .inline-block\@sm { display: inline-block; }
+  .inline\@sm { display: inline; }
+}
+
+@include breakpoint(md) {
+  .block\@md { display: block; }
+  .inline-block\@md { display: inline-block; }
+  .inline\@md { display: inline; }
+}
+
+@include breakpoint(lg) {
+  .block\@lg { display: block; }
+  .inline-block\@lg { display: inline-block; }
+  .inline\@lg { display: inline; }
+}
+
+@include breakpoint(xl) {
+  .block\@xl { display: block; }
+  .inline-block\@xl { display: inline-block; }
+  .inline\@xl { display: inline; }
 }
 
 // --------------------------------
@@ -625,8 +677,51 @@
   .text-right\@xl  { text-align: right; }
 }
 
-// color
+// text-component line-height
+.line-height-xs {
+  --heading-line-height: 1;
+  --body-line-height: 1;
+}
+
+.line-height-sm {
+  --heading-line-height: 1.1;
+  --body-line-height: 1.2;
+}
+
+.line-height-md {
+  --heading-line-height: 1.15;
+  --body-line-height: 1.4;
+}
+
+.line-height-lg {
+  --heading-line-height: 1.22;
+  --body-line-height: 1.58;
+}
+
+.line-height-xl {
+  --heading-line-height: 1.3;
+  --body-line-height: 1.72;
+}
+
+// text-component vertical spacing
+.v-space-xxs { --text-vspace-multiplier: 0.25 !important; }
+.v-space-xs  { --text-vspace-multiplier: 0.5 !important; }
+.v-space-sm  { --text-vspace-multiplier: 0.75 !important; }
+.v-space-md  { --text-vspace-multiplier: 1.25 !important; }
+.v-space-lg  { --text-vspace-multiplier: 1.5 !important; }
+.v-space-xl  { --text-vspace-multiplier: 1.75 !important; }
+.v-space-xxl { --text-vspace-multiplier: 2 !important; }
+
+// --------------------------------
+
+// Color
+
+// --------------------------------
+
 .color-inherit { color: inherit; }
+.color-bg { color: var(--color-bg, hsl(0, 0%, 100%)); }
+.color-contrast-lower { color: var(--color-contrast-lower, hsl(0, 0%, 95%)); }
+.color-contrast-low { color: var(--color-contrast-low, hsl(240, 1%, 83%)); }
 .color-contrast-medium { color: var(--color-contrast-medium, hsl(240, 1%, 48%)); }
 .color-contrast-high { color: var(--color-contrast-high, hsl(240, 4%, 20%)); }
 .color-contrast-higher { color: var(--color-contrast-higher, hsl(240, 8%, 12%)); }
@@ -635,6 +730,8 @@
 .color-success { color: var(--color-success, hsl(94, 48%, 56%)); }
 .color-warning { color: var(--color-warning, hsl(46, 100%, 61%)); }
 .color-error { color: var(--color-error, hsl(355, 90%, 61%)); }
+.color-white { color: var(--color-white, white); }
+.color-black { color: var(--color-black, black); }
 
 // --------------------------------
 
@@ -684,3 +781,61 @@
   display: table;
   clear: both;
 }
+
+// --------------------------------
+
+// Borders
+
+// --------------------------------
+
+.border { border: 1px solid var(--color-contrast-low, hsl(240, 1%, 83%)); }
+.border-top { border-top: 1px solid var(--color-contrast-low, hsl(240, 1%, 83%)); }
+.border-bottom { border-bottom: 1px solid var(--color-contrast-low, hsl(240, 1%, 83%)); }
+.border-left { border-left: 1px solid var(--color-contrast-low, hsl(240, 1%, 83%)); }
+.border-right { border-right: 1px solid var(--color-contrast-low, hsl(240, 1%, 83%)); }
+.border-2 { border-width: 2px; }
+.border-contrast-lower { border-color: var(--color-contrast-lower, hsl(0, 0%, 95%)); }
+.border-contrast-medium { border-color: var(--color-contrast-medium, hsl(240, 1%, 48%)); }
+
+// --------------------------------
+
+// Border radius
+
+// --------------------------------
+
+.radius-sm { border-radius: var(--radius-sm); }
+.radius-md { border-radius: var(--radius-md); }
+.radius-lg { border-radius: var(--radius-lg); }
+
+// --------------------------------
+
+// Box shadow
+
+// --------------------------------
+
+.shadow-xs { box-shadow: var(--shadow-xs); }
+.shadow-sm { box-shadow: var(--shadow-sm); }
+.shadow-md { box-shadow: var(--shadow-md); }
+.shadow-lg { box-shadow: var(--shadow-lg); }
+.shadow-xl { box-shadow: var(--shadow-xl); }
+
+// --------------------------------
+
+// Background
+
+// --------------------------------
+
+.bg-inherit { background-color: inherit; }
+.bg { background-color: var(--color-bg, hsl(0, 0%, 100%)); }
+.bg-contrast-lower { background-color: var(--color-contrast-lower, hsl(0, 0%, 95%)); }
+.bg-contrast-low { background-color: var(--color-contrast-low, hsl(240, 1%, 83%)); }
+.bg-contrast-medium { background-color: var(--color-contrast-medium, hsl(240, 1%, 48%)); }
+.bg-contrast-high { background-color: var(--color-contrast-high, hsl(240, 4%, 20%)); }
+.bg-contrast-higher { background-color: var(--color-contrast-higher, hsl(240, 8%, 12%)); }
+.bg-primary { background-color: var(--color-primary, hsl(220, 90%, 56%)); }
+.bg-accent { background-color: var(--color-accent, hsl(355, 90%, 61%)); }
+.bg-success { background-color: var(--color-success, hsl(94, 48%, 56%)); }
+.bg-warning { background-color: var(--color-warning, hsl(46, 100%, 61%)); }
+.bg-error { background-color: var(--color-error, hsl(355, 90%, 61%)); }
+.bg-white { background-color: var(--color-white, white); }
+.bg-black { background-color: var(--color-black, black); }

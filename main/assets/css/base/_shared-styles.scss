@@ -5,9 +5,11 @@
   --radius-lg: calc(var(--radius, 0.25em)*2);
 
   // box shadow
+  --shadow-xs: 0 1px 2px rgba(0, 0, 0, .1); // lower depth;
   --shadow-sm: 0 1px 2px rgba(0, 0, 0, .085), 0 1px 8px rgba(0, 0, 0, .1); // low depth;
-  --shadow-md: 0 1px 8px rgba(0, 0, 0, .1), 0 8px 24px rgba(0, 0, 0, .15); // medium depth
-  --shadow-lg: 0 1px 8px rgba(0, 0, 0, .1), 0 16px 48px rgba(0, 0, 0, .1), 0 24px 60px rgba(0, 0, 0, .1); // high depth
+  --shadow-md: 0 1px 8px rgba(0, 0, 0, .085), 0 8px 24px rgba(0, 0, 0, .1); // medium depth
+  --shadow-lg: 0 1px 8px rgba(0, 0, 0, .085), 0 16px 48px rgba(0, 0, 0, .085), 0 24px 60px rgba(0, 0, 0, .085); // high depth
+  --shadow-xl: 0 1px 8px rgba(0, 0, 0, .085), 0 16px 64px rgba(0, 0, 0, .15), 0 24px 100px rgba(0, 0, 0, .15); // higher depth
 
   // timing functions
   // credits: https://github.com/ai/easings.net

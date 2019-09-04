@@ -1,7 +1,7 @@
 :root {
   // line-height
-  --body-line-height: 1.4;
   --heading-line-height: 1.2;
+  --body-line-height: 1.4;
 }
 
 body {
@@ -63,24 +63,21 @@ u, .text-underline {
 }
 
 .text-component {
-  --component-body-line-height: calc(var(--body-line-height) * var(--line-height-multiplier, 1));
-  --component-heading-line-height: calc(var(--heading-line-height) * var(--line-height-multiplier, 1));
-
   h1, h2, h3, h4 {
-    line-height: var(--component-heading-line-height, 1.2);
-    margin-bottom: calc(var(--space-xxxs) * var(--text-vspace-multiplier, 1));
+    line-height: calc(var(--heading-line-height) * var(--line-height-multiplier, 1));
+    margin-bottom: calc(var(--space-unit) * 0.25 * var(--text-vspace-multiplier, 1));
   }
 
   h2, h3, h4 {
-    margin-top: calc(var(--space-sm) * var(--text-vspace-multiplier, 1));
+    margin-top: calc(var(--space-unit) * 0.75 * var(--text-vspace-multiplier, 1));
   }
 
   p, blockquote, ul li, ol li {
-    line-height: var(--component-body-line-height);
+    line-height: calc(var(--body-line-height) * var(--line-height-multiplier, 1));
   }
   
   ul, ol, p, blockquote, .text-component__block {
-    margin-bottom: calc(var(--space-sm) * var(--text-vspace-multiplier, 1));
+    margin-bottom: calc(var(--space-unit) * 0.75 * var(--text-vspace-multiplier, 1));
   }
 
   ul, ol {
@@ -102,7 +99,7 @@ u, .text-underline {
 
   figcaption {
     text-align: center;
-    margin-top: var(--space-xs);
+    margin-top: calc(var(--space-unit) * 0.5);
   }
   
   em {
@@ -110,8 +107,8 @@ u, .text-underline {
   }
 
   hr {
-    margin-top: calc(var(--space-lg) * var(--text-vspace-multiplier, 1));
-    margin-bottom: calc(var(--space-lg) * var(--text-vspace-multiplier, 1));
+    margin-top: calc(var(--space-unit) * 2 * var(--text-vspace-multiplier, 1));
+    margin-bottom: calc(var(--space-unit) * 2 * var(--text-vspace-multiplier, 1));
     margin-left: auto;
     margin-right: auto;
   }
@@ -143,19 +140,19 @@ u, .text-underline {
 
   .text-component__block--left {
     float: left;
-    margin-right: calc(var(--space-sm) * var(--text-vspace-multiplier, 1));
+    margin-right: calc(var(--space-unit) * 0.75 * var(--text-vspace-multiplier, 1));
   }
 
   .text-component__block--right {
     float: right;
-    margin-left: calc(var(--space-sm) * var(--text-vspace-multiplier, 1));
+    margin-left: calc(var(--space-unit) * 0.75 * var(--text-vspace-multiplier, 1));
   }
 }
 
 // outset content
 @include breakpoint(xl) {
   .text-component__block--outset {
-    width: calc(100% + 2 * var(--space-xxl));
+    width: calc(100% + 10.5 * var(--space-unit));
 
     img {
       width: 100%;
@@ -163,7 +160,7 @@ u, .text-underline {
   }
 
   .text-component__block--outset:not(.text-component__block--right) {
-    margin-left: calc(-1 * var(--space-xxl));
+    margin-left: calc(-5.25 * var(--space-unit));
   }
 
   .text-component__block--left, .text-component__block--right {
@@ -171,6 +168,6 @@ u, .text-underline {
   }
 
   .text-component__block--right.text-component__block--outset {
-    margin-right: calc(-1 * var(--space-xxl));
+    margin-right: calc(-5.25 * var(--space-unit));
   }
 }
