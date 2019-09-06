@@ -79,7 +79,7 @@
 
 // --------------------------------
 
-$grid-columns: 12;
+$grid-columns: 12 !default;
 
 .grid {
   --grid-gap: 0px;
