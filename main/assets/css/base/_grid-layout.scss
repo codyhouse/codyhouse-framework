@@ -92,8 +92,8 @@ $grid-columns: 12 !default;
 }
 
 [class*="grid-gap"] {
-  margin-bottom: calc(var(--grid-gap, 1em) * -1);
-  margin-left: calc(var(--grid-gap, 1em) * -1);
+  margin-bottom: calc(-1 * var(--grid-gap, 1em));
+  margin-left: calc(-1 * var(--grid-gap, 1em));
 
   > * { 
     margin-bottom: var(--grid-gap, 1em); 
