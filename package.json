@@ -1,6 +1,6 @@
 {
   "name": "codyhouse-framework",
-  "version": "2.1.6",
+  "version": "2.1.7",
   "description": "A lightweight front-end framework for building accessible, bespoke interfaces.",
   "main": "index.js",
   "keywords": [
@@ -38,6 +38,7 @@
     "postcss-calc": "^7.0.1",
     "postcss-css-variables": "git+https://github.com/CodyHouse/postcss-css-variables"
   },
+  "homepage": "https://codyhouse.co",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/CodyHouse/codyhouse-framework.git"
