@@ -20,96 +20,6 @@
 .items-start { align-items: flex-start; }
 .items-end { align-items: flex-end; }
 
-@include breakpoint(xs) {
-  .flex\@xs { display: flex; }
-  .inline-flex\@xs { display: inline-flex; }
-  .flex-wrap\@xs { flex-wrap: wrap; }
-  .flex-column\@xs { flex-direction: column; }
-  .flex-column-reverse\@xs { flex-direction: column-reverse; }
-  .flex-row\@xs { flex-direction: row; }
-  .flex-row-reverse\@xs { flex-direction: row-reverse; }
-  .flex-center\@xs { justify-content: center; align-items: center; }
-  .justify-start\@xs { justify-content: flex-start; }
-  .justify-end\@xs { justify-content: flex-end; }
-  .justify-center\@xs { justify-content: center; }
-  .justify-between\@xs { justify-content: space-between; }
-  .items-center\@xs { align-items: center; }
-  .items-start\@xs { align-items: flex-start; }
-  .items-end\@xs { align-items: flex-end; }
-}
-
-@include breakpoint(sm) {
-  .flex\@sm { display: flex; }
-  .inline-flex\@sm { display: inline-flex; }
-  .flex-wrap\@sm { flex-wrap: wrap; }
-  .flex-column\@sm { flex-direction: column; }
-  .flex-column-reverse\@sm { flex-direction: column-reverse; }
-  .flex-row\@sm { flex-direction: row; }
-  .flex-row-reverse\@sm { flex-direction: row-reverse; }
-  .flex-center\@sm { justify-content: center; align-items: center; }
-  .justify-start\@sm { justify-content: flex-start; }
-  .justify-end\@sm { justify-content: flex-end; }
-  .justify-center\@sm { justify-content: center; }
-  .justify-between\@sm { justify-content: space-between; }
-  .items-center\@sm { align-items: center; }
-  .items-start\@sm { align-items: flex-start; }
-  .items-end\@sm { align-items: flex-end; }
-}
-
-@include breakpoint(md) {
-  .flex\@md { display: flex; }
-  .inline-flex\@md { display: inline-flex; }
-  .flex-wrap\@md { flex-wrap: wrap; }
-  .flex-column\@md { flex-direction: column; }
-  .flex-column-reverse\@md { flex-direction: column-reverse; }
-  .flex-row\@md { flex-direction: row; }
-  .flex-row-reverse\@md { flex-direction: row-reverse; }
-  .flex-center\@md { justify-content: center; align-items: center; }
-  .justify-start\@md { justify-content: flex-start; }
-  .justify-end\@md { justify-content: flex-end; }
-  .justify-center\@md { justify-content: center; }
-  .justify-between\@md { justify-content: space-between; }
-  .items-center\@md { align-items: center; }
-  .items-start\@md { align-items: flex-start; }
-  .items-end\@md { align-items: flex-end; }
-}
-
-@include breakpoint(lg) {
-  .flex\@lg { display: flex; }
-  .inline-flex\@lg { display: inline-flex; }
-  .flex-wrap\@lg { flex-wrap: wrap; }
-  .flex-column\@lg { flex-direction: column; }
-  .flex-column-reverse\@lg { flex-direction: column-reverse; }
-  .flex-row\@lg { flex-direction: row; }
-  .flex-row-reverse\@lg { flex-direction: row-reverse; }
-  .flex-center\@lg { justify-content: center; align-items: center; }
-  .justify-start\@lg { justify-content: flex-start; }
-  .justify-end\@lg { justify-content: flex-end; }
-  .justify-center\@lg { justify-content: center; }
-  .justify-between\@lg { justify-content: space-between; }
-  .items-center\@lg { align-items: center; }
-  .items-start\@lg { align-items: flex-start; }
-  .items-end\@lg { align-items: flex-end; }
-}
-
-@include breakpoint(xl) {
-  .flex\@xl { display: flex; }
-  .inline-flex\@xl { display: inline-flex; }
-  .flex-wrap\@xl { flex-wrap: wrap; }
-  .flex-column\@xl { flex-direction: column; }
-  .flex-column-reverse\@xl { flex-direction: column-reverse; }
-  .flex-row\@xl { flex-direction: row; }
-  .flex-row-reverse\@xl { flex-direction: row-reverse; }
-  .flex-center\@xl { justify-content: center; align-items: center; }
-  .justify-start\@xl { justify-content: flex-start; }
-  .justify-end\@xl { justify-content: flex-end; }
-  .justify-center\@xl { justify-content: center; }
-  .justify-between\@xl { justify-content: space-between; }
-  .items-center\@xl { align-items: center; }
-  .items-start\@xl { align-items: flex-start; }
-  .items-end\@xl { align-items: flex-end; }
-}
-
 // children
 .flex-grow { flex-grow: 1; }
 .flex-shrink-0 { flex-shrink: 0; }
@@ -215,36 +125,6 @@
 .block { display: block; }
 .inline-block { display: inline-block; }
 .inline { display: inline; }
-
-@include breakpoint(xs) {
-  .block\@xs { display: block; }
-  .inline-block\@xs { display: inline-block; }
-  .inline\@xs { display: inline; }
-}
-
-@include breakpoint(sm) {
-  .block\@sm { display: block; }
-  .inline-block\@sm { display: inline-block; }
-  .inline\@sm { display: inline; }
-}
-
-@include breakpoint(md) {
-  .block\@md { display: block; }
-  .inline-block\@md { display: inline-block; }
-  .inline\@md { display: inline; }
-}
-
-@include breakpoint(lg) {
-  .block\@lg { display: block; }
-  .inline-block\@lg { display: inline-block; }
-  .inline\@lg { display: inline; }
-}
-
-@include breakpoint(xl) {
-  .block\@xl { display: block; }
-  .inline-block\@xl { display: inline-block; }
-  .inline\@xl { display: inline; }
-}
 
 // --------------------------------
 
@@ -413,26 +293,6 @@
 .margin-y-auto { 
   margin-top: auto;
   margin-bottom: auto;
-}
-
-@include breakpoint(xs, "not all") {
-  .has-margin\@xs { margin: 0 !important; }
-}
-
-@include breakpoint(sm, "not all") {
-  .has-margin\@sm { margin: 0 !important; }
-}
-
-@include breakpoint(md, "not all") {
-  .has-margin\@md { margin: 0 !important; }
-}
-
-@include breakpoint(lg, "not all") {
-  .has-margin\@lg { margin: 0 !important; }
-}
-
-@include breakpoint(xl, "not all") {
-  .has-margin\@xl { margin: 0 !important; }
 }
 
 // --------------------------------
@@ -604,26 +464,6 @@
   padding-bottom: var(--component-padding);
 }
 
-@include breakpoint(xs, "not all") {
-  .has-padding\@xs { padding: 0 !important; }
-}
-
-@include breakpoint(sm, "not all") {
-  .has-padding\@sm { padding: 0 !important; }
-}
-
-@include breakpoint(md, "not all") {
-  .has-padding\@md { padding: 0 !important; }
-}
-
-@include breakpoint(lg, "not all") {
-  .has-padding\@lg { padding: 0 !important; }
-}
-
-@include breakpoint(xl, "not all") {
-  .has-padding\@xl { padding: 0 !important; }
-}
-
 // --------------------------------
 
 // Vertical Alignment
@@ -662,36 +502,6 @@
 .text-center { text-align: center; }
 .text-left   { text-align: left; }
 .text-right  { text-align: right; }
-
-@include breakpoint(xs) {
-  .text-center\@xs { text-align: center; }
-  .text-left\@xs   { text-align: left; }
-  .text-right\@xs  { text-align: right; }
-}
-
-@include breakpoint(sm) {
-  .text-center\@sm { text-align: center; }
-  .text-left\@sm   { text-align: left; }
-  .text-right\@sm  { text-align: right; }
-}
-
-@include breakpoint(md) {
-  .text-center\@md { text-align: center; }
-  .text-left\@md   { text-align: left; }
-  .text-right\@md  { text-align: right; }
-}
-
-@include breakpoint(lg) {
-  .text-center\@lg { text-align: center; }
-  .text-left\@lg   { text-align: left; }
-  .text-right\@lg  { text-align: right; }
-}
-
-@include breakpoint(xl) {
-  .text-center\@xl { text-align: center; }
-  .text-left\@xl   { text-align: left; }
-  .text-right\@xl  { text-align: right; }
-}
 
 // text-component line-height
 .line-height-xs {
@@ -793,6 +603,20 @@
 
 // --------------------------------
 
+// min-width
+
+// --------------------------------
+
+.min-width-0     { min-width: 0; }
+.min-width-25\%  { min-width: 25%; }
+.min-width-33\%  { min-width: calc(100% / 3); }
+.min-width-50\%  { min-width: 50%; }
+.min-width-66\%  { min-width: calc(100% / 1.5); }
+.min-width-75\%  { min-width: 75%; }
+.min-width-100\% { min-width: 100%; }
+
+// --------------------------------
+
 // Media wrapper - make iframe responsive + prevent img jump when page loads
 
 // --------------------------------
@@ -888,3 +712,194 @@
 .bg-error { background-color: var(--color-error, hsl(355, 90%, 61%)); }
 .bg-white { background-color: var(--color-white, white); }
 .bg-black { background-color: var(--color-black, black); }
+
+// responsive variations
+@include breakpoint(xs) {
+  // flexbox
+  .flex\@xs { display: flex; }
+  .inline-flex\@xs { display: inline-flex; }
+  .flex-wrap\@xs { flex-wrap: wrap; }
+  .flex-column\@xs { flex-direction: column; }
+  .flex-column-reverse\@xs { flex-direction: column-reverse; }
+  .flex-row\@xs { flex-direction: row; }
+  .flex-row-reverse\@xs { flex-direction: row-reverse; }
+  .flex-center\@xs { justify-content: center; align-items: center; }
+  .justify-start\@xs { justify-content: flex-start; }
+  .justify-end\@xs { justify-content: flex-end; }
+  .justify-center\@xs { justify-content: center; }
+  .justify-between\@xs { justify-content: space-between; }
+  .items-center\@xs { align-items: center; }
+  .items-start\@xs { align-items: flex-start; }
+  .items-end\@xs { align-items: flex-end; }
+
+  // display
+  .block\@xs { display: block; }
+  .inline-block\@xs { display: inline-block; }
+  .inline\@xs { display: inline; }
+
+  // text alignment
+  .text-center\@xs { text-align: center; }
+  .text-left\@xs   { text-align: left; }
+  .text-right\@xs  { text-align: right; }
+
+  // visibility
+  .hide\@xs { display: none !important; }
+}
+
+@include breakpoint(sm) {
+  // flexbox
+  .flex\@sm { display: flex; }
+  .inline-flex\@sm { display: inline-flex; }
+  .flex-wrap\@sm { flex-wrap: wrap; }
+  .flex-column\@sm { flex-direction: column; }
+  .flex-column-reverse\@sm { flex-direction: column-reverse; }
+  .flex-row\@sm { flex-direction: row; }
+  .flex-row-reverse\@sm { flex-direction: row-reverse; }
+  .flex-center\@sm { justify-content: center; align-items: center; }
+  .justify-start\@sm { justify-content: flex-start; }
+  .justify-end\@sm { justify-content: flex-end; }
+  .justify-center\@sm { justify-content: center; }
+  .justify-between\@sm { justify-content: space-between; }
+  .items-center\@sm { align-items: center; }
+  .items-start\@sm { align-items: flex-start; }
+  .items-end\@sm { align-items: flex-end; }
+
+  // display
+  .block\@sm { display: block; }
+  .inline-block\@sm { display: inline-block; }
+  .inline\@sm { display: inline; }
+
+  // text alignment
+  .text-center\@sm { text-align: center; }
+  .text-left\@sm   { text-align: left; }
+  .text-right\@sm  { text-align: right; }
+
+  // visibility
+  .hide\@sm { display: none !important; }
+}
+
+@include breakpoint(md) {
+  // flexbox
+  .flex\@md { display: flex; }
+  .inline-flex\@md { display: inline-flex; }
+  .flex-wrap\@md { flex-wrap: wrap; }
+  .flex-column\@md { flex-direction: column; }
+  .flex-column-reverse\@md { flex-direction: column-reverse; }
+  .flex-row\@md { flex-direction: row; }
+  .flex-row-reverse\@md { flex-direction: row-reverse; }
+  .flex-center\@md { justify-content: center; align-items: center; }
+  .justify-start\@md { justify-content: flex-start; }
+  .justify-end\@md { justify-content: flex-end; }
+  .justify-center\@md { justify-content: center; }
+  .justify-between\@md { justify-content: space-between; }
+  .items-center\@md { align-items: center; }
+  .items-start\@md { align-items: flex-start; }
+  .items-end\@md { align-items: flex-end; }
+
+  // display
+  .block\@md { display: block; }
+  .inline-block\@md { display: inline-block; }
+  .inline\@md { display: inline; }
+
+  // text alignment
+  .text-center\@md { text-align: center; }
+  .text-left\@md   { text-align: left; }
+  .text-right\@md  { text-align: right; }
+
+  // visibility
+  .hide\@md { display: none !important; }
+}
+
+@include breakpoint(lg) {
+  // flexbox
+  .flex\@lg { display: flex; }
+  .inline-flex\@lg { display: inline-flex; }
+  .flex-wrap\@lg { flex-wrap: wrap; }
+  .flex-column\@lg { flex-direction: column; }
+  .flex-column-reverse\@lg { flex-direction: column-reverse; }
+  .flex-row\@lg { flex-direction: row; }
+  .flex-row-reverse\@lg { flex-direction: row-reverse; }
+  .flex-center\@lg { justify-content: center; align-items: center; }
+  .justify-start\@lg { justify-content: flex-start; }
+  .justify-end\@lg { justify-content: flex-end; }
+  .justify-center\@lg { justify-content: center; }
+  .justify-between\@lg { justify-content: space-between; }
+  .items-center\@lg { align-items: center; }
+  .items-start\@lg { align-items: flex-start; }
+  .items-end\@lg { align-items: flex-end; }
+
+  // display
+  .block\@lg { display: block; }
+  .inline-block\@lg { display: inline-block; }
+  .inline\@lg { display: inline; }
+
+  // text alignment
+  .text-center\@lg { text-align: center; }
+  .text-left\@lg   { text-align: left; }
+  .text-right\@lg  { text-align: right; }
+
+  // visibility
+  .hide\@lg { display: none !important; }
+}
+
+@include breakpoint(xl) {
+  // flexbox
+  .flex\@xl { display: flex; }
+  .inline-flex\@xl { display: inline-flex; }
+  .flex-wrap\@xl { flex-wrap: wrap; }
+  .flex-column\@xl { flex-direction: column; }
+  .flex-column-reverse\@xl { flex-direction: column-reverse; }
+  .flex-row\@xl { flex-direction: row; }
+  .flex-row-reverse\@xl { flex-direction: row-reverse; }
+  .flex-center\@xl { justify-content: center; align-items: center; }
+  .justify-start\@xl { justify-content: flex-start; }
+  .justify-end\@xl { justify-content: flex-end; }
+  .justify-center\@xl { justify-content: center; }
+  .justify-between\@xl { justify-content: space-between; }
+  .items-center\@xl { align-items: center; }
+  .items-start\@xl { align-items: flex-start; }
+  .items-end\@xl { align-items: flex-end; }
+
+  // display
+  .block\@xl { display: block; }
+  .inline-block\@xl { display: inline-block; }
+  .inline\@xl { display: inline; }
+
+  // text alignment
+  .text-center\@xl { text-align: center; }
+  .text-left\@xl   { text-align: left; }
+  .text-right\@xl  { text-align: right; }
+
+  // visibility
+  .hide\@xl { display: none !important; }
+}
+
+@include breakpoint(xs, "not all") {
+  .has-margin\@xs { margin: 0 !important; }
+  .has-padding\@xs { padding: 0 !important; }
+  .display\@xs { display: none !important; }
+}
+
+@include breakpoint(sm, "not all") {
+  .has-margin\@sm { margin: 0 !important; }
+  .has-padding\@sm { padding: 0 !important; }
+  .display\@sm { display: none !important; }
+}
+
+@include breakpoint(md, "not all") {
+  .has-margin\@md { margin: 0 !important; }
+  .has-padding\@md { padding: 0 !important; }
+  .display\@md { display: none !important; }
+}
+
+@include breakpoint(lg, "not all") {
+  .has-margin\@lg { margin: 0 !important; }
+  .has-padding\@lg { padding: 0 !important; }
+  .display\@lg { display: none !important; }
+}
+
+@include breakpoint(xl, "not all") {
+  .has-margin\@xl { margin: 0 !important; }
+  .has-padding\@xl { padding: 0 !important; }
+  .display\@xl { display: none !important; }
+}

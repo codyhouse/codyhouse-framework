@@ -32,43 +32,34 @@
 .max-width-xxxxl { max-width: var(--max-width-xxxxl); }
 
 // alt approach - max-width is updated at specific breakpoints
-.max-width-adaptive-sm {
-  max-width: var(--max-width-xs);
-
-  @include breakpoint(md) {
-    max-width: var(--max-width-sm);
-  }
-}
-
-.max-width-adaptive-md {
-  max-width: var(--max-width-xs);
-
-  @include breakpoint(md) {
-    max-width: var(--max-width-md);
-  }
-}
-
+.max-width-adaptive-sm,
+.max-width-adaptive-md,
 .max-width-adaptive,
-.max-width-adaptive-lg {
-  max-width: var(--max-width-xs);
-
-  @include breakpoint(md) {
-    max-width: var(--max-width-md);
-  }
-
-  @include breakpoint(xl) {
-    max-width: var(--max-width-lg);
-  }
-}
-
+.max-width-adaptive-lg,
 .max-width-adaptive-xl {
   max-width: var(--max-width-xs);
+}
 
-  @include breakpoint(md) {
-    max-width: var(--max-width-md);
+@include breakpoint(md) {
+  .max-width-adaptive-sm {
+    max-width: var(--max-width-sm);
   }
 
-  @include breakpoint(xl) {
+  .max-width-adaptive-md,
+  .max-width-adaptive,
+  .max-width-adaptive-lg,
+  .max-width-adaptive-xl {
+    max-width: var(--max-width-md);
+  }
+}
+
+@include breakpoint(xl) {
+  .max-width-adaptive,
+  .max-width-adaptive-lg {
+    max-width: var(--max-width-lg);
+  }
+
+  .max-width-adaptive-xl {
     max-width: var(--max-width-xl);
   }
 }
