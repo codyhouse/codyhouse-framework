@@ -93,6 +93,8 @@ npm run gulp watch
 
 The first command will install the modules the framework requires for compiling SCSS into CSS; the second will launch your project on a development server.
 
+⚠️ Note: if you receive error messages while trying to run the npm install command, you may need to install Git on your device first. You can download Git on the [Git website](https://git-scm.com).
+
 ## Component Library
 
 CodyHouse's Components are accessible, progressively enhanced, HTML, CSS, JS components that work seamlessly with the framework.
