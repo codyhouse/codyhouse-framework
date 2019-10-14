@@ -70,10 +70,17 @@ Besides checking JavaScript support, we check the support of CSS custom properti
 
 ```html
 <script>
+  function addCss(path) {
+    var link = document.createElement('link');
+    link.type = 'text/css';
+    link.rel = 'stylesheet';
+    link.href = path;
+    document.head.appendChild(link);
+  }
   if('CSS' in window && CSS.supports('color', 'var(--color-var)')) {
-    document.write('<link rel="stylesheet" href="assets/css/style.css">');
+    addCss('assets/css/style.css');
   } else {
-    document.write('<link rel="stylesheet" href="assets/css/style-fallback.css">');
+    addCss('assets/css/style-fallback.css');
   }
 </script>
 <noscript>
