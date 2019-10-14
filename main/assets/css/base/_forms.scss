@@ -51,26 +51,19 @@
   clip: auto;
 }
 
-// radio and checkbox lists
-.radio-list, .checkbox-list {
-  > * {
+// set basic style for (native) radio and checkbox buttons
+.radio-list, .checkbox-list { // e.g., .radio-list > li > input + label
+  > * { // parent of input + label
     position: relative;
     display: flex;
     align-items: baseline;
-    margin-bottom: var(--space-xxs);
-  }
-
-  > *:last-of-type {
-    margin-bottom: 0;
   }
 
   label { // radio/checkbox labels
     line-height: var(--body-line-height);
-    user-select: none;
   }
 
   input {
-    vertical-align: top;
     margin-right: var(--space-xxxs);
     flex-shrink: 0;
   }
