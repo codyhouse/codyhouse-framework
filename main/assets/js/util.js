@@ -242,26 +242,26 @@ Math.easeInOutQuad = function (t, b, c, d) {
 (function() {
   // make focus ring visible only for keyboard navigation (i.e., tab key) 
   var focusTab = document.getElementsByClassName('js-tab-focus');
-  if(focusTab.length > 0) {
-    function detectClick() {
+  function detectClick() {
+    if(focusTab.length > 0) {
       resetFocusTabs(false);
       window.addEventListener('keydown', detectTab);
-      window.removeEventListener('mousedown', detectClick);
-    };
+    }
+    window.removeEventListener('mousedown', detectClick);
+  };
 
-    function detectTab(event) {
-      if(event.keyCode !== 9) return;
-      resetFocusTabs(true);
-      window.removeEventListener('keydown', detectTab);
-      window.addEventListener('mousedown', detectClick);
-    };
-
-    function resetFocusTabs(bool) {
-      var outlineStyle = bool ? '' : 'none';
-      for(var i = 0; i < focusTab.length; i++) {
-        focusTab[i].style.setProperty('outline', outlineStyle);
-      }
-    };
+  function detectTab(event) {
+    if(event.keyCode !== 9) return;
+    resetFocusTabs(true);
+    window.removeEventListener('keydown', detectTab);
     window.addEventListener('mousedown', detectClick);
-  }
+  };
+
+  function resetFocusTabs(bool) {
+    var outlineStyle = bool ? '' : 'none';
+    for(var i = 0; i < focusTab.length; i++) {
+      focusTab[i].style.setProperty('outline', outlineStyle);
+    }
+  };
+  window.addEventListener('mousedown', detectClick);
 }());
