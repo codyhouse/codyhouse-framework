@@ -661,8 +661,20 @@
   }
 }
 
-.media-wrapper--4\:3 {
-  padding-bottom: 75%; // 4:3
+$media-wrapper-aspect-ratios: (
+  (21 9),
+  (16 9), // default for .media-wrapper
+  (4 3),
+  (1 1)
+);
+
+@each $aspect-ratio in $media-wrapper-aspect-ratios {
+  $aspect-ratio-x: nth($aspect-ratio, 1);
+  $aspect-ratio-y: nth($aspect-ratio, 2);
+
+  .media-wrapper--#{$aspect-ratio-x}\:#{$aspect-ratio-y} {
+    padding-bottom: calc((#{$aspect-ratio-y} / #{$aspect-ratio-x}) * 100%);
+  }
 }
 
 // --------------------------------
