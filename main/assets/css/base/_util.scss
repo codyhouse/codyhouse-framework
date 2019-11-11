@@ -245,7 +245,6 @@
   margin-left: auto;
   margin-right: auto;
 }
-
 .margin-y-xxxxs { 
   margin-top: var(--space-xxxxs);
   margin-bottom: var(--space-xxxxs);
@@ -414,7 +413,6 @@
   padding-left: var(--component-padding);
   padding-right: var(--component-padding);
 }
-
 .padding-y-xxxxs { 
   padding-top: var(--space-xxxxs);
   padding-bottom: var(--space-xxxxs);
@@ -590,6 +588,7 @@
 .width-80\%  { width: 80%; }
 .width-90\%  { width: 90%; }
 .width-100\% { width: 100%; }
+.width-100vw { width: 100vw; }
 
 // --------------------------------
 
@@ -622,6 +621,7 @@
 .height-80\%  { height: 80%; }
 .height-90\%  { height: 90%; }
 .height-100\% { height: 100%; }
+.height-100vh { height: 100vh; }
 
 // --------------------------------
 
@@ -636,6 +636,26 @@
 .min-width-66\%  { min-width: calc(100% / 1.5); }
 .min-width-75\%  { min-width: 75%; }
 .min-width-100\% { min-width: 100%; }
+
+// --------------------------------
+
+// Position
+
+// --------------------------------
+
+.position-relative { position: relative; }
+.position-absolute { position: absolute; }
+.position-fixed    { position: fixed; }
+.position-sticky   { position: sticky; }
+
+// --------------------------------
+
+// Overflow
+
+// --------------------------------
+
+.overflow-hidden { overflow: hidden; }
+.overflow-auto   { overflow: auto; }
 
 // --------------------------------
 
@@ -677,9 +697,12 @@ $media-wrapper-aspect-ratios: (
 
 // --------------------------------
 
-// Clearfix - clear float of child elements
+// Float
 
 // --------------------------------
+
+.float-left  { float: left; }
+.float-right { float: right; }
 
 .clearfix::after {
   content: "";
@@ -689,7 +712,7 @@ $media-wrapper-aspect-ratios: (
 
 // --------------------------------
 
-// Borders
+// Border
 
 // --------------------------------
 

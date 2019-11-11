@@ -95,16 +95,17 @@ Util.setHeight = function(start, to, element, duration, cb) {
 	Smooth Scroll
 */
 
-Util.scrollTo = function(final, duration, cb) {
-  var start = window.scrollY || document.documentElement.scrollTop,
-      currentTime = null;
+Util.scrollTo = function(final, duration, cb, scrollEl) {
+  var element = scrollEl || window;
+  var start = element.scrollTop || document.documentElement.scrollTop,
+    currentTime = null;
       
   var animateScroll = function(timestamp){
   	if (!currentTime) currentTime = timestamp;        
     var progress = timestamp - currentTime;
     if(progress > duration) progress = duration;
     var val = Math.easeInOutQuad(progress, start, final-start, duration);
-    window.scrollTo(0, val);
+    element.scrollTo(0, val);
     if(progress < duration) {
         window.requestAnimationFrame(animateScroll);
     } else {
