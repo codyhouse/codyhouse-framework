@@ -99,6 +99,8 @@ Util.scrollTo = function(final, duration, cb, scrollEl) {
   var element = scrollEl || window;
   var start = element.scrollTop || document.documentElement.scrollTop,
     currentTime = null;
+
+  if(!scrollEl) start = window.scrollY || document.documentElement.scrollTop;
       
   var animateScroll = function(timestamp){
   	if (!currentTime) currentTime = timestamp;        
