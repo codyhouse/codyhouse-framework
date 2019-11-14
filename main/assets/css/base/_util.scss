@@ -768,7 +768,20 @@ $media-wrapper-aspect-ratios: (
 .bg-white { background-color: var(--color-white, white); }
 .bg-black { background-color: var(--color-black, black); }
 
-// responsive variations
+// --------------------------------
+
+// Object Fit
+
+// --------------------------------
+
+.object-contain { object-fit: contain; }
+.object-cover   { object-fit: cover; }
+
+// --------------------------------
+
+// Responsive variations
+
+// --------------------------------
 @include breakpoint(xs) {
   // flexbox
   .flex\@xs { display: flex; }
