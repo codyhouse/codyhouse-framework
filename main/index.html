@@ -5,17 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script>document.getElementsByTagName("html")[0].className += " js";</script>
   <script>
-    function addCss(path) {
-      var link = document.createElement('link');
-      link.type = 'text/css';
-      link.rel = 'stylesheet';
-      link.href = path;
-      document.head.appendChild(link);
-    }
     if('CSS' in window && CSS.supports('color', 'var(--color-var)')) {
-      addCss('assets/css/style.css');
+      document.write('<link rel="stylesheet" href="assets/css/style.css">');
     } else {
-      addCss('assets/css/style-fallback.css');
+      document.write('<link rel="stylesheet" href="assets/css/style-fallback.css">');
     }
   </script>
   <noscript>

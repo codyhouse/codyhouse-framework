@@ -1,4 +1,4 @@
-# 🐞 CodyHouse Framework
+# 🐞 CodyFrame
 A lightweight front-end framework for building accessible, bespoke interfaces.
 
 [Explore the documentation on codyhouse.co](https://codyhouse.co/ds/get-started)
@@ -10,9 +10,9 @@ The framework is composed of:
 3. **style.scss:** used to import the _base.scss and _custom-style.scss files.
 4. **util.js:** utility functions used in the [CodyHouse Components](https://codyhouse.co/ds/components). Make sure to import this file before the component script file.
 
-Some of the advantages of working with this framework:
+Some of the advantages of working with CodyFrame:
 
-- ⚡️ lightweight (**8KB** minified and gzipped)
+- ⚡️ lightweight (**9KB** minified and gzipped)
 - 🙌 no need to override existing CSS rules
 - 📱 mobile-first
 - 🎨 create unique designs with total control
@@ -67,7 +67,7 @@ If you're using the Components, make sure to include the following script in the
 The script is used in CSS to target that JavaScript is enabled and apply additional style accordingly. If you don't include the script, part of the style of the components won't be visible.
 
 ## Gulp
-The framework includes a Gulp configuration file. To start a project that runs on Gulp, once you have downloaded the source files, navigate to the framework folder, and run the following commands in your command line:
+CodyFrame includes a Gulp configuration file. To start a project that runs on Gulp, once you have downloaded the source files, navigate to the framework folder, and run the following commands in your command line:
 
 ```
 npm install
@@ -82,17 +82,10 @@ The first command will install the modules the framework requires for compiling 
 
 ```html
 <script>
-  function addCss(path) {
-    var link = document.createElement('link');
-    link.type = 'text/css';
-    link.rel = 'stylesheet';
-    link.href = path;
-    document.head.appendChild(link);
-  }
   if('CSS' in window && CSS.supports('color', 'var(--color-var)')) {
-    addCss('assets/css/style.css');
+    document.write('<link rel="stylesheet" href="assets/css/style.css">');
   } else {
-    addCss('assets/css/style-fallback.css');
+    document.write('<link rel="stylesheet" href="assets/css/style-fallback.css">');
   }
 </script>
 <noscript>
@@ -110,7 +103,7 @@ CodyHouse's Components are accessible, progressively enhanced, HTML, CSS, JS com
 
 ## Global Editors
 
-The Global Editors are web design tools that allow you to set the style of typography elements, color themes, spacing rules, buttons, and forms directly in the browser. They generate SCSS code that is compatible with the Framework.
+The Global Editors are web design tools that allow you to set the style of typography elements, color themes, spacing rules, buttons, and forms directly in the browser. They generate SCSS code that is compatible with CodyFrame.
 
 Explore the Editors:
 

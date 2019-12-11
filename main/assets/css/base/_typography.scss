@@ -54,7 +54,7 @@ a, .link {
   text-decoration: underline;
 }
 
-strong, .text-bold {
+strong {
   font-weight: bold;
 }
 
@@ -85,7 +85,7 @@ u, .text-underline {
   }
 
   ul, ol {
-    padding-left: 1em;
+    list-style-position: inside;
   }
 
   ul {

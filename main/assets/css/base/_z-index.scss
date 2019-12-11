@@ -1,6 +1,6 @@
 :root {
   --zindex-header: 2;
-  --zindex-popover: 5;
-  --zindex-fixed-element: 10;
-  --zindex-overlay: 15; // modals and dialogs
+  --zindex-popover: 5; // e.g., tooltips and dropdown
+  --zindex-fixed-element: 10; // e.g., 'back to top' button
+  --zindex-overlay: 15; // e.g., modals and dialogs
 }
