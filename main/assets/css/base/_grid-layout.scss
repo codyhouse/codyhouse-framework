@@ -1,15 +1,15 @@
 :root {
-  --max-w-xxxxs: 20rem;  // ~320px
-  --max-w-xxxs:  26rem;  // ~416px
-  --max-w-xxs:   32rem;  // ~512px
-  --max-w-xs:    38rem;  // ~608px
-  --max-w-sm:    48rem;  // ~768px
-  --max-w-md:    64rem;  // ~1024px
-  --max-w-lg:    80rem;  // ~1280px
-  --max-w-xl:    90rem;  // ~1440px
-  --max-w-xxl:   100rem; // ~1600px
-  --max-w-xxxl:  120rem; // ~1920px
-  --max-w-xxxxl: 150rem; // ~2400px
+  --max-width-xxxxs: 20rem;  // ~320px
+  --max-width-xxxs:  26rem;  // ~416px
+  --max-width-xxs:   32rem;  // ~512px
+  --max-width-xs:    38rem;  // ~608px
+  --max-width-sm:    48rem;  // ~768px
+  --max-width-md:    64rem;  // ~1024px
+  --max-width-lg:    80rem;  // ~1280px
+  --max-width-xl:    90rem;  // ~1440px
+  --max-width-xxl:   100rem; // ~1600px
+  --max-width-xxxl:  120rem; // ~1920px
+  --max-width-xxxxl: 150rem; // ~2400px
 }
 
 // classes used to center content on x-axis and set content max width
@@ -19,17 +19,17 @@
   margin-right: auto;
 }
 
-.max-width-xxxxs { max-width: var(--max-w-xxxxs); }
-.max-width-xxxs  { max-width: var(--max-w-xxxs); }
-.max-width-xxs   { max-width: var(--max-w-xxs); }
-.max-width-xs    { max-width: var(--max-w-xs); }
-.max-width-sm    { max-width: var(--max-w-sm); }
-.max-width-md    { max-width: var(--max-w-md); }
-.max-width-lg    { max-width: var(--max-w-lg); }
-.max-width-xl    { max-width: var(--max-w-xl); }
-.max-width-xxl   { max-width: var(--max-w-xxl); }
-.max-width-xxxl  { max-width: var(--max-w-xxxl); }
-.max-width-xxxxl { max-width: var(--max-w-xxxxl); }
+.max-width-xxxxs { max-width: var(--max-width-xxxxs); }
+.max-width-xxxs  { max-width: var(--max-width-xxxs); }
+.max-width-xxs   { max-width: var(--max-width-xxs); }
+.max-width-xs    { max-width: var(--max-width-xs); }
+.max-width-sm    { max-width: var(--max-width-sm); }
+.max-width-md    { max-width: var(--max-width-md); }
+.max-width-lg    { max-width: var(--max-width-lg); }
+.max-width-xl    { max-width: var(--max-width-xl); }
+.max-width-xxl   { max-width: var(--max-width-xxl); }
+.max-width-xxxl  { max-width: var(--max-width-xxxl); }
+.max-width-xxxxl { max-width: var(--max-width-xxxxl); }
 
 // alt approach - max-width is updated at specific breakpoints
 .max-width-adaptive-sm,
@@ -37,30 +37,30 @@
 .max-width-adaptive,
 .max-width-adaptive-lg,
 .max-width-adaptive-xl {
-  max-width: var(--max-w-xs);
+  max-width: var(--max-width-xs);
 }
 
 @include breakpoint(md) {
   .max-width-adaptive-sm {
-    max-width: var(--max-w-sm);
+    max-width: var(--max-width-sm);
   }
 
   .max-width-adaptive-md,
   .max-width-adaptive,
   .max-width-adaptive-lg,
   .max-width-adaptive-xl {
-    max-width: var(--max-w-md);
+    max-width: var(--max-width-md);
   }
 }
 
 @include breakpoint(xl) {
   .max-width-adaptive,
   .max-width-adaptive-lg {
-    max-width: var(--max-w-lg);
+    max-width: var(--max-width-lg);
   }
 
   .max-width-adaptive-xl {
-    max-width: var(--max-w-xl);
+    max-width: var(--max-width-xl);
   }
 }
 
