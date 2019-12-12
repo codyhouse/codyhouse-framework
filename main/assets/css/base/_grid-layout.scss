@@ -73,6 +73,7 @@
 $grid-columns: 12 !default;
 
 .grid {
+  --grid-gap: 0px;
   display: flex;
   flex-wrap: wrap;
 
