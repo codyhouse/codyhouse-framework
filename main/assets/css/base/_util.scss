@@ -904,6 +904,9 @@ $media-wrapper-aspect-ratios: (
 .bg-opacity-80\% { --bg-o: 0.8; }
 .bg-opacity-90\% { --bg-o: 0.9; }
 
+.bg-cover { background-size: cover; }
+.bg-center { background-position: center; }
+
 // --------------------------------
 
 // Object Fit
