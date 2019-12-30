@@ -32,24 +32,17 @@
 .max-width-xxxxl { max-width: var(--max-width-xxxxl); }
 
 // alt approach - max-width is updated at specific breakpoints
-.max-width-adaptive-sm,
-.max-width-adaptive-md,
-.max-width-adaptive,
-.max-width-adaptive-lg,
-.max-width-adaptive-xl {
+[class*="max-width-adaptive"] {
   max-width: var(--max-width-xs);
 }
 
 @include breakpoint(md) {
-  .max-width-adaptive-sm {
-    max-width: var(--max-width-sm);
+  [class*="max-width-adaptive"] {
+    max-width: var(--max-width-md);
   }
 
-  .max-width-adaptive-md,
-  .max-width-adaptive,
-  .max-width-adaptive-lg,
-  .max-width-adaptive-xl {
-    max-width: var(--max-width-md);
+  .max-width-adaptive-sm {
+    max-width: var(--max-width-sm);
   }
 }
 
@@ -74,6 +67,7 @@ $grid-columns: 12 !default;
 
 .grid {
   --grid-gap: 0px;
+  --offset: var(--grid-gap);
   display: flex;
   flex-wrap: wrap;
 
@@ -86,9 +80,9 @@ $grid-columns: 12 !default;
   margin-bottom: calc(-1 * var(--grid-gap, 1em));
   margin-left: calc(-1 * var(--grid-gap, 1em));
 
-  > * { 
-    margin-bottom: var(--grid-gap, 1em); 
-    margin-left: var(--grid-gap, 1em);
+  > * {
+    margin-bottom: var(--grid-gap, 1em);
+    margin-left: var(--offset, 1em);
   }
 }
 
@@ -127,6 +121,12 @@ $grid-columns: 12 !default;
   }
 }
 
+@for $i from 1 through $grid-columns - 1 {
+  .offset-#{$i} {
+    --offset: calc(#{round-width($i)} + var(--grid-gap, 1em));
+  }
+}
+
 @include breakpoint(xs) {
   .col\@xs { // auto-sized column
     @include autoSizedColumn;
@@ -136,6 +136,12 @@ $grid-columns: 12 !default;
     .col-#{$i}\@xs {
       flex-basis: calc( #{round-width($i)} - 0.01px - var(--grid-gap, 1em));
       max-width: calc( #{round-width($i)} - 0.01px - var(--grid-gap, 1em)); 
+    }
+  }
+
+  @for $i from 1 through $grid-columns - 1 {
+    .offset-#{$i}\@xs {
+      --offset: calc(#{round-width($i)} + var(--grid-gap, 1em));
     }
   }
 }
@@ -151,6 +157,12 @@ $grid-columns: 12 !default;
       max-width: calc( #{round-width($i)} - 0.01px - var(--grid-gap, 1em)); 
     }
   }
+
+  @for $i from 1 through $grid-columns - 1 {
+    .offset-#{$i}\@sm {
+      --offset: calc(#{round-width($i)} + var(--grid-gap, 1em));
+    }
+  }
 }
 
 @include breakpoint(md) {
@@ -162,6 +174,12 @@ $grid-columns: 12 !default;
     .col-#{$i}\@md {
       flex-basis: calc( #{round-width($i)} - 0.01px - var(--grid-gap, 1em));
       max-width: calc( #{round-width($i)} - 0.01px - var(--grid-gap, 1em)); 
+    }
+  }
+
+  @for $i from 1 through $grid-columns - 1 {
+    .offset-#{$i}\@md {
+      --offset: calc(#{round-width($i)} + var(--grid-gap, 1em));
     }
   }
 }
@@ -177,6 +195,12 @@ $grid-columns: 12 !default;
       max-width: calc( #{round-width($i)} - 0.01px - var(--grid-gap, 1em));
     }
   }
+
+  @for $i from 1 through $grid-columns - 1 {
+    .offset-#{$i}\@lg {
+      --offset: calc(#{round-width($i)} + var(--grid-gap, 1em));
+    }
+  }
 }
 
 @include breakpoint(xl) {
@@ -188,6 +212,12 @@ $grid-columns: 12 !default;
     .col-#{$i}\@xl {
       flex-basis: calc( #{round-width($i)} - 0.01px - var(--grid-gap, 1em));
       max-width: calc( #{round-width($i)} - 0.01px - var(--grid-gap, 1em));
+    }
+  }
+
+  @for $i from 1 through $grid-columns - 1 {
+    .offset-#{$i}\@xl {
+      --offset: calc(#{round-width($i)} + var(--grid-gap, 1em));
     }
   }
 }

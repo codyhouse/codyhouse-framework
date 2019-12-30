@@ -659,6 +659,7 @@
 .width-90\%  { width: 90%; }
 .width-100\% { width: 100%; }
 .width-100vw { width: 100vw; }
+.width-auto  { width: auto; }
 
 // --------------------------------
 
@@ -692,6 +693,7 @@
 .height-90\%  { height: 90%; }
 .height-100\% { height: 100%; }
 .height-100vh { height: 100vh; }
+.height-auto  { height: auto; }
 
 // --------------------------------
 
@@ -717,6 +719,11 @@
 .position-absolute { position: absolute; }
 .position-fixed    { position: fixed; }
 .position-sticky   { position: sticky; }
+
+.top-0    { top: 0; }
+.bottom-0 { bottom: 0; }
+.left-0   { left: 0; }
+.right-0  { right: 0; }
 
 // --------------------------------
 
@@ -879,6 +886,7 @@ $media-wrapper-aspect-ratios: (
   --bg-o: 1;
 }
 
+.bg-transparent { background-color: transparent; }
 .bg-inherit { background-color: inherit; }
 .bg { background-color: alpha(var(--color-bg), var(--bg-o)); }
 .bg-contrast-lower { background-color: alpha(var(--color-contrast-lower), var(--bg-o, 1)); }
