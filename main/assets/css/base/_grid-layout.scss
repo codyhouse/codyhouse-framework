@@ -76,7 +76,7 @@ $grid-columns: 12 !default;
   }
 }
 
-[class*="grid-gap"]:not[class*="grid-auto"] {
+[class*="grid-gap"]:not([class*="grid-auto"]) {
   margin-bottom: calc(-1 * var(--grid-gap, 1em));
   margin-left: calc(-1 * var(--grid-gap, 1em));
 
