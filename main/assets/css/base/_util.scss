@@ -536,6 +536,15 @@
   white-space: nowrap;
 }
 
+// text transform
+.text-uppercase  { text-transform: uppercase; }
+.text-capitalize { text-transform: capitalize; }
+
+// letter spacing
+.letter-spacing-sm { letter-spacing: -0.05em; }
+.letter-spacing-md { letter-spacing: 0.05em; }
+.letter-spacing-lg { letter-spacing: 0.1em; }
+
 // font weight
 .font-light    { font-weight: 300; }
 .font-normal   { font-weight: 400; }
@@ -550,6 +559,11 @@
 .text-center { text-align: center; }
 .text-left   { text-align: left; }
 .text-right  { text-align: right; }
+
+// text-decoration
+.text-line-through    { text-decoration: line-through; }
+.text-underline       { text-decoration: underline; }
+.text-decoration-none { text-decoration: none; }
 
 // text-component line-height
 .line-height-xs {
@@ -940,6 +954,9 @@ $media-wrapper-aspect-ratios: (
   .flex-row-reverse\@xs { flex-direction: row-reverse; }
   .flex-center\@xs { justify-content: center; align-items: center; }
 
+  .flex-grow-0\@xs { flex-grow: 0; }
+  .flex-shrink\@xs { flex-shrink: 1; }
+
   // justify content
   .justify-start\@xs { justify-content: flex-start; }
   .justify-end\@xs { justify-content: flex-end; }
@@ -980,6 +997,11 @@ $media-wrapper-aspect-ratios: (
   .flex-row\@sm { flex-direction: row; }
   .flex-row-reverse\@sm { flex-direction: row-reverse; }
   .flex-center\@sm { justify-content: center; align-items: center; }
+  
+  .flex-grow-0\@sm { flex-grow: 0; }
+  .flex-grow\@sm { flex-grow: 1; }
+  .flex-shrink-0\@sm { flex-shrink: 0; }
+  .flex-shrink\@sm { flex-shrink: 1; }
 
   // justify content
   .justify-start\@sm { justify-content: flex-start; }
@@ -1021,6 +1043,11 @@ $media-wrapper-aspect-ratios: (
   .flex-row\@md { flex-direction: row; }
   .flex-row-reverse\@md { flex-direction: row-reverse; }
   .flex-center\@md { justify-content: center; align-items: center; }
+  
+  .flex-grow-0\@md { flex-grow: 0; }
+  .flex-grow\@md { flex-grow: 1; }
+  .flex-shrink-0\@md { flex-shrink: 0; }
+  .flex-shrink\@md { flex-shrink: 1; }
 
   // justify content
   .justify-start\@md { justify-content: flex-start; }
@@ -1062,6 +1089,11 @@ $media-wrapper-aspect-ratios: (
   .flex-row\@lg { flex-direction: row; }
   .flex-row-reverse\@lg { flex-direction: row-reverse; }
   .flex-center\@lg { justify-content: center; align-items: center; }
+  
+  .flex-grow-0\@lg { flex-grow: 0; }
+  .flex-grow\@lg { flex-grow: 1; }
+  .flex-shrink-0\@lg { flex-shrink: 0; }
+  .flex-shrink\@lg { flex-shrink: 1; }
 
   // justify content
   .justify-start\@lg { justify-content: flex-start; }
@@ -1103,6 +1135,11 @@ $media-wrapper-aspect-ratios: (
   .flex-row\@xl { flex-direction: row; }
   .flex-row-reverse\@xl { flex-direction: row-reverse; }
   .flex-center\@xl { justify-content: center; align-items: center; }
+  
+  .flex-grow-0\@xl { flex-grow: 0; }
+  .flex-grow\@xl { flex-grow: 1; }
+  .flex-shrink-0\@xl { flex-shrink: 0; }
+  .flex-shrink\@xl { flex-shrink: 1; }
 
   // justify content
   .justify-start\@xl { justify-content: flex-start; }
