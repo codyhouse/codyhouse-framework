@@ -31,29 +31,37 @@
 .max-width-xxxl  { max-width: var(--max-width-xxxl); }
 .max-width-xxxxl { max-width: var(--max-width-xxxxl); }
 
-// alt approach - max-width is updated at specific breakpoints
+// alt approach - max-width is equal to current breakpoint
 [class*="max-width-adaptive"] {
-  max-width: var(--max-width-xs);
+  max-width: map-get($map: $breakpoints, $key: xs);
+}
+
+@include breakpoint(sm) {
+  [class*="max-width-adaptive"] {
+    max-width: map-get($map: $breakpoints, $key: sm);
+  }
 }
 
 @include breakpoint(md) {
-  [class*="max-width-adaptive"] {
-    max-width: var(--max-width-md);
+  .max-width-adaptive-md,
+  .max-width-adaptive,
+  .max-width-adaptive-lg,
+  .max-width-adaptive-xl {
+    max-width: map-get($map: $breakpoints, $key: md);
   }
+}
 
-  .max-width-adaptive-sm {
-    max-width: var(--max-width-sm);
+@include breakpoint(lg) {
+  .max-width-adaptive,
+  .max-width-adaptive-lg,
+  .max-width-adaptive-xl {
+    max-width: map-get($map: $breakpoints, $key: lg);
   }
 }
 
 @include breakpoint(xl) {
-  .max-width-adaptive,
-  .max-width-adaptive-lg {
-    max-width: var(--max-width-lg);
-  }
-
   .max-width-adaptive-xl {
-    max-width: var(--max-width-xl);
+    max-width: map-get($map: $breakpoints, $key: xl);
   }
 }
 

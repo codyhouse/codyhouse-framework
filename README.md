@@ -99,6 +99,10 @@ The first command will install the modules the framework requires for compiling 
 
 CodyHouse's Components are accessible, progressively enhanced, HTML, CSS, JS components that work seamlessly with the framework.
 
+You can use the Gulp configuration file to auto-import the .scss of the CodyHouse's Components.
+
+[Learn more about importing the CSS and JS of the CodyHouse's Components](https://codyhouse.co/ds/docs/framework#import-css-components)
+
 [Explore the Components](https://codyhouse.co/ds/components)
 
 ## Global Editors

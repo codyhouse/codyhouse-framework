@@ -25,7 +25,7 @@
 
   > * {
     margin-bottom: var(--space-xxxxs);
-    margin-left: calc(var(--space-xxxxs));
+    margin-left: var(--space-xxxxs);
   }
 }
 
@@ -35,7 +35,7 @@
 
   > * {
     margin-bottom: var(--space-xxxs);
-    margin-left: calc(var(--space-xxxs));
+    margin-left: var(--space-xxxs);
   }
 }
 
@@ -45,7 +45,7 @@
 
   > * {
     margin-bottom: var(--space-xxs);
-    margin-left: calc(var(--space-xxs));
+    margin-left: var(--space-xxs);
   }
 }
 
@@ -55,7 +55,7 @@
 
   > * {
     margin-bottom: var(--space-xs);
-    margin-left: calc(var(--space-xs));
+    margin-left: var(--space-xs);
   }
 }
 
@@ -65,7 +65,7 @@
 
   > * {
     margin-bottom: var(--space-sm);
-    margin-left: calc(var(--space-sm));
+    margin-left: var(--space-sm);
   }
 }
 
@@ -75,7 +75,7 @@
 
   > * {
     margin-bottom: var(--space-md);
-    margin-left: calc(var(--space-md));
+    margin-left: var(--space-md);
   }
 }
 
@@ -85,7 +85,7 @@
 
   > * {
     margin-bottom: var(--space-lg);
-    margin-left: calc(var(--space-lg));
+    margin-left: var(--space-lg);
   }
 }
 
@@ -95,7 +95,7 @@
 
   > * {
     margin-bottom: var(--space-xl);
-    margin-left: calc(var(--space-xl));
+    margin-left: var(--space-xl);
   }
 }
 
@@ -105,7 +105,7 @@
 
   > * {
     margin-bottom: var(--space-xxl);
-    margin-left: calc(var(--space-xxl));
+    margin-left: var(--space-xxl);
   }
 }
 
@@ -115,7 +115,7 @@
 
   > * {
     margin-bottom: var(--space-xxxl);
-    margin-left: calc(var(--space-xxxl));
+    margin-left: var(--space-xxxl);
   }
 }
 
@@ -125,7 +125,7 @@
 
   > * {
     margin-bottom: var(--space-xxxxl);
-    margin-left: calc(var(--space-xxxxl));
+    margin-left: var(--space-xxxxl);
   }
 }
 
@@ -529,7 +529,7 @@
   white-space: nowrap;
 }
 
-.text-replace { // replace text with img
+.text-replace { // replace text with bg img
   overflow: hidden;
   color: transparent;
   text-indent: 100%;
@@ -551,6 +551,12 @@
 .font-medium   { font-weight: 500; }
 .font-semibold { font-weight: 600; }
 .font-bold, .text-bold { font-weight: 700; }
+
+// font smooth
+.font-smooth {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
 // font family
 .font-primary { font-family: var(--font-primary); }
