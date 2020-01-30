@@ -94,17 +94,19 @@ $grid-columns: 12 !default;
   }
 }
 
-.grid-gap-xxxxs { --grid-gap: var(--space-xxxxs); }
-.grid-gap-xxxs  { --grid-gap: var(--space-xxxs); }
-.grid-gap-xxs   { --grid-gap: var(--space-xxs); }
-.grid-gap-xs    { --grid-gap: var(--space-xs); }
-.grid-gap-sm    { --grid-gap: var(--space-sm); }
-.grid-gap-md    { --grid-gap: var(--space-md); }
-.grid-gap-lg    { --grid-gap: var(--space-lg); }
-.grid-gap-xl    { --grid-gap: var(--space-xl); }
-.grid-gap-xxl   { --grid-gap: var(--space-xxl); }
-.grid-gap-xxxl  { --grid-gap: var(--space-xxxl); }
-.grid-gap-xxxxl { --grid-gap: var(--space-xxxxl); }
+@supports (--css: variables) {
+  .grid-gap-xxxxs { --grid-gap: var(--space-xxxxs); }
+  .grid-gap-xxxs  { --grid-gap: var(--space-xxxs); }
+  .grid-gap-xxs   { --grid-gap: var(--space-xxs); }
+  .grid-gap-xs    { --grid-gap: var(--space-xs); }
+  .grid-gap-sm    { --grid-gap: var(--space-sm); }
+  .grid-gap-md    { --grid-gap: var(--space-md); }
+  .grid-gap-lg    { --grid-gap: var(--space-lg); }
+  .grid-gap-xl    { --grid-gap: var(--space-xl); }
+  .grid-gap-xxl   { --grid-gap: var(--space-xxl); }
+  .grid-gap-xxxl  { --grid-gap: var(--space-xxxl); }
+  .grid-gap-xxxxl { --grid-gap: var(--space-xxxxl); }
+}
 
 @function round-width ($i) {
   //function used to round width to a number with 2 decimal places - used for IE fallback

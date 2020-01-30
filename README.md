@@ -12,7 +12,7 @@ The framework is composed of:
 
 Some of the advantages of working with CodyFrame:
 
-- ⚡️ lightweight (**9KB** minified and gzipped)
+- ⚡️ lightweight (**12.8KB** minified and gzipped)
 - 🙌 no need to override existing CSS rules
 - 📱 mobile-first
 - 🎨 create unique designs with total control
