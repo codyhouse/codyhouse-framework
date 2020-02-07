@@ -5,11 +5,23 @@
   --radius-lg: calc(var(--radius, 0.25em)*2);
 
   // box shadow
-  --shadow-xs: 0 1px 2px rgba(0, 0, 0, .1); // lower depth;
-  --shadow-sm: 0 1px 2px rgba(0, 0, 0, .085), 0 1px 8px rgba(0, 0, 0, .1); // low depth;
-  --shadow-md: 0 1px 8px rgba(0, 0, 0, .085), 0 8px 24px rgba(0, 0, 0, .1); // medium depth
-  --shadow-lg: 0 1px 8px rgba(0, 0, 0, .085), 0 16px 48px rgba(0, 0, 0, .085), 0 24px 60px rgba(0, 0, 0, .085); // high depth
-  --shadow-xl: 0 1px 8px rgba(0, 0, 0, .085), 0 16px 64px rgba(0, 0, 0, .15), 0 24px 100px rgba(0, 0, 0, .15); // higher depth
+  --shadow-xs:  0 0.1px 0.3px rgba(0, 0, 0, 0.06),
+                0 1px 2px rgba(0, 0, 0, 0.12); 
+  --shadow-sm:  0 0.3px 0.4px rgba(0, 0, 0, 0.025),
+                0 0.9px 1.5px rgba(0, 0, 0, 0.05), 
+                0 3.5px 6px rgba(0, 0, 0, 0.1); 
+  --shadow-md:  0 0.9px 1.5px rgba(0, 0, 0, 0.03), 
+                0 3.1px 5.5px rgba(0, 0, 0, 0.08), 
+                0 14px 25px rgba(0, 0, 0, 0.12); 
+  --shadow-lg:  0 1.2px 1.9px -1px rgba(0, 0, 0, 0.014), 
+                0 3.3px 5.3px -1px rgba(0, 0, 0, 0.038), 
+                0 8.5px 12.7px -1px rgba(0, 0, 0, 0.085), 
+                0 30px 42px -1px rgba(0, 0, 0, 0.15);
+  --shadow-xl:  0 1.5px 2.1px -6px rgba(0, 0, 0, 0.012), 
+                0 3.6px 5.2px -6px rgba(0, 0, 0, 0.035), 
+                0 7.3px 10.6px -6px rgba(0, 0, 0, 0.07), 
+                0 16.2px 21.9px -6px rgba(0, 0, 0, 0.117), 
+                0 46px 60px -6px rgba(0, 0, 0, 0.2);
 
   // timing functions
   // credits: https://github.com/ai/easings.net
