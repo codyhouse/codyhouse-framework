@@ -74,8 +74,6 @@
 $grid-columns: 12 !default;
 
 .grid {
-  --grid-gap: 0px;
-  --offset: var(--grid-gap);
   display: flex;
   flex-wrap: wrap;
 
@@ -84,28 +82,30 @@ $grid-columns: 12 !default;
   }
 }
 
-[class*="grid-gap"]:not([class*="grid-auto"]) {
-  margin-bottom: calc(-1 * var(--grid-gap, 1em));
-  margin-left: calc(-1 * var(--grid-gap, 1em));
+[class*="gap-xxxxs"], [class*="gap-xxxs"], [class*="gap-xxs"], [class*="gap-xs"], [class*="gap-sm"], [class*="gap-md"], [class*="gap-lg"], [class*="gap-xl"], [class*="gap-xxl"], [class*="gap-xxxl"], [class*="gap-xxxxl"], [class*="grid-gap-"], [class*="flex-gap-"] {
+  --gap: 0.75em;
+  --offset: var(--gap);
+  margin-bottom: calc(-1 * var(--gap));
+  margin-left: calc(-1 * var(--gap));
 
   > * {
-    margin-bottom: var(--grid-gap, 1em);
-    margin-left: var(--offset, 1em);
+    margin-bottom: var(--gap);
+    margin-left: var(--offset);
   }
 }
 
 @supports (--css: variables) {
-  .grid-gap-xxxxs { --grid-gap: var(--space-xxxxs); }
-  .grid-gap-xxxs  { --grid-gap: var(--space-xxxs); }
-  .grid-gap-xxs   { --grid-gap: var(--space-xxs); }
-  .grid-gap-xs    { --grid-gap: var(--space-xs); }
-  .grid-gap-sm    { --grid-gap: var(--space-sm); }
-  .grid-gap-md    { --grid-gap: var(--space-md); }
-  .grid-gap-lg    { --grid-gap: var(--space-lg); }
-  .grid-gap-xl    { --grid-gap: var(--space-xl); }
-  .grid-gap-xxl   { --grid-gap: var(--space-xxl); }
-  .grid-gap-xxxl  { --grid-gap: var(--space-xxxl); }
-  .grid-gap-xxxxl { --grid-gap: var(--space-xxxxl); }
+  .gap-xxxxs, .grid-gap-xxxxs, .flex-gap-xxxxs { --gap: var(--space-xxxxs); }
+  .gap-xxxs, .grid-gap-xxxs, .flex-gap-xxxs    { --gap: var(--space-xxxs); }
+  .gap-xxs, .grid-gap-xxs, .flex-gap-xxs       { --gap: var(--space-xxs); }
+  .gap-xs, .grid-gap-xs, .flex-gap-xs          { --gap: var(--space-xs); }
+  .gap-sm, .grid-gap-sm, .flex-gap-sm          { --gap: var(--space-sm); }
+  .gap-md, .grid-gap-md, .flex-gap-md          { --gap: var(--space-md); }
+  .gap-lg, .grid-gap-lg, .flex-gap-lg          { --gap: var(--space-lg); }
+  .gap-xl, .grid-gap-xl, .flex-gap-xl          { --gap: var(--space-xl); }
+  .gap-xxl, .grid-gap-xxl, .flex-gap-xxl       { --gap: var(--space-xxl); }
+  .gap-xxxl, .grid-gap-xxxl, .flex-gap-xxxl    { --gap: var(--space-xxxl); }
+  .gap-xxxxl, .grid-gap-xxxxl, .flex-gap-xxxxl { --gap: var(--space-xxxxl); }
 }
 
 @function round-width ($i) {
@@ -126,14 +126,14 @@ $grid-columns: 12 !default;
 
 @for $i from 1 through $grid-columns {
   .col-#{$i} {
-    flex-basis: calc( #{round-width($i)} - 0.01px - var(--grid-gap, 1em));
-    max-width: calc( #{round-width($i)} - 0.01px - var(--grid-gap, 1em)); 
+    flex-basis: calc( #{round-width($i)} - 0.01px - var(--gap, 0px));
+    max-width: calc( #{round-width($i)} - 0.01px - var(--gap, 0px));
   }
 }
 
 @for $i from 1 through $grid-columns - 1 {
   .offset-#{$i} {
-    --offset: calc(#{round-width($i)} + var(--grid-gap, 1em));
+    --offset: calc(#{round-width($i)} + var(--gap, 0px));
   }
 }
 
@@ -144,15 +144,29 @@ $grid-columns: 12 !default;
 
   @for $i from 1 through $grid-columns {
     .col-#{$i}\@xs {
-      flex-basis: calc( #{round-width($i)} - 0.01px - var(--grid-gap, 1em));
-      max-width: calc( #{round-width($i)} - 0.01px - var(--grid-gap, 1em)); 
+      flex-basis: calc( #{round-width($i)} - 0.01px - var(--gap, 0px));
+      max-width: calc( #{round-width($i)} - 0.01px - var(--gap, 0px));
     }
   }
 
   @for $i from 1 through $grid-columns - 1 {
     .offset-#{$i}\@xs {
-      --offset: calc(#{round-width($i)} + var(--grid-gap, 1em));
+      --offset: calc(#{round-width($i)} + var(--gap, 0px));
     }
+  }
+
+  @supports (--css: variables) {
+    .gap-xxxxs\@xs { --gap: var(--space-xxxxs); }
+    .gap-xxxs\@xs  { --gap: var(--space-xxxs); }
+    .gap-xxs\@xs   { --gap: var(--space-xxs); }
+    .gap-xs\@xs    { --gap: var(--space-xs); }
+    .gap-sm\@xs    { --gap: var(--space-sm); }
+    .gap-md\@xs    { --gap: var(--space-md); }
+    .gap-lg\@xs    { --gap: var(--space-lg); }
+    .gap-xl\@xs    { --gap: var(--space-xl); }
+    .gap-xxl\@xs   { --gap: var(--space-xxl); }
+    .gap-xxxl\@xs  { --gap: var(--space-xxxl); }
+    .gap-xxxxl\@xs { --gap: var(--space-xxxxl); }
   }
 }
 
@@ -163,15 +177,29 @@ $grid-columns: 12 !default;
 
   @for $i from 1 through $grid-columns {
     .col-#{$i}\@sm  {
-      flex-basis: calc( #{round-width($i)} - 0.01px - var(--grid-gap, 1em));
-      max-width: calc( #{round-width($i)} - 0.01px - var(--grid-gap, 1em)); 
+      flex-basis: calc( #{round-width($i)} - 0.01px - var(--gap, 0px));
+      max-width: calc( #{round-width($i)} - 0.01px - var(--gap, 0px));
     }
   }
 
   @for $i from 1 through $grid-columns - 1 {
     .offset-#{$i}\@sm {
-      --offset: calc(#{round-width($i)} + var(--grid-gap, 1em));
+      --offset: calc(#{round-width($i)} + var(--gap, 0px));
     }
+  }
+
+  @supports (--css: variables) {
+    .gap-xxxxs\@sm { --gap: var(--space-xxxxs); }
+    .gap-xxxs\@sm  { --gap: var(--space-xxxs); }
+    .gap-xxs\@sm   { --gap: var(--space-xxs); }
+    .gap-xs\@sm    { --gap: var(--space-xs); }
+    .gap-sm\@sm    { --gap: var(--space-sm); }
+    .gap-md\@sm    { --gap: var(--space-md); }
+    .gap-lg\@sm    { --gap: var(--space-lg); }
+    .gap-xl\@sm    { --gap: var(--space-xl); }
+    .gap-xxl\@sm   { --gap: var(--space-xxl); }
+    .gap-xxxl\@sm  { --gap: var(--space-xxxl); }
+    .gap-xxxxl\@sm { --gap: var(--space-xxxxl); }
   }
 }
 
@@ -182,15 +210,29 @@ $grid-columns: 12 !default;
 
   @for $i from 1 through $grid-columns {
     .col-#{$i}\@md {
-      flex-basis: calc( #{round-width($i)} - 0.01px - var(--grid-gap, 1em));
-      max-width: calc( #{round-width($i)} - 0.01px - var(--grid-gap, 1em)); 
+      flex-basis: calc( #{round-width($i)} - 0.01px - var(--gap, 0px));
+      max-width: calc( #{round-width($i)} - 0.01px - var(--gap, 0px));
     }
   }
 
   @for $i from 1 through $grid-columns - 1 {
     .offset-#{$i}\@md {
-      --offset: calc(#{round-width($i)} + var(--grid-gap, 1em));
+      --offset: calc(#{round-width($i)} + var(--gap, 0px));
     }
+  }
+
+  @supports (--css: variables) {
+    .gap-xxxxs\@md { --gap: var(--space-xxxxs); }
+    .gap-xxxs\@md  { --gap: var(--space-xxxs); }
+    .gap-xxs\@md   { --gap: var(--space-xxs); }
+    .gap-xs\@md    { --gap: var(--space-xs); }
+    .gap-sm\@md    { --gap: var(--space-sm); }
+    .gap-md\@md    { --gap: var(--space-md); }
+    .gap-lg\@md    { --gap: var(--space-lg); }
+    .gap-xl\@md    { --gap: var(--space-xl); }
+    .gap-xxl\@md   { --gap: var(--space-xxl); }
+    .gap-xxxl\@md  { --gap: var(--space-xxxl); }
+    .gap-xxxxl\@md { --gap: var(--space-xxxxl); }
   }
 }
 
@@ -201,15 +243,29 @@ $grid-columns: 12 !default;
 
   @for $i from 1 through $grid-columns {
     .col-#{$i}\@lg {
-      flex-basis: calc( #{round-width($i)} - 0.01px - var(--grid-gap, 1em));
-      max-width: calc( #{round-width($i)} - 0.01px - var(--grid-gap, 1em));
+      flex-basis: calc( #{round-width($i)} - 0.01px - var(--gap, 0px));
+      max-width: calc( #{round-width($i)} - 0.01px - var(--gap, 0px));
     }
   }
 
   @for $i from 1 through $grid-columns - 1 {
     .offset-#{$i}\@lg {
-      --offset: calc(#{round-width($i)} + var(--grid-gap, 1em));
+      --offset: calc(#{round-width($i)} + var(--gap, 0px));
     }
+  }
+
+  @supports (--css: variables) {
+    .gap-xxxxs\@lg { --gap: var(--space-xxxxs); }
+    .gap-xxxs\@lg  { --gap: var(--space-xxxs); }
+    .gap-xxs\@lg   { --gap: var(--space-xxs); }
+    .gap-xs\@lg    { --gap: var(--space-xs); }
+    .gap-sm\@lg    { --gap: var(--space-sm); }
+    .gap-md\@lg    { --gap: var(--space-md); }
+    .gap-lg\@lg    { --gap: var(--space-lg); }
+    .gap-xl\@lg    { --gap: var(--space-xl); }
+    .gap-xxl\@lg   { --gap: var(--space-xxl); }
+    .gap-xxxl\@lg  { --gap: var(--space-xxxl); }
+    .gap-xxxxl\@lg { --gap: var(--space-xxxxl); }
   }
 }
 
@@ -220,15 +276,29 @@ $grid-columns: 12 !default;
 
   @for $i from 1 through $grid-columns {
     .col-#{$i}\@xl {
-      flex-basis: calc( #{round-width($i)} - 0.01px - var(--grid-gap, 1em));
-      max-width: calc( #{round-width($i)} - 0.01px - var(--grid-gap, 1em));
+      flex-basis: calc( #{round-width($i)} - 0.01px - var(--gap, 0px));
+      max-width: calc( #{round-width($i)} - 0.01px - var(--gap, 0px));
     }
   }
 
   @for $i from 1 through $grid-columns - 1 {
     .offset-#{$i}\@xl {
-      --offset: calc(#{round-width($i)} + var(--grid-gap, 1em));
+      --offset: calc(#{round-width($i)} + var(--gap, 0px));
     }
+  }
+
+  @supports (--css: variables) {
+    .gap-xxxxs\@xl { --gap: var(--space-xxxxs); }
+    .gap-xxxs\@xl  { --gap: var(--space-xxxs); }
+    .gap-xxs\@xl   { --gap: var(--space-xxs); }
+    .gap-xs\@xl    { --gap: var(--space-xs); }
+    .gap-sm\@xl    { --gap: var(--space-sm); }
+    .gap-md\@xl    { --gap: var(--space-md); }
+    .gap-lg\@xl    { --gap: var(--space-lg); }
+    .gap-xl\@xl    { --gap: var(--space-xl); }
+    .gap-xxl\@xl   { --gap: var(--space-xxl); }
+    .gap-xxxl\@xl  { --gap: var(--space-xxxl); }
+    .gap-xxxxl\@xl { --gap: var(--space-xxxxl); }
   }
 }
 
