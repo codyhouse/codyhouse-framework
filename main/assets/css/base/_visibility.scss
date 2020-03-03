@@ -9,3 +9,9 @@
 .is-hidden {
   display: none !important;
 }
+
+html:not(.js) {
+  .no-js\:is-hidden {
+    display: none !important;
+  }
+}

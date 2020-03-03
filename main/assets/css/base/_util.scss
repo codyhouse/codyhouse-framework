@@ -38,6 +38,7 @@
 .items-center { align-items: center; }
 .items-start { align-items: flex-start; }
 .items-end { align-items: flex-end; }
+.items-baseline { align-items: baseline; }
 
 // --------------------------------
 
@@ -363,6 +364,14 @@
 
 // --------------------------------
 
+// Cursor
+
+// --------------------------------
+
+.cursor-pointer { cursor: pointer; }
+
+// --------------------------------
+
 // Color
 
 // --------------------------------
@@ -497,6 +506,16 @@
 .min-width-66\%  { min-width: calc(100% / 1.5); }
 .min-width-75\%  { min-width: 75%; }
 .min-width-100\% { min-width: 100%; }
+.min-width-100vw { min-width: 100vw; }
+
+// --------------------------------
+
+// min-height
+
+// --------------------------------
+
+.min-height-100\% { min-height: 100%; }
+.min-height-100vh { min-height: 100vh; }
 
 // --------------------------------
 
@@ -520,9 +539,9 @@
 
 // --------------------------------
 
-.zindex-1 { z-index: 1; }
-.zindex-2 { z-index: 2; }
-.zindex-3 { z-index: 3; }
+.zindex-1, .z-index-1 { z-index: 1; }
+.zindex-2, .z-index-2 { z-index: 2; }
+.zindex-3, .z-index-3 { z-index: 3; }
 
 // --------------------------------
 
@@ -781,6 +800,7 @@ $media-wrapper-aspect-ratios: (
   .items-center\@xs { align-items: center; }
   .items-start\@xs { align-items: flex-start; }
   .items-end\@xs { align-items: flex-end; }
+  .items-baseline\@xs { align-items: baseline; }
 
   // order
   .order-1\@xs  { order: 1; }
@@ -1041,6 +1061,7 @@ $media-wrapper-aspect-ratios: (
   .items-center\@sm { align-items: center; }
   .items-start\@sm { align-items: flex-start; }
   .items-end\@sm { align-items: flex-end; }
+  .items-baseline\@sm { align-items: baseline; }
 
   // order
   .order-1\@sm  { order: 1; }
@@ -1301,6 +1322,7 @@ $media-wrapper-aspect-ratios: (
   .items-center\@md { align-items: center; }
   .items-start\@md { align-items: flex-start; }
   .items-end\@md { align-items: flex-end; }
+  .items-baseline\@md { align-items: baseline; }
 
   // order
   .order-1\@md  { order: 1; }
@@ -1561,6 +1583,7 @@ $media-wrapper-aspect-ratios: (
   .items-center\@lg { align-items: center; }
   .items-start\@lg { align-items: flex-start; }
   .items-end\@lg { align-items: flex-end; }
+  .items-baseline\@lg { align-items: baseline; }
 
   // order
   .order-1\@lg  { order: 1; }
@@ -1821,6 +1844,7 @@ $media-wrapper-aspect-ratios: (
   .items-center\@xl { align-items: center; }
   .items-start\@xl { align-items: flex-start; }
   .items-end\@xl { align-items: flex-end; }
+  .items-baseline\@xl { align-items: baseline; }
 
   // order
   .order-1\@xl  { order: 1; }
