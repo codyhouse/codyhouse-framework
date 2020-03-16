@@ -30,6 +30,7 @@
 .max-width-xxl   { max-width: var(--max-width-xxl); }
 .max-width-xxxl  { max-width: var(--max-width-xxxl); }
 .max-width-xxxxl { max-width: var(--max-width-xxxxl); }
+.max-width-100\% { max-width: 100%; }
 
 // alt approach - max-width is equal to current breakpoint
 [class*="max-width-adaptive"] {
@@ -85,17 +86,28 @@ $grid-columns: 12 !default;
 }
 
 [class*="gap-xxxxs"], [class*="gap-xxxs"], [class*="gap-xxs"], [class*="gap-xs"], [class*="gap-sm"], [class*="gap-md"], [class*="gap-lg"], [class*="gap-xl"], [class*="gap-xxl"], [class*="gap-xxxl"], [class*="gap-xxxxl"], [class*="grid-gap-"], [class*="flex-gap-"] {
-  --offset: var(--gap, 0.75em);
-  margin-bottom: calc(-1 * var(--gap, 0.75em));
-  margin-left: calc(-1 * var(--gap, 0.75em));
+  margin-bottom: -0.75em;
+  margin-left: -0.75em;
 
   > * {
-    margin-bottom: var(--gap, 0.75em);
-    margin-left: var(--offset, 0.75em);
+    margin-bottom: 0.75em;
+    margin-left: 0.75em;
   }
 }
 
 @supports (--css: variables) {
+  [class*="gap-xxxxs"], [class*="gap-xxxs"], [class*="gap-xxs"], [class*="gap-xs"], [class*="gap-sm"], [class*="gap-md"], [class*="gap-lg"], [class*="gap-xl"], [class*="gap-xxl"], [class*="gap-xxxl"], [class*="gap-xxxxl"], [class*="grid-gap-"], [class*="flex-gap-"] {
+    --gap: 0px;
+    --offset: var(--gap);
+    margin-bottom: calc(-1 * var(--gap));
+    margin-left: calc(-1 * var(--gap));
+  
+    > * {
+      margin-bottom: var(--gap);
+      margin-left: var(--offset);
+    }
+  }
+
   .gap-xxxxs, .grid-gap-xxxxs, .flex-gap-xxxxs { --gap: var(--space-xxxxs); }
   .gap-xxxs, .grid-gap-xxxs, .flex-gap-xxxs    { --gap: var(--space-xxxs); }
   .gap-xxs, .grid-gap-xxs, .flex-gap-xxs       { --gap: var(--space-xxs); }
@@ -168,6 +180,7 @@ $grid-columns: 12 !default;
     .gap-xxl\@xs   { --gap: var(--space-xxl); }
     .gap-xxxl\@xs  { --gap: var(--space-xxxl); }
     .gap-xxxxl\@xs { --gap: var(--space-xxxxl); }
+    .gap-0\@xs     { --gap: 0px; }
   }
 }
 
@@ -201,6 +214,7 @@ $grid-columns: 12 !default;
     .gap-xxl\@sm   { --gap: var(--space-xxl); }
     .gap-xxxl\@sm  { --gap: var(--space-xxxl); }
     .gap-xxxxl\@sm { --gap: var(--space-xxxxl); }
+    .gap-0\@sm     { --gap: 0px; }
   }
 }
 
@@ -234,6 +248,7 @@ $grid-columns: 12 !default;
     .gap-xxl\@md   { --gap: var(--space-xxl); }
     .gap-xxxl\@md  { --gap: var(--space-xxxl); }
     .gap-xxxxl\@md { --gap: var(--space-xxxxl); }
+    .gap-0\@md     { --gap: 0px; }
   }
 }
 
@@ -267,6 +282,7 @@ $grid-columns: 12 !default;
     .gap-xxl\@lg   { --gap: var(--space-xxl); }
     .gap-xxxl\@lg  { --gap: var(--space-xxxl); }
     .gap-xxxxl\@lg { --gap: var(--space-xxxxl); }
+    .gap-0\@lg     { --gap: 0px; }
   }
 }
 
@@ -300,6 +316,7 @@ $grid-columns: 12 !default;
     .gap-xxl\@xl   { --gap: var(--space-xxl); }
     .gap-xxxl\@xl  { --gap: var(--space-xxxl); }
     .gap-xxxxl\@xl { --gap: var(--space-xxxxl); }
+    .gap-0\@xl     { --gap: 0px; }
   }
 }
 

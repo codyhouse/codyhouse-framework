@@ -372,6 +372,23 @@
 
 // --------------------------------
 
+// Pointer Events
+
+// --------------------------------
+
+.pointer-events-none { pointer-events: none; }
+
+// --------------------------------
+
+// User Select
+
+// --------------------------------
+
+.user-select-none { user-select: none; }
+.user-select-all  { user-select: all; }
+
+// --------------------------------
+
 // Color
 
 // --------------------------------
@@ -495,7 +512,7 @@
 
 // --------------------------------
 
-// min-width
+// Min-Width
 
 // --------------------------------
 
@@ -510,7 +527,16 @@
 
 // --------------------------------
 
-// min-height
+// Max-Height
+
+// --------------------------------
+
+.max-height-100\% { max-height: 100%; }
+.max-height-100vh { max-height: 100vh; }
+
+// --------------------------------
+
+// Min-Height
 
 // --------------------------------
 
@@ -558,6 +584,7 @@
 
 // --------------------------------
 
+.opacity-0    { opacity: 0; }
 .opacity-10\% { opacity: 0.1; }
 .opacity-20\% { opacity: 0.2; }
 .opacity-30\% { opacity: 0.3; }
@@ -633,6 +660,7 @@ $media-wrapper-aspect-ratios: (
 .border-right { border-right: 1px solid alpha(var(--color-contrast-low), var(--border-o, 1)); }
 .border-2 { border-width: 2px; }
 .border-3 { border-width: 3px; }
+.border-4 { border-width: 4px; }
 
 .border-bg { border-color: alpha(var(--color-bg), var(--border-o, 1)); }
 .border-contrast-lower { border-color: alpha(var(--color-contrast-lower), var(--border-o, 1)); }
