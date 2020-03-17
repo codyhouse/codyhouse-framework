@@ -76,12 +76,19 @@ $grid-columns: 12 !default;
 
 .grid {
   --gap: 0px;
+  --offset: var(--gap);
   display: flex;
   flex-wrap: wrap;
 
   > * {
     flex-basis: 100%;
     max-width: 100%;
+  }
+  
+  @supports (--css: variables) {
+    > *[class*="offset-"] {
+      margin-left: var(--offset);
+    }
   }
 }
 
