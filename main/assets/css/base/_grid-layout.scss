@@ -151,6 +151,11 @@ $grid-columns: 12 !default;
   }
 }
 
+.col-content {
+  flex-basis: initial;
+  max-width: initial;
+}
+
 @for $i from 1 through $grid-columns - 1 {
   .offset-#{$i} {
     --offset: calc(#{round-width($i)} + var(--gap, 0.75em));
@@ -167,6 +172,11 @@ $grid-columns: 12 !default;
       flex-basis: calc( #{round-width($i)} - 0.01px - var(--gap, 0.75em));
       max-width: calc( #{round-width($i)} - 0.01px - var(--gap, 0.75em));
     }
+  }
+
+  .col-content\@xs {
+    flex-basis: initial;
+    max-width: initial;
   }
 
   @for $i from 1 through $grid-columns - 1 {
@@ -203,6 +213,11 @@ $grid-columns: 12 !default;
     }
   }
 
+  .col-content\@sm {
+    flex-basis: initial;
+    max-width: initial;
+  }
+
   @for $i from 1 through $grid-columns - 1 {
     .offset-#{$i}\@sm {
       --offset: calc(#{round-width($i)} + var(--gap, 0.75em));
@@ -235,6 +250,11 @@ $grid-columns: 12 !default;
       flex-basis: calc( #{round-width($i)} - 0.01px - var(--gap, 0.75em));
       max-width: calc( #{round-width($i)} - 0.01px - var(--gap, 0.75em));
     }
+  }
+
+  .col-content\@md {
+    flex-basis: initial;
+    max-width: initial;
   }
 
   @for $i from 1 through $grid-columns - 1 {
@@ -271,6 +291,11 @@ $grid-columns: 12 !default;
     }
   }
 
+  .col-content\@lg {
+    flex-basis: initial;
+    max-width: initial;
+  }
+
   @for $i from 1 through $grid-columns - 1 {
     .offset-#{$i}\@lg {
       --offset: calc(#{round-width($i)} + var(--gap, 0.75em));
@@ -303,6 +328,11 @@ $grid-columns: 12 !default;
       flex-basis: calc( #{round-width($i)} - 0.01px - var(--gap, 0.75em));
       max-width: calc( #{round-width($i)} - 0.01px - var(--gap, 0.75em));
     }
+  }
+
+  .col-content\@xl {
+    flex-basis: initial;
+    max-width: initial;
   }
 
   @for $i from 1 through $grid-columns - 1 {

@@ -15,3 +15,9 @@ html:not(.js) {
     display: none !important;
   }
 }
+
+@media print {
+  .print\:is-hidden {
+    display: none !important;
+  }
+}
