@@ -1,12 +1,14 @@
 :root {
   // size
-  --icon-xxs: 12px;
-  --icon-xs:  16px;
-  --icon-sm:  24px;
-  --icon-md:  32px;
-  --icon-lg:  48px;
-  --icon-xl:  64px;
-  --icon-xxl: 128px;
+  --icon-xxxs: 8px;
+  --icon-xxs:  12px;
+  --icon-xs:   16px;
+  --icon-sm:   24px;
+  --icon-md:   32px;
+  --icon-lg:   48px;
+  --icon-xl:   64px;
+  --icon-xxl:  96px;
+  --icon-xxxl: 128px;
 }
 
 .icon {
@@ -21,13 +23,15 @@
 }
 
 // icon size
-.icon--xxs { font-size: var(--icon-xxs); }
-.icon--xs  { font-size: var(--icon-xs); }
-.icon--sm  { font-size: var(--icon-sm); }
-.icon--md  { font-size: var(--icon-md); }
-.icon--lg  { font-size: var(--icon-lg); }
-.icon--xl  { font-size: var(--icon-xl); }
-.icon--xxl { font-size: var(--icon-xxl); }
+.icon--xxxs { font-size: var(--icon-xxxs); }
+.icon--xxs  { font-size: var(--icon-xxs); }
+.icon--xs   { font-size: var(--icon-xs); }
+.icon--sm   { font-size: var(--icon-sm); }
+.icon--md   { font-size: var(--icon-md); }
+.icon--lg   { font-size: var(--icon-lg); }
+.icon--xl   { font-size: var(--icon-xl); }
+.icon--xxl  { font-size: var(--icon-xxl); }
+.icon--xxxl { font-size: var(--icon-xxxl); }
 
 .icon--is-spinning { // rotate the icon infinitely
   animation: icon-spin 1s infinite linear;
