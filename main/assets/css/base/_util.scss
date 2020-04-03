@@ -789,6 +789,16 @@ $media-wrapper-aspect-ratios: (
 
 .bg-cover { background-size: cover; }
 .bg-center { background-position: center; }
+.bg-no-repeat { background-repeat: no-repeat; }
+
+// --------------------------------
+
+// Backdrop Filter
+
+// --------------------------------
+
+.backdrop-blur-10 { backdrop-filter: blur(10px); }
+.backdrop-blur-20 { backdrop-filter: blur(20px); }
 
 // --------------------------------
 
