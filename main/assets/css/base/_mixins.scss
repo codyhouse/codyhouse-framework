@@ -114,5 +114,6 @@
   --text-xl: calc(var(--text-lg) * #{$text-scale-ratio});
   --text-xxl: calc(var(--text-xl) * #{$text-scale-ratio});
   --text-xxxl: calc(var(--text-xxl) * #{$text-scale-ratio});
+  --text-xxxxl: calc(var(--text-xxxl) * #{$text-scale-ratio});
   font-size: $text-unit;
 }

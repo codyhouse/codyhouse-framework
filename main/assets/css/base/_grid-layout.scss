@@ -33,36 +33,37 @@
 .max-width-100\% { max-width: 100%; }
 
 // alt approach - max-width is equal to current breakpoint
-[class*="max-width-adaptive"] {
-  max-width: map-get($map: $breakpoints, $key: xs);
-}
-
-@include breakpoint(sm) {
-  [class*="max-width-adaptive"] {
-    max-width: map-get($map: $breakpoints, $key: sm);
-  }
-}
-
-@include breakpoint(md) {
-  .max-width-adaptive-md,
-  .max-width-adaptive,
-  .max-width-adaptive-lg,
-  .max-width-adaptive-xl {
-    max-width: map-get($map: $breakpoints, $key: md);
-  }
-}
-
-@include breakpoint(lg) {
-  .max-width-adaptive,
-  .max-width-adaptive-lg,
-  .max-width-adaptive-xl {
-    max-width: map-get($map: $breakpoints, $key: lg);
-  }
-}
-
-@include breakpoint(xl) {
-  .max-width-adaptive-xl {
-    max-width: map-get($map: $breakpoints, $key: xl);
+$breakpointsNr: length($breakpoints);
+@each $breakpoint, $value in $breakpoints {
+  $i: index($breakpoints, $breakpoint $value);
+  @if $i == 1 {
+    [class*="max-width-adaptive"] {
+      max-width: map-get($map: $breakpoints, $key: #{$breakpoint});
+    }
+  } @else if $i == 2 {
+    @include breakpoint(#{$breakpoint}) {
+      [class*="max-width-adaptive"] {
+        max-width: map-get($map: $breakpoints, $key: #{$breakpoint});
+      }
+    }
+  } @else {
+    $classList : '';
+    @each $subBreakpoint, $subValue in $breakpoints {
+      $j: index($breakpoints, $subBreakpoint $subValue); 
+      @if $j == $i {
+        $classList: '.max-width-adaptive-#{$subBreakpoint}';
+      } @else if $j > $i {
+        $classList: $classList+', .max-width-adaptive-#{$subBreakpoint}';
+      }
+    }
+    @if $i < $breakpointsNr {
+      $classList: $classList+', .max-width-adaptive';
+    } 
+    @include breakpoint(#{$breakpoint}) {
+      #{$classList} {
+        max-width: map-get($map: $breakpoints, $key: #{$breakpoint});
+      }
+    }
   }
 }
 
@@ -162,198 +163,44 @@ $grid-columns: 12 !default;
   }
 }
 
-@include breakpoint(xs) {
-  .col\@xs { // auto-sized column
-    @include autoSizedColumn;
-  }
-
-  @for $i from 1 through $grid-columns {
-    .col-#{$i}\@xs {
-      flex-basis: calc( #{round-width($i)} - 0.01px - var(--gap, 0.75em));
-      max-width: calc( #{round-width($i)} - 0.01px - var(--gap, 0.75em));
+@each $breakpoint, $value in $breakpoints {
+  @include breakpoint(#{$breakpoint}) {
+    .col\@#{$breakpoint} { // auto-sized column
+      @include autoSizedColumn;
     }
-  }
-
-  .col-content\@xs {
-    flex-basis: initial;
-    max-width: initial;
-  }
-
-  @for $i from 1 through $grid-columns - 1 {
-    .offset-#{$i}\@xs {
-      --offset: calc(#{round-width($i)} + var(--gap, 0.75em));
+  
+    @for $i from 1 through $grid-columns {
+      .col-#{$i}\@#{$breakpoint} {
+        flex-basis: calc( #{round-width($i)} - 0.01px - var(--gap, 0.75em));
+        max-width: calc( #{round-width($i)} - 0.01px - var(--gap, 0.75em));
+      }
     }
-  }
-
-  @supports (--css: variables) {
-    .gap-xxxxs\@xs { --gap: var(--space-xxxxs); }
-    .gap-xxxs\@xs  { --gap: var(--space-xxxs); }
-    .gap-xxs\@xs   { --gap: var(--space-xxs); }
-    .gap-xs\@xs    { --gap: var(--space-xs); }
-    .gap-sm\@xs    { --gap: var(--space-sm); }
-    .gap-md\@xs    { --gap: var(--space-md); }
-    .gap-lg\@xs    { --gap: var(--space-lg); }
-    .gap-xl\@xs    { --gap: var(--space-xl); }
-    .gap-xxl\@xs   { --gap: var(--space-xxl); }
-    .gap-xxxl\@xs  { --gap: var(--space-xxxl); }
-    .gap-xxxxl\@xs { --gap: var(--space-xxxxl); }
-    .gap-0\@xs     { --gap: 0px; }
-  }
-}
-
-@include breakpoint(sm) {
-  .col\@sm { // auto-sized column
-    @include autoSizedColumn;
-  }
-
-  @for $i from 1 through $grid-columns {
-    .col-#{$i}\@sm  {
-      flex-basis: calc( #{round-width($i)} - 0.01px - var(--gap, 0.75em));
-      max-width: calc( #{round-width($i)} - 0.01px - var(--gap, 0.75em));
+  
+    .col-content\@#{$breakpoint} {
+      flex-basis: initial;
+      max-width: initial;
     }
-  }
-
-  .col-content\@sm {
-    flex-basis: initial;
-    max-width: initial;
-  }
-
-  @for $i from 1 through $grid-columns - 1 {
-    .offset-#{$i}\@sm {
-      --offset: calc(#{round-width($i)} + var(--gap, 0.75em));
+  
+    @for $i from 1 through $grid-columns - 1 {
+      .offset-#{$i}\@#{$breakpoint} {
+        --offset: calc(#{round-width($i)} + var(--gap, 0.75em));
+      }
     }
-  }
-
-  @supports (--css: variables) {
-    .gap-xxxxs\@sm { --gap: var(--space-xxxxs); }
-    .gap-xxxs\@sm  { --gap: var(--space-xxxs); }
-    .gap-xxs\@sm   { --gap: var(--space-xxs); }
-    .gap-xs\@sm    { --gap: var(--space-xs); }
-    .gap-sm\@sm    { --gap: var(--space-sm); }
-    .gap-md\@sm    { --gap: var(--space-md); }
-    .gap-lg\@sm    { --gap: var(--space-lg); }
-    .gap-xl\@sm    { --gap: var(--space-xl); }
-    .gap-xxl\@sm   { --gap: var(--space-xxl); }
-    .gap-xxxl\@sm  { --gap: var(--space-xxxl); }
-    .gap-xxxxl\@sm { --gap: var(--space-xxxxl); }
-    .gap-0\@sm     { --gap: 0px; }
-  }
-}
-
-@include breakpoint(md) {
-  .col\@md { // auto-sized column
-    @include autoSizedColumn;
-  }
-
-  @for $i from 1 through $grid-columns {
-    .col-#{$i}\@md {
-      flex-basis: calc( #{round-width($i)} - 0.01px - var(--gap, 0.75em));
-      max-width: calc( #{round-width($i)} - 0.01px - var(--gap, 0.75em));
+  
+    @supports (--css: variables) {
+      .gap-xxxxs\@#{$breakpoint} { --gap: var(--space-xxxxs); }
+      .gap-xxxs\@#{$breakpoint}  { --gap: var(--space-xxxs); }
+      .gap-xxs\@#{$breakpoint}   { --gap: var(--space-xxs); }
+      .gap-xs\@#{$breakpoint}    { --gap: var(--space-xs); }
+      .gap-sm\@#{$breakpoint}    { --gap: var(--space-sm); }
+      .gap-md\@#{$breakpoint}    { --gap: var(--space-md); }
+      .gap-lg\@#{$breakpoint}    { --gap: var(--space-lg); }
+      .gap-xl\@#{$breakpoint}    { --gap: var(--space-xl); }
+      .gap-xxl\@#{$breakpoint}   { --gap: var(--space-xxl); }
+      .gap-xxxl\@#{$breakpoint}  { --gap: var(--space-xxxl); }
+      .gap-xxxxl\@#{$breakpoint} { --gap: var(--space-xxxxl); }
+      .gap-0\@#{$breakpoint}     { --gap: 0px; }
     }
-  }
-
-  .col-content\@md {
-    flex-basis: initial;
-    max-width: initial;
-  }
-
-  @for $i from 1 through $grid-columns - 1 {
-    .offset-#{$i}\@md {
-      --offset: calc(#{round-width($i)} + var(--gap, 0.75em));
-    }
-  }
-
-  @supports (--css: variables) {
-    .gap-xxxxs\@md { --gap: var(--space-xxxxs); }
-    .gap-xxxs\@md  { --gap: var(--space-xxxs); }
-    .gap-xxs\@md   { --gap: var(--space-xxs); }
-    .gap-xs\@md    { --gap: var(--space-xs); }
-    .gap-sm\@md    { --gap: var(--space-sm); }
-    .gap-md\@md    { --gap: var(--space-md); }
-    .gap-lg\@md    { --gap: var(--space-lg); }
-    .gap-xl\@md    { --gap: var(--space-xl); }
-    .gap-xxl\@md   { --gap: var(--space-xxl); }
-    .gap-xxxl\@md  { --gap: var(--space-xxxl); }
-    .gap-xxxxl\@md { --gap: var(--space-xxxxl); }
-    .gap-0\@md     { --gap: 0px; }
-  }
-}
-
-@include breakpoint(lg) {
-  .col\@lg { // auto-sized column
-    @include autoSizedColumn;
-  }
-
-  @for $i from 1 through $grid-columns {
-    .col-#{$i}\@lg {
-      flex-basis: calc( #{round-width($i)} - 0.01px - var(--gap, 0.75em));
-      max-width: calc( #{round-width($i)} - 0.01px - var(--gap, 0.75em));
-    }
-  }
-
-  .col-content\@lg {
-    flex-basis: initial;
-    max-width: initial;
-  }
-
-  @for $i from 1 through $grid-columns - 1 {
-    .offset-#{$i}\@lg {
-      --offset: calc(#{round-width($i)} + var(--gap, 0.75em));
-    }
-  }
-
-  @supports (--css: variables) {
-    .gap-xxxxs\@lg { --gap: var(--space-xxxxs); }
-    .gap-xxxs\@lg  { --gap: var(--space-xxxs); }
-    .gap-xxs\@lg   { --gap: var(--space-xxs); }
-    .gap-xs\@lg    { --gap: var(--space-xs); }
-    .gap-sm\@lg    { --gap: var(--space-sm); }
-    .gap-md\@lg    { --gap: var(--space-md); }
-    .gap-lg\@lg    { --gap: var(--space-lg); }
-    .gap-xl\@lg    { --gap: var(--space-xl); }
-    .gap-xxl\@lg   { --gap: var(--space-xxl); }
-    .gap-xxxl\@lg  { --gap: var(--space-xxxl); }
-    .gap-xxxxl\@lg { --gap: var(--space-xxxxl); }
-    .gap-0\@lg     { --gap: 0px; }
-  }
-}
-
-@include breakpoint(xl) {
-  .col\@xl { // auto-sized column
-    @include autoSizedColumn;
-  }
-
-  @for $i from 1 through $grid-columns {
-    .col-#{$i}\@xl {
-      flex-basis: calc( #{round-width($i)} - 0.01px - var(--gap, 0.75em));
-      max-width: calc( #{round-width($i)} - 0.01px - var(--gap, 0.75em));
-    }
-  }
-
-  .col-content\@xl {
-    flex-basis: initial;
-    max-width: initial;
-  }
-
-  @for $i from 1 through $grid-columns - 1 {
-    .offset-#{$i}\@xl {
-      --offset: calc(#{round-width($i)} + var(--gap, 0.75em));
-    }
-  }
-
-  @supports (--css: variables) {
-    .gap-xxxxs\@xl { --gap: var(--space-xxxxs); }
-    .gap-xxxs\@xl  { --gap: var(--space-xxxs); }
-    .gap-xxs\@xl   { --gap: var(--space-xxs); }
-    .gap-xs\@xl    { --gap: var(--space-xs); }
-    .gap-sm\@xl    { --gap: var(--space-sm); }
-    .gap-md\@xl    { --gap: var(--space-md); }
-    .gap-lg\@xl    { --gap: var(--space-lg); }
-    .gap-xl\@xl    { --gap: var(--space-xl); }
-    .gap-xxl\@xl   { --gap: var(--space-xxl); }
-    .gap-xxxl\@xl  { --gap: var(--space-xxxl); }
-    .gap-xxxxl\@xl { --gap: var(--space-xxxxl); }
-    .gap-0\@xl     { --gap: 0px; }
   }
 }
 

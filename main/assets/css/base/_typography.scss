@@ -16,6 +16,10 @@ h1, h2, h3, h4 {
 }
 
 // font size
+.text-xxxxl {
+  font-size: var(--text-xxxxl, 2.985em);
+}
+
 .text-xxxl {
   font-size: var(--text-xxxl, 2.488em);
 }
