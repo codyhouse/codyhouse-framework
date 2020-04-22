@@ -4,16 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script>document.getElementsByTagName("html")[0].className += " js";</script>
+  <link id="codyframe" rel="stylesheet" href="assets/css/style.css">
+  <!-- browsers not supporting CSS variables -->
   <script>
-    if('CSS' in window && CSS.supports('color', 'var(--color-var)')) {
-      document.write('<link rel="stylesheet" href="assets/css/style.css">');
-    } else {
-      document.write('<link rel="stylesheet" href="assets/css/style-fallback.css">');
-    }
+    if(!('CSS' in window) || !CSS.supports('color', 'var(--color-var)')) {var cfStyle = document.getElementById('codyframe');if(cfStyle) {var href = cfStyle.getAttribute('href');href = href.replace('style.css', 'style-fallback.css');cfStyle.setAttribute('href', href);}}
   </script>
-  <noscript>
-    <link rel="stylesheet" href="assets/css/style-fallback.css">
-  </noscript>
   <title>Title</title>
 </head>
 <body>
