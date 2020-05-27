@@ -8,11 +8,11 @@ The framework is composed of:
 1. **_base.scss:** essential CSS rules and utility classes.
 2. **_custom-style.scss:** CSS templates you can use to create your bespoke style (e.g., buttons, forms, and colors).
 3. **style.scss:** used to import the _base.scss and _custom-style.scss files.
-4. **util.js:** utility functions used in the [CodyHouse Components](https://codyhouse.co/ds/components). Make sure to import this file before the component script file.
+4. **util.js:** utility functions used in the [CodyHouse Components](https://codyhouse.co/ds/components). Make sure to import this file before the script file of the components.
 
 Some of the advantages of working with CodyFrame:
 
-- ⚡️ lightweight (**13KB** minified and gzipped)
+- ⚡️ lightweight (**15KB** minified and gzipped)
 - 🙌 no need to override existing CSS rules
 - 📱 mobile-first
 - 🎨 create unique designs with total control
@@ -24,26 +24,11 @@ codyhouse-framework/
 └── main/
     ├── assets/
     │   ├── css/
-    │   │   ├── base/
-    │   │   │   ├── _accessibility.scss
-    │   │   │   ├── _breakpoints.scss
-    │   │   │   ├── _buttons.scss
-    │   │   │   ├── _colors.scss
-    │   │   │   ├── _forms.scss
-    │   │   │   ├── _grid-layout.scss
-    │   │   │   ├── _icons.scss
-    │   │   │   ├── _mixins.scss
-    │   │   │   ├── _reset.scss
-    │   │   │   ├── _shared-styles.scss
-    │   │   │   ├── _spacing.scss
-    │   │   │   ├── _typography.scss
-    │   │   │   ├── _util.scss
-    │   │   │   ├── _visibility.scss
-    │   │   │   └── _z-index.scss
     │   │   │── custom-style/
     │   │   │   ├── _buttons.scss
     │   │   │   ├── _colors.scss
     │   │   │   ├── _forms.scss
+    │   │   │   ├── _icons.scss
     │   │   │   ├── _shared-styles.scss
     │   │   │   ├── _spacing.scss
     │   │   │   └── _typography.scss

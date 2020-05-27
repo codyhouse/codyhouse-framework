@@ -11,12 +11,19 @@
 }
 
 .form-control { // basic form element style
+  background-color: var(--color-bg);
   border: 2px solid var(--color-contrast-low);
+  transition: .3s;
+
+  &::placeholder {
+    opacity: 1;
+    color: var(--color-contrast-medium);
+  }
 
   &:focus {
     outline: none;
     border-color: var(--color-primary);
-    box-shadow: 0 0 0 3px alpha(var(--color-primary), 0.2)
+    box-shadow: 0 0 0 2px alpha(var(--color-primary), 0.2)
   }
 }
 
@@ -24,7 +31,7 @@
   border-color: var(--color-error);
 
   &:focus {
-    box-shadow: 0 0 0 3px alpha(var(--color-error), 0.2);
+    box-shadow: 0 0 0 2px alpha(var(--color-error), 0.2);
   }
 }
 
@@ -33,20 +40,10 @@
 }
 
 .form-legend {}
-
-.form-label {
-  font-size: var(--text-sm);
-}
+.form-label {}
 
 // --------------------------------
 
 // (END) Global Editor Code
 
 // --------------------------------
-
-.form-error-msg {
-  background-color: alpha(var(--color-error), 0.2);
-  color: inherit;
-  border-radius: var(--radius-md);
-  padding: var(--space-xs);
-}
