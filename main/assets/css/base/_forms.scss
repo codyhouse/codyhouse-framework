@@ -1,0 +1,57 @@
+// basic forms style - we suggest you don't modify this file
+// use the 📁custom-style/_forms.scss file to create your custom form elements
+
+@if variable-exists('cody-base-partials') == false or index($cody-base-partials, 'forms') {
+  .form-control {
+    padding-top: var(--form-control-padding-y, 0.5em);
+    padding-bottom: var(--form-control-padding-y, 0.5em);
+    padding-left: var(--form-control-padding-x, 0.75em);
+    padding-right: var(--form-control-padding-x, 0.75em);
+    border-radius: var(--form-control-radius, 0.25em);
+  }
+
+  .form-legend {
+    color: var(--color-contrast-higher, hsl(240, 8%, 12%));
+    line-height: var(--heading-line-height, 1.2);
+    font-size: var(--text-md, 1.2em);
+    margin-bottom: var(--space-xxs);
+  }
+
+  .form-label {
+    display: inline-block;
+  }
+
+  // error message - ⚠️ deprecated
+  .form__msg-error, .form-error-msg { // .form__msg-error is fallback for older framework versions
+    color: var(--color-error, hsl(349, 75%, 51%));
+    font-size: var(--text-sm, 0.833em);
+    margin-top: var(--space-xxs);
+
+    // hide element
+    position: absolute;
+    clip: rect(1px, 1px, 1px, 1px);
+  }
+
+  .form__msg-error--is-visible, .form-error-msg--is-visible {
+    position: relative;
+    clip: auto;
+  }
+
+  // set basic style for (native) radio and checkbox buttons
+  .radio-list, .checkbox-list { // e.g., .radio-list > li > input + label
+    > * { // parent of input + label
+      position: relative;
+      display: flex;
+      align-items: baseline;
+    }
+
+    label { // radio/checkbox labels
+      line-height: var(--body-line-height);
+    }
+
+    input {
+      margin-right: var(--space-xxxs);
+      flex-shrink: 0;
+    }
+  }
+}

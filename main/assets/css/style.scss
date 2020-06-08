@@ -7,8 +7,5 @@
 //   xl: 90rem
 // );
 
-// 👇 optional -> import specific _base.scss partials
-// $cody-base-partials: 'accessibility', 'breakpoints', 'buttons', 'colors', 'forms', 'grid-layout', 'icons', 'mixins', 'reset', 'shared-styles', 'spacing', 'typography', 'util', 'visibility', 'z-index';
-
 @import 'base';
 @import 'custom-style';

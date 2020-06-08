@@ -5,8 +5,8 @@ A lightweight front-end framework for building accessible, bespoke interfaces.
 
 The framework is composed of:
 
-1. **_base.scss:** essential CSS rules and utility classes.
-2. **_custom-style.scss:** CSS templates you can use to create your bespoke style (e.g., buttons, forms, and colors).
+1. **base/*:** essential CSS rules and utility classes (we suggest you don't modify these files).
+2. **custom-style/*:** SCSS templates you can use to create your bespoke style.
 3. **style.scss:** used to import the _base.scss and _custom-style.scss files.
 4. **util.js:** utility functions used in the [CodyHouse Components](https://codyhouse.co/ds/components). Make sure to import this file before the script file of the components.
 
@@ -24,6 +24,7 @@ codyhouse-framework/
 └── main/
     ├── assets/
     │   ├── css/
+    │   │   ├── base/*
     │   │   │── custom-style/
     │   │   │   ├── _buttons.scss
     │   │   │   ├── _colors.scss

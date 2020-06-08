@@ -1,0 +1,136 @@
+@if variable-exists('cody-base-partials') == false or index($cody-base-partials, 'grid-layout') {
+  // --------------------------------
+
+  // Container - center content on x-axis
+
+  // --------------------------------
+
+  .container {
+    width: calc(100% - 2*var(--component-padding));
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  // --------------------------------
+
+  // Grid System
+
+  // --------------------------------
+
+  .grid {
+    --gap: 0px;
+    --offset: var(--gap);
+    display: flex;
+    flex-wrap: wrap;
+
+    > * {
+      flex-basis: 100%;
+      max-width: 100%;
+    }
+    
+    @supports (--css: variables) {
+      > *[class*="offset-"] {
+        margin-left: var(--offset);
+      }
+    }
+  }
+
+  [class*="gap-xxxxs"], [class*="gap-xxxs"], [class*="gap-xxs"], [class*="gap-xs"], [class*="gap-sm"], [class*="gap-md"], [class*="gap-lg"], [class*="gap-xl"], [class*="gap-xxl"], [class*="gap-xxxl"], [class*="gap-xxxxl"], [class*="grid-gap-"], [class*="flex-gap-"] {
+    margin-bottom: -0.75em;
+    margin-left: -0.75em;
+
+    > * {
+      margin-bottom: 0.75em;
+      margin-left: 0.75em;
+    }
+  }
+
+  @supports (--css: variables) {
+    [class*="gap-xxxxs"], [class*="gap-xxxs"], [class*="gap-xxs"], [class*="gap-xs"], [class*="gap-sm"], [class*="gap-md"], [class*="gap-lg"], [class*="gap-xl"], [class*="gap-xxl"], [class*="gap-xxxl"], [class*="gap-xxxxl"], [class*="grid-gap-"], [class*="flex-gap-"] {
+      --gap: 0px;
+      --offset: var(--gap);
+      margin-bottom: calc(-1 * var(--gap));
+      margin-left: calc(-1 * var(--gap));
+    
+      > * {
+        margin-bottom: var(--gap);
+        margin-left: var(--offset);
+      }
+    }
+
+    .gap-xxxxs, .grid-gap-xxxxs, .flex-gap-xxxxs { --gap: var(--space-xxxxs); }
+    .gap-xxxs, .grid-gap-xxxs, .flex-gap-xxxs    { --gap: var(--space-xxxs); }
+    .gap-xxs, .grid-gap-xxs, .flex-gap-xxs       { --gap: var(--space-xxs); }
+    .gap-xs, .grid-gap-xs, .flex-gap-xs          { --gap: var(--space-xs); }
+    .gap-sm, .grid-gap-sm, .flex-gap-sm          { --gap: var(--space-sm); }
+    .gap-md, .grid-gap-md, .flex-gap-md          { --gap: var(--space-md); }
+    .gap-lg, .grid-gap-lg, .flex-gap-lg          { --gap: var(--space-lg); }
+    .gap-xl, .grid-gap-xl, .flex-gap-xl          { --gap: var(--space-xl); }
+    .gap-xxl, .grid-gap-xxl, .flex-gap-xxl       { --gap: var(--space-xxl); }
+    .gap-xxxl, .grid-gap-xxxl, .flex-gap-xxxl    { --gap: var(--space-xxxl); }
+    .gap-xxxxl, .grid-gap-xxxxl, .flex-gap-xxxxl { --gap: var(--space-xxxxl); }
+  }
+
+  .col { // auto-sized column
+    @include autoSizedColumn;
+  }
+
+  @for $i from 1 through $grid-columns {
+    .col-#{$i} {
+      flex-basis: calc( #{round-width($i)} - 0.01px - var(--gap, 0.75em));
+      max-width: calc( #{round-width($i)} - 0.01px - var(--gap, 0.75em));
+    }
+  }
+
+  .col-content {
+    flex-basis: initial;
+    max-width: initial;
+  }
+
+  @for $i from 1 through $grid-columns - 1 {
+    .offset-#{$i} {
+      --offset: calc(#{round-width($i)} + var(--gap, 0.75em));
+    }
+  }
+
+  @each $breakpoint, $value in $breakpoints {
+    @include breakpoint(#{$breakpoint}) {
+      .col\@#{$breakpoint} { // auto-sized column
+        @include autoSizedColumn;
+      }
+    
+      @for $i from 1 through $grid-columns {
+        .col-#{$i}\@#{$breakpoint} {
+          flex-basis: calc( #{round-width($i)} - 0.01px - var(--gap, 0.75em));
+          max-width: calc( #{round-width($i)} - 0.01px - var(--gap, 0.75em));
+        }
+      }
+    
+      .col-content\@#{$breakpoint} {
+        flex-basis: initial;
+        max-width: initial;
+      }
+    
+      @for $i from 1 through $grid-columns - 1 {
+        .offset-#{$i}\@#{$breakpoint} {
+          --offset: calc(#{round-width($i)} + var(--gap, 0.75em));
+        }
+      }
+    
+      @supports (--css: variables) {
+        .gap-xxxxs\@#{$breakpoint} { --gap: var(--space-xxxxs); }
+        .gap-xxxs\@#{$breakpoint}  { --gap: var(--space-xxxs); }
+        .gap-xxs\@#{$breakpoint}   { --gap: var(--space-xxs); }
+        .gap-xs\@#{$breakpoint}    { --gap: var(--space-xs); }
+        .gap-sm\@#{$breakpoint}    { --gap: var(--space-sm); }
+        .gap-md\@#{$breakpoint}    { --gap: var(--space-md); }
+        .gap-lg\@#{$breakpoint}    { --gap: var(--space-lg); }
+        .gap-xl\@#{$breakpoint}    { --gap: var(--space-xl); }
+        .gap-xxl\@#{$breakpoint}   { --gap: var(--space-xxl); }
+        .gap-xxxl\@#{$breakpoint}  { --gap: var(--space-xxxl); }
+        .gap-xxxxl\@#{$breakpoint} { --gap: var(--space-xxxxl); }
+        .gap-0\@#{$breakpoint}     { --gap: 0px; }
+      }
+    }
+  }
+}

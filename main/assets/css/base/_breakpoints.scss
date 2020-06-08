@@ -1,0 +1,18 @@
+// how to edit the breakpoints -> copy the $breakpoints SASS map (remove the !default flag) and import it before the 'base' and 'custom-style' files -> check _style.scss file
+// https://codyhouse.co/ds/docs/framework/breakpoints#edit
+
+$breakpoints: (
+  xs: 32rem, // ~512px
+  sm: 48rem, // ~768px
+  md: 64rem, // ~1024px
+  lg: 80rem, // ~1280px
+  xl: 90rem  // ~1440px
+) !default;
+
+@mixin breakpoint($breakpoint, $logic: false) {
+  @if( $logic ) {
+    @media #{$logic} and (min-width: map-get($map: $breakpoints, $key: $breakpoint)) { @content; }
+  } @else {
+    @media (min-width: map-get($map: $breakpoints, $key: $breakpoint)) { @content; }
+  }
+}

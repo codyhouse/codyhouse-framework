@@ -1,0 +1,38 @@
+// default shared style - we suggest you don't modify this file
+// use the 📁custom-style/_shared-style.scss file to set your custom shared styles
+
+@if variable-exists('cody-base-partials') == false or index($cody-base-partials, 'shared-styles') {
+  :root {
+    // radius
+    --radius-sm: calc(var(--radius, 0.25em)/2);
+    --radius-md: var(--radius, 0.25em);
+    --radius-lg: calc(var(--radius, 0.25em)*2);
+
+    // box shadow
+    --shadow-xs:  0 0.1px 0.3px rgba(0, 0, 0, 0.06),
+                  0 1px 2px rgba(0, 0, 0, 0.12); 
+    --shadow-sm:  0 0.3px 0.4px rgba(0, 0, 0, 0.025),
+                  0 0.9px 1.5px rgba(0, 0, 0, 0.05), 
+                  0 3.5px 6px rgba(0, 0, 0, 0.1); 
+    --shadow-md:  0 0.9px 1.5px rgba(0, 0, 0, 0.03), 
+                  0 3.1px 5.5px rgba(0, 0, 0, 0.08), 
+                  0 14px 25px rgba(0, 0, 0, 0.12); 
+    --shadow-lg:  0 1.2px 1.9px -1px rgba(0, 0, 0, 0.014), 
+                  0 3.3px 5.3px -1px rgba(0, 0, 0, 0.038), 
+                  0 8.5px 12.7px -1px rgba(0, 0, 0, 0.085), 
+                  0 30px 42px -1px rgba(0, 0, 0, 0.15);
+    --shadow-xl:  0 1.5px 2.1px -6px rgba(0, 0, 0, 0.012), 
+                  0 3.6px 5.2px -6px rgba(0, 0, 0, 0.035), 
+                  0 7.3px 10.6px -6px rgba(0, 0, 0, 0.07), 
+                  0 16.2px 21.9px -6px rgba(0, 0, 0, 0.117), 
+                  0 46px 60px -6px rgba(0, 0, 0, 0.2);
+
+    // timing functions
+    // credits: https://github.com/ai/easings.net
+    --bounce: cubic-bezier(0.175, 0.885, 0.32, 1.275); // ⚠️ deprecated - replaced with --ease-out-back
+    --ease-in-out: cubic-bezier(0.645, 0.045, 0.355, 1);
+    --ease-in: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    --ease-out: cubic-bezier(0.215, 0.61, 0.355, 1);
+    --ease-out-back: cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+}

@@ -1,0 +1,8 @@
+@if variable-exists('cody-base-partials') == false or index($cody-base-partials, 'z-index') {
+  :root {
+    --zindex-header: 3; // e.g., main header
+    --zindex-popover: 5; // e.g., tooltips and dropdown
+    --zindex-fixed-element: 10; // e.g., 'back to top' button
+    --zindex-overlay: 15; // e.g., modals and dialogs
+  }
+}
