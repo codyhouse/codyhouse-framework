@@ -19,46 +19,24 @@
     line-height: var(--heading-line-height, 1.2);
   }
 
-  // --------------------------------
-
-  // Font Size
-
-  // --------------------------------
-
-  .text-xxxxl {
-    font-size: var(--text-xxxxl, 2.985em);
-  }
-
-  .text-xxxl {
-    font-size: var(--text-xxxl, 2.488em);
-  }
-
-  h1, .text-xxl {
+  h1 {
     font-size: var(--text-xxl, 2.074em);
   }
 
-  h2, .text-xl {
+  h2 {
     font-size: var(--text-xl, 1.728em);
   }
 
-  h3, .text-lg {
+  h3 {
     font-size: var(--text-lg, 1.44em);
   }
 
-  h4, .text-md {
+  h4 {
     font-size: var(--text-md, 1.2em);
   }
 
-  .text-base {
-    font-size: 1em;
-  }
-
-  small, .text-sm {
+  small {
     font-size: var(--text-sm, 0.833em);
-  }
-
-  .text-xs {
-    font-size: var(--text-xs, 0.694em);
   }
 
   // --------------------------------

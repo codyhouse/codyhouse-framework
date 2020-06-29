@@ -300,6 +300,22 @@
   }
 
   // --------------------------------
+  
+  // Font Size
+  
+  // --------------------------------
+  
+  .text-xs    { font-size: var(--text-xs, 0.694em); }
+  .text-sm    { font-size: var(--text-sm, 0.833em); }
+  .text-base  { font-size: 1em; }
+  .text-md    { font-size: var(--text-md, 1.2em); }
+  .text-lg    { font-size: var(--text-lg, 1.44em); }
+  .text-xl    { font-size: var(--text-xl, 1.728em); }
+  .text-xxl   { font-size: var(--text-xxl, 2.074em); }
+  .text-xxxl  { font-size: var(--text-xxxl, 2.488em); }
+  .text-xxxxl { font-size: var(--text-xxxxl, 2.985em); }
+
+  // --------------------------------
 
   // Text Transform
 

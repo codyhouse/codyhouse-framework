@@ -149,7 +149,7 @@ $grid-columns: 12 !default;
   @return $width;
 }
 
-// used to create the auto-size columns of the grid system
+// used to create the auto-size columns of the grid system (.col class)
 @mixin autoSizedColumn {
   flex-grow: 1;
   flex-basis: 0;

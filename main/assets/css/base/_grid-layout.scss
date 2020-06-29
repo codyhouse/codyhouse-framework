@@ -83,6 +83,7 @@
   }
 
   .col-content {
+    flex-grow: 0;
     flex-basis: initial;
     max-width: initial;
   }
@@ -107,6 +108,7 @@
       }
     
       .col-content\@#{$breakpoint} {
+        flex-grow: 0;
         flex-basis: initial;
         max-width: initial;
       }
