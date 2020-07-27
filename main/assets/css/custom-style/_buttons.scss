@@ -9,24 +9,25 @@
   --btn-font-size-sm: calc(var(--btn-font-size) - 0.2em);
   --btn-font-size-md: calc(var(--btn-font-size) + 0.2em);
   --btn-font-size-lg: calc(var(--btn-font-size) + 0.4em);
-  --btn-padding-x: var(--space-sm); // padding left + right
-  --btn-padding-y: var(--space-xs); // padding top + bottom
+  --btn-padding-x: var(--space-sm); // padding left/right
+  --btn-padding-y: var(--space-xs); // padding top/bottom
   --btn-radius: 0.25em;
 }
 
 .btn { // style affecting all buttons
   box-shadow: var(--shadow-xs);
-  cursor: pointer;
-  @include fontSmooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   transition: .3s;
-
+  
   &:hover {
+    cursor: pointer;
     box-shadow: var(--shadow-sm);
   }
 
   &:focus {
-    box-shadow: 0px 0px 0px 2px alpha(var(--color-contrast-higher), 0.15);
     outline: none;
+    box-shadow: 0px 0px 0px 2px alpha(var(--color-contrast-higher), 0.15);
   }
 
   &:active {

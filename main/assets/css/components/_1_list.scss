@@ -1,0 +1,114 @@
+/* -------------------------------- 
+
+File#: _1_list
+Title: List
+Descr: Custom list component
+Usage: codyhouse.co/license
+
+-------------------------------- */
+
+.list, .text-component .list {
+  --list-v-space: 0.65; // control vertical space
+  --list-offset: 1;  // control offset of sublists
+  padding-left: 0;
+  list-style: none;
+
+  ul, ol {
+    list-style: none;
+    margin: 0; // reset
+    margin-top: calc( var(--space-xxxs) * var(--list-v-space, 1));
+    padding-top: calc( var(--space-xxxs) * var(--list-v-space, 1));
+    padding-left: calc(var(--space-xs) * var(--list-offset, 1));
+  }
+
+  li {
+    padding-bottom: calc( var(--space-xxxs) * var(--list-v-space, 1));
+    margin-bottom: calc( var(--space-xxxs) * var(--list-v-space, 1));
+  }
+
+  > li:last-child, ul > li:last-child, ol > li:last-child {
+    margin-bottom: 0;
+  }
+
+  &:not(.list--border) > li:last-child, ul > li:last-child, ol > li:last-child {
+    padding-bottom: 0;
+  }
+}
+
+.list--ul, .list--ol {
+  li {
+    padding-left: calc(var(--bullet-size) + var(--bullet-margin-right));
+  }
+
+  li::before {
+    width: var(--bullet-size); 
+    height: var(--bullet-size);
+    margin-left: calc(var(--bullet-size) * -1);
+    display: inline-flex;
+    vertical-align: middle;
+    position: relative;
+    left: calc(var(--bullet-margin-right) * -1);
+  }
+}
+
+.list--ul { // unordered list
+  --bullet-size: 7px; // dot width and height
+  --bullet-margin-right: var(--space-xxs); // gap between bullet and content
+
+  li::before { // bullet
+    content: '';
+    border-radius: 50%;
+    color: var(--color-primary); // bullet color
+    background-color: currentColor;
+    border: 2px solid currentColor;
+  }
+
+  ul li::before {
+    background-color: transparent;
+  }
+}
+
+.list--ol { // ordered list
+  --bullet-size: 26px; // ⚠️ use px or rem units - circle width and height
+  --bullet-margin-right: 6px; // ⚠️ use px or rem units - gap between circle and content
+  counter-reset: list-items;
+
+  li {
+    counter-increment: list-items;
+  }
+
+  ol {
+    counter-reset: list-items;
+  }
+
+  li::before {
+    content: counter(list-items);
+    font-size: 0.75em;
+    justify-content: center;
+    align-items: center;
+    top: -0.1em;
+    border-radius: 50%;
+    background-color: var(--color-contrast-lower);
+    border: 2px solid var(--color-contrast-lower);
+    color: var(--color-contrast-high);
+    @include fontSmooth;
+  }
+
+  ol li::before {
+    background-color: transparent;
+  }
+}
+
+.list--border { // show divider among list items
+  li {
+    border-bottom: 1px solid var(--color-contrast-low);
+  }
+
+  ul, ol {
+    border-top: 1px solid var(--color-contrast-low);
+
+    li:last-child {
+      border-bottom-width: 0;
+    }
+  }
+}
