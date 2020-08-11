@@ -27,15 +27,50 @@
   }
 
   // icon size
-  .icon--xxxs { font-size: var(--icon-xxxs); }
-  .icon--xxs  { font-size: var(--icon-xxs); }
-  .icon--xs   { font-size: var(--icon-xs); }
-  .icon--sm   { font-size: var(--icon-sm); }
-  .icon--md   { font-size: var(--icon-md); }
-  .icon--lg   { font-size: var(--icon-lg); }
-  .icon--xl   { font-size: var(--icon-xl); }
-  .icon--xxl  { font-size: var(--icon-xxl); }
-  .icon--xxxl { font-size: var(--icon-xxxl); }
+  .icon--xxxs { 
+    width: var(--icon-xxxs);
+    height: var(--icon-xxxs);
+  }
+
+  .icon--xxs  {
+    width: var(--icon-xxs);
+    height: var(--icon-xxs);
+  }
+
+  .icon--xs   {
+    width: var(--icon-xs);
+    height: var(--icon-xs);
+  }
+
+  .icon--sm   {
+    width: var(--icon-sm);
+    height: var(--icon-sm);
+  }
+
+  .icon--md   {
+    width: var(--icon-md);
+    height: var(--icon-md);
+  }
+
+  .icon--lg   {
+    width: var(--icon-lg);
+    height: var(--icon-lg);
+  }
+
+  .icon--xl   {
+    width: var(--icon-xl);
+    height: var(--icon-xl);
+  }
+
+  .icon--xxl  {
+    width: var(--icon-xxl);
+    height: var(--icon-xxl);
+  }
+
+  .icon--xxxl {
+    width: var(--icon-xxxl);
+    height: var(--icon-xxxl);
+  }
 
   .icon--is-spinning { // rotate the icon infinitely
     animation: icon-spin 1s infinite linear;

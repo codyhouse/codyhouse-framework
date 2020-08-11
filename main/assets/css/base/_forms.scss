@@ -3,6 +3,7 @@
 
 @if variable-exists('cody-base-partials') == false or index($cody-base-partials, 'forms') {
   .form-control {
+    font-size: var(--form-control-font-size, 1em);
     padding-top: var(--form-control-padding-y, 0.5em);
     padding-bottom: var(--form-control-padding-y, 0.5em);
     padding-left: var(--form-control-padding-x, 0.75em);

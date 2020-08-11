@@ -4,21 +4,15 @@
 
 // --------------------------------
 
-:root {
-  --btn-font-size: 1em;
-  --btn-font-size-sm: calc(var(--btn-font-size) - 0.2em);
-  --btn-font-size-md: calc(var(--btn-font-size) + 0.2em);
-  --btn-font-size-lg: calc(var(--btn-font-size) + 0.4em);
-  --btn-padding-x: var(--space-sm); // padding left/right
-  --btn-padding-y: var(--space-xs); // padding top/bottom
-  --btn-radius: 0.25em;
-}
-
 .btn { // style affecting all buttons
+  --btn-padding-y: var(--space-xs); // padding top/bottom
+  --btn-padding-x: var(--space-sm); // padding left/right
+  --btn-radius: 0.25em; // border radius
+  --btn-font-size: 1em; // font size
   box-shadow: var(--shadow-xs);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  transition: .3s;
+  transition: .2s;
   
   &:hover {
     cursor: pointer;
@@ -74,9 +68,17 @@
 }
 
 // sizes
-.btn--sm {}
-.btn--md {}
-.btn--lg {}
+.btn--sm {
+  font-size: 0.8em;
+}
+
+.btn--md {
+  font-size: 1.2em;
+}
+
+.btn--lg {
+  font-size: 1.4em;
+}
 
 // --------------------------------
 

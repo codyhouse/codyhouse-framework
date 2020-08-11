@@ -32,7 +32,8 @@ codyhouse-framework/
     │   │   │   ├── _icons.scss
     │   │   │   ├── _shared-styles.scss
     │   │   │   ├── _spacing.scss
-    │   │   │   └── _typography.scss
+    │   │   │   ├── _typography.scss
+    │   │   │   └── _util.scss
     │   │   ├── _base.scss
     │   │   ├── _custom-style.scss
     │   │   ├── style-fallback.css

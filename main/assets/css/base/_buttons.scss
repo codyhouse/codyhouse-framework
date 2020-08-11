@@ -18,11 +18,11 @@
     border-radius: var(--btn-radius, 0.25em);
   }
 
-  // size
+  // default size variations
   .btn--sm { font-size: var(--btn-font-size-sm, 0.8em); }
   .btn--md { font-size: var(--btn-font-size-md, 1.2em); }
   .btn--lg { font-size: var(--btn-font-size-lg, 1.4em); }
 
-  // btn with icon (only)
+  // button with (only) icon
   .btn--icon { padding: var(--btn-padding-y, 0.5em); }
 }

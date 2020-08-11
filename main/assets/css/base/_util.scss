@@ -905,6 +905,10 @@
   .radius-lg { border-radius: var(--radius-lg); }
   .radius-50\% { border-radius: 50%; }
   .radius-full { border-radius: 50em; }
+  .radius-top-left-0 { border-top-left-radius: 0; }
+  .radius-top-right-0 { border-top-right-radius: 0; }
+  .radius-bottom-right-0 { border-bottom-right-radius: 0; }
+  .radius-bottom-left-0 { border-bottom-left-radius: 0; }
 
   // --------------------------------
 
