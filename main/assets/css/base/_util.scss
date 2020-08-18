@@ -16,6 +16,8 @@
 
   // flex items
   .flex-grow { flex-grow: 1; }
+  .flex-grow-0 { flex-grow: 0; }
+  .flex-shrink { flex-shrink: 1; }
   .flex-shrink-0 { flex-shrink: 0; }
   .flex-basis-0 { flex-basis: 0; }
 
@@ -416,10 +418,10 @@
 
   .line-height-xs {
     --heading-line-height: 1;
-    --body-line-height: 1;
+    --body-line-height: 1.1;
 
     &:not(.text-component) {
-      line-height: 1;
+      line-height: 1.1;
     }
   }
 
@@ -461,6 +463,8 @@
 
   .line-height-body    { line-height: var(--body-line-height); }
   .line-height-heading { line-height: var(--heading-line-height); }
+  .line-height-normal  { line-height: normal !important; }
+  .line-height-1       { line-height: 1 !important; }
 
   // --------------------------------
 
@@ -597,12 +601,12 @@
   .height-xxxxs { height: var(--size-xxxxs, 0.25rem); }
   .height-xxxs  { height: var(--size-xxxs, 0.5rem); }
   .height-xxs   { height: var(--size-xxs, 0.75rem); }
-  .height-xs    { height: var(--size-xs, 1rem); } 
+  .height-xs    { height: var(--size-xs, 1rem); }
   .height-sm    { height: var(--size-sm, 1.5rem); }
-  .height-md    { height: var(--size-md, 2rem); } 
-  .height-lg    { height: var(--size-lg, 3rem); } 
-  .height-xl    { height: var(--size-xl, 4rem); } 
-  .height-xxl   { height: var(--size-xxl, 6rem); } 
+  .height-md    { height: var(--size-md, 2rem); }
+  .height-lg    { height: var(--size-lg, 3rem); }
+  .height-xl    { height: var(--size-xl, 4rem); }
+  .height-xxl   { height: var(--size-xxl, 6rem); }
   .height-xxxl  { height: var(--size-xxxl, 8rem); }
   .height-xxxxl { height: var(--size-xxxxl, 16rem); }
   .height-0     { height: 0; }
@@ -1039,10 +1043,11 @@
       .flex-row-reverse\@#{$breakpoint} { flex-direction: row-reverse; }
       .flex-center\@#{$breakpoint} { justify-content: center; align-items: center; }
       
-      .flex-grow-0\@#{$breakpoint} { flex-grow: 0; }
       .flex-grow\@#{$breakpoint} { flex-grow: 1; }
-      .flex-shrink-0\@#{$breakpoint} { flex-shrink: 0; }
+      .flex-grow-0\@#{$breakpoint} { flex-grow: 0; }
       .flex-shrink\@#{$breakpoint} { flex-shrink: 1; }
+      .flex-shrink-0\@#{$breakpoint} { flex-shrink: 0; }
+      .flex-basis-0\@#{$breakpoint} { flex-basis: 0; }
     
       // justify-content
       .justify-start\@#{$breakpoint} { justify-content: flex-start; }

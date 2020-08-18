@@ -5,12 +5,13 @@
 // --------------------------------
 
 .form-control { // basic form element style
-  --form-control-padding-y: var(--space-xs); // padding top/bottom
+  --form-control-padding-y: var(--space-xxs); // padding top/bottom
   --form-control-padding-x: var(--space-xs); // padding left/right
   --form-control-radius: 0.25em; // border radius
   --form-control-font-size: 1em; // font size
+  line-height: 1.2;
   background-color: var(--color-bg);
-  box-shadow: inset 0 0 0 2px alpha(var(--color-contrast-higher), 0.15);
+  border: 2px solid var(--color-contrast-low);
   transition: .2s;
 
   &::placeholder {
@@ -20,19 +21,23 @@
 
   &:focus {
     outline: none;
-    box-shadow: inset 0 0 0 2px var(--color-primary), 0 0 0 2px alpha(var(--color-primary), 0.2);
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 2px alpha(var(--color-primary), 0.2);
   }
 }
 
+.form-control--error,
 .form-control[aria-invalid="true"] {
-  box-shadow: inset 0 0 0 2px var(--color-error);
+  border-color: var(--color-error);
 
   &:focus {
-    box-shadow: inset 0 0 0 2px var(--color-error), 0 0 0 2px alpha(var(--color-error), 0.2);
+    box-shadow: 0 0 0 2px alpha(var(--color-error), 0.2);
   }
 }
 
-.form-control[disabled], .form-control[readonly] {
+.form-control--disabled,
+.form-control[disabled], 
+.form-control[readonly] {
   cursor: not-allowed;
 }
 

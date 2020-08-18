@@ -5,10 +5,11 @@
 // --------------------------------
 
 .btn { // style affecting all buttons
-  --btn-padding-y: var(--space-xs); // padding top/bottom
+  --btn-padding-y: var(--space-xxs); // padding top/bottom
   --btn-padding-x: var(--space-sm); // padding left/right
   --btn-radius: 0.25em; // border radius
   --btn-font-size: 1em; // font size
+  line-height: 1.2;
   box-shadow: var(--shadow-xs);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -62,7 +63,9 @@
 }
 
 // feedback
-.btn--disabled {
+.btn--disabled,
+.btn[disabled], 
+.btn[readonly] {
   opacity: 0.6;
   cursor: not-allowed;
 }
