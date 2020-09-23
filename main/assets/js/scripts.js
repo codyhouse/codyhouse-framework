@@ -268,29 +268,52 @@ Math.easeOutElastic = function (t, b, c, d) {
 
 
 /* JS Utility Classes */
+
+// make focus ring visible only for keyboard navigation (i.e., tab key) 
 (function() {
-  // make focus ring visible only for keyboard navigation (i.e., tab key) 
-  var focusTab = document.getElementsByClassName('js-tab-focus');
+  var focusTab = document.getElementsByClassName('js-tab-focus'),
+    shouldInit = false,
+    outlineStyle = false,
+    eventDetected = false;
+
   function detectClick() {
     if(focusTab.length > 0) {
-      resetFocusTabs(false);
+      resetFocusStyle(false);
       window.addEventListener('keydown', detectTab);
     }
     window.removeEventListener('mousedown', detectClick);
+    outlineStyle = false;
+    eventDetected = true;
   };
 
   function detectTab(event) {
     if(event.keyCode !== 9) return;
-    resetFocusTabs(true);
+    resetFocusStyle(true);
     window.removeEventListener('keydown', detectTab);
     window.addEventListener('mousedown', detectClick);
+    outlineStyle = true;
   };
 
-  function resetFocusTabs(bool) {
+  function resetFocusStyle(bool) {
     var outlineStyle = bool ? '' : 'none';
     for(var i = 0; i < focusTab.length; i++) {
       focusTab[i].style.setProperty('outline', outlineStyle);
     }
   };
-  window.addEventListener('mousedown', detectClick);
+
+  function initFocusTabs() {
+    if(shouldInit) {
+      if(eventDetected) resetFocusStyle(outlineStyle);
+      return;
+    }
+    shouldInit = focusTab.length > 0;
+    window.addEventListener('mousedown', detectClick);
+  };
+
+  initFocusTabs();
+  window.addEventListener('initFocusTabs', initFocusTabs);
 }());
+
+function resetFocusTabsStyle() {
+  window.dispatchEvent(new CustomEvent('initFocusTabs'));
+};

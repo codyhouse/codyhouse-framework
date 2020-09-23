@@ -21,17 +21,10 @@
   }
 }
 
-// edit text unit and type scale on a component level
-@mixin textUnit($text-unit, $text-scale-ratio: 1.2) { 
-  --text-xs: calc((#{$text-unit} / #{$text-scale-ratio}) / #{$text-scale-ratio});
-  --text-sm: calc(var(--text-xs) * #{$text-scale-ratio});
-  --text-md: calc(var(--text-sm) * #{$text-scale-ratio} * #{$text-scale-ratio});
-  --text-lg: calc(var(--text-md) * #{$text-scale-ratio});
-  --text-xl: calc(var(--text-lg) * #{$text-scale-ratio});
-  --text-xxl: calc(var(--text-xl) * #{$text-scale-ratio});
-  --text-xxxl: calc(var(--text-xxl) * #{$text-scale-ratio});
-  --text-xxxxl: calc(var(--text-xxxl) * #{$text-scale-ratio});
-  font-size: $text-unit;
+// edit text unit on a component level
+@mixin textUnit($text-unit) {
+  --text-unit: #{$text-unit};
+  font-size: var(--text-unit);
 }
 
 // --------------------------------
@@ -43,18 +36,6 @@
 // edit space unit on a component level
 @mixin spaceUnit($space-unit) {
   --space-unit:  #{$space-unit};
-  --space-xxxxs: calc(0.125 * #{$space-unit});
-  --space-xxxs:  calc(0.25 * #{$space-unit});
-  --space-xxs:   calc(0.375 * #{$space-unit});
-  --space-xs:    calc(0.5 * #{$space-unit});
-  --space-sm:    calc(0.75 * #{$space-unit});
-  --space-md:    calc(1.25 * #{$space-unit});
-  --space-lg:    calc(2 * #{$space-unit});
-  --space-xl:    calc(3.25 * #{$space-unit});
-  --space-xxl:   calc(5.25 * #{$space-unit});
-  --space-xxxl:  calc(8.5 * #{$space-unit});
-  --space-xxxxl: calc(13.75 * #{$space-unit});
-  --component-padding: var(--space-md);
 }
 
 // --------------------------------

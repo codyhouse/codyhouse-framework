@@ -1,6 +1,6 @@
 // --------------------------------
 
-// (START) Global Editor code https://codyhouse.co/ds/globals/typography
+// (START) Global editor code https://codyhouse.co/ds/globals/typography
 
 // --------------------------------
 
@@ -8,12 +8,24 @@
   // font family
   --font-primary: system-ui, sans-serif;
 
-  // body font size
-  --text-base-size: 1em;
+  // font size
+  --text-base-size: 1em; // body font-size
+  --text-scale-ratio: 1.2; // multiplier used to generate the type scale values 👇
   
+  // line-height
+  --body-line-height: 1.4;
+  --heading-line-height: 1.2;
+  
+  // capital letters - used in combo with the lhCrop mixin
+  --font-primary-capital-letter: 1;
+
+  // unit - don't modify unless you want to change the typography unit (e.g., from Em to Rem units)
+  --text-unit: 1em; // if not Em units → --text-unit: var(--text-base-size);
+}
+
+:root, * {
   // type scale
-  --text-scale-ratio: 1.2;
-  --text-xs: calc((1em / var(--text-scale-ratio)) / var(--text-scale-ratio));
+  --text-xs: calc((var(--text-unit) / var(--text-scale-ratio)) / var(--text-scale-ratio));
   --text-sm: calc(var(--text-xs) * var(--text-scale-ratio));
   --text-md: calc(var(--text-sm) * var(--text-scale-ratio) * var(--text-scale-ratio));
   --text-lg: calc(var(--text-md) * var(--text-scale-ratio));
@@ -21,18 +33,11 @@
   --text-xxl: calc(var(--text-xl) * var(--text-scale-ratio));
   --text-xxxl: calc(var(--text-xxl) * var(--text-scale-ratio));
   --text-xxxxl: calc(var(--text-xxxl) * var(--text-scale-ratio));
-
-  // line-height
-  --body-line-height: 1.4;
-  --heading-line-height: 1.2;
-
-  // capital letters - used in combo with the lhCrop mixin
-  --font-primary-capital-letter: 1;
 }
 
 @supports(--css: variables) {
-  :root {
-    @include breakpoint(md) {
+  @include breakpoint(md) {
+    :root {
       --text-base-size: 1.25em;
       --text-scale-ratio: 1.25;
     }
@@ -40,12 +45,12 @@
 }
 
 h1, h2, h3, h4 {
-  font-weight: 600;
+  font-weight: 700;
 }
 
 // --------------------------------
 
-// (END) Global Editor Code
+// (END) Global editor code
 
 // --------------------------------
 

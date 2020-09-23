@@ -65,6 +65,16 @@
 
   // --------------------------------
 
+  // Space unit
+
+  // --------------------------------
+
+  .space-unit-rem { --space-unit: 1rem; }
+  .space-unit-em  { --space-unit: 1em; }
+  .space-unit-px  { --space-unit: 16px; }
+
+  // --------------------------------
+
   // Margin
 
   // --------------------------------
@@ -301,6 +311,11 @@
     white-space: nowrap;
   }
 
+  .break-word {
+    overflow-wrap: break-word;
+    min-width: 0;
+  }
+
   // --------------------------------
   
   // Font Size
@@ -309,13 +324,21 @@
   
   .text-xs    { font-size: var(--text-xs, 0.694em); }
   .text-sm    { font-size: var(--text-sm, 0.833em); }
-  .text-base  { font-size: 1em; }
+  .text-base  { font-size: var(--text-unit, 1em); }
   .text-md    { font-size: var(--text-md, 1.2em); }
   .text-lg    { font-size: var(--text-lg, 1.44em); }
   .text-xl    { font-size: var(--text-xl, 1.728em); }
   .text-xxl   { font-size: var(--text-xxl, 2.074em); }
   .text-xxxl  { font-size: var(--text-xxxl, 2.488em); }
   .text-xxxxl { font-size: var(--text-xxxxl, 2.985em); }
+
+  .text-unit-rem, .text-unit-em, .text-unit-px {
+    font-size: var(--text-unit);
+  }
+
+  .text-unit-rem { --text-unit: 1rem; }
+  .text-unit-em  { --text-unit: 1em; }
+  .text-unit-px  { --text-unit: 16px; }
 
   // --------------------------------
 
@@ -395,6 +418,19 @@
   .text-line-through    { text-decoration: line-through; }
   .text-underline       { text-decoration: underline; }
   .text-decoration-none { text-decoration: none; }
+
+  // --------------------------------
+  
+  // Text Shadow
+  
+  // --------------------------------
+
+  .text-shadow-xs { text-shadow: 0 1px 1px rgba(#000, 0.15); }
+  .text-shadow-sm { text-shadow: 0 1px 2px rgba(#000, 0.25); }
+  .text-shadow-md { text-shadow: 0 1px 2px rgba(#000, 0.1), 0 2px 4px rgba(#000, 0.2); }
+  .text-shadow-lg { text-shadow: 0 1px 4px rgba(#000, 0.1), 0 2px 8px rgba(#000, 0.15), 0 4px 16px rgba(#000, 0.2); }
+  .text-shadow-xl { text-shadow: 0 1px 4px rgba(#000, 0.1), 0 2px 8px rgba(#000, 0.15), 0 4px 16px rgba(#000, 0.2), 0 6px 24px rgba(#000, 0.25); }
+  .text-shadow-none { text-shadow: none; }
 
   // --------------------------------
 
@@ -909,6 +945,7 @@
   .radius-lg { border-radius: var(--radius-lg); }
   .radius-50\% { border-radius: 50%; }
   .radius-full { border-radius: 50em; }
+  .radius-0 { border-radius: 0; }
   .radius-top-left-0 { border-top-left-radius: 0; }
   .radius-top-right-0 { border-top-right-radius: 0; }
   .radius-bottom-right-0 { border-bottom-right-radius: 0; }
@@ -925,6 +962,7 @@
   .shadow-md { box-shadow: var(--shadow-md); }
   .shadow-lg { box-shadow: var(--shadow-lg); }
   .shadow-xl { box-shadow: var(--shadow-xl); }
+  .shadow-none { box-shadow: none; }
 
   // --------------------------------
 
@@ -1283,7 +1321,7 @@
       @supports (--css: variables) {
         .text-xs\@#{$breakpoint}   { font-size: var(--text-xs, 0.694em); }
         .text-sm\@#{$breakpoint}   { font-size: var(--text-sm, 0.833em); }
-        .text-base\@#{$breakpoint} { font-size: 1em; }
+        .text-base\@#{$breakpoint} { font-size: var(--text-unit, 1em); }
         .text-md\@#{$breakpoint}   { font-size: var(--text-md, 1.2em); }
         .text-lg\@#{$breakpoint}   { font-size: var(--text-lg, 1.44em); }
         .text-xl\@#{$breakpoint}   { font-size: var(--text-xl, 1.728em); }

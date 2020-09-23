@@ -3,7 +3,6 @@
 
 @if variable-exists('cody-base-partials') == false or index($cody-base-partials, 'typography') {
   :root {
-    // line-height
     --heading-line-height: 1.2;
     --body-line-height: 1.4;
   }

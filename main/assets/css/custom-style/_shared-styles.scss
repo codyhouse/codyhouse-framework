@@ -25,3 +25,24 @@
   //               0 16.2px 21.9px -6px rgba(0, 0, 0, 0.117), 
   //               0 46px 60px -6px rgba(0, 0, 0, 0.2);
 }
+
+// --------------------------------
+
+// (START) Global editor code https://codyhouse.co/ds/globals/shared-styles
+
+// --------------------------------
+
+.hover\:elevate {
+  box-shadow: var(--shadow-sm);
+  transition: 0.2s;
+
+  &:hover {
+    box-shadow: var(--shadow-md);
+  }
+}
+
+// --------------------------------
+
+// (END) Global editor code
+
+// --------------------------------

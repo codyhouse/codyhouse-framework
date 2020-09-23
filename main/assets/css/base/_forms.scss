@@ -23,7 +23,7 @@
   }
 
   // error message - ⚠️ deprecated
-  .form__msg-error, .form-error-msg { // .form__msg-error is fallback for older framework versions
+  .form__msg-error, .form-error-msg {
     color: var(--color-error, hsl(349, 75%, 51%));
     font-size: var(--text-sm, 0.833em);
     margin-top: var(--space-xxs);
@@ -38,7 +38,7 @@
     clip: auto;
   }
 
-  // set basic style for (native) radio and checkbox buttons
+  // set basic style for (native) radio and checkbox buttons - ⚠️ deprecated
   .radio-list, .checkbox-list { // e.g., .radio-list > li > input + label
     > * { // parent of input + label
       position: relative;

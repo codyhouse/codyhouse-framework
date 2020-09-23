@@ -89,7 +89,7 @@ You can use the Gulp configuration file to auto-import the .scss of the CodyHous
 
 ## Global Editors
 
-The Global Editors are web design tools that allow you to set the style of typography elements, color themes, spacing rules, buttons, and forms directly in the browser. They generate SCSS code that is compatible with CodyFrame.
+The Global Editors are visual tools that allow you to set the style of typography elements, color themes, spacing rules, buttons, and forms directly in the browser. They generate SCSS code that is compatible with CodyFrame.
 
 Explore the Editors:
 
@@ -98,6 +98,7 @@ Explore the Editors:
 - **Spacing** [codyhouse.co/ds/globals/spacing](https://codyhouse.co/ds/globals/spacing)
 - **Buttons** [codyhouse.co/ds/globals/buttons](https://codyhouse.co/ds/globals/buttons)
 - **Forms** [codyhouse.co/ds/globals/forms](https://codyhouse.co/ds/globals/forms)
+- **Shared Styles** [codyhouse.co/ds/globals/shared-styles](https://codyhouse.co/ds/globals/shared-styles)
 
 ## Extensions
 

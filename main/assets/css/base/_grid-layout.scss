@@ -72,7 +72,7 @@
     .gap-xxxxl, .grid-gap-xxxxl, .flex-gap-xxxxl { --gap: var(--space-xxxxl); }
   }
 
-  .col { // auto-sized column
+  .col { // expandable column
     @include autoSizedColumn;
   }
 
@@ -83,7 +83,7 @@
     }
   }
 
-  .col-content {
+  .col-content { // column width depends on its content
     flex-grow: 0;
     flex-basis: initial;
     max-width: initial;
