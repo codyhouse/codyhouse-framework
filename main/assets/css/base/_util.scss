@@ -1042,7 +1042,8 @@
 
   .isolate { isolation: isolate; }
   .blend-multiply { mix-blend-mode: multiply; }
-  .blend-overlay  { mix-blend-mode: overlay; }
+  .blend-overlay { mix-blend-mode: overlay; }
+  .blend-difference { mix-blend-mode: difference; }
 
   // --------------------------------
 
@@ -1329,7 +1330,84 @@
         .text-xxxl\@#{$breakpoint} { font-size: var(--text-xxxl, 2.488em); }
         .text-xxxxl\@#{$breakpoint} { font-size: var(--text-xxxxl, 2.985em); }
       }
-    
+
+      // width
+      @supports (--css: variables) {
+        .width-xxxxs\@#{$breakpoint} { width: var(--size-xxxxs, 0.25rem); }
+        .width-xxxs\@#{$breakpoint}  { width: var(--size-xxxs, 0.5rem); }
+        .width-xxs\@#{$breakpoint}   { width: var(--size-xxs, 0.75rem); }
+        .width-xs\@#{$breakpoint}    { width: var(--size-xs, 1rem); } 
+        .width-sm\@#{$breakpoint}    { width: var(--size-sm, 1.5rem); }
+        .width-md\@#{$breakpoint}    { width: var(--size-md, 2rem); } 
+        .width-lg\@#{$breakpoint}    { width: var(--size-lg, 3rem); } 
+        .width-xl\@#{$breakpoint}    { width: var(--size-xl, 4rem); } 
+        .width-xxl\@#{$breakpoint}   { width: var(--size-xxl, 6rem); } 
+        .width-xxxl\@#{$breakpoint}  { width: var(--size-xxxl, 8rem); }
+        .width-xxxxl\@#{$breakpoint} { width: var(--size-xxxxl, 16rem); }
+      }
+
+      .width-0\@#{$breakpoint}     { width: 0; }
+      .width-10\%\@#{$breakpoint}  { width: 10%; }
+      .width-20\%\@#{$breakpoint}  { width: 20%; }
+      .width-25\%\@#{$breakpoint}  { width: 25%; }
+      .width-30\%\@#{$breakpoint}  { width: 30%; }
+      .width-33\%\@#{$breakpoint}  { width: calc(100% / 3); }
+      .width-40\%\@#{$breakpoint}  { width: 40%; }
+      .width-50\%\@#{$breakpoint}  { width: 50%; }
+      .width-60\%\@#{$breakpoint}  { width: 60%; }
+      .width-66\%\@#{$breakpoint}  { width: calc(100% / 1.5); }
+      .width-70\%\@#{$breakpoint}  { width: 70%; }
+      .width-75\%\@#{$breakpoint}  { width: 75%; }
+      .width-80\%\@#{$breakpoint}  { width: 80%; }
+      .width-90\%\@#{$breakpoint}  { width: 90%; }
+      .width-100\%\@#{$breakpoint} { width: 100%; }
+      .width-100vw\@#{$breakpoint} { width: 100vw; }
+      .width-auto\@#{$breakpoint}  { width: auto; }
+
+      // height
+      @supports (--css: variables) {
+        .height-xxxxs\@#{$breakpoint} { height: var(--size-xxxxs, 0.25rem); }
+        .height-xxxs\@#{$breakpoint}  { height: var(--size-xxxs, 0.5rem); }
+        .height-xxs\@#{$breakpoint}   { height: var(--size-xxs, 0.75rem); }
+        .height-xs\@#{$breakpoint}    { height: var(--size-xs, 1rem); }
+        .height-sm\@#{$breakpoint}    { height: var(--size-sm, 1.5rem); }
+        .height-md\@#{$breakpoint}    { height: var(--size-md, 2rem); }
+        .height-lg\@#{$breakpoint}    { height: var(--size-lg, 3rem); }
+        .height-xl\@#{$breakpoint}    { height: var(--size-xl, 4rem); }
+        .height-xxl\@#{$breakpoint}   { height: var(--size-xxl, 6rem); }
+        .height-xxxl\@#{$breakpoint}  { height: var(--size-xxxl, 8rem); }
+        .height-xxxxl\@#{$breakpoint} { height: var(--size-xxxxl, 16rem); }
+      }
+
+      .height-0\@#{$breakpoint}     { height: 0; }
+      .height-10\%\@#{$breakpoint}  { height: 10%; }
+      .height-20\%\@#{$breakpoint}  { height: 20%; }
+      .height-25\%\@#{$breakpoint}  { height: 25%; }
+      .height-30\%\@#{$breakpoint}  { height: 30%; }
+      .height-33\%\@#{$breakpoint}  { height: calc(100% / 3); }
+      .height-40\%\@#{$breakpoint}  { height: 40%; }
+      .height-50\%\@#{$breakpoint}  { height: 50%; }
+      .height-60\%\@#{$breakpoint}  { height: 60%; }
+      .height-66\%\@#{$breakpoint}  { height: calc(100% / 1.5); }
+      .height-70\%\@#{$breakpoint}  { height: 70%; }
+      .height-75\%\@#{$breakpoint}  { height: 75%; }
+      .height-80\%\@#{$breakpoint}  { height: 80%; }
+      .height-90\%\@#{$breakpoint}  { height: 90%; }
+      .height-100\%\@#{$breakpoint} { height: 100%; }
+      .height-100vh\@#{$breakpoint} { height: 100vh; }
+      .height-auto\@#{$breakpoint}  { height: auto; }
+
+      // position
+      .position-relative\@#{$breakpoint} { position: relative; }
+      .position-absolute\@#{$breakpoint} { position: absolute; }
+      .position-fixed\@#{$breakpoint}    { position: fixed; }
+      .position-sticky\@#{$breakpoint}   { position: sticky; }
+
+      .top-0\@#{$breakpoint}    { top: 0; }
+      .bottom-0\@#{$breakpoint} { bottom: 0; }
+      .left-0\@#{$breakpoint}   { left: 0; }
+      .right-0\@#{$breakpoint}  { right: 0; }
+      
       // visibility
       .hide\@#{$breakpoint} { display: none !important; }
     }

@@ -6,13 +6,13 @@ function Util () {};
 */
 Util.hasClass = function(el, className) {
 	if (el.classList) return el.classList.contains(className);
-	else return !!el.className.match(new RegExp('(\\s|^)' + className + '(\\s|$)'));
+	else return !!el.getAttribute('class').match(new RegExp('(\\s|^)' + className + '(\\s|$)'));
 };
 
 Util.addClass = function(el, className) {
 	var classList = className.split(' ');
  	if (el.classList) el.classList.add(classList[0]);
- 	else if (!Util.hasClass(el, classList[0])) el.className += " " + classList[0];
+  else if (!Util.hasClass(el, classList[0])) el.setAttribute('class', el.getAttribute('class') +  " " + classList[0]);
  	if (classList.length > 1) Util.addClass(el, classList.slice(1).join(' '));
 };
 
@@ -21,7 +21,7 @@ Util.removeClass = function(el, className) {
 	if (el.classList) el.classList.remove(classList[0]);	
 	else if(Util.hasClass(el, classList[0])) {
 		var reg = new RegExp('(\\s|^)' + classList[0] + '(\\s|$)');
-		el.className=el.className.replace(reg, ' ');
+    el.setAttribute('class', el.getAttribute('class').replace(reg, ' '));
 	}
 	if (classList.length > 1) Util.removeClass(el, classList.slice(1).join(' '));
 };
@@ -77,12 +77,13 @@ Util.setHeight = function(start, to, element, duration, cb) {
   var animateHeight = function(timestamp){  
     if (!currentTime) currentTime = timestamp;         
     var progress = timestamp - currentTime;
+    if(progress > duration) progress = duration;
     var val = parseInt((progress/duration)*change + start);
     element.style.height = val+"px";
     if(progress < duration) {
         window.requestAnimationFrame(animateHeight);
     } else {
-    	cb();
+    	if(cb) cb();
     }
   };
   
@@ -109,7 +110,7 @@ Util.scrollTo = function(final, duration, cb, scrollEl) {
     var val = Math.easeInOutQuad(progress, start, final-start, duration);
     element.scrollTo(0, val);
     if(progress < duration) {
-        window.requestAnimationFrame(animateScroll);
+      window.requestAnimationFrame(animateScroll);
     } else {
       cb && cb();
     }
