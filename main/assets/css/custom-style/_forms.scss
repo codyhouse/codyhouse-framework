@@ -4,11 +4,14 @@
 
 // --------------------------------
 
-.form-control { // basic form element style
+:root {
   --form-control-padding-y: var(--space-xxs); // padding top/bottom
   --form-control-padding-x: var(--space-xs); // padding left/right
   --form-control-radius: 0.25em; // border radius
   --form-control-font-size: 1em; // font size
+}
+
+.form-control { // basic form element style
   line-height: 1.2;
   background-color: var(--color-bg);
   border: 2px solid var(--color-contrast-low);

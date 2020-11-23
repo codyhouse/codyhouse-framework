@@ -8,7 +8,7 @@ Usage: codyhouse.co/license
 -------------------------------- */
 
 .list, .text-component .list {
-  --list-v-space: 0.65; // control vertical space
+  --list-v-space: 0.85; // control vertical space
   --list-offset: 1;  // control offset of sublists
   padding-left: 0;
   list-style: none;
@@ -16,8 +16,8 @@ Usage: codyhouse.co/license
   ul, ol {
     list-style: none;
     margin: 0; // reset
-    margin-top: calc( var(--space-xxxs) * var(--list-v-space, 1));
-    padding-top: calc( var(--space-xxxs) * var(--list-v-space, 1));
+    margin-top: calc(var(--space-xxxs) * var(--list-v-space, 1));
+    padding-top: calc(var(--space-xxxs) * var(--list-v-space, 1));
     padding-left: calc(var(--space-xs) * var(--list-offset, 1));
   }
 
@@ -100,15 +100,11 @@ Usage: codyhouse.co/license
 }
 
 .list--border { // show divider among list items
-  li {
-    border-bottom: 1px solid var(--color-contrast-low);
+  li:not(:last-child) {
+    border-bottom: 1px solid alpha(var(--color-contrast-higher), 0.15);
   }
 
   ul, ol {
-    border-top: 1px solid var(--color-contrast-low);
-
-    li:last-child {
-      border-bottom-width: 0;
-    }
+    border-top: 1px solid alpha(var(--color-contrast-higher), 0.15);
   }
 }
