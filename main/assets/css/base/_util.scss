@@ -54,6 +54,32 @@
   .order-3 { order: 3; }
 
   // --------------------------------
+  
+  // Aspect Ratio
+  
+  // --------------------------------
+
+  [class*="aspect-ratio"] {
+    --aspect-ratio: 16/9;
+    position: relative;
+    height: 0;
+    padding-bottom: calc(100%/(var(--aspect-ratio)));
+
+    > * {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .aspect-ratio-16\:9 { --aspect-ratio: 16/9; }
+  .aspect-ratio-4\:3  { --aspect-ratio: 4/3; }
+  .aspect-ratio-1\:1  { --aspect-ratio: 1/1; }
+
+  // --------------------------------
 
   // Display
 
@@ -821,11 +847,12 @@
 
   // --------------------------------
 
-  // Media Wrapper - make iframe responsive + prevent img jump when page loads
+  // Media Wrapper - make iFrame responsive + prevent img jump when page loads
+  // ⚠️ deprecated - replace with aspect ratio
 
   // --------------------------------
 
-  $media-wrapper-aspect-ratios: (
+  $media-wrapper-aspect-ratios: ( 
     (4 3),
     (1 1)
   ) !default;
@@ -853,6 +880,7 @@
       padding-bottom: calc((#{$aspect-ratio-y} / #{$aspect-ratio-x}) * 100%);
     }
   }
+  
 
   // --------------------------------
 
@@ -1056,6 +1084,18 @@
 
   // --------------------------------
 
+  // Perspective
+
+  // --------------------------------
+
+  .perspective-xs { perspective: 250px; }
+  .perspective-sm { perspective: 500px; }
+  .perspective-md { perspective: 1000px; }
+  .perspective-lg { perspective: 1500px; }
+  .perspective-xl { perspective: 3000px; }
+
+  // --------------------------------
+
   // Transform
 
   // --------------------------------
@@ -1063,6 +1103,22 @@
   .flip   { transform: scale(-1); }
   .flip-x { transform: scaleX(-1); }
   .flip-y { transform: scaleY(-1); }
+
+  // --------------------------------
+
+  // Transform Origin
+
+  // --------------------------------
+
+  .origin-center { transform-origin: center; }
+  .origin-top { transform-origin: center top; }
+  .origin-right { transform-origin: right center; }
+  .origin-bottom { transform-origin: center bottom; }
+  .origin-left { transform-origin: left center; }
+  .origin-top-left { transform-origin: left top; }
+  .origin-top-right { transform-origin: right top; }
+  .origin-bottom-left { transform-origin: left bottom; }
+  .origin-bottom-right { transform-origin: right bottom; }
 
   // --------------------------------
 
