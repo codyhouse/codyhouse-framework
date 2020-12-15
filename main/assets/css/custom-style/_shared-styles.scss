@@ -32,12 +32,24 @@
 
 // --------------------------------
 
-.hover\:elevate {
-  box-shadow: var(--shadow-sm);
-  transition: 0.2s;
+.hover\:reduce-opacity {
+  opacity: 1;
+  transition: all 0.3s ease;
 
   &:hover {
-    box-shadow: var(--shadow-md);
+    opacity: 0.8;
+  }
+}
+
+// text styles
+.link-subtle {
+  color: inherit;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.2s ease;
+
+  &:hover {
+    color: var(--color-primary);
   }
 }
 
