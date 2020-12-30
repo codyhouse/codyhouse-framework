@@ -70,7 +70,7 @@ Util.is = function(elem, selector) {
 /* 
 	Animate height of an element
 */
-Util.setHeight = function(start, to, element, duration, cb) {
+Util.setHeight = function(start, to, element, duration, cb, timeFunction) {
 	var change = to - start,
 	    currentTime = null;
 
@@ -79,6 +79,9 @@ Util.setHeight = function(start, to, element, duration, cb) {
     var progress = timestamp - currentTime;
     if(progress > duration) progress = duration;
     var val = parseInt((progress/duration)*change + start);
+    if(timeFunction) {
+      val = Math[timeFunction](progress, start, to - start, duration);
+    }
     element.style.height = val+"px";
     if(progress < duration) {
         window.requestAnimationFrame(animateHeight);
