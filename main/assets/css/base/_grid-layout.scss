@@ -71,7 +71,7 @@
       }
     }
 
-    .flex[class*="gap-"] {
+    .flex[class*="gap-"], .inline-flex[class*="gap-"] {
       margin-bottom: calc(-1 * var(--gap-y, 0));
       margin-left: calc(-1 * var(--gap-x, 0));
     
@@ -164,6 +164,10 @@
         .offset-#{$i}\@#{$breakpoint} {
           --offset: calc(#{round-width($i)} + var(--gap-x, 0.75em));
         }
+      }
+
+      .offset-0\@#{$breakpoint} {
+        --offset: var(--gap-x);
       }
     
       @supports (--css: variables) {

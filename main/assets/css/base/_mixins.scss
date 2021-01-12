@@ -62,12 +62,12 @@
 // --------------------------------
 
 // define HSL color variable
-@mixin defineColorHSL($color, $hue, $saturation, $lightness){
+@mixin defineColorHSL($color, $hue, $saturation, $lightness) {
   #{$color}: unquote("hsl(#{$hue}, #{$saturation}, #{$lightness})");#{$color}-h: #{$hue};#{$color}-s: #{$saturation};#{$color}-l: #{$lightness};
 }
 
 // return color with different opacity value
-@function alpha($color, $opacity){
+@function alpha($color, $opacity) {
   $color: str-replace($color, 'var(');
   $color: str-replace($color, ')');
   $color-h: var(#{$color+'-h'});
@@ -77,13 +77,23 @@
 }
 
 // return color with different lightness value
-@function lightness($color, $lightnessMultiplier){
+@function lightness($color, $lightnessMultiplier) {
   $color: str-replace($color, 'var(');
   $color: str-replace($color, ')');
   $color-h: var(#{$color+'-h'});
   $color-s: var(#{$color+'-s'});
   $color-l: var(#{$color+'-l'});
   @return hsl($color-h, $color-s, calc(#{$color-l} * #{$lightnessMultiplier}));
+}
+
+// modify color HSLA values
+@function adjustHSLA($color, $hueMultiplier: 1, $saturationMultiplier: 1, $lightnessMultiplier: 1, $opacity: 1) {
+  $color: str-replace($color, 'var(');
+  $color: str-replace($color, ')');
+  $color-h: var(#{$color+'-h'});
+  $color-s: var(#{$color+'-s'});
+  $color-l: var(#{$color+'-l'});
+  @return hsla(calc(#{$color-h} * #{$hueMultiplier}), calc(#{$color-s} * #{$saturationMultiplier}), calc(#{$color-l} * #{$lightnessMultiplier}), $opacity);
 }
 
 // replace substring with another string
