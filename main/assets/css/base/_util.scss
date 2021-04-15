@@ -59,7 +59,7 @@
   
   // --------------------------------
 
-  [class*="aspect-ratio"] {
+  [class^="aspect-ratio"], [class*=" aspect-ratio"] {
     --aspect-ratio: 16/9;
     position: relative;
     height: 0;
@@ -71,13 +71,22 @@
       left: 0;
       width: 100%;
       height: 100%;
-      object-fit: cover;
+
+      &:not(iframe) {
+        object-fit: cover;
+      }
     }
   }
 
   .aspect-ratio-16\:9 { --aspect-ratio: 16/9; }
+  .aspect-ratio-3\:2  { --aspect-ratio: 3/2; }
   .aspect-ratio-4\:3  { --aspect-ratio: 4/3; }
+  .aspect-ratio-5\:4  { --aspect-ratio: 5/4; }
   .aspect-ratio-1\:1  { --aspect-ratio: 1/1; }
+  .aspect-ratio-4\:5  { --aspect-ratio: 4/5; }
+  .aspect-ratio-3\:4  { --aspect-ratio: 3/4; }
+  .aspect-ratio-2\:3  { --aspect-ratio: 2/3; }
+  .aspect-ratio-9\:16 { --aspect-ratio: 9/16; }
 
   // --------------------------------
 
@@ -381,9 +390,11 @@
 
   // --------------------------------
 
+  .letter-spacing-xs { letter-spacing: -0.1em; }
   .letter-spacing-sm { letter-spacing: -0.05em; }
   .letter-spacing-md { letter-spacing: 0.05em; }
   .letter-spacing-lg { letter-spacing: 0.1em; }
+  .letter-spacing-xl { letter-spacing: 0.2em; }
 
   // --------------------------------
 
@@ -569,7 +580,7 @@
 
   // --------------------------------
 
-  [class*="color-"] { --color-o: 1; }
+  [class^="color-"], [class*=" color-"] { --color-o: 1; }
 
   .color-inherit { color: inherit; }
   
@@ -633,7 +644,7 @@
   // --------------------------------
 
   @supports (--css: variables) {
-    [class*="color-gradient-"] {
+    [class^="color-gradient"], [class*=" color-gradient"] {
       color: transparent !important;
       background-clip: text;
     }
@@ -771,7 +782,7 @@
   @each $breakpoint, $value in $breakpoints {
     $i: index($breakpoints, $breakpoint $value);
     @if $i == 1 {
-      [class*="max-width-adaptive"] {
+      [class^="max-width-adaptive"], [class*=" max-width-adaptive"] {
         max-width: map-get($map: $breakpoints, $key: #{$breakpoint});
       }
     } @else {
@@ -815,15 +826,63 @@
   .position-fixed    { position: fixed; }
   .position-sticky   { position: sticky; }
 
-  .top-0       { top: 0; }
-  .top-50\%    { top: 50%; }
-  .bottom-0    { bottom: 0; }
-  .bottom-50\% { bottom: 50%; }
-  .left-0      { left: 0; }
-  .left-50\%   { left: 50%; }
+  .inset-0     { top: 0; right: 0; bottom: 0; left: 0; }
+
+  .top-0     { top: 0; }
+  .top-50\%  { top: 50%; }
+  .top-xxxxs { top: var(--space-xxxxs); }
+  .top-xxxs  { top: var(--space-xxxs); }
+  .top-xxs   { top: var(--space-xxs); }
+  .top-xs    { top: var(--space-xs); }
+  .top-sm    { top: var(--space-sm); }
+  .top-md    { top: var(--space-md); }
+  .top-lg    { top: var(--space-lg); }
+  .top-xl    { top: var(--space-xl); }
+  .top-xxl   { top: var(--space-xxl); }
+  .top-xxxl  { top: var(--space-xxxl); }
+  .top-xxxxl { top: var(--space-xxxxl); }
+
+  .bottom-0     { bottom: 0; }
+  .bottom-50\%  { bottom: 50%; }
+  .bottom-xxxxs { bottom: var(--space-xxxxs); }
+  .bottom-xxxs  { bottom: var(--space-xxxs); }
+  .bottom-xxs   { bottom: var(--space-xxs); }
+  .bottom-xs    { bottom: var(--space-xs); }
+  .bottom-sm    { bottom: var(--space-sm); }
+  .bottom-md    { bottom: var(--space-md); }
+  .bottom-lg    { bottom: var(--space-lg); }
+  .bottom-xl    { bottom: var(--space-xl); }
+  .bottom-xxl   { bottom: var(--space-xxl); }
+  .bottom-xxxl  { bottom: var(--space-xxxl); }
+  .bottom-xxxxl { bottom: var(--space-xxxxl); }
+
   .right-0     { right: 0; }
   .right-50\%  { right: 50%; }
-  .inset-0     { top: 0; right: 0; bottom: 0; left: 0; }
+  .right-xxxxs { right: var(--space-xxxxs); }
+  .right-xxxs  { right: var(--space-xxxs); }
+  .right-xxs   { right: var(--space-xxs); }
+  .right-xs    { right: var(--space-xs); }
+  .right-sm    { right: var(--space-sm); }
+  .right-md    { right: var(--space-md); }
+  .right-lg    { right: var(--space-lg); }
+  .right-xl    { right: var(--space-xl); }
+  .right-xxl   { right: var(--space-xxl); }
+  .right-xxxl  { right: var(--space-xxxl); }
+  .right-xxxxl { right: var(--space-xxxxl); }
+
+  .left-0     { left: 0; }
+  .left-50\%  { left: 50%; }
+  .left-xxxxs { left: var(--space-xxxxs); }
+  .left-xxxs  { left: var(--space-xxxs); }
+  .left-xxs   { left: var(--space-xxs); }
+  .left-xs    { left: var(--space-xs); }
+  .left-sm    { left: var(--space-sm); }
+  .left-md    { left: var(--space-md); }
+  .left-lg    { left: var(--space-lg); }
+  .left-xl    { left: var(--space-xl); }
+  .left-xxl   { left: var(--space-xxl); }
+  .left-xxxl  { left: var(--space-xxxl); }
+  .left-xxxxl { left: var(--space-xxxxl); }
 
   // --------------------------------
 
@@ -852,6 +911,27 @@
 
   // overscroll-behavior
   .overscroll-contain { overscroll-behavior: contain; }
+
+  // --------------------------------
+
+  // Scroll Behavior
+
+  // --------------------------------
+
+  .scroll-smooth { scroll-behavior: smooth; }
+
+  .scroll-padding-xxxxs { scroll-padding: var(--space-xxxxs); }
+  .scroll-padding-xxxs  { scroll-padding: var(--space-xxxs); }
+  .scroll-padding-xxs   { scroll-padding: var(--space-xxs); }
+  .scroll-padding-xs    { scroll-padding: var(--space-xs); }
+  .scroll-padding-sm    { scroll-padding: var(--space-sm); }
+  .scroll-padding-md    { scroll-padding: var(--space-md); }
+  .scroll-padding-lg    { scroll-padding: var(--space-lg); }
+  .scroll-padding-xl    { scroll-padding: var(--space-xl); }
+  .scroll-padding-xxl   { scroll-padding: var(--space-xxl); }
+  .scroll-padding-xxxl  { scroll-padding: var(--space-xxxl); }
+  .scroll-padding-xxxxl { scroll-padding: var(--space-xxxxl); }
+
 
   // --------------------------------
 
@@ -893,7 +973,10 @@
       left: 0;
       width: 100%;
       height: 100%;
-      object-fit: cover;
+
+      &:not(iframe) {
+        object-fit: cover;
+      }
     }
   }
 
@@ -927,7 +1010,7 @@
 
   // --------------------------------
 
-  [class*="border-"] { --border-o: 1; }
+  [class^="border-"], [class*=" border-"] { --border-o: 1; }
 
   .border { border: 1px solid alpha(var(--color-contrast-low), var(--border-o, 1)); }
   .border-top { border-top: 1px solid alpha(var(--color-contrast-low), var(--border-o, 1)); }
@@ -1027,7 +1110,7 @@
 
   // --------------------------------
 
-  .bg, [class*="bg-"] { --bg-o: 1; }
+  .bg, [class^="bg-"], [class*=" bg-"] { --bg-o: 1; }
 
   .bg-transparent { background-color: transparent; }
   .bg-inherit { background-color: inherit; }
@@ -1136,17 +1219,40 @@
 
   // --------------------------------
 
-  .flip   { transform: scale(-1); }
-  .flip-x { transform: scaleX(-1); }
-  .flip-y { transform: scaleY(-1); }
+  @supports (--css: variables) {
+    [class^="flip"], [class*=" flip"],
+    [class^="-rotate"], [class*=" -rotate"],
+    [class^="rotate"], [class*=" rotate"],
+    [class^="-translate"], [class*=" -translate"],
+    [class^="translate"], [class*=" translate"],
+    [class^="-scale"], [class*=" -scale"],
+    [class^="scale"], [class*=" scale"],
+    [class^="-skew"], [class*=" -skew"]
+    [class^="skew"], [class*=" skew"] {
+      --translate: 0;
+      --rotate: 0;
+      --skew: 0;
+      --scale: 1;
 
-  .-translate-50\%   { transform: translate(-50%, -50%); }
-  .-translate-x-50\% { transform: translateX(-50%); }
-  .-translate-y-50\% { transform: translateY(-50%); }
+      transform: translate3d(var(--translate-x, var(--translate)), var(--translate-y, var(--translate)), var(--translate-z, 0)) rotateX(var(--rotate-x, 0)) rotateY(var(--rotate-y, 0)) rotateZ(var(--rotate-z, var(--rotate))) skewX(var(--skew-x, var(--skew))) skewY(var(--skew-y, 0)) scaleX(var(--scale-x, var(--scale))) scaleY(var(--scale-y, var(--scale)));
+    }
+  
+    .flip   { --scale: -1; }
+    .flip-x { --scale-x: -1; }
+    .flip-y { --scale-y: -1; }
 
-  .translate-50\%   { transform: translate(50%, 50%); }
-  .translate-x-50\% { transform: translateX(50%); }
-  .translate-y-50\% { transform: translateY(50%); }
+    .rotate-90  { --rotate: 90deg; }
+    .rotate-180 { --rotate: 180deg; }
+    .rotate-270 { --rotate: 270deg; }
+  
+    .-translate-50\%   { --translate: -50%; }
+    .-translate-x-50\% { --translate-x: -50%; }
+    .-translate-y-50\% { --translate-y: -50%; }
+  
+    .translate-50\%   { --translate: 50%; }
+    .translate-x-50\% { --translate-x: 50%; }
+    .translate-y-50\% { --translate-y: 50%; }
+  }
 
   // --------------------------------
 
@@ -1163,6 +1269,30 @@
   .origin-top-right { transform-origin: right top; }
   .origin-bottom-left { transform-origin: left bottom; }
   .origin-bottom-right { transform-origin: right bottom; }
+
+  // --------------------------------
+
+  // SVG
+
+  // --------------------------------
+
+  .fill-current { fill: currentColor; }
+
+  .stroke-current { stroke: currentColor; }
+
+  .stroke-1 { stroke-width: 1px; }
+  .stroke-2 { stroke-width: 2px; }
+  .stroke-3 { stroke-width: 3px; }
+  .stroke-4 { stroke-width: 4px; }
+
+  // --------------------------------
+
+  // Visibility
+
+  // --------------------------------
+
+  .visible    { visibility: visible; }
+  .invisible  { visibility: hidden; }
 
   // --------------------------------
 
@@ -1504,15 +1634,75 @@
       .position-sticky\@#{$breakpoint}   { position: sticky; }
       .position-static\@#{$breakpoint}   { position: static; }
 
+      .inset-0\@#{$breakpoint}     { top: 0; right: 0; bottom: 0; left: 0; }
+
       .top-0\@#{$breakpoint}       { top: 0; }
       .top-50\%\@#{$breakpoint}    { top: 50%; }
+
       .bottom-0\@#{$breakpoint}    { bottom: 0; }
       .bottom-50\%\@#{$breakpoint} { bottom: 50%; }
-      .left-0\@#{$breakpoint}      { left: 0; }
-      .left-50\%\@#{$breakpoint}   { left: 50%; }
+
       .right-0\@#{$breakpoint}     { right: 0; }
       .right-50\%\@#{$breakpoint}  { right: 50%; }
-      .inset-0\@#{$breakpoint}     { top: 0; right: 0; bottom: 0; left: 0; }
+
+      .left-0\@#{$breakpoint}      { left: 0; }
+      .left-50\%\@#{$breakpoint}   { left: 50%; }
+
+      @supports (--css: variables) {
+        .top-xxxxs\@#{$breakpoint} { top: var(--space-xxxxs); }
+        .top-xxxs\@#{$breakpoint}  { top: var(--space-xxxs); }
+        .top-xxs\@#{$breakpoint}   { top: var(--space-xxs); }
+        .top-xs\@#{$breakpoint}    { top: var(--space-xs); }
+        .top-sm\@#{$breakpoint}    { top: var(--space-sm); }
+        .top-md\@#{$breakpoint}    { top: var(--space-md); }
+        .top-lg\@#{$breakpoint}    { top: var(--space-lg); }
+        .top-xl\@#{$breakpoint}    { top: var(--space-xl); }
+        .top-xxl\@#{$breakpoint}   { top: var(--space-xxl); }
+        .top-xxxl\@#{$breakpoint}  { top: var(--space-xxxl); }
+        .top-xxxxl\@#{$breakpoint} { top: var(--space-xxxxl); }
+
+        .bottom-xxxxs\@#{$breakpoint} { bottom: var(--space-xxxxs); }
+        .bottom-xxxs\@#{$breakpoint}  { bottom: var(--space-xxxs); }
+        .bottom-xxs\@#{$breakpoint}   { bottom: var(--space-xxs); }
+        .bottom-xs\@#{$breakpoint}    { bottom: var(--space-xs); }
+        .bottom-sm\@#{$breakpoint}    { bottom: var(--space-sm); }
+        .bottom-md\@#{$breakpoint}    { bottom: var(--space-md); }
+        .bottom-lg\@#{$breakpoint}    { bottom: var(--space-lg); }
+        .bottom-xl\@#{$breakpoint}    { bottom: var(--space-xl); }
+        .bottom-xxl\@#{$breakpoint}   { bottom: var(--space-xxl); }
+        .bottom-xxxl\@#{$breakpoint}  { bottom: var(--space-xxxl); }
+        .bottom-xxxxl\@#{$breakpoint} { bottom: var(--space-xxxxl); }
+
+        .right-xxxxs\@#{$breakpoint} { right: var(--space-xxxxs); }
+        .right-xxxs\@#{$breakpoint}  { right: var(--space-xxxs); }
+        .right-xxs\@#{$breakpoint}   { right: var(--space-xxs); }
+        .right-xs\@#{$breakpoint}    { right: var(--space-xs); }
+        .right-sm\@#{$breakpoint}    { right: var(--space-sm); }
+        .right-md\@#{$breakpoint}    { right: var(--space-md); }
+        .right-lg\@#{$breakpoint}    { right: var(--space-lg); }
+        .right-xl\@#{$breakpoint}    { right: var(--space-xl); }
+        .right-xxl\@#{$breakpoint}   { right: var(--space-xxl); }
+        .right-xxxl\@#{$breakpoint}  { right: var(--space-xxxl); }
+        .right-xxxxl\@#{$breakpoint} { right: var(--space-xxxxl); }
+
+        .left-xxxxs\@#{$breakpoint} { left: var(--space-xxxxs); }
+        .left-xxxs\@#{$breakpoint}  { left: var(--space-xxxs); }
+        .left-xxs\@#{$breakpoint}   { left: var(--space-xxs); }
+        .left-xs\@#{$breakpoint}    { left: var(--space-xs); }
+        .left-sm\@#{$breakpoint}    { left: var(--space-sm); }
+        .left-md\@#{$breakpoint}    { left: var(--space-md); }
+        .left-lg\@#{$breakpoint}    { left: var(--space-lg); }
+        .left-xl\@#{$breakpoint}    { left: var(--space-xl); }
+        .left-xxl\@#{$breakpoint}   { left: var(--space-xxl); }
+        .left-xxxl\@#{$breakpoint}  { left: var(--space-xxxl); }
+        .left-xxxxl\@#{$breakpoint} { left: var(--space-xxxxl); }
+      }
+
+      // overflow
+      .overflow-hidden\@#{$breakpoint} { overflow: hidden; }
+      .overflow-auto\@#{$breakpoint}   { overflow: auto; }
+      .momentum-scrolling\@#{$breakpoint} { -webkit-overflow-scrolling: touch; }
+      .overscroll-contain\@#{$breakpoint} { overscroll-behavior: contain; }
       
       // visibility
       .hide\@#{$breakpoint} { display: none !important; }

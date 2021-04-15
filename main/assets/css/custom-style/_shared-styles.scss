@@ -41,6 +41,23 @@
   }
 }
 
+.hover\:scale {
+  transition: transform 0.3s var(--ease-out-back);
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.hover\:elevate {
+  box-shadow: var(--shadow-sm);
+  transition: all 0.3s ease;
+
+  &:hover {
+    box-shadow: var(--shadow-md);
+  }
+}
+
 // text styles
 .link-subtle {
   color: inherit;

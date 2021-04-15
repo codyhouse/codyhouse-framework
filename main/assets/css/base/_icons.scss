@@ -16,61 +16,27 @@
   }
 
   .icon {
+    --size: 1em;
     display: inline-block;
     color: inherit;
     fill: currentColor;
-    height: 1em;
-    width: 1em;
+    height: var(--size);
+    width: var(--size);
     line-height: 1;
     flex-shrink: 0;
     max-width: initial;
   }
 
   // icon size
-  .icon--xxxs { 
-    width: var(--icon-xxxs);
-    height: var(--icon-xxxs);
-  }
-
-  .icon--xxs  {
-    width: var(--icon-xxs);
-    height: var(--icon-xxs);
-  }
-
-  .icon--xs   {
-    width: var(--icon-xs);
-    height: var(--icon-xs);
-  }
-
-  .icon--sm   {
-    width: var(--icon-sm);
-    height: var(--icon-sm);
-  }
-
-  .icon--md   {
-    width: var(--icon-md);
-    height: var(--icon-md);
-  }
-
-  .icon--lg   {
-    width: var(--icon-lg);
-    height: var(--icon-lg);
-  }
-
-  .icon--xl   {
-    width: var(--icon-xl);
-    height: var(--icon-xl);
-  }
-
-  .icon--xxl  {
-    width: var(--icon-xxl);
-    height: var(--icon-xxl);
-  }
-
-  .icon--xxxl {
-    width: var(--icon-xxxl);
-    height: var(--icon-xxxl);
-  }
+  .icon--xxxs { --size: var(--icon-xxxs); }
+  .icon--xxs  { --size: var(--icon-xxs); }
+  .icon--xs   { --size: var(--icon-xs); }
+  .icon--sm   { --size: var(--icon-sm); }
+  .icon--md   { --size: var(--icon-md); }
+  .icon--lg   { --size: var(--icon-lg); }
+  .icon--xl   { --size: var(--icon-xl); }
+  .icon--xxl  { --size: var(--icon-xxl); }
+  .icon--xxxl { --size: var(--icon-xxxl); }
 
   .icon--is-spinning { // rotate the icon infinitely
     animation: icon-spin 1s infinite linear;

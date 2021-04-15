@@ -34,6 +34,7 @@
   border-color: var(--color-error);
 
   &:focus {
+    border-color: var(--color-error);
     box-shadow: 0 0 0 2px alpha(var(--color-error), 0.2);
   }
 }
