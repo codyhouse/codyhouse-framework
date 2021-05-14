@@ -11,7 +11,7 @@
     white-space: nowrap;
   }
   
-  .sr-only--focusable{ // Focusable visually hidden element.
+  .sr-only-focusable { // focusable,visually hidden element.
       &:not(:focus):not(:focus-within){
         @extend .sr-only
       }
