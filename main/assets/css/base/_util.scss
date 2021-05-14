@@ -97,6 +97,8 @@
   .block { display: block; }
   .inline-block { display: inline-block; }
   .inline { display: inline; }
+  .contents { display: contents; }
+  .hide { display: none; }
 
   // --------------------------------
 
@@ -1292,7 +1294,7 @@
   // --------------------------------
 
   .visible { visibility: visible; }
-  .hidden  { visibility: hidden; }
+  .hidden, .invisible { visibility: hidden; } // ⚠️ .hidden is deprecated - use .invisible
 
   // --------------------------------
 
@@ -1339,6 +1341,8 @@
       .block\@#{$breakpoint} { display: block; }
       .inline-block\@#{$breakpoint} { display: inline-block; }
       .inline\@#{$breakpoint} { display: inline; }
+      .contents\@#{$breakpoint} { display: contents; }
+      .hide\@#{$breakpoint} { display: none !important; }
     
       // margin
       @supports (--css: variables) {
@@ -1703,9 +1707,10 @@
       .overflow-auto\@#{$breakpoint}   { overflow: auto; }
       .momentum-scrolling\@#{$breakpoint} { -webkit-overflow-scrolling: touch; }
       .overscroll-contain\@#{$breakpoint} { overscroll-behavior: contain; }
-      
+
       // visibility
-      .hide\@#{$breakpoint} { display: none !important; }
+      .visible\@#{$breakpoint} { visibility: visible; }
+      .invisible\@#{$breakpoint} { visibility: hidden; }
     }
 
     @include breakpoint(#{$breakpoint}, "not all") {
