@@ -10,4 +10,11 @@
     border: 0;
     white-space: nowrap;
   }
+  
+  .sr-only-focusable { // focusable,visually hidden element.
+      &:not(:focus):not(:focus-within){
+        @extend .sr-only
+      }
+  }
+  
 }
