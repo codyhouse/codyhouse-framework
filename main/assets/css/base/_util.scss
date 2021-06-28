@@ -8,6 +8,7 @@
   .flex { display: flex; }
   .inline-flex { display: inline-flex; }
   .flex-wrap { flex-wrap: wrap; }
+  .flex-nowrap {flex-wrap: nowrap;}
   .flex-column { flex-direction: column; }
   .flex-column-reverse { flex-direction: column-reverse; }
   .flex-row { flex-direction: row; }
@@ -1308,6 +1309,7 @@
       .flex\@#{$breakpoint} { display: flex; }
       .inline-flex\@#{$breakpoint} { display: inline-flex; }
       .flex-wrap\@#{$breakpoint} { flex-wrap: wrap; }
+      .flex-nowrap\@#{$breakpoint} {flex-wrap:nowrap;}
       .flex-column\@#{$breakpoint} { flex-direction: column; }
       .flex-column-reverse\@#{$breakpoint} { flex-direction: column-reverse; }
       .flex-row\@#{$breakpoint} { flex-direction: row; }
