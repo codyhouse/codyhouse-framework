@@ -7,7 +7,7 @@
 :root {
   --btn-padding-y: var(--space-xxs); // padding top/bottom
   --btn-padding-x: var(--space-sm); // padding left/right
-  --btn-radius: 0.25em; // border radius
+  --btn-radius: var(--radius-md); // border radius
   --btn-font-size: 1em; // font size
 }
 
@@ -16,10 +16,11 @@
   box-shadow: var(--shadow-xs);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  cursor: pointer;
+  will-change: transform;
   transition: .2s;
   
   &:hover {
-    cursor: pointer;
     box-shadow: var(--shadow-sm);
   }
 
@@ -48,8 +49,12 @@
 }
 
 .btn--subtle {
-  background-color: var(--color-contrast-lower);
+  background: alpha(var(--color-contrast-higher), 0.07);
   color: var(--color-contrast-higher);
+
+  &:hover {
+    background: alpha(var(--color-contrast-higher), 0.09);
+  }
 }
 
 .btn--accent {

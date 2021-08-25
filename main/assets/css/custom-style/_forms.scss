@@ -7,19 +7,19 @@
 :root {
   --form-control-padding-y: var(--space-xxs); // padding top/bottom
   --form-control-padding-x: var(--space-xs); // padding left/right
-  --form-control-radius: 0.25em; // border radius
+  --form-control-radius: var(--radius-md); // border radius
   --form-control-font-size: 1em; // font size
 }
 
 .form-control { // basic form element style
   line-height: 1.2;
   background-color: var(--color-bg);
-  border: 2px solid var(--color-contrast-low);
+  border: 2px solid var(--color-contrast-lower);
   transition: .2s;
 
   &::placeholder {
     opacity: 1;
-    color: var(--color-contrast-medium);
+    color: var(--color-contrast-low);
   }
 
   &:focus {
@@ -29,7 +29,7 @@
   }
 }
 
-.form-control--error,
+.form-control.form-control--error,
 .form-control[aria-invalid="true"] {
   border-color: var(--color-error);
 

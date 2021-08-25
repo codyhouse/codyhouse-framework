@@ -1,5 +1,4 @@
-// how to edit the breakpoints -> copy the $breakpoints SASS map (remove the !default flag) and import it before the 'base' and 'custom-style' files -> check the _style.scss file
-// https://codyhouse.co/ds/docs/framework/breakpoints#edit
+// how to edit the breakpoints -> copy the $breakpoints SASS map (remove the !default flag) and import it before 'base' and 'custom-style' in the _style.scss file
 
 $breakpoints: (
   xs: 32rem, // ~512px

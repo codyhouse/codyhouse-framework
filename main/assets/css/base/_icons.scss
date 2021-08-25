@@ -1,5 +1,4 @@
-// basic icons style - we suggest you don't modify this file
-// use the 📁custom-style/_icons.scss file to set the custom icons style
+// don't modify this file -> edit 📁 custom-style/_icons.scss to set your custom icons style
 
 @if variable-exists('cody-base-partials') == false or index($cody-base-partials, 'icons') {
   :root {

@@ -1,4 +1,4 @@
-// use the 📁custom-style/_colors.scss file to set the color palette of your project
+// don't modify this file -> edit 📁 custom-style/_colors.scss to create your color palette
 
 @if variable-exists('cody-base-partials') == false or index($cody-base-partials, 'colors') {
   [data-theme] {

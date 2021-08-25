@@ -7,10 +7,13 @@ Usage: codyhouse.co/license
 
 -------------------------------- */
 
-.list, .text-component .list {
+:root {
   --list-space-y: var(--space-xxs); // vertical gaps
   --list-offset: var(--space-xs);  // sublist horizontal offset
   --list-line-height: var(--body-line-height);  // items line-height
+}
+
+.list, .text-component .list {
   padding-left: 0;
   list-style: none;
 
@@ -38,8 +41,8 @@ Usage: codyhouse.co/license
 }
 
 /* #region (ul + ol) */
-.list--ul, .list--ol, 
-.text-component .list--ul, .text-component .list--ol {
+.list--ul, .text-component .list--ul, 
+.list--ol, .text-component .list--ol {
   --list-offset: calc(var(--list-bullet-size) + var(--list-bullet-margin-right));
 
   ul, ol {
@@ -47,94 +50,144 @@ Usage: codyhouse.co/license
   }
 
   li {
-    padding-left: var(--list-offset);
+    @supports (--css: variables) {
+      padding-left: var(--list-offset) !important;
+    }
   }
 
   li::before {
-    width: var(--list-bullet-size); 
-    height: var(--list-bullet-size);
-    margin-left: calc(var(--list-bullet-size) * -1);
     display: inline-flex;
+    justify-content: center;
+    align-items: center;
     vertical-align: middle;
     position: relative;
-    left: calc(var(--list-bullet-margin-right) * -1);
+    top: -0.1em;
+    
+    @supports (--css: variables) {
+      width: var(--list-bullet-size) !important; 
+      height: var(--list-bullet-size) !important;
+      margin-left: calc(var(--list-bullet-size) * -1) !important;
+      left: calc(var(--list-bullet-margin-right) * -1) !important;
+    }
   }
 }
 
-.list--ul { // unordered list
+// unordered list
+.list--ul, .text-component .list--ul { 
   --list-bullet-size: 7px; // dot width and height
   --list-bullet-margin-right: 12px; // gap between bullet and content
 
-  li::before { // bullet
+  > li {
+    padding-left: 19px; // IE fallback
+  }
+
+  > li::before { // bullet
     content: '';
     border-radius: 50%;
-    color: var(--color-primary); // bullet color
+    color: var(--color-contrast-lower); // bullet color
     background-color: currentColor;
-    border: 2px solid currentColor;
+
+    // IE fallback
+    width: 7px;
+    height: 7px;
+    margin-left: -7px;
+    left: -12px;
+    // end - IE fallback
   }
 
   ul li::before {
     background-color: transparent;
+    box-shadow: inset 0 0 0 2px currentColor;
   }
 }
 
-.list--ol { // ordered list
+// ordered list
+.list--ol, .text-component .list--ol { 
   --list-bullet-size: 26px; // ⚠️ use px or rem units - circle width and height
   --list-bullet-margin-right: 6px; // ⚠️ use px or rem units - gap between circle and content
+  --list-bullet-font-size: 14px; // ⚠️ use px or rem units - bullet font size
   counter-reset: list-items;
 
-  li {
+  > li {
     counter-increment: list-items;
+    padding-left: 32px; // IE fallback
   }
 
   ol {
     counter-reset: list-items;
   }
 
-  li::before {
+  > li::before {
     content: counter(list-items);
-    font-size: 0.75em;
-    justify-content: center;
-    align-items: center;
-    top: -0.1em;
-    border-radius: 50%;
-    background-color: alpha(var(--color-contrast-higher), 0.1);
+    font-size: var(--list-bullet-font-size, 14px);
+    background-color: var(--color-contrast-lower);
     color: var(--color-contrast-high);
-    @include fontSmooth;
+    line-height: 1;
+    border-radius: 50%;
+
+    // IE fallback
+    width: 26px;
+    height: 26px;
+    margin-left: -26px;
+    left: -6px;
+    // end - IE fallback
   }
 
-  ol li::before {
+  ol > li::before {
     background-color: transparent;
-    box-shadow: inset 0 0 0 2px alpha(var(--color-contrast-higher), 0.1);
+    box-shadow: inset 0 0 0 2px var(--color-contrast-lower);
   }
 }
 /* #endregion */
 
 /* #region (border) */
-.list--border { // show border divider among list items
+.list--border, .text-component .list--border { // show border divider among list items
   li:not(:last-child) {
-    border-bottom: 1px solid alpha(var(--color-contrast-higher), 0.15);
+    border-bottom: 1px solid var(--color-contrast-lower);
   }
 
   ul, ol {
-    border-top: 1px solid alpha(var(--color-contrast-higher), 0.15);
+    border-top: 1px solid var(--color-contrast-lower);
   }
 }
 /* #endregion */
 
 /* #region (icons) */
 .list--icons, .text-component .list--icons { // use icons as bullet points
-  --list-icon-size: 24px;
-  --list-icon-margin-right: 8px; // gap between icon and text
-  --list-offset: calc(var(--list-icon-size) + var(--list-icon-margin-right));
+  --list-bullet-size: 24px;
+  --list-bullet-margin-right: 8px; // gap between icon and text
+  --list-offset: calc(var(--list-bullet-size) + var(--list-bullet-margin-right));
+
+  ul, ol {
+    padding-left: 32px; // IE fallback
+
+    @supports (--css: variables) {
+      padding-left: var(--list-offset);
+    }
+  }
 }
 
 .list__icon {
-  width: var(--list-icon-size);
-  height: var(--list-icon-size);
-  margin-right: var(--list-icon-margin-right);
-
   position: relative;
-  top: calc((1em * var(--list-line-height) - var(--list-icon-size)) / 2);
+
+  // IE fallback
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+
+  &:not(.top-0) {
+    top: calc((1em * var(--list-line-height) - 24px) / 2);
+  }
+  // end - IE fallback
+
+  @supports (--css: variables) {
+    width: var(--list-bullet-size);
+    height: var(--list-bullet-size);
+    margin-right: var(--list-bullet-margin-right);
+
+    &:not(.top-0) {
+      top: calc((1em * var(--list-line-height) - var(--list-bullet-size)) / 2);
+    }
+  }
 }
 /* #endregion */

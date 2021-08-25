@@ -64,25 +64,25 @@ mark {
 
 .text-component {
   --line-height-multiplier: 1;
-  --text-vspace-multiplier: 1;
+  --text-space-y-multiplier: 1;
 
   blockquote {
     padding-left: 1em;
-    border-left: 4px solid var(--color-contrast-low);
+    border-left: 4px solid var(--color-contrast-lower);
   }
 
   hr {
-    background: var(--color-contrast-low);
+    background: var(--color-contrast-lower);
     height: 1px;
   }
 
   figcaption {
     font-size: var(--text-sm);
-    color: var(--color-contrast-medium);
+    color: var(--color-contrast-low);
   }
 }
 
 .article { // e.g., blog posts
   --body-line-height: 1.58; // set body line-height
-  --text-vspace-multiplier: 1.2; // increase vertical spacing
+  --text-space-y-multiplier: 1.2; // control vertical spacing
 }

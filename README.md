@@ -1,18 +1,17 @@
 # 🐞 CodyFrame
 A lightweight front-end framework for building accessible, bespoke interfaces.
 
-[Explore the documentation on codyhouse.co](https://codyhouse.co/ds/get-started)
+[Documentation on codyhouse.co →](https://codyhouse.co/ds/get-started)
 
-The framework is composed of:
+Files included:
 
 1. **base/*:** essential CSS rules and utility classes (we suggest you don't modify these files).
 2. **custom-style/*:** SCSS templates you can use to create your bespoke style.
 3. **style.scss:** used to import the _base.scss and _custom-style.scss files.
 4. **util.js:** utility functions used in the [CodyHouse Components](https://codyhouse.co/ds/components). Make sure to import this file before the script file of the components.
 
-Some of the advantages of working with CodyFrame:
+Selling points:
 
-- ⚡️ lightweight (**20KB** minified and gzipped - before running PurgeCSS)
 - 🙌 no need to override existing CSS rules
 - 📱 mobile-first
 - 🎨 create unique designs with total control
@@ -82,17 +81,17 @@ Make sure to uncomment the following script in the <head> of the index.html file
 
 ## Component Library
 
-CodyHouse's Components are accessible, progressively enhanced, HTML, CSS, JS components that work seamlessly with the framework.
+CodyHouse's components are accessible, progressively enhanced, HTML, CSS, JS components that work seamlessly with the framework.
 
-You can use the Gulp configuration file to auto-import the .scss of the CodyHouse's Components.
+You can use the Gulp configuration file to auto-import the .SCSS of the components.
 
-[Learn more about importing the CSS and JS of the CodyHouse's Components](https://codyhouse.co/ds/docs/framework#import-css-components)
+[How to import the CSS and JS of the CodyHouse's Components](https://codyhouse.co/ds/docs/framework#import-css-components)
 
 [Explore the Components](https://codyhouse.co/ds/components)
 
 ## Global Editors
 
-The Global Editors are visual tools that allow you to set the style of typography elements, color themes, spacing rules, buttons, and forms directly in the browser. They generate SCSS code that is compatible with CodyFrame.
+The Global Editors are visual tools that you can use to create the style of typography elements, color palettes, spacing rules, buttons, and forms. They generate SCSS code compatible with CodyFrame.
 
 Explore the Editors:
 
@@ -105,6 +104,6 @@ Explore the Editors:
 
 ## Extensions
 
-Explore our autocomplete extensions for VSCode, Sublime Text and Atom:
+Browse our extensions for VSCode, Sublime Text and Atom:
 
 [codyhouse.co/ds/docs/extensions](https://codyhouse.co/ds/docs/extensions)

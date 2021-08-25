@@ -1,5 +1,4 @@
-// basic forms style - we suggest you don't modify this file
-// use the 📁custom-style/_forms.scss file to create your custom form elements
+// don't modify this file -> edit 📁 custom-style/_forms.scss to create your custom form elements
 
 @if variable-exists('cody-base-partials') == false or index($cody-base-partials, 'forms') {
   .form-control {
