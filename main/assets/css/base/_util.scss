@@ -398,6 +398,14 @@
 
   // --------------------------------
 
+  .text-unit-rem, .text-unit-em, .text-unit-px {
+    font-size: var(--text-unit);
+  }
+
+  .text-unit-rem { --text-unit: 1rem; }
+  .text-unit-em  { --text-unit: 1em; }
+  .text-unit-px  { --text-unit: 16px; }
+
   .text-xs    { font-size: var(--text-xs, 0.694em); }
   .text-sm    { font-size: var(--text-sm, 0.833em); }
   .text-base  { font-size: var(--text-unit, 1em); }
@@ -407,14 +415,6 @@
   .text-xxl   { font-size: var(--text-xxl, 2.074em); }
   .text-xxxl  { font-size: var(--text-xxxl, 2.488em); }
   .text-xxxxl { font-size: var(--text-xxxxl, 2.985em); }
-
-  .text-unit-rem, .text-unit-em, .text-unit-px {
-    font-size: var(--text-unit);
-  }
-
-  .text-unit-rem { --text-unit: 1rem; }
-  .text-unit-em  { --text-unit: 1em; }
-  .text-unit-px  { --text-unit: 16px; }
 
   // --------------------------------
 
@@ -875,9 +875,14 @@
   .shadow-xl { box-shadow: var(--shadow-xl); }
   .shadow-none { box-shadow: none; }
 
-  [class^="inner-glow-"], [class*=" inner-glow-"] { 
+  :root {
+    --inner-glow: inset 0 0 0.5px 1px hsla(0, 0%, 100%, 0.075);
+    --inner-glow-top: inset 0 1px 0.5px hsla(0, 0%, 100%, 0.075);
+  }
+  
+  .inner-glow, .inner-glow-top { 
     position: relative;
-
+  
     &::after {
       content: '';
       position: absolute;
@@ -889,16 +894,9 @@
       pointer-events: none;
     }
   }
-
-  .inner-glow-05\%::after { box-shadow: inset 0 0 0.5px 1px hsla(0, 0%, 100%, 0.05); }
-  .inner-glow-10\%::after { box-shadow: inset 0 0 0.5px 1px hsla(0, 0%, 100%, 0.1); }
-  .inner-glow-15\%::after { box-shadow: inset 0 0 0.5px 1px hsla(0, 0%, 100%, 0.15); }
-  .inner-glow-20\%::after { box-shadow: inset 0 0 0.5px 1px hsla(0, 0%, 100%, 0.2); }
-
-  .inner-glow-top-05\%::after { box-shadow: inset 0 1px 0.5px hsla(0, 0%, 100%, 0.05); }
-  .inner-glow-top-10\%::after { box-shadow: inset 0 1px 0.5px hsla(0, 0%, 100%, 0.1); }
-  .inner-glow-top-15\%::after { box-shadow: inset 0 1px 0.5px hsla(0, 0%, 100%, 0.15); }
-  .inner-glow-top-20\%::after { box-shadow: inset 0 1px 0.5px hsla(0, 0%, 100%, 0.2); }
+  
+  .inner-glow::after { box-shadow: var(--inner-glow); }
+  .inner-glow-top::after { box-shadow: var(--inner-glow-top); }
 
   // --------------------------------
 
