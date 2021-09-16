@@ -1,22 +1,22 @@
 // --------------------------------
 
-// Base - essential CSS rules and utility classes
-// We suggestion you don't modify the base/* files -> use the custom-style/* files to create your bespoke style
+// Basic Style - Essential CSS rules and utility classes
 
 // --------------------------------
 
-@import 'base/reset';
-@import 'base/breakpoints';
-@import 'base/mixins';
-@import 'base/colors';
-@import 'base/spacing';
-@import 'base/grid-layout';
-@import 'base/shared-styles';
-@import 'base/typography';
-@import 'base/icons';
-@import 'base/buttons';
-@import 'base/forms';
-@import 'base/z-index';
-@import 'base/visibility';
-@import 'base/accessibility';
-@import 'base/util';
+@forward 'base/breakpoints';
+@forward 'base/mixins';
+@forward 'base/grid-layout';
+
+@use 'base/reset';
+@use 'base/colors';
+@use 'base/spacing';
+@use 'base/shared-styles';
+@use 'base/typography';
+@use 'base/icons';
+@use 'base/buttons';
+@use 'base/forms';
+@use 'base/z-index';
+@use 'base/visibility';
+@use 'base/accessibility';
+@use 'base/util';

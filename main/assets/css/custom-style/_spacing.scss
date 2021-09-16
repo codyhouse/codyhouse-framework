@@ -1,3 +1,5 @@
+@use '../base' as *;
+
 // --------------------------------
 
 // (START) Global editor code https://codyhouse.co/ds/globals/spacing
@@ -6,7 +8,7 @@
 
 // 👇 uncomment to modify default spacing scale
 // :root {
-//   --space-unit:  1em;
+//   --space-unit:  1rem;
 // }
 
 // :root, * {
@@ -24,11 +26,19 @@
 //   --component-padding: var(--space-md);
 // }
 
-@supports(--css: variables) {
-  @include breakpoint(md) {
-    :root {
-      --space-unit:  1.25em;
-    }
+@include breakpoint(md) {
+  :root, * {
+    --space-xxxxs: calc(0.1875 * var(--space-unit));
+    --space-xxxs: calc(0.375 * var(--space-unit));
+    --space-xxs: calc(0.5625 * var(--space-unit));
+    --space-xs: calc(0.75 * var(--space-unit));
+    --space-sm: calc(1.125 * var(--space-unit));
+    --space-md: calc(2 * var(--space-unit));
+    --space-lg: calc(3.125 * var(--space-unit));
+    --space-xl: calc(5.125 * var(--space-unit));
+    --space-xxl: calc(8.25 * var(--space-unit));
+    --space-xxxl: calc(13.25 * var(--space-unit));
+    --space-xxxxl: calc(21.5 * var(--space-unit));
   }
 }
 

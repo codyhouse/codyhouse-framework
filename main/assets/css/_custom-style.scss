@@ -1,14 +1,14 @@
 // --------------------------------
 
-// Custom Style - your bespoke style
+// Custom Style - Your bespoke style
 
 // --------------------------------
 
-@import 'custom-style/colors';
-@import 'custom-style/spacing';
-@import 'custom-style/shared-styles';
-@import 'custom-style/typography';
-@import 'custom-style/icons';
-@import 'custom-style/buttons';
-@import 'custom-style/forms';
-@import 'custom-style/util';
+@use 'custom-style/colors';
+@use 'custom-style/spacing';
+@use 'custom-style/shared-styles';
+@use 'custom-style/typography';
+@use 'custom-style/icons';
+@use 'custom-style/buttons';
+@use 'custom-style/forms';
+@use 'custom-style/util';

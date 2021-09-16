@@ -1,14 +1,14 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
+sass.compiler = require('sass-embedded');
 var sassGlob = require('gulp-sass-glob');
 var browserSync = require('browser-sync').create();
 var postcss      = require('gulp-postcss');
 var autoprefixer = require('autoprefixer');
-var cssvariables = require('postcss-css-variables'); 
-var calc = require('postcss-calc');  
 var concat = require('gulp-concat');
 var rename = require('gulp-rename');
 var uglify = require('gulp-uglify');
+var cleanCSS = require('gulp-clean-css');
 var purgecss = require('gulp-purgecss');
 
 // js file paths
@@ -25,34 +25,22 @@ function reload(done) {
   done();
 } 
 
-/* Gulp watch task */
-// This task is used to convert the scss to css and compress it. No fallback for IE is created  
+/* Gulp watch tasks */
+// This task is used to convert the scss to css and compress it.
 gulp.task('sass', function() {
   return gulp.src(scssFilesPath)
-  .pipe(sassGlob())
-  .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+  .pipe(sassGlob({sassModules: true}))
+  .pipe(sass().on('error', sass.logError))
   .pipe(postcss([autoprefixer()]))
+  .pipe(gulp.dest(cssFolder))
+  .pipe(rename('style.min.css'))
+  .pipe(cleanCSS())
   .pipe(gulp.dest(cssFolder))
   .pipe(browserSync.reload({
     stream: true
   }));
 });
-
-// This task is used to convert the scss to css and compress it. A fallback for IE (style-fallback.css) is created
-gulp.task('sass-ie', function() {
-  return gulp.src(scssFilesPath)
-  .pipe(sassGlob())
-  .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
-  .pipe(postcss([autoprefixer()]))
-  .pipe(gulp.dest(cssFolder))
-  .pipe(browserSync.reload({
-    stream: true
-  }))
-  .pipe(rename('style-fallback.css'))
-  .pipe(postcss([cssvariables(), calc()]))
-  .pipe(gulp.dest(cssFolder));
-});
-
+// This task is used to combine all js files in a single scripts.min.js.
 gulp.task('scripts', function() {
   return gulp.src([utilJsPath+'/util.js', componentsJsPath])
   .pipe(concat('scripts.js'))
@@ -67,7 +55,7 @@ gulp.task('scripts', function() {
     stream: true
   }));
 });
-
+// This task is used to reload the project whan changes are made to a html/scss/js file.
 gulp.task('browserSync', gulp.series(function (done) {
   browserSync.init({
     server: {
@@ -84,13 +72,6 @@ gulp.task('watch', gulp.series(['browserSync', 'sass', 'scripts'], function () {
   gulp.watch(componentsJsPath, gulp.series(['scripts']));
 }));
 
-/* Gulp watch-ie task */
-gulp.task('watch-ie', gulp.series(['browserSync', 'sass-ie', 'scripts'], function () {
-  gulp.watch('main/*.html', gulp.series(reload));
-  gulp.watch('main/assets/css/**/*.scss', gulp.series(['sass-ie']));
-  gulp.watch(componentsJsPath, gulp.series(['scripts']));
-}));
-
 
 /* Gulp dist task */
 // create a distribution folder for production
@@ -102,8 +83,6 @@ gulp.task('dist', async function(){
   await purgeCSS();
   // minify the scripts.js file and copy it to the dist folder
   await minifyJs();
-  // copy the style-fallback (IE support) to the dist folder
-  await moveCSS();
   // copy any additional js files to the dist folder
   await moveJS();
   // copy all the assets inside main/assets/img folder to the dist folder
@@ -134,17 +113,6 @@ function minifyJs() {
     var stream = gulp.src(scriptsJsPath+'/scripts.js')
     .pipe(uglify())
     .pipe(gulp.dest(distFolder+'/assets/js'));
-    
-    stream.on('finish', function() {
-      resolve();
-    });
-  });
-};
-
-function moveCSS() {
-  return new Promise(function(resolve, reject) {
-    var stream = gulp.src(cssFolder+'/style-fallback.css', { allowEmpty: true })
-    .pipe(gulp.dest(assetsFolder+'css'));
     
     stream.on('finish', function() {
       resolve();

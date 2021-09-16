@@ -1,3 +1,5 @@
+@use '../base' as *;
+
 // --------------------------------
 
 // (START) Global editor code https://codyhouse.co/ds/globals/forms
@@ -5,44 +7,41 @@
 // --------------------------------
 
 :root {
-  --form-control-padding-y: var(--space-xxs); // padding top/bottom
-  --form-control-padding-x: var(--space-xs); // padding left/right
-  --form-control-radius: var(--radius-md); // border radius
-  --form-control-font-size: 1em; // font size
+  --form-control-font-size: 1em;
+  --form-control-padding-x: var(--space-xs);
+  --form-control-padding-y: var(--space-xxs);
+  --form-control-radius: var(--radius-md);
 }
 
-.form-control { // basic form element style
+.form-control {
+  background: var(--color-bg-dark);
   line-height: 1.2;
-  background-color: var(--color-bg);
-  border: 2px solid var(--color-contrast-lower);
-  transition: .2s;
+  box-shadow: inset 0px 0px 0px 1px var(--color-contrast-lower);
+  transition: all 0.2s ease;
 
   &::placeholder {
-    opacity: 1;
+    opacity: 1;  
     color: var(--color-contrast-low);
   }
 
   &:focus {
+    background: var(--color-bg);
+    box-shadow: inset 0px 0px 0px 1px alpha(var(--color-contrast-lower), 0), 0px 0px 0px 2px var(--color-primary), var(--shadow-sm);
     outline: none;
-    border-color: var(--color-primary);
-    box-shadow: 0 0 0 2px alpha(var(--color-primary), 0.2);
   }
 }
 
-.form-control.form-control--error,
-.form-control[aria-invalid="true"] {
-  border-color: var(--color-error);
+.form-control--disabled, .form-control[disabled], .form-control[readonly] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.form-control[aria-invalid="true"], .form-control.form-control--error {
+  box-shadow: inset 0px 0px 0px  alpha(var(--color-contrast-lower), 0), 0px 0px 0px 2px var(--color-error);
 
   &:focus {
-    border-color: var(--color-error);
-    box-shadow: 0 0 0 2px alpha(var(--color-error), 0.2);
+    box-shadow: inset 0px 0px 0px 1px alpha(var(--color-contrast-lower), 0), 0px 0px 0px 2px var(--color-error), var(--shadow-sm);
   }
-}
-
-.form-control--disabled,
-.form-control[disabled], 
-.form-control[readonly] {
-  cursor: not-allowed;
 }
 
 .form-legend {}

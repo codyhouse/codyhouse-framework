@@ -1,3 +1,5 @@
+@use '../base' as *;
+
 // --------------------------------
 
 // (START) Global editor code https://codyhouse.co/ds/globals/typography
@@ -9,7 +11,7 @@
   --font-primary: system-ui, sans-serif;
 
   // font size
-  --text-base-size: 1em; // body font-size
+  --text-base-size: 1rem; // body font-size
   --text-scale-ratio: 1.2; // multiplier used to generate the type scale values 👇
   
   // line-height
@@ -19,8 +21,8 @@
   // capital letters - used in combo with the lhCrop mixin
   --font-primary-capital-letter: 1;
 
-  // unit - don't modify unless you want to change the typography unit (e.g., from Em to Rem units)
-  --text-unit: 1em; // if not Em units → --text-unit: var(--text-base-size);
+  // unit - don't modify unless you want to change the typography unit (e.g., from Rem to Em units)
+  --text-unit: var(--text-base-size); // if Em units → --text-unit: 1em;
 }
 
 :root, * {
@@ -35,12 +37,10 @@
   --text-xxxxl: calc(var(--text-xxxl) * var(--text-scale-ratio));
 }
 
-@supports(--css: variables) {
-  @include breakpoint(md) {
-    :root {
-      --text-base-size: 1.25em;
-      --text-scale-ratio: 1.25;
-    }
+@include breakpoint(md) {
+  :root {
+    --text-base-size: 1.25rem;
+    --text-scale-ratio: 1.25;
   }
 }
 
@@ -63,12 +63,15 @@ mark {
 }
 
 .text-component {
+  --text-unit: 1em;
+  --space-unit: 1em;
   --line-height-multiplier: 1;
   --text-space-y-multiplier: 1;
 
   blockquote {
     padding-left: 1em;
     border-left: 4px solid var(--color-contrast-lower);
+    font-style: italic;
   }
 
   hr {

@@ -1,8 +1,6 @@
 // don't modify this file -> edit 📁 custom-style/_colors.scss to create your color palette
 
-@if variable-exists('cody-base-partials') == false or index($cody-base-partials, 'colors') {
-  [data-theme] {
-    background-color: var(--color-bg, hsl(0, 0%, 100%));
-    color: var(--color-contrast-high, hsl(240, 4%, 20%));
-  }
+[data-theme] {
+  background-color: var(--color-bg, hsl(0, 0%, 100%));
+  color: var(--color-contrast-high, hsl(210, 7%, 21%));
 }

@@ -1,25 +1,23 @@
-@if variable-exists('cody-base-partials') == false or index($cody-base-partials, 'visibility') {
-  :root {
-    --display: block;
-  }
+:root {
+  --display: block;
+}
 
-  .is-visible {
-    display: var(--display) !important;
-  }
+.is-visible {
+  display: var(--display) !important;
+}
 
-  .is-hidden {
+.is-hidden {
+  display: none !important;
+}
+
+html:not(.js) {
+  .no-js\:is-hidden {
     display: none !important;
   }
+}
 
-  html:not(.js) {
-    .no-js\:is-hidden {
-      display: none !important;
-    }
-  }
-
-  @media print {
-    .print\:is-hidden {
-      display: none !important;
-    }
+@media print {
+  .print\:is-hidden {
+    display: none !important;
   }
 }

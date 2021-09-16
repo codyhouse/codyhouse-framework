@@ -1,13 +1,6 @@
-@if variable-exists('cody-base-partials') == false or index($cody-base-partials, 'z-index') {
-  :root {
-    --zindex-header: 3; // ⚠️ deprecated
-    --zindex-popover: 5; // ⚠️ deprecated
-    --zindex-fixed-element: 10; // ⚠️ deprecated
-    --zindex-overlay: 15; // ⚠️ deprecated
-
-    --z-index-header: var(--zindex-header, 3); // e.g., main header
-    --z-index-popover: var(--zindex-popover, 5); // e.g., tooltips and dropdown
-    --z-index-fixed-element: var(--zindex-fixed-element, 10); // e.g., 'back to top' button
-    --z-index-overlay: var(--zindex-overlay, 15); // e.g., modals and dialogs
-  }
+:root {
+  --z-index-header: 3; // e.g., main header
+  --z-index-popover: 5; // e.g., tooltips and dropdown
+  --z-index-fixed-element: 10; // e.g., 'back to top' button
+  --z-index-overlay: 15; // e.g., modals and dialogs
 }

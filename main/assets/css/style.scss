@@ -1,14 +1,15 @@
-// 👇 optional -> set custom breakpoints
-// $breakpoints: (
-//   xs: 32rem,
-//   sm: 48rem,
-//   md: 64rem,
-//   lg: 80rem,
-//   xl: 90rem
-// );
+@use 'base' with (
+  $breakpoints: (
+    'xs': 32rem, // ~512px
+    'sm': 48rem, // ~768px
+    'md': 64rem, // ~1024px
+    'lg': 80rem, // ~1280px
+    'xl': 90rem  // ~1440px
+  ),
+  $grid-columns: 12
+);
 
-@import 'base';
 /*! purgecss start ignore */
-@import 'custom-style';
-@import 'components/**/*.scss';
+@use 'custom-style';
+@use 'components/**/*.scss';
 /*! purgecss end ignore */

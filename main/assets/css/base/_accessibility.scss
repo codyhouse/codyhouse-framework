@@ -1,19 +1,17 @@
-@if variable-exists('cody-base-partials') == false or index($cody-base-partials, 'accessibility') {
-  .sr-only { // content made available only to screen readers
-    position: absolute;
-    clip: rect(1px, 1px, 1px, 1px);
-    clip-path: inset(50%);
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    padding: 0;
-    border: 0;
-    white-space: nowrap;
-  }
-  
-  .sr-only-focusable { // focusable, visually hidden element
-    &:not(:focus):not(:focus-within){
-      @extend .sr-only
-    }
+.sr-only { // content made available only to screen readers
+  position: absolute;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  padding: 0;
+  border: 0;
+  white-space: nowrap;
+}
+
+.sr-only-focusable { // focusable, visually hidden element
+  &:not(:focus):not(:focus-within){
+    @extend .sr-only
   }
 }

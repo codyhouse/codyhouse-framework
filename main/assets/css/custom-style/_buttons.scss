@@ -1,3 +1,5 @@
+@use '../base' as *;
+
 // --------------------------------
 
 // (START) Global editor code https://codyhouse.co/ds/globals/buttons
@@ -5,28 +7,25 @@
 // --------------------------------
 
 :root {
-  --btn-padding-y: var(--space-xxs); // padding top/bottom
-  --btn-padding-x: var(--space-sm); // padding left/right
-  --btn-radius: var(--radius-md); // border radius
-  --btn-font-size: 1em; // font size
+  --btn-font-size: 1em;
+  --btn-padding-x: var(--space-sm);
+  --btn-padding-y: var(--space-xxs);
+  --btn-radius: var(--radius-md);
 }
 
-.btn { // style affecting all buttons
-  line-height: 1.2;
-  box-shadow: var(--shadow-xs);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.btn {
+  background: var(--color-bg-dark);
+  color: var(--color-contrast-higher);
   cursor: pointer;
+  text-decoration: none;
+  line-height: 1.2;
+  @include fontSmooth;
+  transition: all 0.2s ease;
   will-change: transform;
-  transition: .2s;
-  
-  &:hover {
-    box-shadow: var(--shadow-sm);
-  }
 
   &:focus {
-    outline: none;
     box-shadow: 0px 0px 0px 2px alpha(var(--color-contrast-higher), 0.15);
+    outline: none;
   }
 
   &:active {
@@ -36,49 +35,57 @@
 
 // themes
 .btn--primary {
-  background-color: var(--color-primary);
+  background: var(--color-primary);
   color: var(--color-white);
+  box-shadow: inset 0px 1px 0px  alpha(var(--color-white), 0.15), var(--shadow-xs);
 
   &:hover {
-    background-color: var(--color-primary-dark);
+    background: var(--color-primary-light);
+    box-shadow: inset 0px 1px 0px  alpha(var(--color-white), 0.15), var(--shadow-sm);
   }
 
   &:focus {
-    box-shadow: 0px 0px 0px 2px alpha(var(--color-primary), 0.2);
+    box-shadow: inset 0px 1px 0px  alpha(var(--color-white), 0.15), 0px 0px 0px 2px alpha(var(--color-primary), 0.2);
   }
 }
 
 .btn--subtle {
-  background: alpha(var(--color-contrast-higher), 0.07);
+  background: var(--color-bg-light);
   color: var(--color-contrast-higher);
+  box-shadow: inset 0px 0px 0px 1px var(--color-contrast-lower), var(--shadow-xs);
 
   &:hover {
-    background: alpha(var(--color-contrast-higher), 0.09);
+    background: var(--color-bg-lighter);
+    box-shadow: inset 0px 0px 0px 1px var(--color-contrast-lower), var(--shadow-sm);
+  }
+
+  &:focus {
+    box-shadow: inset 0px 0px 0px 1px var(--color-contrast-lower), 0px 0px 0px 2px alpha(var(--color-contrast-higher), 0.05);
   }
 }
 
 .btn--accent {
-  background-color: var(--color-accent);
+  background: var(--color-accent);
   color: var(--color-white);
+  box-shadow: inset 0px 1px 0px  alpha(var(--color-white), 0.15), var(--shadow-xs);
 
   &:hover {
-    background-color: var(--color-accent-dark);
+    background: var(--color-accent-light);
+    box-shadow: inset 0px 1px 0px  alpha(var(--color-white), 0.15), var(--shadow-sm);
   }
 
   &:focus {
-    box-shadow: 0px 0px 0px 2px alpha(var(--color-accent), 0.2);
+    box-shadow: inset 0px 1px 0px  alpha(var(--color-white), 0.15), 0px 0px 0px 2px alpha(var(--color-accent), 0.2);
   }
 }
 
 // feedback
-.btn--disabled,
-.btn[disabled], 
-.btn[readonly] {
+.btn--disabled, .btn[disabled], .btn[readonly] {
   opacity: 0.6;
   cursor: not-allowed;
 }
 
-// sizes
+// size
 .btn--sm {
   font-size: 0.8em;
 }

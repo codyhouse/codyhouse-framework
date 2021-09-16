@@ -1,64 +1,62 @@
 // don't modify this file -> edit 📁 custom-style/_icons.scss to set your custom icons style
 
-@if variable-exists('cody-base-partials') == false or index($cody-base-partials, 'icons') {
-  :root {
-    // default icon sizes
-    --icon-xxxs: 8px;
-    --icon-xxs:  12px;
-    --icon-xs:   16px;
-    --icon-sm:   24px;
-    --icon-md:   32px;
-    --icon-lg:   48px;
-    --icon-xl:   64px;
-    --icon-xxl:  96px;
-    --icon-xxxl: 128px;
+:root {
+  // default icon sizes
+  --icon-xxxs: 8px;
+  --icon-xxs:  12px;
+  --icon-xs:   16px;
+  --icon-sm:   24px;
+  --icon-md:   32px;
+  --icon-lg:   48px;
+  --icon-xl:   64px;
+  --icon-xxl:  96px;
+  --icon-xxxl: 128px;
+}
+
+.icon {
+  --size: 1em;
+  height: var(--size);
+  width: var(--size);
+  display: inline-block;
+  color: inherit;
+  fill: currentColor;
+  line-height: 1;
+  flex-shrink: 0;
+  max-width: initial;
+}
+
+// icon size
+.icon--xxxs { --size: var(--icon-xxxs); }
+.icon--xxs  { --size: var(--icon-xxs); }
+.icon--xs   { --size: var(--icon-xs); }
+.icon--sm   { --size: var(--icon-sm); }
+.icon--md   { --size: var(--icon-md); }
+.icon--lg   { --size: var(--icon-lg); }
+.icon--xl   { --size: var(--icon-xl); }
+.icon--xxl  { --size: var(--icon-xxl); }
+.icon--xxxl { --size: var(--icon-xxxl); }
+
+.icon--is-spinning { // rotate the icon infinitely
+  animation: icon-spin 1s infinite linear;
+}
+
+@keyframes icon-spin {
+  0% {
+    transform: rotate(0deg);
   }
-
-  .icon {
-    --size: 1em;
-    display: inline-block;
-    color: inherit;
-    fill: currentColor;
-    height: var(--size);
-    width: var(--size);
-    line-height: 1;
-    flex-shrink: 0;
-    max-width: initial;
+  100% {
+    transform: rotate(360deg);
   }
+}
 
-  // icon size
-  .icon--xxxs { --size: var(--icon-xxxs); }
-  .icon--xxs  { --size: var(--icon-xxs); }
-  .icon--xs   { --size: var(--icon-xs); }
-  .icon--sm   { --size: var(--icon-sm); }
-  .icon--md   { --size: var(--icon-md); }
-  .icon--lg   { --size: var(--icon-lg); }
-  .icon--xl   { --size: var(--icon-xl); }
-  .icon--xxl  { --size: var(--icon-xxl); }
-  .icon--xxxl { --size: var(--icon-xxxl); }
+// --------------------------------
 
-  .icon--is-spinning { // rotate the icon infinitely
-    animation: icon-spin 1s infinite linear;
-  }
+// SVG <symbol>
 
-  @keyframes icon-spin {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
-  }
+// --------------------------------
 
-  // --------------------------------
-
-  // SVG <symbol>
-
-  // --------------------------------
-
-  // enable icon color corrections
-  .icon use {
-    color: inherit;
-    fill: currentColor;
-  }
+// enable icon color corrections
+.icon use {
+  color: inherit;
+  fill: currentColor;
 }
