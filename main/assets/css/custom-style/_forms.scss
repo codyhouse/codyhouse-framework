@@ -37,7 +37,7 @@
 }
 
 .form-control[aria-invalid="true"], .form-control.form-control--error {
-  box-shadow: inset 0px 0px 0px  alpha(var(--color-contrast-lower), 0), 0px 0px 0px 2px var(--color-error);
+  box-shadow: inset 0px 0px 0px 1px alpha(var(--color-contrast-lower), 0), 0px 0px 0px 2px var(--color-error);
 
   &:focus {
     box-shadow: inset 0px 0px 0px 1px alpha(var(--color-contrast-lower), 0), 0px 0px 0px 2px var(--color-error), var(--shadow-sm);

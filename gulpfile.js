@@ -33,6 +33,9 @@ gulp.task('sass', function() {
   .pipe(sass().on('error', sass.logError))
   .pipe(postcss([autoprefixer()]))
   .pipe(gulp.dest(cssFolder))
+  .pipe(browserSync.reload({
+    stream: true
+  }))
   .pipe(rename('style.min.css'))
   .pipe(cleanCSS())
   .pipe(gulp.dest(cssFolder))

@@ -14198,7 +14198,7 @@ mark {
 }
 
 .form-control[aria-invalid=true], .form-control.form-control--error {
-  box-shadow: inset 0px 0px 0px hsla(var(--color-contrast-lower-h), var(--color-contrast-lower-s), var(--color-contrast-lower-l), 0), 0px 0px 0px 2px var(--color-error);
+  box-shadow: inset 0px 0px 0px 1px hsla(var(--color-contrast-lower-h), var(--color-contrast-lower-s), var(--color-contrast-lower-l), 0), 0px 0px 0px 2px var(--color-error);
 }
 .form-control[aria-invalid=true]:focus, .form-control.form-control--error:focus {
   box-shadow: inset 0px 0px 0px 1px hsla(var(--color-contrast-lower-h), var(--color-contrast-lower-s), var(--color-contrast-lower-l), 0), 0px 0px 0px 2px var(--color-error), var(--shadow-sm);
