@@ -1,6 +1,6 @@
 {
   "name": "codyhouse-framework",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "description": "A lightweight front-end framework for building accessible, bespoke interfaces.",
   "main": "index.js",
   "keywords": [
@@ -39,7 +39,7 @@
     "gulp-sass-glob": "git+https://github.com/CodyHouse/gulp-sass-glob",
     "gulp-uglify": "^3.0.2",
     "sass": "^1.37.5",
-    "sass-embedded": "^1.0.0-beta.3"
+    "sass-embedded": "^1.0.0-beta.4"
   },
   "homepage": "https://codyhouse.co",
   "repository": {

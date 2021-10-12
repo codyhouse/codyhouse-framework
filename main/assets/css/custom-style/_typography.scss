@@ -63,10 +63,13 @@ mark {
 }
 
 .text-component {
-  --text-unit: 1em;
-  --space-unit: 1em;
   --line-height-multiplier: 1;
   --text-space-y-multiplier: 1;
+  
+  > * { // use Em units
+    --text-unit: 1em;
+    --space-unit: 1em;
+  }
 
   blockquote {
     padding-left: 1em;

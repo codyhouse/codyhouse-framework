@@ -100,7 +100,11 @@ function purgeCSS() {
     var stream = gulp.src(cssFolder+'/style.css')
     .pipe(purgecss({
       content: ['main/*.html', scriptsJsPath+'/scripts.js'],
-      safelist: ['.is-hidden', '.is-visible'],
+      safelist: {
+        standard: ['.is-hidden', '.is-visible'],
+        deep: [/class$/],
+        greedy: []
+      },
       defaultExtractor: content => content.match(/[\w-/:%@]+(?<!:)/g) || []
     }))
     .pipe(gulp.dest(distFolder+'/assets/css'));
