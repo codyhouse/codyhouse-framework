@@ -36,7 +36,7 @@
       margin-left: calc(-1 * var(--gap-x));
     }
     .grid > *, .flex[class*=gap-] > *, .inline-flex[class*=gap-] > * {
-      margin-bottom: var(--gap-y);
+      margin-bottom: var(--sub-gap-y);
     }
 
     .grid {
@@ -49,7 +49,7 @@
     }
 
     .flex[class*=gap-] > *, .inline-flex[class*=gap-] > * {
-      margin-left: var(--gap-x);
+      margin-left: var(--sub-gap-x);
     }
   }
 }
