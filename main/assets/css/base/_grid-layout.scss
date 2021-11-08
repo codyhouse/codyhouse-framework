@@ -55,7 +55,7 @@ $grid-columns: 12 !default;
       margin-left: calc(-1 * var(--gap-x));
 
       > * {
-        margin-bottom: var(--gap-y);
+        margin-bottom: var(--sub-gap-y);
       }
     }
 
@@ -71,7 +71,7 @@ $grid-columns: 12 !default;
 
     .flex[class*="gap-"], .inline-flex[class*="gap-"] {
       > * {
-        margin-left: var(--gap-x);
+        margin-left: var(--sub-gap-x);
       }
     }
   }
