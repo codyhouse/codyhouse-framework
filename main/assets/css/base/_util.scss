@@ -63,7 +63,13 @@
 // --------------------------------
 
 [class^="aspect-ratio"], [class*=" aspect-ratio"] {
-  --aspect-ratio: 16/9;
+  --aspect-ratio: calc(16/9);
+
+  @supports not (aspect-ratio: 1/1) {
+    position: relative;
+    height: 0;
+    padding-bottom: calc(100%/(var(--aspect-ratio)));
+  }
 
   > * {
     width: 100%;
@@ -73,18 +79,26 @@
     &:not(iframe) {
       object-fit: cover;
     }
+
+    @supports not (aspect-ratio: 1/1) {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
   }
 }
 
-.aspect-ratio-16\:9 { --aspect-ratio: 16/9; }
-.aspect-ratio-3\:2  { --aspect-ratio: 3/2; }
-.aspect-ratio-4\:3  { --aspect-ratio: 4/3; }
-.aspect-ratio-5\:4  { --aspect-ratio: 5/4; }
-.aspect-ratio-1\:1  { --aspect-ratio: 1/1; }
-.aspect-ratio-4\:5  { --aspect-ratio: 4/5; }
-.aspect-ratio-3\:4  { --aspect-ratio: 3/4; }
-.aspect-ratio-2\:3  { --aspect-ratio: 2/3; }
-.aspect-ratio-9\:16 { --aspect-ratio: 9/16; }
+.aspect-ratio-16\:9 { --aspect-ratio: calc(16/9); }
+.aspect-ratio-3\:2  { --aspect-ratio: calc(3/2); }
+.aspect-ratio-4\:3  { --aspect-ratio: calc(4/3); }
+.aspect-ratio-5\:4  { --aspect-ratio: calc(5/4); }
+.aspect-ratio-1\:1  { --aspect-ratio: calc(1/1); }
+.aspect-ratio-4\:5  { --aspect-ratio: calc(4/5); }
+.aspect-ratio-3\:4  { --aspect-ratio: calc(3/4); }
+.aspect-ratio-2\:3  { --aspect-ratio: calc(2/3); }
+.aspect-ratio-9\:16 { --aspect-ratio: calc(9/16); }
 
 // --------------------------------
 
