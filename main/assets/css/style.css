@@ -2780,7 +2780,7 @@ footer, header, hgroup, menu, nav, section, main, form legend {
   display: block;
 }
 
-ol, ul {
+ol, ul, menu {
   list-style: none;
 }
 
@@ -14188,7 +14188,7 @@ mark {
   opacity: 1;
   color: var(--color-contrast-low);
 }
-.form-control:focus {
+.form-control:focus, .form-control:focus-within {
   background: var(--color-bg);
   box-shadow: inset 0px 0px 0px 1px hsla(var(--color-contrast-lower-h), var(--color-contrast-lower-s), var(--color-contrast-lower-l), 0), 0px 0px 0px 2px var(--color-primary), var(--shadow-sm);
   outline: none;
@@ -14202,10 +14202,11 @@ mark {
 .form-control[aria-invalid=true], .form-control.form-control--error {
   box-shadow: inset 0px 0px 0px 1px hsla(var(--color-contrast-lower-h), var(--color-contrast-lower-s), var(--color-contrast-lower-l), 0), 0px 0px 0px 2px var(--color-error);
 }
-.form-control[aria-invalid=true]:focus, .form-control.form-control--error:focus {
+.form-control[aria-invalid=true]:focus, .form-control[aria-invalid=true]:focus-within, .form-control.form-control--error:focus, .form-control.form-control--error:focus-within {
   box-shadow: inset 0px 0px 0px 1px hsla(var(--color-contrast-lower-h), var(--color-contrast-lower-s), var(--color-contrast-lower-l), 0), 0px 0px 0px 2px var(--color-error), var(--shadow-sm);
 }
 
+/*! purgecss start ignore */
 /* -------------------------------- 
 
 File#: _1_list
@@ -14342,5 +14343,3 @@ Usage: codyhouse.co/license
 }
 
 /* #endregion */
-/*! purgecss start ignore */
-/*! purgecss end ignore */

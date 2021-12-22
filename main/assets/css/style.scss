@@ -9,7 +9,5 @@
   $grid-columns: 12
 );
 
-/*! purgecss start ignore */
 @use 'custom-style';
 @use 'components/**/*.scss';
-/*! purgecss end ignore */
