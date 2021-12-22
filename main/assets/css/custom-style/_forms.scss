@@ -22,7 +22,7 @@
     color: var(--color-contrast-low);
   }
 
-  &:focus {
+  &:focus, &:focus-within {
     outline: none;
     border-color: var(--color-primary);
     box-shadow: 0 0 0 2px alpha(var(--color-primary), 0.2);
@@ -33,7 +33,7 @@
 .form-control[aria-invalid="true"] {
   border-color: var(--color-error);
 
-  &:focus {
+  &:focus, &:focus-within {
     border-color: var(--color-error);
     box-shadow: 0 0 0 2px alpha(var(--color-error), 0.2);
   }
