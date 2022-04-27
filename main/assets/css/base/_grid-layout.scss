@@ -21,7 +21,9 @@
 
 $grid-columns: 12 !default;
 
-.grid, .flex, .inline-flex {
+.grid, .flex, .inline-flex,
+[class^=flex\@], [class*=" flex\@"],
+[class^=inline-flex\@], [class*=" inline-flex\@"] {
   --gap: 0px;
   --gap-x: var(--gap);
   --gap-y: var(--gap);

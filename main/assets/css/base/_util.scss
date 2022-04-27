@@ -328,6 +328,10 @@
 // --------------------------------
 
 .align-baseline { vertical-align: baseline; }
+.align-sub { vertical-align: sub; }
+.align-super { vertical-align: super; }
+.align-text-top { vertical-align: text-top; }
+.align-text-bottom { vertical-align: text-bottom; }
 .align-top      { vertical-align: top; }
 .align-middle   { vertical-align: middle; }
 .align-bottom   { vertical-align: bottom; }
@@ -407,11 +411,13 @@
 
 // --------------------------------
 
-.font-light    { font-weight: 300; }
-.font-normal   { font-weight: 400; }
-.font-medium   { font-weight: 500; }
+.font-light { font-weight: 300; }
+.font-normal { font-weight: 400; }
+.font-medium { font-weight: 500; }
 .font-semibold { font-weight: 600; }
 .font-bold, .text-bold { font-weight: 700; }
+.font-extrabold { font-weight: 800; }
+.font-black { font-weight: 900; }
 
 // --------------------------------
 
@@ -635,15 +641,21 @@
 .color-black { color: alpha(var(--color-black), var(--color-o, 1)); }
 
 .color-opacity-0    { --color-o: 0; }
+.color-opacity-5\%  { --color-o: 0.05; }
 .color-opacity-10\% { --color-o: 0.1; }
+.color-opacity-15\% { --color-o: 0.15; }
 .color-opacity-20\% { --color-o: 0.2; }
+.color-opacity-25\% { --color-o: 0.25; }
 .color-opacity-30\% { --color-o: 0.3; }
 .color-opacity-40\% { --color-o: 0.4; }
 .color-opacity-50\% { --color-o: 0.5; }
 .color-opacity-60\% { --color-o: 0.6; }
 .color-opacity-70\% { --color-o: 0.7; }
+.color-opacity-75\% { --color-o: 0.75; }
 .color-opacity-80\% { --color-o: 0.8; }
+.color-opacity-85\% { --color-o: 0.85; }
 .color-opacity-90\% { --color-o: 0.9; }
+.color-opacity-95\% { --color-o: 0.95; }
 
 // --------------------------------
 
@@ -690,6 +702,7 @@
 .width-100\% { width: 100%; }
 .width-100vw { width: 100vw; }
 .width-auto  { width: auto; }
+.width-inherit { width: inherit; }
 
 // --------------------------------
 
@@ -725,6 +738,7 @@
 .height-100\% { height: 100%; }
 .height-100vh { height: 100vh; }
 .height-auto  { height: auto; }
+.height-inherit { height: inherit; }
 
 // --------------------------------
 
@@ -835,12 +849,7 @@ $breakpointsNr: length($breakpoints);
 .shadow-xl { box-shadow: var(--shadow-xl); }
 .shadow-none { box-shadow: none; }
 
-:root {
-  --inner-glow: inset 0 0 0.5px 1px hsla(0, 0%, 100%, 0.075);
-  --inner-glow-top: inset 0 1px 0.5px hsla(0, 0%, 100%, 0.075);
-}
-
-.inner-glow, .inner-glow-top { 
+:where(.inner-glow, .inner-glow-top) { 
   position: relative;
 
   &::after {
@@ -869,7 +878,7 @@ $breakpointsNr: length($breakpoints);
 .position-fixed    { position: fixed; }
 .position-sticky   { position: sticky; }
 
-.inset-0     { top: 0; right: 0; bottom: 0; left: 0; }
+.inset-0 { top: 0; right: 0; bottom: 0; left: 0; }
 
 .top-0     { top: 0; }
 .top-50\%  { top: 50%; }
@@ -983,15 +992,21 @@ $breakpointsNr: length($breakpoints);
 // --------------------------------
 
 .opacity-0    { opacity: 0; }
+.opacity-5\%  { opacity: 0.05; }
 .opacity-10\% { opacity: 0.1; }
+.opacity-15\% { opacity: 0.15; }
 .opacity-20\% { opacity: 0.2; }
+.opacity-25\% { opacity: 0.25; }
 .opacity-30\% { opacity: 0.3; }
 .opacity-40\% { opacity: 0.4; }
 .opacity-50\% { opacity: 0.5; }
 .opacity-60\% { opacity: 0.6; }
 .opacity-70\% { opacity: 0.7; }
+.opacity-75\% { opacity: 0.75; }
 .opacity-80\% { opacity: 0.8; }
+.opacity-85\% { opacity: 0.85; }
 .opacity-90\% { opacity: 0.9; }
+.opacity-95\% { opacity: 0.95; }
 
 // --------------------------------
 
@@ -1076,15 +1091,21 @@ $breakpointsNr: length($breakpoints);
 .border-black { border-color: alpha(var(--color-black), var(--border-o, 1)); }
 
 .border-opacity-0    { --border-o: 0; }
+.border-opacity-5\%  { --border-o: 0.05; }
 .border-opacity-10\% { --border-o: 0.1; }
+.border-opacity-15\% { --border-o: 0.15; }
 .border-opacity-20\% { --border-o: 0.2; }
+.border-opacity-25\% { --border-o: 0.25; }
 .border-opacity-30\% { --border-o: 0.3; }
 .border-opacity-40\% { --border-o: 0.4; }
 .border-opacity-50\% { --border-o: 0.5; }
 .border-opacity-60\% { --border-o: 0.6; }
 .border-opacity-70\% { --border-o: 0.7; }
+.border-opacity-75\% { --border-o: 0.75; }
 .border-opacity-80\% { --border-o: 0.8; }
+.border-opacity-85\% { --border-o: 0.85; }
 .border-opacity-90\% { --border-o: 0.9; }
+.border-opacity-95\% { --border-o: 0.95; }
 
 // --------------------------------
 
@@ -1161,15 +1182,21 @@ $breakpointsNr: length($breakpoints);
 .bg-black { background-color: alpha(var(--color-black), var(--bg-o, 1)); }
 
 .bg-opacity-0    { --bg-o: 0; }
+.bg-opacity-5\%  { --bg-o: 0.05; }
 .bg-opacity-10\% { --bg-o: 0.1; }
+.bg-opacity-15\% { --bg-o: 0.15; }
 .bg-opacity-20\% { --bg-o: 0.2; }
+.bg-opacity-25\% { --bg-o: 0.25; }
 .bg-opacity-30\% { --bg-o: 0.3; }
 .bg-opacity-40\% { --bg-o: 0.4; }
 .bg-opacity-50\% { --bg-o: 0.5; }
 .bg-opacity-60\% { --bg-o: 0.6; }
 .bg-opacity-70\% { --bg-o: 0.7; }
+.bg-opacity-75\% { --bg-o: 0.75; }
 .bg-opacity-80\% { --bg-o: 0.8; }
+.bg-opacity-85\% { --bg-o: 0.85; }
 .bg-opacity-90\% { --bg-o: 0.9; }
+.bg-opacity-95\% { --bg-o: 0.95; }
 
 .bg-center { background-position: center; }
 .bg-top { background-position: center top; }
@@ -1597,6 +1624,7 @@ $breakpointsNr: length($breakpoints);
     .width-100\%\@#{$breakpoint} { width: 100%; }
     .width-100vw\@#{$breakpoint} { width: 100vw; }
     .width-auto\@#{$breakpoint}  { width: auto; }
+    .width-inherit\@#{$breakpoint} { width: inherit; }
 
     // height
     .height-xxxxs\@#{$breakpoint} { height: var(--size-xxxxs, 0.25rem); }
@@ -1627,6 +1655,7 @@ $breakpointsNr: length($breakpoints);
     .height-100\%\@#{$breakpoint} { height: 100%; }
     .height-100vh\@#{$breakpoint} { height: 100vh; }
     .height-auto\@#{$breakpoint}  { height: auto; }
+    .height-inherit\@#{$breakpoint} { height: inherit; }
 
     // max-width
     .max-width-xxxxs\@#{$breakpoint} { max-width: var(--max-width-xxxxs); }

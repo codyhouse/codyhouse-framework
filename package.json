@@ -1,6 +1,6 @@
 {
   "name": "codyhouse-framework",
-  "version": "3.0.4",
+  "version": "3.0.5",
   "description": "A lightweight front-end framework for building accessible, bespoke interfaces.",
   "main": "index.js",
   "keywords": [
@@ -28,14 +28,13 @@
   "devDependencies": {
     "autoprefixer": "^9.4.3",
     "browser-sync": "^2.26.3",
-    "codyhouse-framework": "^2.8.9",
     "gulp": "^4.0.0",
     "gulp-clean-css": "^4.3.0",
     "gulp-concat": "^2.6.1",
     "gulp-postcss": "^8.0.0",
     "gulp-purgecss": "^3.0.0",
     "gulp-rename": "^1.4.0",
-    "gulp-sass": "^4.0.2",
+    "gulp-sass": "^5.0.0",
     "gulp-sass-glob": "git+https://github.com/CodyHouse/gulp-sass-glob",
     "gulp-uglify": "^3.0.2",
     "sass": "^1.37.5",
