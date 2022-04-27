@@ -1,6 +1,6 @@
 {
   "name": "codyhouse-framework",
-  "version": "2.9.2",
+  "version": "2.9.3",
   "description": "A lightweight front-end framework for building accessible, bespoke interfaces.",
   "main": "index.js",
   "keywords": [
