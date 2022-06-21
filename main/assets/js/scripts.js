@@ -1,9 +1,7 @@
 // Utility function
 function Util () {};
 
-/* 
-	class manipulation functions
-*/
+/* class manipulation functions */
 Util.hasClass = function(el, className) {
 	return el.classList.contains(className);
 };
@@ -31,9 +29,7 @@ Util.setAttributes = function(el, attrs) {
   }
 };
 
-/* 
-  DOM manipulation
-*/
+/* DOM manipulation */
 Util.getChildrenByClassName = function(el, className) {
   var children = el.children,
     childrenByClass = [];
@@ -49,8 +45,7 @@ Util.is = function(elem, selector) {
   }
 
   var qa = (typeof(selector) === 'string' ? document.querySelectorAll(selector) : selector),
-    length = qa.length,
-    returnArr = [];
+    length = qa.length;
 
   while(length--){
     if(qa[length] === elem){
@@ -61,9 +56,7 @@ Util.is = function(elem, selector) {
   return false;
 };
 
-/* 
-	Animate height of an element
-*/
+/* Animate height of an element */
 Util.setHeight = function(start, to, element, duration, cb, timeFunction) {
 	var change = to - start,
 	    currentTime = null;
@@ -89,10 +82,7 @@ Util.setHeight = function(start, to, element, duration, cb, timeFunction) {
   window.requestAnimationFrame(animateHeight);
 };
 
-/* 
-	Smooth Scroll
-*/
-
+/* Smooth Scroll */
 Util.scrollTo = function(final, duration, cb, scrollEl) {
   var element = scrollEl || window;
   var start = element.scrollTop || document.documentElement.scrollTop,
@@ -116,11 +106,7 @@ Util.scrollTo = function(final, duration, cb, scrollEl) {
   window.requestAnimationFrame(animateScroll);
 };
 
-/* 
-  Focus utility classes
-*/
-
-//Move focus to an element
+/* Move Focus */
 Util.moveFocus = function (element) {
   if( !element ) element = document.getElementsByTagName("body")[0];
   element.focus();
@@ -130,21 +116,14 @@ Util.moveFocus = function (element) {
   }
 };
 
-/* 
-  Misc
-*/
+/* Misc */
 
 Util.getIndexInArray = function(array, el) {
   return Array.prototype.indexOf.call(array, el);
 };
 
 Util.cssSupports = function(property, value) {
-  if('CSS' in window) {
-    return CSS.supports(property, value);
-  } else {
-    var jsProperty = property.replace(/-([a-z])/g, function (g) { return g[1].toUpperCase();});
-    return jsProperty in document.body.style;
-  }
+  return CSS.supports(property, value);
 };
 
 // merge a set of user options into plugin defaults
@@ -193,44 +172,7 @@ Util.osHasReducedMotion = function() {
   return false; // return false if not supported
 }; 
 
-/* 
-	Polyfills
-*/
-//Closest() method
-if (!Element.prototype.matches) {
-	Element.prototype.matches = Element.prototype.msMatchesSelector || Element.prototype.webkitMatchesSelector;
-}
-
-if (!Element.prototype.closest) {
-	Element.prototype.closest = function(s) {
-		var el = this;
-		if (!document.documentElement.contains(el)) return null;
-		do {
-			if (el.matches(s)) return el;
-			el = el.parentElement || el.parentNode;
-		} while (el !== null && el.nodeType === 1); 
-		return null;
-	};
-}
-
-//Custom Event() constructor
-if ( typeof window.CustomEvent !== "function" ) {
-
-  function CustomEvent ( event, params ) {
-    params = params || { bubbles: false, cancelable: false, detail: undefined };
-    var evt = document.createEvent( 'CustomEvent' );
-    evt.initCustomEvent( event, params.bubbles, params.cancelable, params.detail );
-    return evt;
-   }
-
-  CustomEvent.prototype = window.Event.prototype;
-
-  window.CustomEvent = CustomEvent;
-}
-
-/* 
-	Animation curves
-*/
+/* Animation curves */
 Math.easeInOutQuad = function (t, b, c, d) {
 	t /= d/2;
 	if (t < 1) return c/2*t*t + b;

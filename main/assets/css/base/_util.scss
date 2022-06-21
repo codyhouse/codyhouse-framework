@@ -552,6 +552,17 @@
 
 // --------------------------------
 
+// Column Count
+
+// --------------------------------
+
+.column-count-1 { column-count: 1; }
+.column-count-2 { column-count: 2; }
+.column-count-3 { column-count: 3; }
+.column-count-4 { column-count: 4; }
+
+// --------------------------------
+
 // White Space
 
 // --------------------------------
@@ -771,32 +782,34 @@
 // --------------------------------
 
 :root {
-  --max-width-xxxxs: 20rem;  // ~320px
-  --max-width-xxxs:  26rem;  // ~416px
-  --max-width-xxs:   32rem;  // ~512px
-  --max-width-xs:    38rem;  // ~608px
-  --max-width-sm:    48rem;  // ~768px
-  --max-width-md:    64rem;  // ~1024px
-  --max-width-lg:    80rem;  // ~1280px
-  --max-width-xl:    90rem;  // ~1440px
-  --max-width-xxl:   100rem; // ~1600px
-  --max-width-xxxl:  120rem; // ~1920px
-  --max-width-xxxxl: 150rem; // ~2400px
+  --max-width-xxxxxs: 17.5rem; // ~280px
+  --max-width-xxxxs: 20rem;    // ~320px
+  --max-width-xxxs:  26rem;    // ~416px
+  --max-width-xxs:   32rem;    // ~512px
+  --max-width-xs:    38rem;    // ~608px
+  --max-width-sm:    48rem;    // ~768px
+  --max-width-md:    64rem;    // ~1024px
+  --max-width-lg:    80rem;    // ~1280px
+  --max-width-xl:    90rem;    // ~1440px
+  --max-width-xxl:   100rem;   // ~1600px
+  --max-width-xxxl:  120rem;   // ~1920px
+  --max-width-xxxxl: 150rem;   // ~2400px
 }
 
-.max-width-xxxxs { max-width: var(--max-width-xxxxs); }
-.max-width-xxxs  { max-width: var(--max-width-xxxs); }
-.max-width-xxs   { max-width: var(--max-width-xxs); }
-.max-width-xs    { max-width: var(--max-width-xs); }
-.max-width-sm    { max-width: var(--max-width-sm); }
-.max-width-md    { max-width: var(--max-width-md); }
-.max-width-lg    { max-width: var(--max-width-lg); }
-.max-width-xl    { max-width: var(--max-width-xl); }
-.max-width-xxl   { max-width: var(--max-width-xxl); }
-.max-width-xxxl  { max-width: var(--max-width-xxxl); }
-.max-width-xxxxl { max-width: var(--max-width-xxxxl); }
-.max-width-100\% { max-width: 100%; }
-.max-width-none  { max-width: none; }
+.max-width-xxxxxs { max-width: var(--max-width-xxxxxs); }
+.max-width-xxxxs  { max-width: var(--max-width-xxxxs); }
+.max-width-xxxs   { max-width: var(--max-width-xxxs); }
+.max-width-xxs    { max-width: var(--max-width-xxs); }
+.max-width-xs     { max-width: var(--max-width-xs); }
+.max-width-sm     { max-width: var(--max-width-sm); }
+.max-width-md     { max-width: var(--max-width-md); }
+.max-width-lg     { max-width: var(--max-width-lg); }
+.max-width-xl     { max-width: var(--max-width-xl); }
+.max-width-xxl    { max-width: var(--max-width-xxl); }
+.max-width-xxxl   { max-width: var(--max-width-xxxl); }
+.max-width-xxxxl  { max-width: var(--max-width-xxxxl); }
+.max-width-100\%  { max-width: 100%; }
+.max-width-none   { max-width: none; }
 
 // alt approach - max-width is equal to current breakpoint
 $breakpointsNr: length($breakpoints);
@@ -848,6 +861,10 @@ $breakpointsNr: length($breakpoints);
 .shadow-lg { box-shadow: var(--shadow-lg); }
 .shadow-xl { box-shadow: var(--shadow-xl); }
 .shadow-none { box-shadow: none; }
+.shadow-xs.shadow-sm { box-shadow: var(--shadow-xs), var(--shadow-sm); }
+.shadow-sm.shadow-md { box-shadow: var(--shadow-sm), var(--shadow-md); }
+.shadow-md.shadow-lg { box-shadow: var(--shadow-md), var(--shadow-lg); }
+.shadow-lg.shadow-xl { box-shadow: var(--shadow-lg), var(--shadow-xl); }
 
 :where(.inner-glow, .inner-glow-top) { 
   position: relative;
@@ -1306,6 +1323,18 @@ $breakpointsNr: length($breakpoints);
 .origin-top-right { transform-origin: right top; }
 .origin-bottom-left { transform-origin: left bottom; }
 .origin-bottom-right { transform-origin: right bottom; }
+
+// --------------------------------
+
+// Transition
+
+// --------------------------------
+
+.transition {
+  transition-property: var(--transition-property, all);
+  transition-duration: var(--transition-duration, 0.2s);
+  transition-delay: var(--transition-delay, 0s);
+}
 
 // --------------------------------
 
