@@ -7321,6 +7321,26 @@ html:not(.js) .no-js\:is-hidden {
     font-size: var(--text-xxxxl, 3rem);
   }
 
+  .column-count-1\@xs {
+    -moz-column-count: 1;
+         column-count: 1;
+  }
+
+  .column-count-2\@xs {
+    -moz-column-count: 2;
+         column-count: 2;
+  }
+
+  .column-count-3\@xs {
+    -moz-column-count: 3;
+         column-count: 3;
+  }
+
+  .column-count-4\@xs {
+    -moz-column-count: 4;
+         column-count: 4;
+  }
+
   .width-xxxxs\@xs {
     width: var(--size-xxxxs, 0.25rem);
   }
@@ -7551,6 +7571,10 @@ html:not(.js) .no-js\:is-hidden {
 
   .height-inherit\@xs {
     height: inherit;
+  }
+
+  .max-width-xxxxxs\@xs {
+    max-width: var(--max-width-xxxxxs);
   }
 
   .max-width-xxxxs\@xs {
@@ -8824,6 +8848,26 @@ html:not(.js) .no-js\:is-hidden {
     font-size: var(--text-xxxxl, 3rem);
   }
 
+  .column-count-1\@sm {
+    -moz-column-count: 1;
+         column-count: 1;
+  }
+
+  .column-count-2\@sm {
+    -moz-column-count: 2;
+         column-count: 2;
+  }
+
+  .column-count-3\@sm {
+    -moz-column-count: 3;
+         column-count: 3;
+  }
+
+  .column-count-4\@sm {
+    -moz-column-count: 4;
+         column-count: 4;
+  }
+
   .width-xxxxs\@sm {
     width: var(--size-xxxxs, 0.25rem);
   }
@@ -9054,6 +9098,10 @@ html:not(.js) .no-js\:is-hidden {
 
   .height-inherit\@sm {
     height: inherit;
+  }
+
+  .max-width-xxxxxs\@sm {
+    max-width: var(--max-width-xxxxxs);
   }
 
   .max-width-xxxxs\@sm {
@@ -10327,6 +10375,26 @@ html:not(.js) .no-js\:is-hidden {
     font-size: var(--text-xxxxl, 3rem);
   }
 
+  .column-count-1\@md {
+    -moz-column-count: 1;
+         column-count: 1;
+  }
+
+  .column-count-2\@md {
+    -moz-column-count: 2;
+         column-count: 2;
+  }
+
+  .column-count-3\@md {
+    -moz-column-count: 3;
+         column-count: 3;
+  }
+
+  .column-count-4\@md {
+    -moz-column-count: 4;
+         column-count: 4;
+  }
+
   .width-xxxxs\@md {
     width: var(--size-xxxxs, 0.25rem);
   }
@@ -10557,6 +10625,10 @@ html:not(.js) .no-js\:is-hidden {
 
   .height-inherit\@md {
     height: inherit;
+  }
+
+  .max-width-xxxxxs\@md {
+    max-width: var(--max-width-xxxxxs);
   }
 
   .max-width-xxxxs\@md {
@@ -11830,6 +11902,26 @@ html:not(.js) .no-js\:is-hidden {
     font-size: var(--text-xxxxl, 3rem);
   }
 
+  .column-count-1\@lg {
+    -moz-column-count: 1;
+         column-count: 1;
+  }
+
+  .column-count-2\@lg {
+    -moz-column-count: 2;
+         column-count: 2;
+  }
+
+  .column-count-3\@lg {
+    -moz-column-count: 3;
+         column-count: 3;
+  }
+
+  .column-count-4\@lg {
+    -moz-column-count: 4;
+         column-count: 4;
+  }
+
   .width-xxxxs\@lg {
     width: var(--size-xxxxs, 0.25rem);
   }
@@ -12060,6 +12152,10 @@ html:not(.js) .no-js\:is-hidden {
 
   .height-inherit\@lg {
     height: inherit;
+  }
+
+  .max-width-xxxxxs\@lg {
+    max-width: var(--max-width-xxxxxs);
   }
 
   .max-width-xxxxs\@lg {
@@ -13333,6 +13429,26 @@ html:not(.js) .no-js\:is-hidden {
     font-size: var(--text-xxxxl, 3rem);
   }
 
+  .column-count-1\@xl {
+    -moz-column-count: 1;
+         column-count: 1;
+  }
+
+  .column-count-2\@xl {
+    -moz-column-count: 2;
+         column-count: 2;
+  }
+
+  .column-count-3\@xl {
+    -moz-column-count: 3;
+         column-count: 3;
+  }
+
+  .column-count-4\@xl {
+    -moz-column-count: 4;
+         column-count: 4;
+  }
+
   .width-xxxxs\@xl {
     width: var(--size-xxxxs, 0.25rem);
   }
@@ -13563,6 +13679,10 @@ html:not(.js) .no-js\:is-hidden {
 
   .height-inherit\@xl {
     height: inherit;
+  }
+
+  .max-width-xxxxxs\@xl {
+    max-width: var(--max-width-xxxxxs);
   }
 
   .max-width-xxxxs\@xl {

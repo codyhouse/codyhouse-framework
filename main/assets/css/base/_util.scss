@@ -783,17 +783,17 @@
 
 :root {
   --max-width-xxxxxs: 17.5rem; // ~280px
-  --max-width-xxxxs: 20rem;    // ~320px
-  --max-width-xxxs:  26rem;    // ~416px
-  --max-width-xxs:   32rem;    // ~512px
-  --max-width-xs:    38rem;    // ~608px
-  --max-width-sm:    48rem;    // ~768px
-  --max-width-md:    64rem;    // ~1024px
-  --max-width-lg:    80rem;    // ~1280px
-  --max-width-xl:    90rem;    // ~1440px
-  --max-width-xxl:   100rem;   // ~1600px
-  --max-width-xxxl:  120rem;   // ~1920px
-  --max-width-xxxxl: 150rem;   // ~2400px
+  --max-width-xxxxs:  20rem;   // ~320px
+  --max-width-xxxs:   26rem;   // ~416px
+  --max-width-xxs:    32rem;   // ~512px
+  --max-width-xs:     38rem;   // ~608px
+  --max-width-sm:     48rem;   // ~768px
+  --max-width-md:     64rem;   // ~1024px
+  --max-width-lg:     80rem;   // ~1280px
+  --max-width-xl:     90rem;   // ~1440px
+  --max-width-xxl:    100rem;  // ~1600px
+  --max-width-xxxl:   120rem;  // ~1920px
+  --max-width-xxxxl:  150rem;  // ~2400px
 }
 
 .max-width-xxxxxs { max-width: var(--max-width-xxxxxs); }
@@ -1624,6 +1624,12 @@ $breakpointsNr: length($breakpoints);
     .text-xxxl\@#{$breakpoint} { font-size: var(--text-xxxl, 2.5rem); }
     .text-xxxxl\@#{$breakpoint} { font-size: var(--text-xxxxl, 3rem); }
 
+    // column-count
+    .column-count-1\@#{$breakpoint} { column-count: 1; }
+    .column-count-2\@#{$breakpoint} { column-count: 2; }
+    .column-count-3\@#{$breakpoint} { column-count: 3; }
+    .column-count-4\@#{$breakpoint} { column-count: 4; }
+
     // width
     .width-xxxxs\@#{$breakpoint} { width: var(--size-xxxxs, 0.25rem); }
     .width-xxxs\@#{$breakpoint}  { width: var(--size-xxxs, 0.5rem); }
@@ -1687,19 +1693,20 @@ $breakpointsNr: length($breakpoints);
     .height-inherit\@#{$breakpoint} { height: inherit; }
 
     // max-width
-    .max-width-xxxxs\@#{$breakpoint} { max-width: var(--max-width-xxxxs); }
-    .max-width-xxxs\@#{$breakpoint}  { max-width: var(--max-width-xxxs); }
-    .max-width-xxs\@#{$breakpoint}   { max-width: var(--max-width-xxs); }
-    .max-width-xs\@#{$breakpoint}    { max-width: var(--max-width-xs); }
-    .max-width-sm\@#{$breakpoint}    { max-width: var(--max-width-sm); }
-    .max-width-md\@#{$breakpoint}    { max-width: var(--max-width-md); }
-    .max-width-lg\@#{$breakpoint}    { max-width: var(--max-width-lg); }
-    .max-width-xl\@#{$breakpoint}    { max-width: var(--max-width-xl); }
-    .max-width-xxl\@#{$breakpoint}   { max-width: var(--max-width-xxl); }
-    .max-width-xxxl\@#{$breakpoint}  { max-width: var(--max-width-xxxl); }
-    .max-width-xxxxl\@#{$breakpoint} { max-width: var(--max-width-xxxxl); }
-    .max-width-100\%\@#{$breakpoint} { max-width: 100%; }
-    .max-width-none\@#{$breakpoint}  { max-width: none; }
+    .max-width-xxxxxs\@#{$breakpoint} { max-width: var(--max-width-xxxxxs); }
+    .max-width-xxxxs\@#{$breakpoint}  { max-width: var(--max-width-xxxxs); }
+    .max-width-xxxs\@#{$breakpoint}   { max-width: var(--max-width-xxxs); }
+    .max-width-xxs\@#{$breakpoint}    { max-width: var(--max-width-xxs); }
+    .max-width-xs\@#{$breakpoint}     { max-width: var(--max-width-xs); }
+    .max-width-sm\@#{$breakpoint}     { max-width: var(--max-width-sm); }
+    .max-width-md\@#{$breakpoint}     { max-width: var(--max-width-md); }
+    .max-width-lg\@#{$breakpoint}     { max-width: var(--max-width-lg); }
+    .max-width-xl\@#{$breakpoint}     { max-width: var(--max-width-xl); }
+    .max-width-xxl\@#{$breakpoint}    { max-width: var(--max-width-xxl); }
+    .max-width-xxxl\@#{$breakpoint}   { max-width: var(--max-width-xxxl); }
+    .max-width-xxxxl\@#{$breakpoint}  { max-width: var(--max-width-xxxxl); }
+    .max-width-100\%\@#{$breakpoint}  { max-width: 100%; }
+    .max-width-none\@#{$breakpoint}   { max-width: none; }
 
     // position
     .position-relative\@#{$breakpoint} { position: relative; }
