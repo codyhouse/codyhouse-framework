@@ -1049,11 +1049,11 @@ $breakpointsNr: length($breakpoints);
 
 // --------------------------------
 
-.border { border: var(--border-width, 1px) var(--border-style, solid) alpha(var(--color-contrast-higher), 0.1); }
-.border-top { border-top: var(--border-width, 1px) var(--border-style, solid) alpha(var(--color-contrast-higher), 0.1); }
-.border-bottom { border-bottom: var(--border-width, 1px) var(--border-style, solid) alpha(var(--color-contrast-higher), 0.1); }
-.border-left { border-left: var(--border-width, 1px) var(--border-style, solid) alpha(var(--color-contrast-higher), 0.1); }
-.border-right { border-right: var(--border-width, 1px) var(--border-style, solid) alpha(var(--color-contrast-higher), 0.1); }
+.border { border: var(--border-width, 1px) var(--border-style, solid) alpha(var(--color-contrast-higher), var(--border-o-base, 0.1)); }
+.border-top { border-top: var(--border-width, 1px) var(--border-style, solid) alpha(var(--color-contrast-higher), var(--border-o-base, 0.1)); }
+.border-bottom { border-bottom: var(--border-width, 1px) var(--border-style, solid) alpha(var(--color-contrast-higher), var(--border-o-base, 0.1)); }
+.border-left { border-left: var(--border-width, 1px) var(--border-style, solid) alpha(var(--color-contrast-higher), var(--border-o-base, 0.1)); }
+.border-right { border-right: var(--border-width, 1px) var(--border-style, solid) alpha(var(--color-contrast-higher), var(--border-o-base, 0.1)); }
 
 .border-2 { --border-width: 2px; }
 .border-3 { --border-width: 3px; }
