@@ -39,8 +39,8 @@
 
 @include breakpoint(md) {
   :root {
-    --text-base-size: 1.25rem;
-    --text-scale-ratio: 1.25;
+    --text-base-size: 1.125rem;
+    --text-scale-ratio: 1.215;
   }
 }
 
@@ -53,6 +53,11 @@ h1, h2, h3, h4 {
 // (END) Global editor code
 
 // --------------------------------
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
 // link style
 a, .link {}

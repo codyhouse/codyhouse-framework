@@ -91,7 +91,7 @@ $grid-columns: 12 !default;
 .gap-xxl   { --gap-x: var(--space-xxl);   --gap-y: var(--space-xxl);   > * { --sub-gap-x: var(--space-xxl);   --sub-gap-y: var(--space-xxl); }}
 .gap-xxxl  { --gap-x: var(--space-xxxl);  --gap-y: var(--space-xxxl);  > * { --sub-gap-x: var(--space-xxxl);  --sub-gap-y: var(--space-xxxl); }}
 .gap-xxxxl { --gap-x: var(--space-xxxxl); --gap-y: var(--space-xxxxl); > * { --sub-gap-x: var(--space-xxxxl); --sub-gap-y: var(--space-xxxxl); }}
-.gap-0     { --gap-x: 0;                  --gap-y: 0;                  > * { --sub-gap-x: 0;                  --sub-gap-y: 0; }}
+.gap-0     { --gap-x: 0px;                  --gap-y: 0px;                  > * { --sub-gap-x: 0px;                  --sub-gap-y: 0px; }}
 
 .gap-x-xxxxs { --gap-x: var(--space-xxxxs); > * { --sub-gap-x: var(--space-xxxxs); }}
 .gap-x-xxxs  { --gap-x: var(--space-xxxs);  > * { --sub-gap-x: var(--space-xxxs); }}
@@ -104,7 +104,7 @@ $grid-columns: 12 !default;
 .gap-x-xxl   { --gap-x: var(--space-xxl);   > * { --sub-gap-x: var(--space-xxl); }}
 .gap-x-xxxl  { --gap-x: var(--space-xxxl);  > * { --sub-gap-x: var(--space-xxxl); }}
 .gap-x-xxxxl { --gap-x: var(--space-xxxxl); > * { --sub-gap-x: var(--space-xxxxl); }}
-.gap-x-0     { --gap-x: 0;                  > * { --sub-gap-x: 0; }}
+.gap-x-0     { --gap-x: 0px;                  > * { --sub-gap-x: 0px; }}
 
 .gap-y-xxxxs { --gap-y: var(--space-xxxxs); > * { --sub-gap-y: var(--space-xxxxs); }}
 .gap-y-xxxs  { --gap-y: var(--space-xxxs);  > * { --sub-gap-y: var(--space-xxxs); }}
@@ -117,7 +117,7 @@ $grid-columns: 12 !default;
 .gap-y-xxl   { --gap-y: var(--space-xxl);   > * { --sub-gap-y: var(--space-xxl); }}
 .gap-y-xxxl  { --gap-y: var(--space-xxxl);  > * { --sub-gap-y: var(--space-xxxl); }}
 .gap-y-xxxxl { --gap-y: var(--space-xxxxl); > * { --sub-gap-y: var(--space-xxxxl); }}
-.gap-y-0     { --gap-y: 0;                  > * { --sub-gap-y: 0; }}
+.gap-y-0     { --gap-y: 0px;                  > * { --sub-gap-y: 0px; }}
 
 $grid-col-class-list: ''; // list of col-{span} classes
 
@@ -176,7 +176,7 @@ $grid-offset-class-list: ''; // list of offset-{span} classes
     .gap-xxl\@#{$breakpoint}   { --gap-x: var(--space-xxl);   --gap-y: var(--space-xxl);   > * { --sub-gap-x: var(--space-xxl);   --sub-gap-y: var(--space-xxl); }}
     .gap-xxxl\@#{$breakpoint}  { --gap-x: var(--space-xxxl);  --gap-y: var(--space-xxxl);  > * { --sub-gap-x: var(--space-xxxl);  --sub-gap-y: var(--space-xxxl); }}
     .gap-xxxxl\@#{$breakpoint} { --gap-x: var(--space-xxxxl); --gap-y: var(--space-xxxxl); > * { --sub-gap-x: var(--space-xxxxl); --sub-gap-y: var(--space-xxxxl); }}
-    .gap-0\@#{$breakpoint}     { --gap-x: 0;                  --gap-y: 0;                  > * { --sub-gap-x: 0;                  --sub-gap-y: 0; }}
+    .gap-0\@#{$breakpoint}     { --gap-x: 0px;                  --gap-y: 0px;                  > * { --sub-gap-x: 0px;                  --sub-gap-y: 0px; }}
 
     .gap-x-xxxxs\@#{$breakpoint} { --gap-x: var(--space-xxxxs); > * { --sub-gap-x: var(--space-xxxxs); }}
     .gap-x-xxxs\@#{$breakpoint}  { --gap-x: var(--space-xxxs);  > * { --sub-gap-x: var(--space-xxxs); }}
@@ -189,7 +189,7 @@ $grid-offset-class-list: ''; // list of offset-{span} classes
     .gap-x-xxl\@#{$breakpoint}   { --gap-x: var(--space-xxl);   > * { --sub-gap-x: var(--space-xxl); }}
     .gap-x-xxxl\@#{$breakpoint}  { --gap-x: var(--space-xxxl);  > * { --sub-gap-x: var(--space-xxxl); }}
     .gap-x-xxxxl\@#{$breakpoint} { --gap-x: var(--space-xxxxl); > * { --sub-gap-x: var(--space-xxxxl); }}
-    .gap-x-0\@#{$breakpoint}     { --gap-x: 0;                  > * { --sub-gap-x: 0; }}
+    .gap-x-0\@#{$breakpoint}     { --gap-x: 0px;                  > * { --sub-gap-x: 0px; }}
 
     .gap-y-xxxxs\@#{$breakpoint} { --gap-y: var(--space-xxxxs); > * { --sub-gap-y: var(--space-xxxxs); }}
     .gap-y-xxxs\@#{$breakpoint}  { --gap-y: var(--space-xxxs);  > * { --sub-gap-y: var(--space-xxxs); }}
@@ -202,7 +202,7 @@ $grid-offset-class-list: ''; // list of offset-{span} classes
     .gap-y-xxl\@#{$breakpoint}   { --gap-y: var(--space-xxl);   > * { --sub-gap-y: var(--space-xxl); }}
     .gap-y-xxxl\@#{$breakpoint}  { --gap-y: var(--space-xxxl);  > * { --sub-gap-y: var(--space-xxxl); }}
     .gap-y-xxxxl\@#{$breakpoint} { --gap-y: var(--space-xxxxl); > * { --sub-gap-y: var(--space-xxxxl); }}
-    .gap-y-0\@#{$breakpoint}     { --gap-y: 0;                  > * { --sub-gap-y: 0; }}
+    .gap-y-0\@#{$breakpoint}     { --gap-y: 0px;                  > * { --sub-gap-y: 0px; }}
 
     $grid-col-class-list: ''; // list of col-{span} classes
 

@@ -106,10 +106,6 @@
   @include defineColorHSL(--color-contrast-medium, 231, 3%, 57%);
   @include defineColorHSL(--color-contrast-high, 240, 5%, 82%);
   @include defineColorHSL(--color-contrast-higher, 240, 100%, 99%);
-
-  // font rendering
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 // --------------------------------
