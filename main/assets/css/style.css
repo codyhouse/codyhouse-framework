@@ -2859,7 +2859,7 @@ img, video, svg {
   --radius-sm: calc(var(--radius, 0.375em)/2);
   --radius-md: var(--radius, 0.375em);
   --radius-lg: calc(var(--radius, 0.375em)*2);
-  --shadow-ring: 0 0 0 1px hsla(0, 0%, 0%, 0.065);
+  --shadow-ring: 0 0 0 1px hsla(0, 0%, 0%, 0.05);
   --shadow-xs: 0 0.1px 0.3px hsla(0, 0%, 0%, 0.06),
                 0 1px 2px hsla(0, 0%, 0%, 0.12);
   --shadow-sm: 0 0.3px 0.4px hsla(0, 0%, 0%, 0.025),
@@ -5615,28 +5615,24 @@ html:not(.js) .no-js\:is-hidden {
   clear: both;
 }
 
-[class^=border-], [class*=" border-"] {
-  --border-o: 1;
-}
-
 .border {
-  border: var(--border-width, 1px) var(--border-style, solid) hsla(var(--color-contrast-higher-h), var(--color-contrast-higher-s), var(--color-contrast-higher-l), var(--border-o, 0.1));
+  border: var(--border-width, 1px) var(--border-style, solid) hsla(var(--color-contrast-higher-h), var(--color-contrast-higher-s), var(--color-contrast-higher-l), 0.1);
 }
 
 .border-top {
-  border-top: var(--border-width, 1px) var(--border-style, solid) hsla(var(--color-contrast-higher-h), var(--color-contrast-higher-s), var(--color-contrast-higher-l), var(--border-o, 0.1));
+  border-top: var(--border-width, 1px) var(--border-style, solid) hsla(var(--color-contrast-higher-h), var(--color-contrast-higher-s), var(--color-contrast-higher-l), 0.1);
 }
 
 .border-bottom {
-  border-bottom: var(--border-width, 1px) var(--border-style, solid) hsla(var(--color-contrast-higher-h), var(--color-contrast-higher-s), var(--color-contrast-higher-l), var(--border-o, 0.1));
+  border-bottom: var(--border-width, 1px) var(--border-style, solid) hsla(var(--color-contrast-higher-h), var(--color-contrast-higher-s), var(--color-contrast-higher-l), 0.1);
 }
 
 .border-left {
-  border-left: var(--border-width, 1px) var(--border-style, solid) hsla(var(--color-contrast-higher-h), var(--color-contrast-higher-s), var(--color-contrast-higher-l), var(--border-o, 0.1));
+  border-left: var(--border-width, 1px) var(--border-style, solid) hsla(var(--color-contrast-higher-h), var(--color-contrast-higher-s), var(--color-contrast-higher-l), 0.1);
 }
 
 .border-right {
-  border-right: var(--border-width, 1px) var(--border-style, solid) hsla(var(--color-contrast-higher-h), var(--color-contrast-higher-s), var(--color-contrast-higher-l), var(--border-o, 0.1));
+  border-right: var(--border-width, 1px) var(--border-style, solid) hsla(var(--color-contrast-higher-h), var(--color-contrast-higher-s), var(--color-contrast-higher-l), 0.1);
 }
 
 .border-2 {
@@ -5657,6 +5653,10 @@ html:not(.js) .no-js\:is-hidden {
 
 .border-dashed {
   --border-style: dashed;
+}
+
+[class^=border-], [class*=" border-"] {
+  --border-o: 1;
 }
 
 .border-bg-darker {
