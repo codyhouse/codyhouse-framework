@@ -19,7 +19,6 @@
   cursor: pointer;
   text-decoration: none;
   line-height: 1.2;
-  @include fontSmooth;
   transition: all 0.2s ease;
   will-change: transform;
 

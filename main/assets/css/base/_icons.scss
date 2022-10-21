@@ -15,8 +15,9 @@
 
 .icon {
   --size: 1em;
-  height: var(--size);
-  width: var(--size);
+  font-size: var(--size);
+  height: 1em;
+  width: 1em;
   display: inline-block;
   color: inherit;
   fill: currentColor;
