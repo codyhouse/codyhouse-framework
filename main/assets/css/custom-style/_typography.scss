@@ -59,8 +59,18 @@ html {
   -moz-osx-font-smoothing: grayscale;
 }
 
-// link style
-a, .link {}
+.link {
+  text-decoration: none;
+  background-image: linear-gradient(to right, currentColor 50%, alpha(var(--color-contrast-higher), 0.15) 50%);
+  background-size: 200% 1px;
+  background-repeat: no-repeat;
+  background-position: 100% 100%;
+  transition: background-position 0.2s;
+
+  &:hover {
+    background-position: 0% 100%;
+  }
+}
 
 mark {
   background-color: alpha(var(--color-accent), 0.2);
