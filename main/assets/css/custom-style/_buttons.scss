@@ -19,12 +19,14 @@
   cursor: pointer;
   text-decoration: none;
   line-height: 1.2;
+  font-weight: 500;
   transition: all 0.2s ease;
   will-change: transform;
 
   &:focus-visible {
-    box-shadow: 0 0 0 2px var(--color-bg), 0px 0px 0px 4px alpha(var(--color-contrast-higher), 0.15);
     outline: none;
+    box-shadow: 0 0 0 2px var(--color-bg), 
+                0 0 0 4px alpha(var(--color-contrast-higher), 0.15);
   }
 
   &:active {
@@ -35,46 +37,82 @@
 // themes
 .btn--primary {
   background: var(--color-primary);
+  box-shadow: inset 0 1px 0 alpha(var(--color-white), 0.15), 
+              0 1px 3px alpha(var(--color-primary-darker), 0.25), 
+              0 2px 6px alpha(var(--color-primary-darker), 0.1), 
+              0 6px 10px -2px alpha(var(--color-primary-darker), 0.25);
   color: var(--color-white);
-  box-shadow: inset 0px 1px 0px alpha(var(--color-white), 0.15), 0px 1px 3px alpha(var(--color-primary-darker), 0.25), 0px 2px 6px alpha(var(--color-primary-darker), 0.1), 0px 6px 10px -2px alpha(var(--color-primary-darker), 0.25);
 
   &:hover {
     background: var(--color-primary-light);
-    box-shadow: inset 0px 1px 0px alpha(var(--color-white), 0.15), 0px 1px 2px alpha(var(--color-primary-darker), 0.25), 0px 1px 4px alpha(var(--color-primary-darker), 0.1), 0px 3px 6px -2px alpha(var(--color-primary-darker), 0.25);
+    box-shadow: inset 0 1px 0 alpha(var(--color-white), 0.15), 
+                0 1px 2px alpha(var(--color-primary-darker), 0.25), 
+                0 1px 4px alpha(var(--color-primary-darker), 0.1), 
+                0 3px 6px -2px alpha(var(--color-primary-darker), 0.25);
   }
 
   &:focus-visible {
-    box-shadow: inset 0px 1px 0px alpha(var(--color-white), 0.15), 0px 1px 2px alpha(var(--color-primary-darker), 0.25), 0px 1px 4px alpha(var(--color-primary-darker), 0.1), 0px 3px 6px -2px alpha(var(--color-primary-darker), 0.25), 0px 0px 0px 2px var(--color-bg), 0px 0px 0px 4px var(--color-primary);
+    box-shadow: inset 0 1px 0 alpha(var(--color-white), 0.15), 
+                0 1px 2px alpha(var(--color-primary-darker), 0.25), 
+                0 1px 4px alpha(var(--color-primary-darker), 0.1), 
+                0 3px 6px -2px alpha(var(--color-primary-darker), 0.25), 
+                0 0 0 2px var(--color-bg), 
+                0 0 0 4px var(--color-primary);
   }
 }
 
 .btn--subtle {
   background: var(--color-bg-lighter);
   color: var(--color-contrast-higher);
-  box-shadow: inset 0px 1px 0px alpha(var(--color-white), 0.1), 0px 0px 0px 1px alpha(var(--color-black), 0.02), 0px 1px 3px -1px alpha(var(--color-black), 0.2), var(--shadow-sm);
+  box-shadow: inset 0 1px 0 alpha(var(--color-white), 0.1), 
+              0 0 0 1px alpha(var(--color-black), 0.02), 
+              0 0.3px 0.4px alpha(var(--color-black), 0.025),
+              0 1px 3px -1px alpha(var(--color-black), 0.2), 
+              0 3.5px 6px alpha(var(--color-black), 0.12);
 
   &:hover {
     background: var(--color-bg-light);
-    box-shadow: inset 0px 1px 0px alpha(var(--color-white), 0.1), 0px 0px 0px 1px alpha(var(--color-black), 0.02), 0px 1px 3px -1px alpha(var(--color-black), 0.2), var(--shadow-xs);
+    box-shadow: inset 0 1px 0 alpha(var(--color-white), 0.1), 
+                0 0 0 1px alpha(var(--color-black), 0.02), 
+                0 0.1px 0.3px alpha(var(--color-black), 0.06),
+                0 1px 2px alpha(var(--color-black), 0.12),
+                0 1px 3px -1px alpha(var(--color-black), 0.2);
   }
 
   &:focus-visible {
-    box-shadow: inset 0px 1px 0px alpha(var(--color-white), 0.1), 0px 0px 0px 1px alpha(var(--color-black), 0.02), 0px 1px 3px -1px alpha(var(--color-black), 0.2), var(--shadow-xs), 0px 0px 0px 2px var(--color-bg), 0px 0px 0px 4px var(--color-contrast-high);
+    box-shadow: inset 0 1px 0 alpha(var(--color-white), 0.1), 
+                0 0 0 1px alpha(var(--color-black), 0.02), 
+                0 0.3px 0.4px alpha(var(--color-black), 0.025),
+                0 1px 3px -1px alpha(var(--color-black), 0.2), 
+                0 3.5px 6px alpha(var(--color-black), 0.12), 
+                0 0 0 2px var(--color-bg), 
+                0 0 0 4px var(--color-contrast-high);
   }
 }
 
 .btn--accent {
   background: var(--color-accent);
   color: var(--color-white);
-  box-shadow: inset 0px 1px 0px alpha(var(--color-white), 0.15), 0px 1px 3px alpha(var(--color-accent-darker), 0.25), 0px 2px 6px alpha(var(--color-accent-darker), 0.1), 0px 6px 10px -2px alpha(var(--color-accent-darker), 0.25);
+  box-shadow: inset 0 1px 0 alpha(var(--color-white), 0.15), 
+              0 1px 3px alpha(var(--color-accent-darker), 0.25), 
+              0 2px 6px alpha(var(--color-accent-darker), 0.1), 
+              0 6px 10px -2px alpha(var(--color-accent-darker), 0.25);
 
   &:hover {
     background: var(--color-accent-light);
-    box-shadow: inset 0px 1px 0px alpha(var(--color-white), 0.15), 0px 1px 2px alpha(var(--color-accent-darker), 0.25), 0px 1px 4px alpha(var(--color-accent-darker), 0.1), 0px 3px 6px -2px alpha(var(--color-accent-darker), 0.1);
+    box-shadow: inset 0 1px 0 alpha(var(--color-white), 0.15), 
+                0 1px 2px alpha(var(--color-accent-darker), 0.25), 
+                0 1px 4px alpha(var(--color-accent-darker), 0.1), 
+                0 3px 6px -2px alpha(var(--color-accent-darker), 0.1);
   }
 
   &:focus-visible {
-    box-shadow: inset 0px 1px 0px alpha(var(--color-white), 0.15), 0px 1px 2px alpha(var(--color-accent-darker), 0.25), 0px 1px 4px alpha(var(--color-accent-darker), 0.1), 0px 3px 6px -2px alpha(var(--color-accent-darker), 0.1), 0px 0px 0px 2px var(--color-bg), 0px 0px 0px 4px var(--color-accent);
+    box-shadow: inset 0 1px 0 alpha(var(--color-white), 0.15), 
+                0 1px 2px alpha(var(--color-accent-darker), 0.25), 
+                0 1px 4px alpha(var(--color-accent-darker), 0.1), 
+                0 3px 6px -2px alpha(var(--color-accent-darker), 0.1), 
+                0 0 0 2px var(--color-bg), 
+                0 0 0 4px var(--color-accent);
   }
 }
 

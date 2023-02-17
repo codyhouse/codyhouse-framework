@@ -45,6 +45,18 @@
 .items-start { align-items: flex-start; }
 .items-end { align-items: flex-end; }
 .items-baseline { align-items: baseline; }
+.items-stretch { align-items: stretch; }
+
+// --------------------------------
+
+// Align Content
+
+// --------------------------------
+
+.content-start { align-content: start; }
+.content-end { align-content: end; }
+.content-center { align-content: center; }
+.content-between { align-content: space-between; }
 
 // --------------------------------
 
@@ -81,6 +93,7 @@
   }
 }
 
+// broader browser support, class added to the parent element
 .aspect-ratio-16\:9 { --aspect-ratio: calc(16/9); }
 .aspect-ratio-3\:2  { --aspect-ratio: calc(3/2); }
 .aspect-ratio-4\:3  { --aspect-ratio: calc(4/3); }
@@ -90,6 +103,17 @@
 .aspect-ratio-3\:4  { --aspect-ratio: calc(3/4); }
 .aspect-ratio-2\:3  { --aspect-ratio: calc(2/3); }
 .aspect-ratio-9\:16 { --aspect-ratio: calc(9/16); }
+
+// use the aspect-ratio CSS property
+.ratio-16\:9 { aspect-ratio: 16/9; }
+.ratio-3\:2  { aspect-ratio: 3/2; }
+.ratio-4\:3  { aspect-ratio: 4/3; }
+.ratio-5\:4  { aspect-ratio: 5/4; }
+.ratio-1\:1  { aspect-ratio: 1/1; }
+.ratio-4\:5  { aspect-ratio: 4/5; }
+.ratio-3\:4  { aspect-ratio: 3/4; }
+.ratio-2\:3  { aspect-ratio: 2/3; }
+.ratio-9\:16 { aspect-ratio: 9/16; }
 
 // --------------------------------
 
@@ -102,6 +126,8 @@
 .inline { display: inline; }
 .contents { display: contents; }
 .hide { display: none; }
+.css-grid { display: grid; }
+.css-inline-grid { display: inline-grid; }
 
 // --------------------------------
 
@@ -411,6 +437,8 @@
 
 // --------------------------------
 
+.font-thin { font-weight: 100; }
+.font-extralight { font-weight: 200; }
 .font-light { font-weight: 300; }
 .font-normal { font-weight: 400; }
 .font-medium { font-weight: 500; }
@@ -772,6 +800,7 @@
 
 // --------------------------------
 
+.min-height-0 { min-height: 0; }
 .min-height-100\% { min-height: 100%; }
 .min-height-100vh { min-height: 100vh; }
 
@@ -977,6 +1006,7 @@ $breakpointsNr: length($breakpoints);
 
 // --------------------------------
 
+.overflow-visible { overflow: visible; }
 .overflow-hidden { overflow: hidden; }
 .overflow-auto   { overflow: auto; }
 .momentum-scrolling { -webkit-overflow-scrolling: touch; }
@@ -1049,6 +1079,12 @@ $breakpointsNr: length($breakpoints);
 
 // --------------------------------
 
+[class^="border-"], [class*=" border-"] { 
+  --border-o: 1;
+  --border-width: 1px;
+  --border-style: solid;
+}
+
 .border { border: var(--border-width, 1px) var(--border-style, solid) alpha(var(--color-contrast-higher), var(--border-o-base, 0.1)); }
 .border-top { border-top: var(--border-width, 1px) var(--border-style, solid) alpha(var(--color-contrast-higher), var(--border-o-base, 0.1)); }
 .border-bottom { border-bottom: var(--border-width, 1px) var(--border-style, solid) alpha(var(--color-contrast-higher), var(--border-o-base, 0.1)); }
@@ -1060,10 +1096,6 @@ $breakpointsNr: length($breakpoints);
 .border-4 { --border-width: 4px; }
 .border-dotted { --border-style: dotted; }
 .border-dashed { --border-style: dashed; }
-
-[class^="border-"], [class*=" border-"] { 
-  --border-o: 1;
-}
 
 .border-bg-darker { border-color: alpha(var(--color-bg-darker), var(--border-o, 1)); }
 .border-bg-dark { border-color: alpha(var(--color-bg-dark), var(--border-o, 1)); }
@@ -1365,6 +1397,15 @@ $breakpointsNr: length($breakpoints);
 
 // --------------------------------
 
+// Appearance
+
+// --------------------------------
+
+.appearance-none { appearance: none; }
+.appearance-auto { appearance: auto; }
+
+// --------------------------------
+
 // Responsive Variations
 
 // --------------------------------
@@ -1399,6 +1440,13 @@ $breakpointsNr: length($breakpoints);
     .items-start\@#{$breakpoint} { align-items: flex-start; }
     .items-end\@#{$breakpoint} { align-items: flex-end; }
     .items-baseline\@#{$breakpoint} { align-items: baseline; }
+    .items-stretch\@#{$breakpoint} { align-items: stretch; }
+
+    // align-content
+    .content-start\@#{$breakpoint} { align-content: start; }
+    .content-end\@#{$breakpoint} { align-content: end; }
+    .content-center\@#{$breakpoint} { align-content: center; }
+    .content-between\@#{$breakpoint} { align-content: space-between; }
   
     // order
     .order-1\@#{$breakpoint}  { order: 1; }
@@ -1410,6 +1458,8 @@ $breakpointsNr: length($breakpoints);
     .inline-block\@#{$breakpoint} { display: inline-block; }
     .inline\@#{$breakpoint} { display: inline; }
     .contents\@#{$breakpoint} { display: contents; }
+    .css-grid\@#{$breakpoint} { display: grid; }
+    .css-inline-grid\@#{$breakpoint} { display: inline-grid; }
     .hide\@#{$breakpoint} { display: none !important; }
   
     // margin

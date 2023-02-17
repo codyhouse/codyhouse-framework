@@ -12,8 +12,9 @@
 .form-legend {
   color: var(--color-contrast-higher, hsl(204, 28%, 7%));
   line-height: var(--heading-line-height, 1.2);
+  font-weight: var(--heading-font-weight, 700);
   font-size: var(--text-md, 1.125rem);
-  margin-bottom: var(--space-sm);
+  margin-bottom: var(--space-md);
 }
 
 .form-label {

@@ -20,4 +20,8 @@ html:not(.js) {
   .print\:is-hidden {
     display: none !important;
   }
+
+  .print\:shadow-none {
+    box-shadow: none;
+  }
 }

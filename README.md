@@ -1,7 +1,7 @@
-# 🐞 CodyFrame
+# 🐞 CodyFrame v3
 A lightweight front-end framework for building accessible, bespoke interfaces.
 
-[Documentation on codyhouse.co →](https://codyhouse.co/ds/get-started)
+**✦ New version available!** [Download CodyFrame v4 →](https://github.com/codyhouse/codyframe)
 
 Files included:
 
@@ -41,6 +41,8 @@ codyhouse-framework/
     │       └── util.js
     └── index.html
 ```
+## Documentation
+[View the documentation on codyhouse.co →](https://codyhouse.co/ds/get-started)
 
 ## Progressive enhancement
 If you're using our [components](https://codyhouse.co/ds/components), make sure to include the following script in the `<head>` of your document:
