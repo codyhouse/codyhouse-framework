@@ -510,6 +510,16 @@
 
 // --------------------------------
 
+// Text Indent
+
+// --------------------------------
+
+.text-indent-sm { text-indent: 0.5em; }
+.text-indent-md { text-indent: 1em; }
+.text-indent-lg { text-indent: 1.5em; }
+
+// --------------------------------
+
 // .text-component vertical spacing
 
 // --------------------------------
@@ -580,6 +590,40 @@
 
 // --------------------------------
 
+// Line Clamp
+
+// --------------------------------
+
+.line-clamp-1 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}
+
+.line-clamp-2 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.line-clamp-3 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+
+.line-clamp-4 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+}
+
+// --------------------------------
+
 // Column Count
 
 // --------------------------------
@@ -588,6 +632,16 @@
 .column-count-2 { column-count: 2; }
 .column-count-3 { column-count: 3; }
 .column-count-4 { column-count: 4; }
+
+// --------------------------------
+
+// List Style
+
+// --------------------------------
+
+.list-style-none {
+  list-style: none;
+}
 
 // --------------------------------
 
@@ -705,6 +759,7 @@
 [class^="color-gradient"], [class*=" color-gradient"] {
   color: transparent !important;
   background-clip: text;
+  opacity: var(--color-o, 1);
 }
 
 // --------------------------------

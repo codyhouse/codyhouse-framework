@@ -2615,11 +2615,11 @@ u {
 
 @media (min-width: 48rem) {
   .text-component__block--left,
-  .text-component__block--right {
+.text-component__block--right {
     width: 45%;
   }
   .text-component__block--left img,
-  .text-component__block--right img {
+.text-component__block--right img {
     width: 100%;
   }
   .text-component__block--left {
@@ -4085,6 +4085,18 @@ html:not(.js) .no-js\:is-hidden {
   text-shadow: none;
 }
 
+.text-indent-sm {
+  text-indent: 0.5em;
+}
+
+.text-indent-md {
+  text-indent: 1em;
+}
+
+.text-indent-lg {
+  text-indent: 1.5em;
+}
+
 .text-space-y-xxs {
   --text-space-y-multiplier: 0.25 !important;
 }
@@ -4169,6 +4181,34 @@ html:not(.js) .no-js\:is-hidden {
   line-height: 1 !important;
 }
 
+.line-clamp-1 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}
+
+.line-clamp-2 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.line-clamp-3 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+
+.line-clamp-4 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+}
+
 .column-count-1 {
   -moz-column-count: 1;
        column-count: 1;
@@ -4187,6 +4227,10 @@ html:not(.js) .no-js\:is-hidden {
 .column-count-4 {
   -moz-column-count: 4;
        column-count: 4;
+}
+
+.list-style-none {
+  list-style: none;
 }
 
 .ws-nowrap, .text-nowrap {
@@ -4445,6 +4489,7 @@ html:not(.js) .no-js\:is-hidden {
   color: transparent !important;
   -webkit-background-clip: text;
           background-clip: text;
+  opacity: var(--color-o, 1);
 }
 
 .width-xxxxs {
